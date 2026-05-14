@@ -9,8 +9,9 @@
     "capture": "node src/cli.js https://xailab.com.cn/ --output=output/xailab.png",
     "capture:desktop": "node src/cli.js https://xailab.com.cn/ --output=output/xailab-desktop.png --width=1440 --height=900",
     "capture:mobile": "node src/cli.js https://xailab.com.cn/ --output=output/xailab-mobile.png --width=390 --height=844",
-    "check": "node --check src/security.js && node --check src/screenshot.js && node --check src/cli.js && node --check src/server.js",
+    "check": "node --check src/security.js && node --check src/screenshot.js && node --check src/cli.js && node --check src/batch-cli.js && node --check src/server.js",
     "screenshot": "node src/cli.js",
+    "screenshot:batch": "node src/batch-cli.js",
     "screenshot:server": "node src/server.js",
     "start": "node src/server.js"
   },

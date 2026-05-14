@@ -40,6 +40,39 @@ npm run screenshot -- https://xailab.com.cn/ --output=output/xailab.png --width=
 - `--max-page-height=50000`：页面最大高度，避免无限滚动页面占满资源。
 - `--tile-height=8000`：长页面分片高度。
 
+### 批量截图
+
+把统一配置和多个 URL 写到 JSON 文件里：
+
+```json
+{
+  "outputDir": "output/batch",
+  "width": 1440,
+  "height": 900,
+  "format": "png",
+  "maxPageHeight": 50000,
+  "tileHeight": 8000,
+  "items": [
+    { "name": "xailab-home", "url": "https://xailab.com.cn/" },
+    { "name": "example", "url": "https://example.com/" }
+  ]
+}
+```
+
+执行：
+
+```bash
+npm run screenshot:batch -- --input=batch-screenshots.example.json
+```
+
+也可以不写配置文件，直接一次性传多个目标：
+
+```bash
+npm run screenshot:batch -- --output-dir=output/batch --width=1440 --height=900 --format=png --max-page-height=50000 --tile-height=8000 --target=xailab-home=https://xailab.com.cn/ --target=example=https://example.com/
+```
+
+批量脚本会把 `name` 作为输出文件名，按统一 `format` 生成到 `outputDir`，例如 `output/batch/xailab-home.png`。
+
 ### HTTP API
 
 启动服务：
