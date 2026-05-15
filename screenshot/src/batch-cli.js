@@ -226,7 +226,7 @@ function toCamelCase(value) {
 }
 
 function sanitizeFilename(value) {
-  return value.replace(/[^a-zA-Z0-9._-]+/g, "-").replace(/^-+|-+$/g, "") || "screenshot";
+  return value.replace(/[\/\\:*?"<>|]+/g, "-").replace(/^-+|-+$/g, "").trim() || "screenshot";
 }
 
 function extensionFor(format) {
