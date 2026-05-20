@@ -1,0 +1,22 @@
+{
+  "guardrails": [
+    {
+      "guardrail_id": "gr-content-001",
+      "guardrail_name": "content-safety",
+      "litellm_params": { "default_on": true, "mode": "pre_call" },
+      "guardrail_info": { "description": "Block harmful content" }
+    },
+    {
+      "guardrail_id": "gr-pii-002",
+      "guardrail_name": "pii-detection",
+      "litellm_params": { "default_on": false, "mode": "pre_call" },
+      "guardrail_info": { "description": "Detect PII in prompts" }
+    },
+    {
+      "guardrail_id": "gr-toxic-003",
+      "guardrail_name": "toxicity-filter",
+      "litellm_params": { "default_on": true, "mode": "post_call" },
+      "guardrail_info": { "description": "Filter toxic outputs" }
+    }
+  ]
+}
