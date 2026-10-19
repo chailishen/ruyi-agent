@@ -1,0 +1,967 @@
+{
+ "ctx": "mf_5fadaf04e4",
+ "createdAt": "2026-10-17T01:05:13",
+ "baseUrl": "https://zhxz.xasp.com.cn",
+ "authSource": "workbuddy-dev-session",
+ "workflow": {
+  "id": "1302788388361633792",
+  "name": "会议申请"
+ },
+ "nodeId": "1302788388361633794",
+ "currentUser": {
+  "hrmId": "1248936314680606736",
+  "name": "sysadmin"
+ },
+ "form": {
+  "id": "1302787649769865266",
+  "layoutId": "1302790548931510275",
+  "layoutMultiId": "1302790548931510274",
+  "customTextFields": {
+   "materials": "1302788014707867664"
+  }
+ },
+ "fields": [
+  {
+   "key": "hrmMembers",
+   "label": "参会人员",
+   "itemType": "BROWSER",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": null
+  },
+  {
+   "key": "crmTotalMember",
+   "label": "crmTotalMember",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "frequent",
+   "label": "重复规则",
+   "itemType": "SELECT",
+   "required": true,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "0",
+     "content": "永不"
+    },
+    {
+     "id": "1",
+     "content": "按日"
+    },
+    {
+     "id": "2",
+     "content": "按周"
+    },
+    {
+     "id": "3",
+     "content": "按月"
+    },
+    {
+     "id": "4",
+     "content": "按年"
+    }
+   ]
+  },
+  {
+   "key": "beginDatetime",
+   "label": "开始时间",
+   "itemType": "DATETIMEPICKER",
+   "required": true,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "mtType",
+   "label": "会议类型",
+   "itemType": "BROWSER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "customizeAddress",
+   "label": "自定义会议地点",
+   "itemType": "INPUT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "byDateType",
+   "label": "byDateType",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "0",
+     "content": "日期"
+    },
+    {
+     "id": "1",
+     "content": "星期"
+    }
+   ]
+  },
+  {
+   "key": "byDay",
+   "label": "byDay",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": [
+    {
+     "id": "MO",
+     "content": "周一"
+    },
+    {
+     "id": "TU",
+     "content": "周二"
+    },
+    {
+     "id": "WE",
+     "content": "周三"
+    },
+    {
+     "id": "TH",
+     "content": "周四"
+    },
+    {
+     "id": "FR",
+     "content": "周五"
+    },
+    {
+     "id": "SA",
+     "content": "周六"
+    },
+    {
+     "id": "SU",
+     "content": "周日"
+    }
+   ]
+  },
+  {
+   "key": "remindToCreater",
+   "label": "提醒给创建人",
+   "itemType": "CHECKBOX",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "1",
+     "content": "提醒给创建人"
+    }
+   ]
+  },
+  {
+   "key": "remindBeforeStart",
+   "label": "开始前提醒",
+   "itemType": "CHECKBOX",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "1",
+     "content": "开始前提醒"
+    }
+   ]
+  },
+  {
+   "key": "mtDesc",
+   "label": "会议内容",
+   "itemType": "TEXTAREA",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "remindImmediately",
+   "label": "立即提醒",
+   "itemType": "SWITCH",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "remindHoursBeforeStart",
+   "label": "remindHoursBeforeStart",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "crmMembers",
+   "label": "参会客户",
+   "itemType": "BROWSER",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": null
+  },
+  {
+   "key": "address",
+   "label": "会议地点",
+   "itemType": "BROWSER",
+   "required": true,
+   "readOnly": false,
+   "multiple": true,
+   "options": null
+  },
+  {
+   "key": "remindTimesBeforeStart",
+   "label": "remindTimesBeforeStart",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "otherMembers",
+   "label": "其他人员",
+   "itemType": "INPUT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "orgMembers",
+   "label": "参会部门",
+   "itemType": "BROWSER",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": null
+  },
+  {
+   "key": "repeatRuleEx",
+   "label": "repeatRuleEx",
+   "itemType": "INPUT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "byMonth",
+   "label": "byMonth",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": [
+    {
+     "id": "1",
+     "content": "1"
+    },
+    {
+     "id": "2",
+     "content": "2"
+    },
+    {
+     "id": "3",
+     "content": "3"
+    },
+    {
+     "id": "4",
+     "content": "4"
+    },
+    {
+     "id": "5",
+     "content": "5"
+    },
+    {
+     "id": "6",
+     "content": "6"
+    },
+    {
+     "id": "7",
+     "content": "7"
+    },
+    {
+     "id": "8",
+     "content": "8"
+    },
+    {
+     "id": "9",
+     "content": "9"
+    },
+    {
+     "id": "10",
+     "content": "10"
+    },
+    {
+     "id": "11",
+     "content": "11"
+    },
+    {
+     "id": "12",
+     "content": "12"
+    }
+   ]
+  },
+  {
+   "key": "count",
+   "label": "count",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "byDayCount",
+   "label": "byDayCount",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "1",
+     "content": "第一个"
+    },
+    {
+     "id": "2",
+     "content": "第二个"
+    },
+    {
+     "id": "3",
+     "content": "第三个"
+    },
+    {
+     "id": "4",
+     "content": "第四个"
+    },
+    {
+     "id": "5",
+     "content": "第五个"
+    },
+    {
+     "id": "-1",
+     "content": "最后一个"
+    }
+   ]
+  },
+  {
+   "key": "sort",
+   "label": "sort",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "0",
+     "content": "正数"
+    },
+    {
+     "id": "1",
+     "content": "倒数"
+    }
+   ]
+  },
+  {
+   "key": "totalMember",
+   "label": "应到人数",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "remindBeforeEnd",
+   "label": "结束前提醒",
+   "itemType": "CHECKBOX",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "1",
+     "content": "结束前提醒"
+    }
+   ]
+  },
+  {
+   "key": "remindHoursBeforeEnd",
+   "label": "remindHoursBeforeEnd",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "caller",
+   "label": "发起人",
+   "itemType": "BROWSER",
+   "required": true,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "contacter",
+   "label": "联系人",
+   "itemType": "BROWSER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "remindTimesBeforeEnd",
+   "label": "remindTimesBeforeEnd",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "name",
+   "label": "会议名称",
+   "itemType": "INPUT",
+   "required": true,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "mtAccessorys",
+   "label": "相关附件",
+   "itemType": "UPLOAD",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "interval",
+   "label": "interval",
+   "itemType": "INPUTNUMBER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "until",
+   "label": "until",
+   "itemType": "DATEPICKER",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "finishAt",
+   "label": "finishAt",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "2",
+     "content": "日期"
+    },
+    {
+     "id": "1",
+     "content": "次数"
+    }
+   ]
+  },
+  {
+   "key": "endDatetime",
+   "label": "结束时间",
+   "itemType": "DATETIMEPICKER",
+   "required": true,
+   "readOnly": false,
+   "multiple": false,
+   "options": null
+  },
+  {
+   "key": "byMonthDay",
+   "label": "byMonthDay",
+   "itemType": "SELECT",
+   "required": false,
+   "readOnly": false,
+   "multiple": true,
+   "options": [
+    {
+     "id": "1",
+     "content": "1"
+    },
+    {
+     "id": "2",
+     "content": "2"
+    },
+    {
+     "id": "3",
+     "content": "3"
+    },
+    {
+     "id": "4",
+     "content": "4"
+    },
+    {
+     "id": "5",
+     "content": "5"
+    },
+    {
+     "id": "6",
+     "content": "6"
+    },
+    {
+     "id": "7",
+     "content": "7"
+    },
+    {
+     "id": "8",
+     "content": "8"
+    },
+    {
+     "id": "9",
+     "content": "9"
+    },
+    {
+     "id": "10",
+     "content": "10"
+    },
+    {
+     "id": "11",
+     "content": "11"
+    },
+    {
+     "id": "12",
+     "content": "12"
+    },
+    {
+     "id": "13",
+     "content": "13"
+    },
+    {
+     "id": "14",
+     "content": "14"
+    },
+    {
+     "id": "15",
+     "content": "15"
+    },
+    {
+     "id": "16",
+     "content": "16"
+    },
+    {
+     "id": "17",
+     "content": "17"
+    },
+    {
+     "id": "18",
+     "content": "18"
+    },
+    {
+     "id": "19",
+     "content": "19"
+    },
+    {
+     "id": "20",
+     "content": "20"
+    },
+    {
+     "id": "21",
+     "content": "21"
+    },
+    {
+     "id": "22",
+     "content": "22"
+    },
+    {
+     "id": "23",
+     "content": "23"
+    },
+    {
+     "id": "24",
+     "content": "24"
+    },
+    {
+     "id": "25",
+     "content": "25"
+    },
+    {
+     "id": "26",
+     "content": "26"
+    },
+    {
+     "id": "27",
+     "content": "27"
+    },
+    {
+     "id": "28",
+     "content": "28"
+    },
+    {
+     "id": "29",
+     "content": "29"
+    },
+    {
+     "id": "30",
+     "content": "30"
+    },
+    {
+     "id": "31",
+     "content": "31"
+    }
+   ]
+  },
+  {
+   "key": "remindType",
+   "label": "提醒方式",
+   "itemType": "CHECKBOX",
+   "required": false,
+   "readOnly": false,
+   "multiple": false,
+   "options": [
+    {
+     "id": "6",
+     "content": "系统消息提醒"
+    }
+   ]
+  }
+ ],
+ "requiredKeys": [
+  "beginDatetime",
+  "address",
+  "caller",
+  "name",
+  "endDatetime"
+ ],
+ "customFields": [
+  {
+   "fieldId": "1302787649769865226",
+   "dataKey": "name",
+   "label": "会议名称",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865227",
+   "dataKey": "mttype",
+   "label": "会议类型",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865228",
+   "dataKey": "secretlevel",
+   "label": "密级",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865229",
+   "dataKey": "caller",
+   "label": "发起人",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865230",
+   "dataKey": "contacter",
+   "label": "联系人",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865231",
+   "dataKey": "mtdesc",
+   "label": "会议内容",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865232",
+   "dataKey": "mtaccessorys",
+   "label": "相关附件",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865233",
+   "dataKey": "requestid",
+   "label": "审批流程",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865235",
+   "dataKey": "frequent",
+   "label": "重复规则",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865236",
+   "dataKey": "finishat",
+   "label": "结束于",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865237",
+   "dataKey": "repeatstrategy",
+   "label": "非工作日处理方式",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865238",
+   "dataKey": "repeatdesc",
+   "label": "重复概述",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865239",
+   "dataKey": "begindatetime",
+   "label": "开始时间",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865240",
+   "dataKey": "enddatetime",
+   "label": "结束时间",
+   "columnType": "TEXT",
+   "required": true,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865241",
+   "dataKey": "address",
+   "label": "会议地点",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865242",
+   "dataKey": "customizeaddress",
+   "label": "自定义会议地点",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865243",
+   "dataKey": "remindtype",
+   "label": "提醒方式",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865244",
+   "dataKey": "remindimmediately",
+   "label": "立即提醒",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865245",
+   "dataKey": "remindbeforestart",
+   "label": "开始前提醒",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865246",
+   "dataKey": "remindbeforeend",
+   "label": "结束前提醒",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865247",
+   "dataKey": "remindtocreater",
+   "label": "提醒给创建人",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865249",
+   "dataKey": "hrmmembers",
+   "label": "参会人员",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865250",
+   "dataKey": "orgmembers",
+   "label": "参会部门",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865251",
+   "dataKey": "totalmember",
+   "label": "应到人数",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865252",
+   "dataKey": "othermembers",
+   "label": "其他人员",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865253",
+   "dataKey": "crmmembers",
+   "label": "参会客户",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302787649769865254",
+   "dataKey": "crmtotalmember",
+   "label": "应到客户数",
+   "columnType": "TEXT",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  },
+  {
+   "fieldId": "1302788014707867664",
+   "dataKey": "materials",
+   "label": "会议物资",
+   "columnType": "TEXTAREA",
+   "required": false,
+   "readOnly": false,
+   "visible": true
+  }
+ ],
+ "tempRequestId": "1327017372838379523",
+ "prepared": {
+  "intent": "submit",
+  "name": "Skill提交链路终验会议",
+  "beginDatetime": "2026-10-23 09:00",
+  "endDatetime": "2026-10-23 10:00",
+  "caller": "1248936314680606736",
+  "roomId": "1302788933889589250",
+  "members": [
+   "1248936314680606736"
+  ],
+  "memberLabels": [
+   {
+    "id": "1248936314680606736",
+    "name": "sysadmin"
+   }
+  ],
+  "departments": [
+   "1255539887080341532"
+  ],
+  "departmentLabels": [
+   {
+    "id": "1255539887080341532",
+    "name": "财务资产组"
+   }
+  ],
+  "otherMembers": "无",
+  "mtDesc": "会议申请Skill提交链端到端验证",
+  "materials": "投影仪、白板笔",
+  "totalMember": 3,
+  "remindType": "6",
+  "missingRequirements": [],
+  "conflictChecked": true,
+  "conflict": {
+   "blocks": [],
+   "warnings": []
+  },
+  "preparedAt": "2026-10-17T01:05:36"
+ },
+ "result": {
+  "requestId": "1327017518649163779",
+  "requestName": "会议申请-sysadmin-2026-10-17",
+  "isDraft": false,
+  "meetingId": "1327017522960908293",
+  "formDataId": "1327017518649163780",
+  "submitted": true,
+  "viewUrl": "https://zhxz.xasp.com.cn/sp/workflow/flowpage/view/1327017518649163779",
+  "createUrl": "https://zhxz.xasp.com.cn/sp/workflow/flowpage/create/1302788388361633792",
+  "rawResult": {
+   "resultType": "SUCCESS_READ_PATH_CONFIG"
+  }
+ }
+}
