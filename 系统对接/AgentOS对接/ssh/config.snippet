@@ -1,0 +1,11 @@
+# 合并到 ~/.ssh/config（本机已按此写入）
+# 私钥：~/.ssh/agentos-prod（chmod 600）
+
+Host agentos-prod
+  HostName 192.168.2.10
+  Port 2222
+  User ws00-access
+  IdentityFile ~/.ssh/agentos-prod
+  IdentitiesOnly yes
+  ServerAliveInterval 30
+  ServerAliveCountMax 3
