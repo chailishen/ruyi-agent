@@ -1,0 +1,162 @@
+{
+  "id": "840714112855539713",
+  "name": "前台可发起工作流列表",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/list/paService/v1/getCreateWorkflowList",
+  "url_template": "{OpenApiOrigin}/api/workflow/list/paService/v1/getCreateWorkflowList",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "wfpCode",
+      "required": "是",
+      "type": "Int",
+      "description": "0：个人审批 1：团队审批"
+    },
+    {
+      "name": "filterHide",
+      "required": "否",
+      "type": "String",
+      "description": "是否过滤“新建流程默认隐藏”设置，为1时过滤"
+    },
+    {
+      "name": "mergeShow",
+      "required": "否",
+      "type": "Int",
+      "description": "主次账号是否统一显示\"mergeShow\":1/0（参数传递为1，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ）"
+    },
+    {
+      "name": "inCludePTJob",
+      "required": "否",
+      "type": "Int",
+      "description": "是否包含兼职岗位数据，0：否 1：是"
+    },
+    {
+      "name": "loadOfsFlow",
+      "required": "否",
+      "type": "Int",
+      "description": "是否加载异构流程数据，0：否 1：是"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "审批ID"
+    },
+    {
+      "name": "workflowName",
+      "required": "",
+      "type": "string",
+      "description": "审批名称"
+    },
+    {
+      "name": "workflowDesc",
+      "required": "",
+      "type": "string",
+      "description": "审批流描述"
+    },
+    {
+      "name": "creatorName",
+      "required": "",
+      "type": "string",
+      "description": "审批流创建人名称"
+    },
+    {
+      "name": "workflowType",
+      "required": "",
+      "type": "string",
+      "description": "审批流类型ID"
+    },
+    {
+      "name": "belongType",
+      "required": "",
+      "type": "string",
+      "description": "团队：company 个人：personal"
+    },
+    {
+      "name": "orderId",
+      "required": "",
+      "type": "float",
+      "description": "显示顺序"
+    },
+    {
+      "name": "versionId",
+      "required": "",
+      "type": "string",
+      "description": "版本（V1 V2 V3）"
+    },
+    {
+      "name": "curAccountCreateAble",
+      "required": "",
+      "type": "boolean",
+      "description": "当前账号是否可创建（当传入参数mergeShow=1或inCludePTJob=1才会有此属性）"
+    },
+    {
+      "name": "identityList",
+      "required": "",
+      "type": "list",
+      "description": "可创建流程的身份列表（当传入参数mergeShow=1或inCludePTJob=1才会有此属性）"
+    },
+    {
+      "name": "datasrc",
+      "required": "",
+      "type": "string",
+      "description": "数据来源,异构系统数据为3"
+    },
+    {
+      "name": "pcUrl",
+      "required": "",
+      "type": "string",
+      "description": "自定义pc打开链接"
+    },
+    {
+      "name": "mUrl",
+      "required": "",
+      "type": "string",
+      "description": "自定义mobile打开链接"
+    },
+    {
+      "name": "sysCode",
+      "required": "",
+      "type": "string",
+      "description": "统一待办数据系统标识"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "前台可发起工作流列表"
+  ],
+  "raw_text": "## 前台可发起工作流列表\n请求URL：\n- {OpenApiOrigin}/api/workflow/list/paService/v1/getCreateWorkflowList\n请求方式：\n- POST\n- 备注：access_token参数请放置于param中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| wfpCode | 是 | Int | 0：个人审批 1：团队审批 |\n| filterHide | 否 | String | 是否过滤“新建流程默认隐藏”设置，为1时过滤 |\n| mergeShow | 否 | Int | 主次账号是否统一显示\"mergeShow\":1/0（参数传递为1，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ） |\n| inCludePTJob | 否 | Int | 是否包含兼职岗位数据，0：否 1：是 |\n| loadOfsFlow | 否 | Int | 是否加载异构流程数据，0：否 1：是 |\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | string | 审批ID |\n| workflowName | string | 审批名称 |\n| workflowDesc | string | 审批流描述 |\n| creatorName | string | 审批流创建人名称 |\n| workflowType | string | 审批流类型ID |\n| belongType | string | 团队：company 个人：personal |\n| orderId | float | 显示顺序 |\n| versionId | string | 版本（V1 V2 V3） |\n| curAccountCreateAble | boolean | 当前账号是否可创建（当传入参数mergeShow=1或inCludePTJob=1才会有此属性） |\n| identityList | list | 可创建流程的身份列表（当传入参数mergeShow=1或inCludePTJob=1才会有此属性） |\n| datasrc | string | 数据来源,异构系统数据为3 |\n| pcUrl | string | 自定义pc打开链接 |\n| mUrl | string | 自定义mobile打开链接 |\n| sysCode | string | 统一待办数据系统标识 |\nJava sdk调用示例："
+}

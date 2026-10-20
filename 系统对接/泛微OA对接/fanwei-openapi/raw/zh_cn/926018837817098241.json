@@ -1,0 +1,895 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "获取团队人员账号信息",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "获取团队人员账号信息"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/basicserver/v1/login/findAccount",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/basicserver/v1/login/findAccount",
+                        "title": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST application/json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://open-doc.eteams.cn/web/#/1?page_id=2",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userid"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "用户ID "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取用户ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://open-doc.eteams.cn/web/#/1?page_id=14",
+                            "title": "获取用户ID"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求示例",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\"access_token\":\"047afa02afd2f8d41821958c4e6444bc\",\n\"userid\":\"1565952891127889815\"\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n    \"code\": 200,\n    \"msg\": \"接口返回成功\",\n    \"status\": true,\n    \"data\": {\n        \"loginName\": \"aaaa\",\n        \"jobNum\": \"xxxxxx\",\n        \"account\": \"13333333333\",\n        \"mobile\": \"13333333333\",\n        \"email\": \"123@qq.com\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "loginName"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "登录名"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "jobNum"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "工号"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "account"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "绑定的账号"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mobile"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "绑定的手机号账号"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "email"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "绑定的邮箱账号"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "        BasicVo basicVo = new BasicVo();\n        basicVo.setAccessToken(accessToken);\n        basicVo.setUserid(2225304380394396551L);\n        BasicResultVo result = BasicService.findAccount(basicVo, \"{OpenApiOrigin}\", null);\n        System.out.println(JSONObject.toJSONString(result));"
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

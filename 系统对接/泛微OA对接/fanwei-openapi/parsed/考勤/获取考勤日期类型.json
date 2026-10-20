@@ -1,0 +1,62 @@
+{
+  "id": "347855715148234752",
+  "name": "获取考勤日期类型",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/open/getDayTypeByAttendDate",
+  "url_template": "{OpenApiOrigin}/api/attend/web/open/getDayTypeByAttendDate",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "**备注：**body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "attendDate",
+      "required": "是",
+      "type": "String",
+      "description": "考勤日期yyyy-MM-dd"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "日期类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取考勤日期类型"
+  ],
+  "raw_text": "## 获取考勤日期类型\n请求URL：\n- {OpenApiOrigin}/api/attend/web/open/getDayTypeByAttendDate\n请求方式：\n- POST\nURL参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| attendDate | 是 | String | 考勤日期yyyy-MM-dd |\nbody参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n**备注：**body传参格式为application/json\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 日期类型 |\nData补充：\ncom.weaver.teams.attend.enums.AttendDayType"
+}

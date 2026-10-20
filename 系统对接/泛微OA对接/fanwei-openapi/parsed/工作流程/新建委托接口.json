@@ -1,0 +1,144 @@
+{
+  "id": "944321385584549889",
+  "name": "新建委托接口",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/newAgent",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/newAgent",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "agentUserId",
+      "required": "",
+      "type": "long",
+      "description": "委托接收人ID"
+    },
+    {
+      "name": "agentExplain",
+      "required": "",
+      "type": "string",
+      "description": "委托说明"
+    },
+    {
+      "name": "beginDateTime",
+      "required": "",
+      "type": "LocalDateTime",
+      "description": "委托开始时间"
+    },
+    {
+      "name": "endDateTime",
+      "required": "",
+      "type": "LocalDateTime",
+      "description": "委托结束时间"
+    },
+    {
+      "name": "rangeType",
+      "required": "",
+      "type": "int",
+      "description": "委托范围 1：全部 2：选择审批流类型 3：选择审批流 4：选择节点"
+    },
+    {
+      "name": "rangeObjects",
+      "required": "",
+      "type": "String",
+      "description": "委托范围对象 审批流类型或者审批流或者节点的具体值，多个以,分割"
+    },
+    {
+      "name": "isAgentCreate",
+      "required": "",
+      "type": "int",
+      "description": "委托流程发起 0：否 1：是"
+    },
+    {
+      "name": "isAgentCreateSubWf",
+      "required": "",
+      "type": "int",
+      "description": "委托发起子流程 0：否 1：是"
+    },
+    {
+      "name": "isAgentDeal",
+      "required": "",
+      "type": "int",
+      "description": "委托流程处理 0：否 1：是"
+    },
+    {
+      "name": "isAgentPendingWf",
+      "required": "",
+      "type": "int",
+      "description": "委托已有待办流程 0：否 1：是"
+    },
+    {
+      "name": "operateType",
+      "required": "",
+      "type": "int",
+      "description": "委托指定操作类型 0：全部 1：选择"
+    },
+    {
+      "name": "operateObjects",
+      "required": "",
+      "type": "String",
+      "description": "委托指定操作类型对象(多个,分割) 0：节点操作者 1：转发接收人2：抄送接收人 3：传阅接收人 4：意见征询接收人"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "agentId",
+      "required": "",
+      "type": "string",
+      "description": "新建代理id"
+    },
+    {
+      "name": "workflowInfo",
+      "required": "",
+      "type": "array",
+      "description": "流程信息"
+    },
+    {
+      "name": "workflowInfo[0].workflowId",
+      "required": "",
+      "type": "String",
+      "description": "工作流id"
+    },
+    {
+      "name": "workflowInfo[0].workflowName",
+      "required": "",
+      "type": "String",
+      "description": "工作流名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建委托接口"
+  ],
+  "raw_text": "## 新建委托接口\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/newAgent\n请求方式：\n- POST\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| agentUserId | 是 | long | 委托接收人ID |\n| agentExplain | 否 | string | 委托说明 |\n| beginDateTime | 否 | LocalDateTime | 委托开始时间 |\n| endDateTime | 否 | LocalDateTime | 委托结束时间 |\n| rangeType | 是 | int | 委托范围 1：全部 2：选择审批流类型 3：选择审批流 4：选择节点 |\n| rangeObjects | rangeType为2、3、4时必填 | String | 委托范围对象 审批流类型或者审批流或者节点的具体值，多个以,分割 |\n| isAgentCreate | isAgentCreate和isAgentDeal至少一个必填 | int | 委托流程发起 0：否 1：是 |\n| isAgentCreateSubWf | 否 | int | 委托发起子流程 0：否 1：是 |\n| isAgentDeal | isAgentCreate和isAgentDeal至少一个必填 | int | 委托流程处理 0：否 1：是 |\n| isAgentPendingWf | 否 | int | 委托已有待办流程 0：否 1：是 |\n| operateType | 是 | int | 委托指定操作类型 0：全部 1：选择 |\n| operateObjects | operateType为1时必填 | String | 委托指定操作类型对象(多个,分割) 0：节点操作者 1：转发接收人2：抄送接收人 3：传阅接收人 4：意见征询接收人 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| agentId | string | 新建代理id |\n| workflowInfo | array | 流程信息 |\n| workflowInfo[0].workflowId | String | 工作流id |\n| workflowInfo[0].workflowName | String | 工作流名称 |\nJava sdk调用示例："
+}

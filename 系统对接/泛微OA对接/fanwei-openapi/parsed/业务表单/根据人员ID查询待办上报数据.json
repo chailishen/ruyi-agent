@@ -1,0 +1,90 @@
+{
+  "id": "840716706990620673",
+  "name": "根据人员ID查询待办上报数据",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/getTodoData",
+  "url_template": "{OpenApiOrigin}/form/v2/getTodoData",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Int",
+      "description": "分页展示数据数，默认最大20"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单数据ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "表单数据名称"
+    },
+    {
+      "name": "reporter",
+      "required": "",
+      "type": "String",
+      "description": "表单数据提交人信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "表单数据状态"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "所属团队识别码"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据人员ID查询待办上报数据"
+  ],
+  "raw_text": "## 根据人员ID查询待办上报数据\n请求URL：\n- {OpenApiOrigin}/form/v2/getTodoData\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageNo | 否 | Int | 分页页码 |\n| pageSize | 否 | Int | 分页展示数据数，默认最大20 |\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/getTodoData?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&pageNo=1&pageSize=10\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | String | 表单数据ID |\n| name | String | 表单数据名称 |\n| reporter | String | 表单数据提交人信息 |\n| status | String | 表单数据状态 |\n| tenantKey | String | 所属团队识别码 |\nJava sdk调用示例："
+}

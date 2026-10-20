@@ -1,0 +1,56 @@
+{
+  "id": "413162407045627904",
+  "name": "重新上传接口",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/v2/common/upload/reUpload",
+  "url_template": "{OpenApiOrigin}/api/file/v2/common/upload/reUpload",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "oldFileId",
+      "required": "是",
+      "type": "long",
+      "description": "旧文件ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "string",
+      "description": "新文件名"
+    },
+    {
+      "name": "file",
+      "required": "是",
+      "type": "file",
+      "description": "文件"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "请求URL",
+    "请求方式：",
+    "请求Body参数使用form-data传参"
+  ],
+  "raw_text": "##### 请求URL\n- {OpenApiOrigin}/api/file/v2/common/upload/reUpload\n##### 请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n##### 请求Body参数使用form-data传参\n| 参数名 | 示例值 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- | --- |\n| oldFileId |  | 是 | long | 旧文件ID |\n| name |  | 是 | string | 新文件名 |\n| file |  | 是 | file | 文件 |\n| userid |  | 是 | long | 用户id |\npostman请求调用示例\n返回值参数说明\n| 返回值参数 | 说明 |\n| --- | --- |\n| errcode | 接口响应状态， 0：成功 1：失败 |\n| errmsg | 描述信息 |\n| fileid | 附件ID |\n| name | 附件名称 |\n| size | 附件大小（单位为字节 B） |\n| extName | 附件后缀扩展名 |\n| type | 附件类型 |\n| uploadUser | 附件上传用户ID |\n| uploadUserName | 附件上传用户名称 |\n| uploadTime | 附件上传时间 |\n| docId | 文档ID |\njava 代码调用示例"
+}

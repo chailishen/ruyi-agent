@@ -1,0 +1,319 @@
+{
+  "id": "398310741205057536",
+  "name": "删除角色成员",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "角色成员同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/role/user/v1/batchDelete",
+  "url_template": "{OpenApiOrigin}/api/auth/role/user/v1/batchDelete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "operator",
+      "required": "必填",
+      "type": "Long",
+      "description": "操作者"
+    },
+    {
+      "name": "roleQueryRule",
+      "required": "必填",
+      "type": "AuthRoleQueryRule",
+      "description": "角色查询规则"
+    },
+    {
+      "name": "userRoleQueryRule",
+      "required": "必填",
+      "type": "AuthUserRoleQueryRule",
+      "description": "角色成员查询规则"
+    },
+    {
+      "name": "conversionRule",
+      "required": "必填",
+      "type": "ConversionRule",
+      "description": "人员/部门/分部/岗位/群组转换规则-群组不支持第三方主键"
+    },
+    {
+      "name": "data",
+      "required": "必填",
+      "type": "List<BatchAuthUserRoleDetail>",
+      "description": "角色成员数据"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "ID",
+      "required": "",
+      "type": "",
+      "description": "角色ID"
+    },
+    {
+      "name": "ROLE_CODE",
+      "required": "",
+      "type": "",
+      "description": "角色编号"
+    },
+    {
+      "name": "OUT_KEY",
+      "required": "",
+      "type": "",
+      "description": "第三方主键"
+    },
+    {
+      "name": "ID",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "USER",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "OUT_KEY",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "TYPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ID",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "CODE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "OUT_KEY",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "userRole",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "role",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "resourceType",
+      "required": "",
+      "type": "AuthRoleResourceType",
+      "description": ""
+    },
+    {
+      "name": "user",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "memberLevel",
+      "required": "",
+      "type": "AuthRoleMemberLevel",
+      "description": ""
+    },
+    {
+      "name": "secLevelFrom",
+      "required": "",
+      "type": "Integer",
+      "description": ""
+    },
+    {
+      "name": "secLevelTo",
+      "required": "",
+      "type": "Integer",
+      "description": ""
+    },
+    {
+      "name": "includeFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": ""
+    },
+    {
+      "name": "postFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": ""
+    },
+    {
+      "name": "positionLevel",
+      "required": "",
+      "type": "Integer",
+      "description": ""
+    },
+    {
+      "name": "positionOrgList",
+      "required": "",
+      "type": "List<String>",
+      "description": ""
+    },
+    {
+      "name": "userOrgType",
+      "required": "",
+      "type": "AuthUserOrgType",
+      "description": ""
+    },
+    {
+      "name": "userOrg",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userOrgIncludeFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": ""
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "Long",
+      "description": ""
+    },
+    {
+      "name": "outKey",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "RESOURCE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "DEPARTMENT",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "SUBCOMPANY",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "CHANNEL",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "JOBTITLE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ALL",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "HEADQUARTERS",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "SUB_COMPANY",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "DEPARTMENT",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ALL_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_DEPT_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_DEPT_SUB_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_DEPT_INCLUDE_SUB_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_SUBCOMPANY_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_SUBCOMPANY_SUB_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ORIGINAL_SUBCOMPANY_INCLUDE_SUB_SCOPE",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "SUBCOMPANY",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "DEPARTMENT",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除角色成员接口"
+  ],
+  "raw_text": "## 删除角色成员接口\n请求URL：\n- {OpenApiOrigin}/api/auth/role/user/v1/batchDelete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| operator | 必填 | Long | 操作者 |\n| roleQueryRule | 必填 | AuthRoleQueryRule | 角色查询规则 |\n| userRoleQueryRule | 必填 | AuthUserRoleQueryRule | 角色成员查询规则 |\n| conversionRule | 必填 | ConversionRule | 人员/部门/分部/岗位/群组转换规则-群组不支持第三方主键 |\n| data | 必填 | List<BatchAuthUserRoleDetail> | 角色成员数据 |\nroleQueryRule（角色查询规则）：\n| 参数名 | 说明 |\n| --- | --- |\n| ID | 角色ID |\n| ROLE_CODE | 角色编号 |\n| OUT_KEY | 第三方主键 |\nuserRoleQueryRule（角色成员查询规则）：\n| 参数名 | 描述 |\n| --- | --- |\n| ID | 角色成员ID |\n| USER | 角色成员对象 |\n| OUT_KEY | 第三方主键 |\n| TYPE | 对象类型-删除使用 |\nconversionRule（转换规则）：\n| 参数名 | 描述 |\n| --- | --- |\n| ID | ID |\n| CODE | 编码 |\n| OUT_KEY | 第三方主键 |\nBatchAuthUserRoleDetail（角色成员详细数据）：\n| 参数名 | 类型 | 描述 |\n| --- | --- | --- |\n| userRole | String | 角色成员唯一值-更新/删除时传递 |\n| role | String | 所属角色唯一值 |\n| resourceType | AuthRoleResourceType | 对象类型 |\n| user | String | 对象唯一值 |\n| memberLevel | AuthRoleMemberLevel | 成员级别-新增时默认为总部 |\n| secLevelFrom | Integer | 安全级别最小值-新增时默认为0 |\n| secLevelTo | Integer | 安全级别最大值-新增时默认为255 |\n| includeFlag | Boolean | 是否含下级 |\n| postFlag | Boolean | 是否含兼职 |\n| positionLevel | Integer | 岗位级别：1-全部，2-指定分部，3-指定部门，新增时默认为全部 |\n| positionOrgList | List<String> | 岗位：指定分部/部门唯一值列表 |\n| userOrgType | AuthUserOrgType | 组织架构权限类别-新增时默认为全部机构 |\n| userOrg | String | 组织架构权限：指定分部/部门唯一值 |\n| userOrgIncludeFlag | Boolean | 组织架构权限：指定分部/部门是否含下级 |\n| requestId | Long | 请求ID-用于和返回结果对应 |\n| outKey | String | 第三方系统主键 |\nAuthRoleResourceType（对象类型）：\n| 参数名 | 描述 |\n| --- | --- |\n| RESOURCE | 人员 |\n| DEPARTMENT | 部门 |\n| SUBCOMPANY | 分部 |\n| CHANNEL | 群组 |\n| JOBTITLE | 岗位 |\n| ALL | 所有人 |\nAuthRoleMemberLevel（成员级别）：\n| 参数名 | 描述 |\n| --- | --- |\n| HEADQUARTERS | 总部 |\n| SUB_COMPANY | 分部 |\n| DEPARTMENT | 部门 |\nAuthUserOrgType（组织架构类型）：\n| 参数名 | 描述 |\n| --- | --- |\n| ALL_SCOPE | 全部机构 |\n| ORIGINAL_DEPT_SCOPE | 同部门 |\n| ORIGINAL_DEPT_SUB_SCOPE | 同部门的下级部门 |\n| ORIGINAL_DEPT_INCLUDE_SUB_SCOPE | 同部门及下级部门 |\n| ORIGINAL_SUBCOMPANY_SCOPE | 同分部 |\n| ORIGINAL_SUBCOMPANY_SUB_SCOPE | 同分部的下级分部 |\n| ORIGINAL_SUBCOMPANY_INCLUDE_SUB_SCOPE | 同分部及下级分部 |\n| SUBCOMPANY | 指定分部 |\n| DEPARTMENT | 指定部门 |\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| requestId | Long | 请求ID |\n| roleId | Long | 角色ID |\n| userRoleId | Long | 角色成员ID |\n| msg | String | 失败信息 |"
+}

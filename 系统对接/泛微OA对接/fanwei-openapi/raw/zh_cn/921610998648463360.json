@@ -1,0 +1,394 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "开放平台人员信息动态转换功能",
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台人员信息动态转换功能"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "前言",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "前言"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在第三方系统还未进行人员信息同步的情况下，调用开放平台相关接口时无法传递人员ID等相关信息，因此在开放平台层面提供三方人员信息动态转换功能"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "功能介绍",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "功能介绍"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "第三方系统在调用开放平台接口时，支持传入工号、邮箱、手机号、身份证、登陆名、账号等信息，开放平台层面会对这些信息进行动态转换并获取到OA中对应的人员信息，从而实现第三方系统还未进行人员信息同步的情况下可以正常调用开放平台接口，提升开放平台与第三方系统交互的灵活性、扩展性"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "一人员信息转换使用说明",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "一：人员信息转换使用说明"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在原有OpenApi请求参数上新增userType参数用来标识当前传入需要转换为人员ID的人员信息。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "userType支持以下类型："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "JOB_NUM：工号"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "EMAIL：邮箱"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "MOBILE：手机号"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "idNos：身份证"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "loginID：登录名"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "account：账号"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "使用示例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "原有openApi接口为"
+        },
+        {
+          "type": "text",
+          "text": "{OpenApiOrigin}/form/v2/classify",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{OpenApiOrigin}/form/v2/classify",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "?userid=2225304380394396551"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f921610998648463360.0.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "以工号为例，使用转换功能后为"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "{OpenApiOrigin}/form/v2/classify?userid=",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{OpenApiOrigin}/form/v2/classify?userid=",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "工号&userType=JOB_NUM"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f921610998648463360.1.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "二部门信息转换使用说明",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "二：部门信息转换使用说明"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在原有OpenApi请求参数上新增deptType参数用来标识当前传入需要转换为部门ID的部门信息。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "deptType支持以下类型："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "DEPT_CODE：部门编号"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "DEPT_NAME：部门名称"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "使用示例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "原有openApi接口为"
+        },
+        {
+          "type": "text",
+          "text": "{OpenApiOrigin}/department/v2/get?depid=2225304380394396551",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{OpenApiOrigin}/department/v2/get?depid=#{depid}",
+                "title": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f921610998648463360.2.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "以部门编号为例，使用转换功能后为"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "{OpenApiOrigin}/department/v2/get?depid=部门编号&deptType=DEPT_CODE",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{OpenApiOrigin}/department/v2/get?depid=部门编号&deptType=DEPT_CODE",
+                "title": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f921610998648463360.3.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：涉及文件上传的相关接口暂不支持人员信息转换",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            },
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

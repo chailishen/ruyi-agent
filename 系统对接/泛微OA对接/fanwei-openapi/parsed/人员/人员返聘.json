@@ -1,0 +1,69 @@
+{
+  "id": "840675226347470848",
+  "name": "人员返聘",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/api/hrm/restful/rehireEmployee",
+  "url_template": "{OpenApiOrigin}/api/hrm/restful/rehireEmployee",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "返聘人员id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "keyValue",
+      "required": "",
+      "type": "String",
+      "description": "人员id"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "人员id"
+    },
+    {
+      "name": "operate",
+      "required": "",
+      "type": "操作类型",
+      "description": "update 修改 add 新增"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "状态",
+      "description": "SUCCESS : 成功 ERROR ：失败"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "人员返聘"
+  ],
+  "raw_text": "## 人员返聘\n请求URL：\n- {OpenApiOrigin}/api/hrm/restful/rehireEmployee\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 返聘人员id 获取用户ID |\n备注:\n- Body 参数格式(application/json)\n传参示例：\n请求示例：\n响应示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| keyValue | String | 人员id |\n| id | Long | 人员id |\n| operate | 操作类型 | update 修改 add 新增 |\n| status | 状态 | SUCCESS : 成功 ERROR ：失败 |\nJava sdk调用示例："
+}

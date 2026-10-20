@@ -1,0 +1,112 @@
+{
+  "id": "197073733465145344",
+  "name": "商机新增评论",
+  "module": "商机",
+  "module_path": [
+    "商机"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "attachments",
+      "required": "否",
+      "type": "String",
+      "description": "评论对应的附件信息"
+    },
+    {
+      "name": "comment.targetId",
+      "required": "是",
+      "type": "Long",
+      "description": "评论对应的事项ID"
+    },
+    {
+      "name": "comment.disableMessage",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否禁用发送评论消息，默认为false"
+    },
+    {
+      "name": "comment.relevanceList",
+      "required": "否",
+      "type": "Object",
+      "description": "评论的事项关联信息列表relevanceList：[ \"targetId\": \"5118242497465889431\" ,\"targetModule\": \"task\" \"targetName\": \"1\"]targetId 关联的事项的id，targetModule 关联的事项的module，targetName关联的事项的名"
+    },
+    {
+      "name": "comment.atLinkList",
+      "required": "否",
+      "type": "Object",
+      "description": "评论的艾特信息列表"
+    },
+    {
+      "name": "comment.content",
+      "required": "是",
+      "type": "String",
+      "description": "评论内容，富文本评论需要以_weaverMte_开头"
+    },
+    {
+      "name": "comment.module",
+      "required": "是",
+      "type": "String",
+      "description": "评论所属模块，例如商机模块为saleChance，客户模块为customer"
+    },
+    {
+      "name": "currentUser.id",
+      "required": "是",
+      "type": "String",
+      "description": "评论人的人员id"
+    },
+    {
+      "name": "currentUser.tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "评论人的租户key"
+    },
+    {
+      "name": "currentUser.username",
+      "required": "是",
+      "type": "String",
+      "description": "评论人的名称"
+    },
+    {
+      "name": "client",
+      "required": "否",
+      "type": "String",
+      "description": "评论发送来源，默认pc，移动端mobile 区分大小写"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "评论信息（JSON格式）内容说明和请求中的comment一致"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- https://api.yunteams.cn/api/crm/common/comment/createComment\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| attachments | 否 | String | 评论对应的附件信息 |\n| comment.targetId | 是 | Long | 评论对应的事项ID |\n| comment.disableMessage | 否 | Boolean | 是否禁用发送评论消息，默认为false |\n| comment.relevanceList | 否 | Object | 评论的事项关联信息列表relevanceList：[ \"targetId\": \"5118242497465889431\" ,\"targetModule\": \"task\" \"targetName\": \"1\"]targetId 关联的事项的id，targetModule 关联的事项的module，targetName关联的事项的名 |\n| comment.atLinkList | 否 | Object | 评论的艾特信息列表 |\n| comment.content | 是 | String | 评论内容，富文本评论需要以_weaverMte_开头 |\n| comment.module | 是 | String | 评论所属模块，例如商机模块为saleChance，客户模块为customer |\n| currentUser.id | 是 | String | 评论人的人员id |\n| currentUser.tenantKey | 是 | String | 评论人的租户key |\n| currentUser.username | 是 | String | 评论人的名称 |\n| client | 否 | String | 评论发送来源，默认pc，移动端mobile 区分大小写 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| data | String | 评论信息（JSON格式）内容说明和请求中的comment一致 |"
+}

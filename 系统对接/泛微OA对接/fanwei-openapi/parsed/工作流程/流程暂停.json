@@ -1,0 +1,60 @@
+{
+  "id": "408014601586737152",
+  "name": "流程暂停",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/stop?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/stop?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "流程暂停"
+  ],
+  "raw_text": "## 流程暂停\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/stop?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n说明：\n- 能调用该接口权限的人：人员具有流程监控开启了【可暂停启用】权限。人员在：应用设置-基础设置-暂停功能设置和工作流设置-高级设置-暂停功能设置配置中配置了权限。\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |"
+}

@@ -1,0 +1,91 @@
+{
+  "id": "408042555192639488",
+  "name": "获取退回操作发送人",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getSendOperator?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getSendOperator?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "isGetAllInTurnOperator",
+      "required": "",
+      "type": "boolean",
+      "description": "当发送人有依次逐个处理的情况，传递该值为true时，可以得到所有的依次逐个处理的人，否则只会得到依次逐个处理的第一个人"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "",
+      "type": "long",
+      "description": "当有多个节点时，可以传递节点ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "long",
+      "description": "人员ID"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "long",
+      "description": "节点ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "人员名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取退回操作发送人"
+  ],
+  "raw_text": "## 获取退回操作发送人\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getSendOperator?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n说明：\n- 当操作者能退回时，可以调用该接口获取流程的发送人或发送人所在轮次所有人数据；\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n| isGetAllInTurnOperator | 否 | boolean | 当发送人有依次逐个处理的情况，传递该值为true时，可以得到所有的依次逐个处理的人，否则只会得到依次逐个处理的第一个人 |\n| userCurrentNodeId | 否 | long | 当有多个节点时，可以传递节点ID |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |\ndata说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| userId | long | 人员ID |\n| nodeId | long | 节点ID |\n| userName | String | 人员名称 |"
+}

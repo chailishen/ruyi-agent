@@ -1,0 +1,48 @@
+{
+  "id": "840674826763640833",
+  "name": "离职人员",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v2/delete",
+  "url_template": "{OpenApiOrigin}/user/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "离职人员"
+  ],
+  "raw_text": "## 离职人员\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用同步人员接口\n请求URL：\n- {OpenApiOrigin}/user/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n返回示例：\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v2/delete?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&userid=4980937863852743878\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

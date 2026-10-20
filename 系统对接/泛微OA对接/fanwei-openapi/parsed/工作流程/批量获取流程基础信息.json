@@ -1,0 +1,79 @@
+{
+  "id": "279102228558512128",
+  "name": "批量获取流程基础信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/batchGetRequestInfo",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchGetRequestInfo",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestIds",
+      "required": "是",
+      "type": "String",
+      "description": "流程ID，多个ID用英文逗号隔开；最多传递100个，多余100的流程ID将被忽略；"
+    },
+    {
+      "name": "isGetOperator",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：额外获取当前节点操作者，默认值：false；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": "响应数据"
+    },
+    {
+      "name": "failRequest",
+      "required": "",
+      "type": "json",
+      "description": "查询失败的流程信息以及提示信息"
+    },
+    {
+      "name": "requestBaseInfo",
+      "required": "",
+      "type": "json",
+      "description": "查询成功的流程信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量获取流程基础信息"
+  ],
+  "raw_text": "## 批量获取流程基础信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/batchGetRequestInfo\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| requestIds | 是 | String | 流程ID，多个ID用英文逗号隔开；最多传递100个，多余100的流程ID将被忽略； |\n| isGetOperator | 否 | boolean | true：额外获取当前节点操作者，默认值：false； |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| data | JSON | 响应数据 |\n| failRequest | json | 查询失败的流程信息以及提示信息 |\n| requestBaseInfo | json | 查询成功的流程信息 |\nJava sdk调用示例："
+}

@@ -1,0 +1,84 @@
+{
+  "id": "408047921972379648",
+  "name": "回收站批量还原流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/recover?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/recover?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestIds",
+      "required": "",
+      "type": "String",
+      "description": "流程请求id，多个请求ID用英文逗号隔开；"
+    },
+    {
+      "name": "resendMsg",
+      "required": "",
+      "type": "boolean",
+      "description": "true：对未操作者发送新到达消息（草稿数据不推送新到达流程提醒）；默认值：false；"
+    },
+    {
+      "name": "isViewDelRequest",
+      "required": "",
+      "type": "int",
+      "description": "是否可获取回收站数据  0：否（默认） 1：是"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    },
+    {
+      "name": "successRequest",
+      "required": "",
+      "type": "list",
+      "description": "还原成功的流程ID集合"
+    },
+    {
+      "name": "failRequest",
+      "required": "",
+      "type": "Map",
+      "description": "还原失败的流程ID以及还原失败的原因；"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "回收站批量还原流程"
+  ],
+  "raw_text": "## 回收站批量还原流程\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/recover?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestIds | 是 | String | 流程请求id，多个请求ID用英文逗号隔开； |\n| resendMsg | 否 | boolean | true：对未操作者发送新到达消息（草稿数据不推送新到达流程提醒）；默认值：false； |\n| isViewDelRequest | 否 | int | 是否可获取回收站数据  0：否（默认） 1：是 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |\ndata说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| successRequest | list | 还原成功的流程ID集合 |\n| failRequest | Map | 还原失败的流程ID以及还原失败的原因； |"
+}

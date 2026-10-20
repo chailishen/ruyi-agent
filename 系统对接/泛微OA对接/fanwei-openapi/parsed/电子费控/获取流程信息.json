@@ -1,0 +1,218 @@
+{
+  "id": "908325891736551425",
+  "name": "获取流程信息",
+  "module": "电子费控",
+  "module_path": [
+    "电子费控"
+  ],
+  "is_api": true,
+  "url": "/api/fna/workflow/core/paService/v1/getWorkflowRequest",
+  "url_template": "{OpenApiOrigin}/api/fna/workflow/core/paService/v1/getWorkflowRequest",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "GET （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "审批数据"
+    },
+    {
+      "name": "workflowRequestLogs",
+      "required": "",
+      "type": "String",
+      "description": "获取签字意见"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "审批实例id"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "String",
+      "description": "审批id"
+    },
+    {
+      "name": "workflowType",
+      "required": "",
+      "type": "String",
+      "description": "审批类型id"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "创建人id"
+    },
+    {
+      "name": "userIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "创建人岗位id"
+    },
+    {
+      "name": "createDateTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "lastNodeId",
+      "required": "",
+      "type": "String",
+      "description": "最后节点"
+    },
+    {
+      "name": "lastNodeType",
+      "required": "",
+      "type": "String",
+      "description": "最后节点类型"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "类型名称"
+    },
+    {
+      "name": "requestName",
+      "required": "",
+      "type": "String",
+      "description": "审批实例名称"
+    },
+    {
+      "name": "requestNameHtml",
+      "required": "",
+      "type": "String",
+      "description": "审批实例显示名称"
+    },
+    {
+      "name": "requestNameTitle",
+      "required": "",
+      "type": "String",
+      "description": "审批名称"
+    },
+    {
+      "name": "lastOperator",
+      "required": "",
+      "type": "String",
+      "description": "最后操作者id"
+    },
+    {
+      "name": "lastOperateDateTime",
+      "required": "",
+      "type": "String",
+      "description": "最后操作时间"
+    },
+    {
+      "name": "requestLevel",
+      "required": "",
+      "type": "String",
+      "description": "紧急程度"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "String",
+      "description": "密级"
+    },
+    {
+      "name": "lastFeedBackDatetime",
+      "required": "",
+      "type": "String",
+      "description": "最后反馈时间"
+    },
+    {
+      "name": "flowStatus",
+      "required": "",
+      "type": "String",
+      "description": "审批状态"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "updateTime",
+      "required": "",
+      "type": "String",
+      "description": "更新时间"
+    },
+    {
+      "name": "lastCommentTime",
+      "required": "",
+      "type": "String",
+      "description": "最后评论时间"
+    },
+    {
+      "name": "triggerSource",
+      "required": "",
+      "type": "String",
+      "description": "触发方式"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "moduleDataId",
+      "required": "",
+      "type": "String",
+      "description": "模块id"
+    },
+    {
+      "name": "test",
+      "required": "",
+      "type": "String",
+      "description": "是否审批测试数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程信息"
+  ],
+  "raw_text": "## 获取流程信息\n请求URL：\n- {OpenApiOrigin}/api/fna/workflow/core/paService/v1/getWorkflowRequest\n请求方式：\n- GET （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程数据ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 审批数据 |\n| workflowRequestLogs | String | 获取签字意见 |\n| requestId | String | 审批实例id |\n| workflowId | String | 审批id |\n| workflowType | String | 审批类型id |\n| userId | String | 创建人id |\n| userIdentityId | String | 创建人岗位id |\n| createDateTime | String | 创建时间 |\n| lastNodeId | String | 最后节点 |\n| lastNodeType | String | 最后节点类型 |\n| status | String | 类型名称 |\n| requestName | String | 审批实例名称 |\n| requestNameHtml | String | 审批实例显示名称 |\n| requestNameTitle | String | 审批名称 |\n| lastOperator | String | 最后操作者id |\n| lastOperateDateTime | String | 最后操作时间 |\n| requestLevel | String | 紧急程度 |\n| secLevel | String | 密级 |\n| lastFeedBackDatetime | String | 最后反馈时间 |\n| flowStatus | String | 审批状态 |\n| createTime | String | 创建时间 |\n| updateTime | String | 更新时间 |\n| lastCommentTime | String | 最后评论时间 |\n| triggerSource | String | 触发方式 |\n| module | String | 模块 |\n| moduleDataId | String | 模块id |\n| test | String | 是否审批测试数据 |\nJava sdk调用示例："
+}

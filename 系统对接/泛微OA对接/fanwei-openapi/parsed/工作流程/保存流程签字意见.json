@@ -1,0 +1,108 @@
+{
+  "id": "840714748619751425",
+  "name": "保存流程签字意见",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/saveRequestLog",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/saveRequestLog",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "审批意见"
+    },
+    {
+      "name": "attachments",
+      "required": "否",
+      "type": "String",
+      "description": "相关附件id"
+    },
+    {
+      "name": "signatureData",
+      "required": "否",
+      "type": "Map<String, Object>",
+      "description": "手写签批"
+    },
+    {
+      "name": "userSignatureData",
+      "required": "否",
+      "type": "Map<String, Object>",
+      "description": "电子签名"
+    },
+    {
+      "name": "locationData",
+      "required": "否",
+      "type": "Map<String, Object>",
+      "description": "位置信息"
+    },
+    {
+      "name": "quoteData",
+      "required": "否",
+      "type": "List<Map<String, Object>>",
+      "description": "引用信息"
+    },
+    {
+      "name": "fullTextAnnotationData",
+      "required": "否",
+      "type": "List<String>",
+      "description": "全文批注"
+    },
+    {
+      "name": "mailAndSmsMsgParam",
+      "required": "否",
+      "type": "Map<String, Object>",
+      "description": "流程提醒相关参数"
+    },
+    {
+      "name": "odocId",
+      "required": "否",
+      "type": "String",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "保存流程签字意见"
+  ],
+  "raw_text": "## 保存流程签字意见\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/saveRequestLog\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n| remark | 否 | String | 审批意见 |\n| attachments | 否 | String | 相关附件id |\n| signatureData | 否 | Map<String, Object> | 手写签批 |\n| userSignatureData | 否 | Map<String, Object> | 电子签名 |\n| locationData | 否 | Map<String, Object> | 位置信息 |\n| quoteData | 否 | List<Map<String, Object>> | 引用信息 |\n| fullTextAnnotationData | 否 | List<String> | 全文批注 |\n| mailAndSmsMsgParam | 否 | Map<String, Object> | 流程提醒相关参数 |\n| odocId | 否 | String |  |\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

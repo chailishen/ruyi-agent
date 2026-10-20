@@ -1,0 +1,295 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "开放平台接口发布管理",
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台接口发布管理"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "前言",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "前言"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "针对于私有化二开开放平台接口场景繁多，以及二开接口和自有接口缺少发布，上线，下线等管理控制，现新增接口管理机制。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "功能介绍",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "功能介绍"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "私有化项目同事或客户按照开放平台对接规范开发好对应的接口后可直接使用开放平台接口发布管理功能进行接口的自动发布以及上下线维护管理，无需再去手动调整网关配置等复杂操作事项。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "操作说明",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "操作说明"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "1.按照开放平台对接规范("
+        },
+        {
+          "type": "text",
+          "text": "{origin}/sp/techdoc/view/716154026911416320/879737644644122625",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{origin}/sp/techdoc/view/716154026911416320/879737644644122625",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ")开发好相关接口后，进入后台管理中心-开放平台-在接口管理菜单中对接口进行发布维护，发布完成后展示在前台接口列表中,状态为待审核"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注意事项",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "1.接口名称不允许重复  "
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "2.接口路由不允许重复,一个接口对应一个具体的URL,并且需要以/sapi开头"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3.服务名称是"
+        },
+        {
+          "type": "text",
+          "text": "nacos注册中心中的原服务名称(见下面图2)，组合部署可在运维平台中查询服务实际名称(见下面图3)",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontFamily": null,
+                "fontSize": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ",并非代码项目的名称（单体部署统一为E10）"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957953152199999488.0.png",
+            "alt": ""
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957953152199999488.1.png",
+            "alt": ""
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957953152199999488.2.png",
+            "alt": "image.png"
+          }
+        },
+        {
+          "type": "text",
+          "text": "  "
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "2.使用"
+        },
+        {
+          "type": "text",
+          "text": "主管理团队",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "账号进入开放平台管理中心，在接口管理菜单中对接口进行上下线的审核操作"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957953152199999488.3.png",
+            "alt": ""
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957953152199999488.4.png",
+            "alt": ""
+          }
+        },
+        {
+          "type": "text",
+          "text": "  "
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3."
+        },
+        {
+          "type": "text",
+          "text": "主管理团队",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "在管理中心对接口审核通过后，会给出提示，需要重启weaver-open-gateway网关服务（单体部署无需重启）后生效,重启完成后，则可以对接口进行正常调用"
+        }
+      ]
+    }
+  ]
+}

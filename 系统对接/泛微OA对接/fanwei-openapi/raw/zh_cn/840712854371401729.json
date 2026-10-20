@@ -1,0 +1,1066 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "根据审批表id列表查询数据分页返回",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "根据审批表ID列表查询数据，分页返回"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds",
+                        "title": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "#e27300",
+                        "backgroundColor": null,
+                        "fontSize": null,
+                        "fontFamily": null,
+                        "align": null,
+                        "underline": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840673319280451584');",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userid"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "用户ID "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取用户ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840674921396404224');",
+                            "title": "获取用户ID"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "formIds"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List<Long>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "审批表ID列表（最大10）"
+                    },
+                    {
+                      "type": "text",
+                      "text": " 获取审批表ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840693728847601665');",
+                            "target": "_blank",
+                            "rel": "noopener noreferrer nofollow",
+                            "class": null
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageNo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Integer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "分页页码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageSize"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Integer"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "每页数量（最大200）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "query",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "方式"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "{OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&formIds=6473714586545086123,785837620680556544"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n    \"flowMaps\": {\n        \"785837620680556544\": [\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1666167841000,\n                \"flowSequence\": 785837620592910336,\n                \"formData\": 785840188961947648,\n                \"formId\": 785837620680556544,\n                \"id\": \"785840077468958721\",\n                \"name\": \"回调测试2\",\n                \"requestTime\": 1666167679000,\n                \"statusType\": \"finish\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1666167536000,\n                \"flowSequence\": 785837620592910336,\n                \"formData\": 785839540421885953,\n                \"formId\": 785837620680556544,\n                \"id\": \"785839458851061760\",\n                \"name\": \"新建审批1019-02-陈陈-2022-10-19-任意节点回到哦测试\",\n                \"requestTime\": 1666167528000,\n                \"statusType\": \"finish\"\n            }\n        ],\n        \"6473714586545086123\": [\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1679624066000,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 843623742788444163,\n                \"formId\": 6473714586545086123,\n                \"id\": \"843623747084992512\",\n                \"name\": \"新增审批2023-03-23 18:26:38\",\n                \"requestTime\": 1679621461000,\n                \"statusType\": \"finish\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 843402684965937152,\n                \"formId\": 6473714586545086123,\n                \"id\": \"843402719487508480\",\n                \"name\": \"新增审批2023-03-23 18:26:38\",\n                \"requestTime\": 1679570006000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 843391900481667073,\n                \"formId\": 6473714586545086123,\n                \"id\": \"843391904650805249\",\n                \"name\": \"新增审批2023-03-23 18:26:38\",\n                \"requestTime\": 1679567485000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 843390727824244766,\n                \"formId\": 6473714586545086123,\n                \"id\": \"843390740709146624\",\n                \"name\": \"新增审批2023-03-23 18:26:38\",\n                \"requestTime\": 1679567213000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 843390075131822082,\n                \"formId\": 6473714586545086123,\n                \"id\": \"843390105070764033\",\n                \"name\": \"新增审批2023-03-23 18:24:00\",\n                \"requestTime\": 1679567065000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 817029988175208448,\n                \"formId\": 6473714586545086123,\n                \"id\": \"817029949516095488\",\n                \"name\": \"测试角标\",\n                \"requestTime\": 1673429620000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1673429476000,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 817029343896559616,\n                \"formId\": 6473714586545086123,\n                \"id\": \"817029318084812800\",\n                \"name\": \"基础审批表单chl-陈兰-2023-1-11\",\n                \"requestTime\": 1673429471000,\n                \"statusType\": \"finish\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1669702263000,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 801021047243980801,\n                \"formId\": 6473714586545086123,\n                \"id\": \"801020793983516672\",\n                \"name\": \"明细表数据测试\",\n                \"requestTime\": 1669702250000,\n                \"statusType\": \"finish\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 786240608980566017,\n                \"formId\": 6473714586545086123,\n                \"id\": \"786240570247462912\",\n                \"name\": \"复制审批\",\n                \"requestTime\": 1666260909000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 786240076267503616,\n                \"formId\": 6473714586545086123,\n                \"id\": \"786240016037298177\",\n                \"name\": \"基础审批表单chl-陈陈-2022-10-20\",\n                \"requestTime\": 1666260785000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"2225304380394396551\",\n                    \"userid\": \"2225304380394396551\",\n                    \"username\": \"赵志成\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 782793992027791360,\n                \"formId\": 6473714586545086123,\n                \"id\": \"782793846166675457\",\n                \"name\": \"基础审批表单chl-赵志成-2022-10-11\",\n                \"requestTime\": 1665478601000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"2225304380394396551\",\n                    \"userid\": \"2225304380394396551\",\n                    \"username\": \"赵志成\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 782486807519641600,\n                \"formId\": 6473714586545086123,\n                \"id\": \"782486180513136641\",\n                \"name\": \"基础审批表单chl-赵志成-2022-10-10\",\n                \"statusType\": \"unSubmit\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 782479248201039872,\n                \"formId\": 6473714586545086123,\n                \"id\": \"782479162486243329\",\n                \"name\": \"测试对接esb后回调\",\n                \"statusType\": \"unSubmit\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 775369952145596422,\n                \"formId\": 6473714586545086123,\n                \"id\": \"775369926391865345\",\n                \"name\": \"基础审批表单chl-陈陈-2022-9-21-[远程无侵入修改abc]\",\n                \"requestTime\": 1663729887000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5113843477207934449\",\n                    \"userid\": \"5113843477207934449\",\n                    \"username\": \"西方甩卖\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5955819769188354849,\n                \"formId\": 6473714586545086123,\n                \"id\": \"751609157874761729\",\n                \"name\": \"基础审批表单chl-陈尹娜B-2022-7-19\",\n                \"requestTime\": 1658197693000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5955630244671060610,\n                \"formId\": 6473714586545086123,\n                \"id\": \"743469305784926208\",\n                \"name\": \"基础审批表单chl-陈陈-2022-6-27\",\n                \"requestTime\": 1656302448000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112639914017544118\",\n                    \"userid\": \"5112639914017544118\",\n                    \"username\": \"陈陈\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 6475630191790672841,\n                \"formId\": 6473714586545086123,\n                \"id\": \"743467025266343936\",\n                \"name\": \"基础审批表单chl-陈陈-2022-6-27\",\n                \"requestTime\": 1656301921000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"finishTime\": 1646289822000,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5954628981593762003,\n                \"formId\": 6473714586545086123,\n                \"id\": \"700465301632901120\",\n                \"name\": \"基础审批表单chl-测试干预\",\n                \"requestTime\": 1646289817000,\n                \"statusType\": \"finish\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 6474034627163227159,\n                \"formId\": 6473714586545086123,\n                \"id\": \"674938073210093568\",\n                \"name\": \"基础审批表单chl-陈兰-2021-12-24\",\n                \"requestTime\": 1640346272000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5954034574293361209,\n                \"formId\": 6473714586545086123,\n                \"id\": \"674935775360647168\",\n                \"name\": \"基础审批表单chl-陈兰-2021-12-241935\",\n                \"requestTime\": 1640345743000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5954034518302761203,\n                \"formId\": 6473714586545086123,\n                \"id\": \"674933344417546241\",\n                \"name\": \"基础审批表单chl-陈兰-2021-12-24新\",\n                \"requestTime\": 1640345183000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5140826883110054023\",\n                    \"userid\": \"5140826883110054023\",\n                    \"username\": \"陈兰\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 6474034491933927155,\n                \"formId\": 6473714586545086123,\n                \"id\": \"674932257814798336\",\n                \"name\": \"基础审批表单chl-陈兰-2021-12-24\",\n                \"requestTime\": 1640344920000,\n                \"statusType\": \"inProcess\"\n            },\n            {\n                \"creator\": {\n                    \"id\": \"5112072213907315398\",\n                    \"userid\": \"5112072213907315398\",\n                    \"username\": \"孙晓晓\"\n                },\n                \"delete\": false,\n                \"flowSequence\": 661192584547819528,\n                \"formData\": 5953791554441389664,\n                \"formId\": 6473714586545086123,\n                \"id\": \"664498167408107520\",\n                \"name\": \"基础审批表单chl-孙纯慧-2021-11-26\",\n                \"requestTime\": 1637915545000,\n                \"statusType\": \"inProcess\"\n            }\n        ]\n    },\n    \"message\": {\n        \"errcode\": \"0\",\n        \"errmsg\": \"success\"\n    },\n    \"pageNo\": 1,\n    \"pageSize\": 200\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errcode"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840723540442972161');",
+                            "title": "返回码"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errmsg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "flowMaps"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "流程列表"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "FlowVo flowVo = new FlowVo();\nflowVo.setAccessToken(accessToken);\nflowVo.setUserid(5140826883110054023L);\nflowVo.setFormIds(Arrays.asList(845865007038095360L));\nflowVo.setPageNo(1);\nflowVo.setPageSize(20);\nFlowResultVo normalRes = FlowService.queryStatFlowByFormIdsV2(flowVo, \"{OpenApiOrigin}\", null);"
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

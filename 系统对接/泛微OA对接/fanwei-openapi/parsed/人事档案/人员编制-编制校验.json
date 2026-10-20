@@ -1,0 +1,146 @@
+{
+  "id": "365948145936367616",
+  "name": "人员编制-编制校验",
+  "module": "人事档案",
+  "module_path": [
+    "人事档案"
+  ],
+  "is_api": true,
+  "url": "/api/hr/hrapi/est/validate",
+  "url_template": "/api/hr/hrapi/est/validate",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "操作人员id"
+    },
+    {
+      "name": "empList",
+      "required": "是",
+      "type": "array",
+      "description": "新增的人员数据"
+    },
+    {
+      "name": "source",
+      "required": "是",
+      "type": "string",
+      "description": "新增人员：addEmp，更新人员：updateEmp"
+    },
+    {
+      "name": "updateEmpFieldList",
+      "required": "否",
+      "type": "array",
+      "description": "更新的人员字段key,empList的参数key"
+    },
+    {
+      "name": "preIgnoreBusiIdList",
+      "required": "否",
+      "type": "array",
+      "description": "校验的时候忽略的预增数据busiId集合"
+    },
+    {
+      "name": "date",
+      "required": "否",
+      "type": "string",
+      "description": "校验日期 2025-10-11 这样格式的字符串，传递的话，按照这个日期的编制配置进行校验，只支持当前和未来日期【1101基线支持】"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "否",
+      "type": "long",
+      "description": "人员id，新增人员不需要"
+    },
+    {
+      "name": "departmentId",
+      "required": "否",
+      "type": "long",
+      "description": "部门id"
+    },
+    {
+      "name": "positionId",
+      "required": "否",
+      "type": "long",
+      "description": "岗位id"
+    },
+    {
+      "name": "locationId",
+      "required": "否",
+      "type": "long",
+      "description": "办公地点id"
+    },
+    {
+      "name": "jobcallId",
+      "required": "否",
+      "type": "long",
+      "description": "职称"
+    },
+    {
+      "name": "gradeId",
+      "required": "否",
+      "type": "long",
+      "description": "职级"
+    },
+    {
+      "name": "jobsetLevelId",
+      "required": "否",
+      "type": "long",
+      "description": "职等"
+    },
+    {
+      "name": "hiredate",
+      "required": "否",
+      "type": "date",
+      "description": "入职日期"
+    },
+    {
+      "name": "personnelStatus",
+      "required": "否",
+      "type": "string",
+      "description": "人员状态"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "checkResult",
+      "required": "",
+      "type": "boolean",
+      "description": "是否校验通过"
+    },
+    {
+      "name": "errContent",
+      "required": "",
+      "type": "string",
+      "description": "校验不通过提示内容"
+    },
+    {
+      "name": "overCtrl",
+      "required": "",
+      "type": "string",
+      "description": "超编管控 强控：STRONG，弱控：WEAK"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "简要描述",
+    "请求URL",
+    "请求方式",
+    "参数",
+    "empList参数说明",
+    "请求参数示例",
+    "返回示例",
+    "返回参数说明",
+    "data返回参数说明"
+  ],
+  "raw_text": "##### 简要描述\n- 对预修改数据修改前先进行编制校验\n##### 请求URL\n- /api/hr/hrapi/est/validate\n##### 请求方式\n- POST\n##### 参数\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| userid | 是 | long | 操作人员id |\n| empList | 是 | array | 新增的人员数据 |\n| source | 是 | string | 新增人员：addEmp，更新人员：updateEmp |\n| updateEmpFieldList | 否 | array | 更新的人员字段key,empList的参数key |\n| preIgnoreBusiIdList | 否 | array | 校验的时候忽略的预增数据busiId集合 |\n| date | 否 | string | 校验日期 2025-10-11 这样格式的字符串，传递的话，按照这个日期的编制配置进行校验，只支持当前和未来日期【1101基线支持】 |\n##### empList参数说明\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 否 | long | 人员id，新增人员不需要 |\n| departmentId | 否 | long | 部门id |\n| positionId | 否 | long | 岗位id |\n| locationId | 否 | long | 办公地点id |\n| jobcallId | 否 | long | 职称 |\n| gradeId | 否 | long | 职级 |\n| jobsetLevelId | 否 | long | 职等 |\n| hiredate | 否 | date | 入职日期 |\n| personnelStatus | 否 | string | 人员状态 |\n##### 请求参数示例\n##### 返回示例\n##### 返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errmsg | string | 错误提示 |\n##### data返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| checkResult | boolean | 是否校验通过 |\n| errContent | string | 校验不通过提示内容 |\n| overCtrl | string | 超编管控 强控：STRONG，弱控：WEAK |"
+}

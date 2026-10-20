@@ -1,0 +1,97 @@
+{
+  "id": "840715105118814208",
+  "name": "获取流程状态",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestStatus",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatus",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "审批状态数据"
+    },
+    {
+      "name": "workflowBaseInfo",
+      "required": "",
+      "type": "String",
+      "description": "审批基本信息 详细说明同获取审批信息接口"
+    },
+    {
+      "name": "currentNodeType",
+      "required": "",
+      "type": "String",
+      "description": "“节点类型”,//START(发起),APPROVE(批准),COMMIT(提交),END(结束),SUB_WF(子流程节点),VOTE(投票节点),LOOP(循环审批),ROBOT(机器人节点),WAIT(等待节点),LOOK_UP(查阅节点 仅自由节点使用)"
+    },
+    {
+      "name": "creatorId",
+      "required": "",
+      "type": "String",
+      "description": "创建人id"
+    },
+    {
+      "name": "currentNode",
+      "required": "",
+      "type": "String",
+      "description": "节点id"
+    },
+    {
+      "name": "isremark",
+      "required": "",
+      "type": "String",
+      "description": "操作状态，具体可以查看数据字典"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "流程状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程状态"
+  ],
+  "raw_text": "## 获取流程状态\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatus\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 审批状态数据 |\n| workflowBaseInfo | String | 审批基本信息 详细说明同获取审批信息接口 |\n| currentNodeType | String | “节点类型”,//START(发起),APPROVE(批准),COMMIT(提交),END(结束),SUB_WF(子流程节点),VOTE(投票节点),LOOP(循环审批),ROBOT(机器人节点),WAIT(等待节点),LOOK_UP(查阅节点 仅自由节点使用) |\n| creatorId | String | 创建人id |\n| currentNode | String | 节点id |\n| isremark | String | 操作状态，具体可以查看数据字典 |\n| status | String | 流程状态 |\nJava sdk调用示例："
+}

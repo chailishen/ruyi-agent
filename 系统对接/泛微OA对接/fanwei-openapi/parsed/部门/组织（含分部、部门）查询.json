@@ -1,0 +1,243 @@
+{
+  "id": "949500884241367040",
+  "name": "组织（含分部、部门）查询",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/api/hrm/restful/queryOrg",
+  "url_template": "{OpenApiOrigin}/api/hrm/restful/queryOrg",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "codeList",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "ids",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "typeList",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "containDisableOrg",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "containExtend",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "current",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "parentCodeList",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "parentOrgIds",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "loadAllChilds",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "subcompanyCodeList",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "subcompanyList",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "multiFieldList",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "",
+      "description": "响应状态"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "",
+      "description": "状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "",
+      "description": "响应消息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "",
+      "description": "数据"
+    },
+    {
+      "name": "current",
+      "required": "",
+      "type": "",
+      "description": "分页-当前页"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "",
+      "description": "分页-总数"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "",
+      "description": "上级组织（分部/部门）"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "",
+      "description": "编号"
+    },
+    {
+      "name": "tenant_key",
+      "required": "",
+      "type": "",
+      "description": "组织key"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "",
+      "description": "组织类型"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "",
+      "description": "组织id"
+    },
+    {
+      "name": "virtualid",
+      "required": "",
+      "type": "",
+      "description": "多维id"
+    },
+    {
+      "name": "disporder",
+      "required": "",
+      "type": "",
+      "description": "排序"
+    },
+    {
+      "name": "subcompanyid",
+      "required": "",
+      "type": "",
+      "description": "所属分部id"
+    },
+    {
+      "name": "datarank",
+      "required": "",
+      "type": "",
+      "description": "层级"
+    },
+    {
+      "name": "is_delete",
+      "required": "",
+      "type": "",
+      "description": "是否删除"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "",
+      "description": "名称"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "",
+      "description": "是否启用"
+    },
+    {
+      "name": "extend",
+      "required": "",
+      "type": "",
+      "description": "组织自定义"
+    },
+    {
+      "name": "multiObj",
+      "required": "",
+      "type": "",
+      "description": "多语言"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "",
+      "description": "分页-页大小"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "组织查询（含分部、部门）-高级搜索"
+  ],
+  "raw_text": "## 组织查询（含分部、部门）-高级搜索\n请求URL：\n- {OpenApiOrigin}/api/hrm/restful/queryOrg\n请求方式：\n- POST\n参数释义：\n| 参数名 | 参数位置 | 参数类型 | 是否必需 | 描述 | 详细描述 |\n| --- | --- | --- | --- | --- | --- |\n| access_token | params | String | 是 | 调用凭证 |  |\n| codeList | body | [String] | 否 | 编号 |  |\n| ids | body | [Long] | 否 | 组织id（部门/分部） |  |\n| typeList | body | [String] | 否 | 组织类型 | 类型： department 部门、subcompany 分部 |\n| containDisableOrg | body | boolean | 否 | 含停用部门 |  |\n| containExtend | body | boolean | 否 | 包含自定义（分部/部门） |  |\n| current | body | Integer | 否 | 分页-当前页 |  |\n| pageSize | body | Integer | 否 | 分页-页大小 | 最大1000 |\n| parentCodeList | body | [String] | 否 | 上级组织编号 | 可以是分部或者部门的编号；与parentOrgIds参数冲突；如果设置当前参数，则parentOrgIds无效 |\n| parentOrgIds | body | [Long] | 否 | 上级组织id | 可以是分部或者部门 |\n| loadAllChilds | body | boolean | 否 | 是否含下级 | 仅支持 parentCodeList 或者 parentOrgIds |\n| subcompanyCodeList | body | [String] | 否 | 所属分部编号列表 | 与subcompanyList参数冲突；如果设置当前参数，则subcompanyList无效 |\n| subcompanyList | body | [Long] | 否 | 所属分部id列表 |  |\n| multiFieldList | body | [String] | 否 | 需要返回的多语言字段 | 仅支持： name 名称；fullname 全称 |\n备注:\n- Body 参数格式(application/json)\n传参示例：\n请求示例：\n响应示例：\n返回参数说明：\n| 参数名 | 参数类型 | 是否必需 | 说明 | 详细说明 |\n| --- | --- | --- | --- | --- |\n| message | Object | true | 响应状态 |  |\n| errcode | String | true | 状态码 |  |\n| errmsg | String | true | 响应消息 |  |\n| data | Object | true | 数据 |  |\n| current | Integer | true | 分页-当前页 |  |\n| total | Integer | true | 分页-总数 |  |\n| data | [Object] | true |  |  |\n| parent | String | true | 上级组织（分部/部门） |  |\n| code | String | true | 编号 |  |\n| tenant_key | String | true | 组织key |  |\n| type | String | true | 组织类型 | subcompany 分部，department 部门 |\n| id | String | true | 组织id |  |\n| virtualid | String | true | 多维id |  |\n| disporder | Integer | true | 排序 |  |\n| subcompanyid | String | true | 所属分部id |  |\n| datarank | Integer | true | 层级 |  |\n| is_delete | boolean | true | 是否删除 |  |\n| name | String | true | 名称 |  |\n| status | boolean | true | 是否启用 | 1 启用；0 停用 |\n| extend | Object | true | 组织自定义 |  |\n| multiObj | Object | true | 多语言 |  |\n| pageSize | Integer | true | 分页-页大小 |  |"
+}

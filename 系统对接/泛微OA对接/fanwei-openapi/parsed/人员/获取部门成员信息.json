@@ -1,0 +1,102 @@
+{
+  "id": "840675002832134145",
+  "name": "获取部门成员信息",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v3/departmentUsers",
+  "url_template": "{OpenApiOrigin}/user/v3/departmentUsers",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "depid",
+      "required": "是",
+      "type": "Long",
+      "description": "部门ID 获取部门ID"
+    },
+    {
+      "name": "status",
+      "required": "是",
+      "type": "String",
+      "description": "成员状态：在职normal、离职unavailable、已邀请invited、所有ALL"
+    },
+    {
+      "name": "fetch_child",
+      "required": "是",
+      "type": "String",
+      "description": "是否递归子部门：0非递归、1递归"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "user",
+      "required": "",
+      "type": "Object",
+      "description": "成员信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "username",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门列表"
+    },
+    {
+      "name": "mobile",
+      "required": "",
+      "type": "String",
+      "description": "手机号码"
+    },
+    {
+      "name": "email",
+      "required": "",
+      "type": "String",
+      "description": "邮箱号码"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "成员状态：在职normal、离职unavailable、已邀请invited"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取部门成员信息"
+  ],
+  "raw_text": "## 获取部门成员信息\n注：本接口为老接口，不推荐使用，请优先使用查询人员-高级搜索接口\n请求URL：\n- {OpenApiOrigin}/user/v3/departmentUsers\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| depid | 是 | Long | 部门ID 获取部门ID |\n| status | 是 | String | 成员状态：在职normal、离职unavailable、已邀请invited、所有ALL |\n| fetch_child | 是 | String | 是否递归子部门：0非递归、1递归 |\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v3/departmentUsers?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&depid=4539973033980907968&status=normal&fetch_child=1\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| user | Object | 成员信息 |\n| userid | String | 用户ID |\n| username | String | 用户名 |\n| department | List | 部门列表 |\n| mobile | String | 手机号码 |\n| email | String | 邮箱号码 |\n| status | String | 成员状态：在职normal、离职unavailable、已邀请invited |\nJava sdk调用示例："
+}

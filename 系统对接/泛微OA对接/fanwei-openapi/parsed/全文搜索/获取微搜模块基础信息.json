@@ -1,0 +1,96 @@
+{
+  "id": "367839494658850816",
+  "name": "获取微搜模块基础信息",
+  "module": "全文搜索",
+  "module_path": [
+    "全文搜索"
+  ],
+  "is_api": true,
+  "url": "/api/esearch/search/xiaoe/getBaseInfoForXE",
+  "url_template": "{OpenApiOrigin}/api/esearch/search/xiaoe/getBaseInfoForXE",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户编码"
+    },
+    {
+      "name": "employeeId",
+      "required": "是",
+      "type": "String",
+      "description": "人员ID"
+    },
+    {
+      "name": "page_uuid",
+      "required": "是",
+      "type": "String",
+      "description": "页面编码"
+    },
+    {
+      "name": "fromApp",
+      "required": "是",
+      "type": "boolean",
+      "description": "是否是移动端"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "moduleInfo",
+      "required": "",
+      "type": "Object",
+      "description": "模块信息"
+    },
+    {
+      "name": "moduleInfo.id",
+      "required": "",
+      "type": "String",
+      "description": "模块编码"
+    },
+    {
+      "name": "moduleInfo.content",
+      "required": "",
+      "type": "String",
+      "description": "模块名"
+    },
+    {
+      "name": "module.children",
+      "required": "",
+      "type": "Object",
+      "description": "子模块"
+    },
+    {
+      "name": "page_uuid",
+      "required": "",
+      "type": "String",
+      "description": "页面编码"
+    },
+    {
+      "name": "sortInfoList",
+      "required": "",
+      "type": "Object",
+      "description": "结果排序信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取微搜模块基础信息"
+  ],
+  "raw_text": "## 获取微搜模块基础信息\n请求URL：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/getBaseInfoForXE\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| tenantKey | 是 | String | 租户编码 |\n| employeeId | 是 | String | 人员ID |\n| page_uuid | 是 | String | 页面编码 |\n| fromApp | 是 | boolean | 是否是移动端 |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/getBaseInfoForXE\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| moduleInfo | Object | 模块信息 |\n| moduleInfo.id | String | 模块编码 |\n| moduleInfo.content | String | 模块名 |\n| module.children | Object | 子模块 |\n| page_uuid | String | 页面编码 |\n| sortInfoList | Object | 结果排序信息 |"
+}

@@ -1,0 +1,102 @@
+{
+  "id": "840674921396404224",
+  "name": "查询所有人员",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v3/findAllUsers",
+  "url_template": "{OpenApiOrigin}/user/v3/findAllUsers",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "page",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码，从1开始（不传值则默认为1，每页1000条数据）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门列表"
+    },
+    {
+      "name": "mobile",
+      "required": "",
+      "type": "String",
+      "description": "手机号码"
+    },
+    {
+      "name": "email",
+      "required": "",
+      "type": "String",
+      "description": "邮箱"
+    },
+    {
+      "name": "jobNum",
+      "required": "",
+      "type": "String",
+      "description": "工号"
+    },
+    {
+      "name": "hireDdate",
+      "required": "",
+      "type": "String",
+      "description": "入职日期"
+    },
+    {
+      "name": "sex",
+      "required": "",
+      "type": "String",
+      "description": "性别"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "成员状态：在职normal、离职unavailable、已邀请invited"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询所有人员"
+  ],
+  "raw_text": "## 查询所有人员\n注：本接口为老接口，不推荐使用，请优先使用查询人员-高级搜索接口\n请求URL：\n- {OpenApiOrigin}/user/v3/findAllUsers\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| page | 否 | Int | 分页页码，从1开始（不传值则默认为1，每页1000条数据） |\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v3/findAllUsers?access_token=87c727b30884087192647cefc8a3ac9d&page=1\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userid | String | 用户ID |\n| name | String | 用户名 |\n| department | List | 部门列表 |\n| mobile | String | 手机号码 |\n| email | String | 邮箱 |\n| jobNum | String | 工号 |\n| hireDdate | String | 入职日期 |\n| sex | String | 性别 |\n| status | String | 成员状态：在职normal、离职unavailable、已邀请invited |\nJava sdk调用示例："
+}

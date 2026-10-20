@@ -1,0 +1,114 @@
+{
+  "id": "840717943881605121",
+  "name": "搜索订单",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/search",
+  "url_template": "{OpenApiOrigin}/crm/v2/search",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：orderform"
+    },
+    {
+      "name": "query",
+      "required": "是",
+      "type": "Object",
+      "description": "查询参数对象"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "每页显示条数"
+    },
+    {
+      "name": "orderPropertyName",
+      "required": "是",
+      "type": "String",
+      "description": "排序字段name"
+    },
+    {
+      "name": "asc",
+      "required": "是",
+      "type": "String",
+      "description": "true升序，false降序"
+    },
+    {
+      "name": "conditions",
+      "required": "是",
+      "type": "List",
+      "description": "查询条件集"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "属性名"
+    },
+    {
+      "name": "compareType",
+      "required": "是",
+      "type": "String",
+      "description": "比较类型"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "String",
+      "description": "属性值"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "订单信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "搜索订单"
+  ],
+  "raw_text": "## 搜索订单\n请求URL：\n- {OpenApiOrigin}/crm/v2/search\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：orderform |\n| query | 是 | Object | 查询参数对象 |\nquery请求结构体：\nquery参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| pageNo | 是 | Int | 页码 |\n| pageSize | 是 | Int | 每页显示条数 |\n| orderPropertyName | 是 | String | 排序字段name |\n| asc | 是 | String | true升序，false降序 |\n| conditions | 是 | List | 查询条件集 |\n| propertyName | 是 | String | 属性名 |\n| compareType | 是 | String | 比较类型 |\n| propertyValue | 是 | String | 属性值 |\npropertyName\n- 名称：name（string）\n- 订单编号：orderformNumber（string）\n- 客户：orderformCustomer（string）\n- 状态：orderformStatus（string）\n- 类型：orderformType（string）\n- 下单日期：orderformStartTime（date）\n- 结单日期：orderformEndTime（date）\n- 创建时间：createTime（date）\n- 更新时间：updateTime（date）\ncompareType比较类型\n- like包含\n- eq等于\n- neq不等于\n- empty为空\n- notEmpty不为空\n- range 范围区间\n- in 取值范围\n选择范围\n- string类型字段：like、eq、neq、empty、notEmpty、in\n- date类型字段：range、empty、notEmpty\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/search?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&query={\"pageNo\":\"1\",\"pageSize\":\"15\",\"orderPropertyName\":\"name\",\"asc\":\"true\",\"conditions\":[{\"propertyName\":\"name\",\"compareType\":\"like\",\"propertyValue\":\"订单\"}]}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 订单信息（JSON格式） |\nJava sdk调用示例："
+}

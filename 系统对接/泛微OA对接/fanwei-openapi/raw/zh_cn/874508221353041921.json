@@ -1,0 +1,3086 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "查询待办接口",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "查询待办接口"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/my/workWait/queryWorkWaitList",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/my/workWait/queryWorkWaitList",
+                        "title": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "#d33115",
+                        "backgroundColor": null,
+                        "fontSize": null,
+                        "fontFamily": null,
+                        "align": null,
+                        "underline": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840673319280451584'); ",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "creator"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办人"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "modules"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string[]"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "模块"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "statue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "1 未读 2 进行中 3 已延期"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "joinType"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "0 我参与的 1我发起的"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "orderType"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "排序方式:0 按接受时间降序，1 按发起时间降序，2按接受时间升序，3按发起时间升序"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "事项名称"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageSize"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "每一页展示条数"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageNo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "页码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "dealStatue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否稍后处理（0正常，1稍后处理）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "templateId"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "流程模板ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "s_time"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办生成时间起(时间戳)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "e_time"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办生成时间止(时间戳)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"modules\": [],\n\t\"statue\": \"\",\n\t\"joinType\": \"\",\n\t\"orderType\": 0,\n\t\"name\": \"\",\n\t\"pageNo\": \"1\",\n\t\"pageSize\": \",    \n    \"dealStatue \": 0,    \n    \"s_time \":\"\",    \n    \"e_time \": \"\",    \n    \"creator \":4980937863852743878,    \n    \"access_token \":\"ad148be64bb63ecb6d788e2a8102be08 \"\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"code\": 200,\n\t\"msg\": \"接口返回成功\",\n\t\"status\": true,\n\t\"data\": {\n\t\t\"initiationCount\": 411,\n\t\t\"total\": 416,\n\t\t\"data\": [{\n\t\t\t\"creator\": \"4980937863852743878\",\n\t\t\t\"colorStatue\": 2,\n\t\t\t\"pcUrl\": \"/sp/workflow/flowpage/view/867644927991668762\",\n\t\t\t\"unDealDay\": 15,\n\t\t\t\"module\": \"workflow\",\n\t\t\t\"moduleName\": \"流程\",\n\t\t\t\"statue\": 0,\n\t\t\t\"entityId\": \"867644927991668762\",\n\t\t\t\"i18n\": \"65821\",\n\t\t\t\"h5Url\": \"/mobile/workflow/flowpage/view/867644927991668762\",\n\t\t\t\"readStatue\": 0,\n\t\t\t\"entityCreatName\": \"李四\",\n\t\t\t\"requestCodeI18n\": \"0\",\n\t\t\t\"waitTimeTamp\": \"1685214328000\",\n\t\t\t\"entityCreator\": \"4980937863852743878\",\n\t\t\t\"name\": \"wmz-修改基本信息中内容1652420686.3796003-李四-2023-05-28\",\n\t\t\t\"id\": \"867644932097597441\",\n\t\t\t\"waitTime\": 1685214328000,\n\t\t\t\"exts\": \"\"\n\t\t}, {\n\t\t\t\"creator\": \"4980937863852743878\",\n\t\t\t\"colorStatue\": 2,\n\t\t\t\"pcUrl\": \"/sp/workflow/flowpage/view/866886887597285381\",\n\t\t\t\"unDealDay\": 17,\n\t\t\t\"module\": \"workflow\",\n\t\t\t\"moduleName\": \"流程\",\n\t\t\t\"statue\": 0,\n\t\t\t\"entityId\": \"866886887597285381\",\n\t\t\t\"i18n\": \"65821\",\n\t\t\t\"h5Url\": \"/mobile/workflow/flowpage/view/866886887597285381\",\n\t\t\t\"readStatue\": 0,\n\t\t\t\"entityCreatName\": \"张三\",\n\t\t\t\"requestCodeI18n\": \"0\",\n\t\t\t\"waitTimeTamp\": \"1685037832000\",\n\t\t\t\"entityCreator\": \"4980937863852743878\",\n\t\t\t\"name\": \"wmz-修改基本信息中内容1652420686.3796003-张三-2023-05-26\",\n\t\t\t\"id\": \"866886887738957824\",\n\t\t\t\"waitTime\": 1685037832000,\n\t\t\t\"exts\": \"\"\n\t\t}, ],\n\t\t\"doingCount\": 402,\n\t\t\"pageNo\": 1,\n\t\t\"totalPage\": 42,\n\t\t\"delayCount\": 14,\n\t\t\"pageSize\": 10,\n\t\t\"unReadCount\": 415,\n\t\t\"allCount\": 416\n\t}\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "msg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "事项名称"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "module"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "事项模块"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "waitTimeTamp"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办时间戳(毫秒)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "expireTimeTamp"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "过期时间时间戳（毫秒）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "readStatue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "已读未读状态"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "entityId"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "待办人ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "entityCreatName"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "事项创建人姓名"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "statue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "状态，0正常，1稍后处理"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "entityCreator"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "事项创建人"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "unDealDay"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "未处理时间天数"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "colorStatue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "显示颜色1黄色2红色其他不显示"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "totalPage"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "总页数"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageNo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "页码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pageSize"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "每一页数量"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "unReadCount"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "未读数量"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "doingCount"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "正在处理数量"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "delayCount"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "延期处理数量"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "initiationCount"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "我发起的事项列表"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "allCount"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "全部待办"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "requestCode"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "统一待办模块标识"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "exts"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "扩展字段（用于打开统一待办组件）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pcUrl"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "pc端打开事项详情url"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "h5Url"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "h5打开事项详情url"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "MessageVo messageVo = new MessageVo();\nmessageVo.setAccessToken(accessToken);\nmessageVo.setPageNo(\"1\");\nmessageVo.setPageSize(\"10\");\nmessageVo.setCreator(2225304380394396551L);\nmessageVo.setOrderType(0);\nmessageVo.setDealStatue(0);\nApiResult<WatchResultVo> watchResultVoApiResult = MessageService.queryWorkWaitList(messageVo, \"https://api.yunteams.cn\", null);\nSystem.out.println(JSONObject.toJSONString(watchResultVoApiResult));\nSystem.out.println(watchResultVoApiResult.getMsg());"
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

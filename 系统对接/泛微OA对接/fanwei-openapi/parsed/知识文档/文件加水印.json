@@ -1,0 +1,66 @@
+{
+  "id": "383093268017053696",
+  "name": "文件加水印",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/online/addWatermark",
+  "url_template": "{OpenApiOrigin}/api/file/online/addWatermark",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "body参数（content-type : application/json）："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "String",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "返回数据"
+    },
+    {
+      "name": "targetFileId",
+      "required": "",
+      "type": "Long",
+      "description": "加过水印后的文件id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：\n- 支持给文件加文字水印\n请求URL：\n- {OpenApiOrigin}/api/file/online/addWatermark\n请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | String | 用户id 获取用户ID |\nbody参数（content-type : application/json）：\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| fileId | 是 | Long | 文件id |\n| temporaryFile | 否 | boolean | 加完水印后的文件是否为临时文件，默认false如设置为临时文件，则加完水印后的文件3小时候会被系统自动删除 |\n| fileWatermarkParam | 是 | Object | 水印参数 |\n| type | 是 | String | 水印类型 |\n| fileWatermarkParam | 是 | Object | 水印参数 |\n| content | 是 | String | 文字水印内容 |\n| size | 否 | int | 文字水印字体大小 |\n| color | 否 | String | 水印文字颜色（十六进制）默认为#000000例如： #CC00FF\" |\n| transparent | 否 | float | 水印不透明度 取值范围0-1的小数，默认为0.50 ：完全透明1 ：不透明 |\n| tilt | 否 | boolean | 是否倾斜45度，默认true |\n| tiled | 否 | boolean | 水印是否平铺，默认true |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 错误编码 |\n| errmsg | String | 错误提示 |\n| data | Object | 返回数据 |\n| targetFileId | Long | 加过水印后的文件id |"
+}

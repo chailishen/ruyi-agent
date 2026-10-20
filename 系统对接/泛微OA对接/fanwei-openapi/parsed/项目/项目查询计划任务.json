@@ -1,0 +1,54 @@
+{
+  "id": "840678125407576064",
+  "name": "项目查询计划任务",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/queryMainlineTasks",
+  "url_template": "{OpenApiOrigin}/mainline/v2/queryMainlineTasks",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "项目ID 获取项目ID"
+    },
+    {
+      "name": "containFinished",
+      "required": "是",
+      "type": "Boolean",
+      "description": "包含已完成：true，不包含已完成：false"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "项目查询计划任务"
+  ],
+  "raw_text": "## 项目查询计划任务\n请求URL：\n- {OpenApiOrigin}/mainline/v2/queryMainlineTasks\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| id | 是 | Long | 项目ID 获取项目ID |\n| containFinished | 是 | Boolean | 包含已完成：true，不包含已完成：false |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/queryMainlineTasks?access_token=309bfb82ce12a2e30e37141273fb5ea0&id=8993238989000073303&containFinished=true\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

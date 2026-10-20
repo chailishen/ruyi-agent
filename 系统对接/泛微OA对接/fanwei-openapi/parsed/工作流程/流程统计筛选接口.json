@@ -1,0 +1,150 @@
+{
+  "id": "840712227406839809",
+  "name": "流程统计筛选接口",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryStatFormDatasForFlow",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryStatFormDatasForFlow",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "Long",
+      "description": "流程表ID 获取流程表ID"
+    },
+    {
+      "name": "param",
+      "required": "是",
+      "type": "String",
+      "description": "参数JSON格式"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "当前页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "每页数量"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "flowName",
+      "required": "否",
+      "type": "String",
+      "description": "审批名称数组"
+    },
+    {
+      "name": "flowStatus",
+      "required": "否",
+      "type": "String",
+      "description": "流程状态：审批中notFinish、已结束finish"
+    },
+    {
+      "name": "flowFinishTime",
+      "required": "否",
+      "type": "String",
+      "description": "结束时间区间(startTime、endTime)"
+    },
+    {
+      "name": "flowSubmitTime",
+      "required": "否",
+      "type": "String",
+      "description": "提交时间区间(startTime、endTime)"
+    },
+    {
+      "name": "flowCreator",
+      "required": "否",
+      "type": "Long",
+      "description": "申请人列表"
+    },
+    {
+      "name": "flowCreatorDepartment",
+      "required": "否",
+      "type": "Long",
+      "description": "申请人部门列表"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "申请人信息"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "流程ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "流程名称"
+    },
+    {
+      "name": "requestTime",
+      "required": "",
+      "type": "Date",
+      "description": "流程提交时间"
+    },
+    {
+      "name": "finishTime",
+      "required": "",
+      "type": "Date",
+      "description": "流程结束时间"
+    },
+    {
+      "name": "serNum",
+      "required": "",
+      "type": "String",
+      "description": "流程流水号"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "流程统计筛选接口"
+  ],
+  "raw_text": "## 流程统计筛选接口\n请求URL：\n- {OpenApiOrigin}/workflow/v2/queryStatFormDatasForFlow\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| formId | 是 | Long | 流程表ID 获取流程表ID |\n| param | 是 | String | 参数JSON格式 |\n| pageNo | 是 | Int | 当前页数 |\n| pageSize | 是 | Int | 每页数量 |\nparam请求结构体：\nparam参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| flowName | 否 | String | 审批名称数组 |\n| flowStatus | 否 | String | 流程状态：审批中notFinish、已结束finish |\n| flowFinishTime | 否 | String | 结束时间区间(startTime、endTime) |\n| flowSubmitTime | 否 | String | 提交时间区间(startTime、endTime) |\n| flowCreator | 否 | Long | 申请人列表 |\n| flowCreatorDepartment | 否 | Long | 申请人部门列表 |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/queryStatFormDatasForFlow?pageNo=1&access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&pageSize=20&formId=6473714586545086123&param={\"flowStatus\":[\"finish\",\"notfinish\"],\"flowFinishTime\":{\"startTime\":\"2023-03-22 06:50\",\"endTime\":\"2023-03-29 07:50\"},\"flowSubmitTime\":{\"startTime\":\"2022-03-23 06:50\",\"endTime\":\"2023-03-29 07:50\"}}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| creator | Object | 申请人信息 |\n| delete | Boolean | 是否删除 |\n| id | Long | 流程ID |\n| name | String | 流程名称 |\n| requestTime | Date | 流程提交时间 |\n| finishTime | Date | 流程结束时间 |\n| serNum | String | 流程流水号 |\nJava sdk调用示例："
+}

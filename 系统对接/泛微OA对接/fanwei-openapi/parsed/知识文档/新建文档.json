@@ -1,0 +1,426 @@
+{
+  "id": "908317705490554880",
+  "name": "新建文档",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/create",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/create",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误代码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "提示语"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "成功时，新建成功的document实体"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "object",
+      "description": "创建人对象"
+    },
+    {
+      "name": "creator.id",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人id"
+    },
+    {
+      "name": "creator.name",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人名称"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "更新时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "string",
+      "description": "所属模块"
+    },
+    {
+      "name": "commentCount",
+      "required": "",
+      "type": "string",
+      "description": "评论次数"
+    },
+    {
+      "name": "ummary",
+      "required": "",
+      "type": "string",
+      "description": "文档若为HTML，此为文档内容"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "string",
+      "description": "类型"
+    },
+    {
+      "name": "docFile",
+      "required": "",
+      "type": "object",
+      "description": "附件对象"
+    },
+    {
+      "name": "docFile.id",
+      "required": "",
+      "type": "string",
+      "description": "附件id"
+    },
+    {
+      "name": "docFile.refId",
+      "required": "",
+      "type": "string",
+      "description": "所属文档"
+    },
+    {
+      "name": "docFile.name",
+      "required": "",
+      "type": "string",
+      "description": "附件名称"
+    },
+    {
+      "name": "author",
+      "required": "",
+      "type": "object",
+      "description": "文档负责人对象"
+    },
+    {
+      "name": "author.id",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人id"
+    },
+    {
+      "name": "author.name",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人名称"
+    },
+    {
+      "name": "deleted",
+      "required": "",
+      "type": "string",
+      "description": "是否已删除"
+    },
+    {
+      "name": "docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "docStatusName",
+      "required": "",
+      "type": "string",
+      "description": "文档状态名称"
+    },
+    {
+      "name": "operateType",
+      "required": "",
+      "type": "string",
+      "description": "操作类型"
+    },
+    {
+      "name": "downloadCount",
+      "required": "",
+      "type": "string",
+      "description": "下载次数"
+    },
+    {
+      "name": "readCount",
+      "required": "",
+      "type": "string",
+      "description": "阅读次数"
+    },
+    {
+      "name": "folder",
+      "required": "",
+      "type": "object",
+      "description": "所属文件夹"
+    },
+    {
+      "name": "folder.id",
+      "required": "",
+      "type": "string",
+      "description": "文件夹id"
+    },
+    {
+      "name": "folder.deleted",
+      "required": "",
+      "type": "string",
+      "description": "文件夹是否删除"
+    },
+    {
+      "name": "folder.transformFolderName",
+      "required": "",
+      "type": "string",
+      "description": "文件夹名称"
+    },
+    {
+      "name": "contentType",
+      "required": "",
+      "type": "string",
+      "description": "正文类型"
+    },
+    {
+      "name": "contentMainType",
+      "required": "",
+      "type": "string",
+      "description": "主类型"
+    },
+    {
+      "name": "praise",
+      "required": "",
+      "type": "string",
+      "description": "点赞次数"
+    },
+    {
+      "name": "enPraise",
+      "required": "",
+      "type": "string",
+      "description": "是否开启点赞"
+    },
+    {
+      "name": "watched",
+      "required": "",
+      "type": "string",
+      "description": "是否已关注"
+    },
+    {
+      "name": "unread",
+      "required": "",
+      "type": "string",
+      "description": "是否未读"
+    },
+    {
+      "name": "newConment",
+      "required": "",
+      "type": "string",
+      "description": "是否有新的反馈"
+    },
+    {
+      "name": "monopoly",
+      "required": "",
+      "type": "string",
+      "description": "是否开启附件独占权限"
+    },
+    {
+      "name": "docFileModule",
+      "required": "",
+      "type": "string",
+      "description": "关联附件模块"
+    },
+    {
+      "name": "shareOut",
+      "required": "",
+      "type": "string",
+      "description": "是否外部分享"
+    },
+    {
+      "name": "hasNormalized",
+      "required": "",
+      "type": "string",
+      "description": "是否变为正常状态过"
+    },
+    {
+      "name": "createType",
+      "required": "",
+      "type": "string",
+      "description": "创建类型"
+    },
+    {
+      "name": "hasAttachment",
+      "required": "",
+      "type": "string",
+      "description": "是否包含附件"
+    },
+    {
+      "name": "permission",
+      "required": "",
+      "type": "string",
+      "description": "权限"
+    },
+    {
+      "name": "deletePermission",
+      "required": "",
+      "type": "string",
+      "description": "删除权限"
+    },
+    {
+      "name": "downloadPermission",
+      "required": "",
+      "type": "string",
+      "description": "下载权限"
+    },
+    {
+      "name": "fromSearch",
+      "required": "",
+      "type": "string",
+      "description": "搜索"
+    },
+    {
+      "name": "excludeAttach",
+      "required": "",
+      "type": "string",
+      "description": "排除附件"
+    },
+    {
+      "name": "withoutPermission",
+      "required": "",
+      "type": "string",
+      "description": "查询的时候不涉及权限"
+    },
+    {
+      "name": "excludeDocumentSubscribeFlag",
+      "required": "",
+      "type": "string",
+      "description": "是否排除已订阅的标记"
+    },
+    {
+      "name": "openClassifiedProtection",
+      "required": "",
+      "type": "string",
+      "description": "租户是否开启密级"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "alreadySetToDoMatter",
+      "required": "",
+      "type": "string",
+      "description": "是否已经设为待办事项"
+    },
+    {
+      "name": "enableListViewPenetrateSubFolder",
+      "required": "",
+      "type": "string",
+      "description": "开启列表视图穿透下级文件夹"
+    },
+    {
+      "name": "docCategory",
+      "required": "",
+      "type": "string",
+      "description": "知识分类"
+    },
+    {
+      "name": "topType",
+      "required": "",
+      "type": "string",
+      "description": "类型"
+    },
+    {
+      "name": "isHistory",
+      "required": "",
+      "type": "string",
+      "description": "是否历史版本"
+    },
+    {
+      "name": "lastUpdatePerson",
+      "required": "",
+      "type": "string",
+      "description": "最后更新人"
+    },
+    {
+      "name": "extendDefShare",
+      "required": "",
+      "type": "string",
+      "description": "是否继承文件夹默认共享"
+    },
+    {
+      "name": "useFastTable",
+      "required": "",
+      "type": "string",
+      "description": "使用（权限）快表查询"
+    },
+    {
+      "name": "sumScore",
+      "required": "",
+      "type": "string",
+      "description": "总分"
+    },
+    {
+      "name": "averageScore",
+      "required": "",
+      "type": "string",
+      "description": "平均分"
+    },
+    {
+      "name": "customTop",
+      "required": "",
+      "type": "string",
+      "description": "置顶"
+    },
+    {
+      "name": "noRight",
+      "required": "",
+      "type": "string",
+      "description": "查询无权限的文档"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建文档"
+  ],
+  "raw_text": "## 新建文档\n新建文档\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/create\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| folderId | 是 | number | 文档所在目录id |\n| virtualFolderIds | 否 | string | 虚拟目录id集合，多个逗号隔开 |\n| name | 是 | string | 文档标题 |\n| content | 否 | string | html正文内容或office文档id（与contentType成对判断） |\n| contentType | 否 | string | 文档类型，当值是WORD、EXCEL、PPT时，为office文档，content字段的值必须，且为对应正文附件的id |\n| folderType | 否 | string | 文件夹类型(company,sys,privy)，不传默认privy |\n| attIds | 否 | string | 附件id集合，多个逗号隔开 |\n| tags | 否 | string | 标签id集合，多个逗号隔开 |\n| secLevel | 否 | string | 密级（系统开启时必填） |\n| validity | 否 | string | 保密期限（系统开启密级时必填） |\n| formData | 否 | string | 表单formdata（通用自定义字段表单） |\n| customFormData | 否 | string | 表单formdata（文件夹自定义字段表单） |\n| operateType | 否 | string | 操作类型，新建提交定值save |\n请求参数示例\n成功返回示例\n成功返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| errcode | string | 错误代码 |\n| errmsg | string | 提示语 |\n| data | object | 成功时，新建成功的document实体 |\n| id | string | 文档id |\n| name | string | 文档名称 |\n| creator | object | 创建人对象 |\n| creator.id | string | 文档创建人id |\n| creator.name | string | 文档创建人名称 |\n| lastUpdateTime | string | 更新时间 |\n| module | string | 所属模块 |\n| commentCount | string | 评论次数 |\n| ummary | string | 文档若为HTML，此为文档内容 |\n| type | string | 类型 |\n| docFile | object | 附件对象 |\n| docFile.id | string | 附件id |\n| docFile.refId | string | 所属文档 |\n| docFile.name | string | 附件名称 |\n| author | object | 文档负责人对象 |\n| author.id | string | 文档负责人id |\n| author.name | string | 文档负责人名称 |\n| deleted | string | 是否已删除 |\n| docStatus | string | 文档状态 |\n| docStatusName | string | 文档状态名称 |\n| operateType | string | 操作类型 |\n| downloadCount | string | 下载次数 |\n| readCount | string | 阅读次数 |\n| folder | object | 所属文件夹 |\n| folder.id | string | 文件夹id |\n| folder.deleted | string | 文件夹是否删除 |\n| folder.transformFolderName | string | 文件夹名称 |\n| contentType | string | 正文类型 |\n| contentMainType | string | 主类型 |\n| praise | string | 点赞次数 |\n| enPraise | string | 是否开启点赞 |\n| watched | string | 是否已关注 |\n| unread | string | 是否未读 |\n| newConment | string | 是否有新的反馈 |\n| monopoly | string | 是否开启附件独占权限 |\n| docFileModule | string | 关联附件模块 |\n| shareOut | string | 是否外部分享 |\n| hasNormalized | string | 是否变为正常状态过 |\n| createType | string | 创建类型 |\n| hasAttachment | string | 是否包含附件 |\n| permission | string | 权限 |\n| deletePermission | string | 删除权限 |\n| downloadPermission | string | 下载权限 |\n| fromSearch | string | 搜索 |\n| excludeAttach | string | 排除附件 |\n| withoutPermission | string | 查询的时候不涉及权限 |\n| excludeDocumentSubscribeFlag | string | 是否排除已订阅的标记 |\n| openClassifiedProtection | string | 租户是否开启密级 |\n| secLevel | string | 密级 |\n| alreadySetToDoMatter | string | 是否已经设为待办事项 |\n| enableListViewPenetrateSubFolder | string | 开启列表视图穿透下级文件夹 |\n| docCategory | string | 知识分类 |\n| topType | string | 类型 |\n| isHistory | string | 是否历史版本 |\n| lastUpdatePerson | string | 最后更新人 |\n| extendDefShare | string | 是否继承文件夹默认共享 |\n| useFastTable | string | 使用（权限）快表查询 |\n| sumScore | string | 总分 |\n| averageScore | string | 平均分 |\n| customTop | string | 置顶 |\n| noRight | string | 查询无权限的文档 |\nJava sdk调用示例："
+}

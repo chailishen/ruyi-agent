@@ -1,0 +1,84 @@
+{
+  "id": "907515938228486144",
+  "name": "开放平台几种认证方式使用说明",
+  "module": "对接说明",
+  "module_path": [
+    "对接说明"
+  ],
+  "is_api": true,
+  "url": "/user/v3/findAllUsers",
+  "url_template": "{OpenApiOrigin}/user/v3/findAllUsers",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_name",
+      "required": "是",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "access_pwd",
+      "required": "是",
+      "type": "String",
+      "description": "密码"
+    },
+    {
+      "name": "corpid",
+      "required": "是",
+      "type": "String",
+      "description": "开放平台开发者资料中获取"
+    },
+    {
+      "name": "secret_key",
+      "required": "否",
+      "type": "String",
+      "description": "签名校验"
+    },
+    {
+      "name": "page",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码，从1开始（不传值则默认为1，每页1000条数据）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_name",
+      "required": "是",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "access_pwd",
+      "required": "是",
+      "type": "String",
+      "description": "按照指定加密方式进行加密后的密码"
+    },
+    {
+      "name": "corpid",
+      "required": "是",
+      "type": "String",
+      "description": "开放平台开发者资料中获取"
+    },
+    {
+      "name": "secret_key",
+      "required": "否",
+      "type": "String",
+      "description": "签名校验"
+    },
+    {
+      "name": "page",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码，从1开始（不传值则默认为1，每页1000条数据）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "开放平台几种认证方式使用说明"
+  ],
+  "raw_text": "## 开放平台几种认证方式使用说明\n开放平台通用型应用支持Oauth2.0，无认证，Http Basic，普通四类认证方式。\n- Oauth2.0为默认认证方式，使用access_token进行认证，具体使用步骤参照认证说明文档\n- 无认证方式：创建应用时会生成无认证令牌(只有创建该应用的人有权查看)，与Oauth2.0方式一样使用access_token进行传递，区别在于该令牌有效时间为永久性，为了安全性需要在使用此种认证方式时需要进行IP限制，由应用创建者指定IP黑白名单，只有在白名单的访问IP才可使用无认证令牌进行openApi接口的调用\n- Http Basic认证方式：使用用户名与密码进行身份验证，可辅助设置签名验证，打开签名验证时，系统自动分配Secret Key。调用openApi接口时无需再传入access_token参数，改为传入access_name(创建Http Basic应用时指定的用户名),access_pwd(创建Http Basic应用时指定的密码),corpid(开发者资料中查看)，secret_key(开启签名验证后需传入，应用信息中查看)。\n- 普通认证方式：同样也是使用用户名与密码进行身份验证，但与Basic的主要区别是：新增了加密设置（必须），需要对密码进行加密传递，支持SHA1和MD5两种加密方式。\n如何创建相关应用：\n进入后台管理中心-开放平台-应用管理-创建应用\n点击下一步\n认证方式这里可选择几种认证方式。\n无认证：token永久有效，为保证安全性，需要设置可访问的IP白名单，请使用方自己保存好该凭证，谨防外泄。\n非单体部署：在调用者浏览器直接访问该接口可以获取调用者实际IP：{OpenApiOrigin}/oauth2/ip/getOpenIp\n单体部署：在调用者浏览器直接访问该接口可以获取调用者实际IP：{OpenApiOrigin}/oauth2/ip/getAllInOneOpenIp\noauth认证：\nBasic认证：\n普通认证：\nHttp Basic 认证方式使用示例：请求URL：\n- {OpenApiOrigin}/user/v3/findAllUsers\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_name | 是 | String | 用户名 |\n| access_pwd | 是 | String | 密码 |\n| corpid | 是 | String | 开放平台开发者资料中获取 |\n| secret_key | 否 | String | 签名校验 |\n| page | 否 | Int | 分页页码，从1开始（不传值则默认为1，每页1000条数据） |\n- 普通认证方式使用用户名与密码进行身份验证，支持配置加密方式(SHA1,MD5)，支持配置签名验证，打开签名验证时，系统自动分配Secret Key。调用openApi接口时无需再传入access_token参数，改为传入access_name(创建Http Basic应用时指定的用户名),access_pwd(创建Http Basic应用时指定的密码，需要按照指定的加密方式加密后的密文进行传输),corpid(开发者资料中查看)，secret_key(开启签名验证后需传入，应用信息中查看)。\n普通认证方式使用示例：请求URL：\n- {OpenApiOrigin}/user/v3/findAllUsers\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_name | 是 | String | 用户名 |\n| access_pwd | 是 | String | 按照指定加密方式进行加密后的密码 |\n| corpid | 是 | String | 开放平台开发者资料中获取 |\n| secret_key | 否 | String | 签名校验 |\n| page | 否 | Int | 分页页码，从1开始（不传值则默认为1，每页1000条数据） |"
+}

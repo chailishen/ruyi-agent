@@ -1,0 +1,103 @@
+{
+  "id": "370433517147914240",
+  "name": "查询工作流关联的表单信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/pathdef/openapi/getFormInfo",
+  "url_template": "{OpenApiOrigin}/api/workflow/pathdef/openapi/getFormInfo",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID  获取用户ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "Int",
+      "description": "工作流id"
+    },
+    {
+      "name": "needMainFormInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要主表信息，默认false"
+    },
+    {
+      "name": "needDetailFormInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要明细表信息，默认false"
+    },
+    {
+      "name": "needMainFieldInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要主表字段信息，默认false"
+    },
+    {
+      "name": "needDetailFieldInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要明细表字段信息，默认false"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "mainFormList",
+      "required": "",
+      "type": "List<WfFormEntity>",
+      "description": "主表信息"
+    },
+    {
+      "name": "subFormList",
+      "required": "",
+      "type": "List<WfSubFormEntity>",
+      "description": "明细表信息"
+    },
+    {
+      "name": "mainFieldList",
+      "required": "",
+      "type": "List<WfFormFieldEntity>",
+      "description": "主表字段信息"
+    },
+    {
+      "name": "detailFieldList",
+      "required": "",
+      "type": "List<WfFormFieldEntity>",
+      "description": "明细表字段信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "注意："
+  ],
+  "raw_text": "## 注意：\n1、此接口只有工作流关联内部表单或者关联eb表单的，才支持查询，关联其它表单的均不支持查询，比如会议卡片、外部表单等。\n2、返回的表单相关信息包括4个内容：主表信息、明细表信息、主表字段信息、明细表字段信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/pathdef/openapi/getFormInfo\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID  获取用户ID |\n| workflowId | 是 | Int | 工作流id |\n| needMainFormInfo | 否 | boolean | 是否需要主表信息，默认false |\n| needDetailFormInfo | 否 | boolean | 是否需要明细表信息，默认false |\n| needMainFieldInfo | 否 | boolean | 是否需要主表字段信息，默认false |\n| needDetailFieldInfo | 否 | boolean | 是否需要明细表字段信息，默认false |\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| mainFormList | List<WfFormEntity> | 主表信息 |\n| subFormList | List<WfSubFormEntity> | 明细表信息 |\n| mainFieldList | List<WfFormFieldEntity> | 主表字段信息 |\n| detailFieldList | List<WfFormFieldEntity> | 明细表字段信息 |\n1、主表信息，WfFormEntity对象属性说明\n2、明细表信息，WfSubFormEntity对象属性说明\n3、字段信息，WfFormFieldEntity对象属性说明"
+}

@@ -1,0 +1,198 @@
+{
+  "id": "908312512988921857",
+  "name": "新建、编辑文档-保存",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/saveDoc",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/saveDoc",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "0-成功，其他-失败"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误消息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "文档数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "object",
+      "description": "创建人"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "string",
+      "description": "创建时间"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "最后修改时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "string",
+      "description": "所属模块"
+    },
+    {
+      "name": "summary",
+      "required": "",
+      "type": "string",
+      "description": "HTML文档内容"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "string",
+      "description": "类型"
+    },
+    {
+      "name": "docFile",
+      "required": "",
+      "type": "object",
+      "description": "文档附件"
+    },
+    {
+      "name": "docFile.id",
+      "required": "",
+      "type": "string",
+      "description": "附件id"
+    },
+    {
+      "name": "docFile.refId",
+      "required": "",
+      "type": "string",
+      "description": "附件所属文档id"
+    },
+    {
+      "name": "docFile.name",
+      "required": "",
+      "type": "string",
+      "description": "附件名称"
+    },
+    {
+      "name": "docFile.fileid",
+      "required": "",
+      "type": "string",
+      "description": "附件id"
+    },
+    {
+      "name": "author",
+      "required": "",
+      "type": "object",
+      "description": "文档负责人对象"
+    },
+    {
+      "name": "author.id",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人id"
+    },
+    {
+      "name": "author.username",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人姓名"
+    },
+    {
+      "name": "docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "downloadCount",
+      "required": "",
+      "type": "string",
+      "description": "下载次数"
+    },
+    {
+      "name": "readCount",
+      "required": "",
+      "type": "string",
+      "description": "阅读次数"
+    },
+    {
+      "name": "folder",
+      "required": "",
+      "type": "object",
+      "description": "所属文档"
+    },
+    {
+      "name": "folder.id",
+      "required": "",
+      "type": "string",
+      "description": "所属文档id"
+    },
+    {
+      "name": "contentType",
+      "required": "",
+      "type": "string",
+      "description": "正文类型"
+    },
+    {
+      "name": "documentCode",
+      "required": "",
+      "type": "string",
+      "description": "文档编号"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建、编辑文档-保存"
+  ],
+  "raw_text": "## 新建、编辑文档-保存\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/saveDoc\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| document | 是 | object | 文档对象 |\n| document.contentType | 否 | string | 正文是文本的情况下填 html |\n| document.author | 否 | object | 文档作者 |\n| document.author.id | 否 | string | 人员id |\n| document.name | 否 | string | 文档标题 |\n| document.summary | 否 | string | 文档正文 |\n| folderId | 是 | string | 保存文件夹id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| errcode | string | 0-成功，其他-失败 |\n| errmsg | string | 错误消息 |\n| data | object | 文档数据 |\n| id | string | 文档id |\n| name | string | 文档名称 |\n| creator | object | 创建人 |\n| createTime | string | 创建时间 |\n| lastUpdateTime | string | 最后修改时间 |\n| module | string | 所属模块 |\n| summary | string | HTML文档内容 |\n| type | string | 类型 |\n| docFile | object | 文档附件 |\n| docFile.id | string | 附件id |\n| docFile.refId | string | 附件所属文档id |\n| docFile.name | string | 附件名称 |\n| docFile.fileid | string | 附件id |\n| author | object | 文档负责人对象 |\n| author.id | string | 文档负责人id |\n| author.username | string | 文档负责人姓名 |\n| docStatus | string | 文档状态 |\n| downloadCount | string | 下载次数 |\n| readCount | string | 阅读次数 |\n| folder | object | 所属文档 |\n| folder.id | string | 所属文档id |\n| contentType | string | 正文类型 |\n| documentCode | string | 文档编号 |\nJava sdk调用示例："
+}

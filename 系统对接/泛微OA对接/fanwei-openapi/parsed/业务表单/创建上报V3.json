@@ -1,0 +1,66 @@
+{
+  "id": "840715800760033281",
+  "name": "创建上报V3",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v3/createDataReportByIdVal",
+  "url_template": "{OpenApiOrigin}/form/v3/createDataReportByIdVal",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long 用户id",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "Long 表单id",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "jsonStr",
+      "required": "是",
+      "type": "String 表单自定义字段参数",
+      "description": "表单自定义字段集合"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "reportId",
+      "required": "",
+      "type": "Long",
+      "description": "表单数据ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "创建上报V3"
+  ],
+  "raw_text": "## 创建上报V3\n请求URL：\n- {OpenApiOrigin}/form/v3/createDataReportByIdVal\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long 用户id | 用户ID 获取用户ID |\n| formId | 是 | Long 表单id | 表单ID 获取表单ID |\n| jsonStr | 是 | String 表单自定义字段参数 | 表单自定义字段集合 |\njsonStr示例：\njsonStr传参格式说明：\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v3/createDataReportByIdVal?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userid=5140826883110054023&formId=843625344723992576&jsonStr={\"dataDetails\": [{ \"fieldId\": \"843625370528186369\", \"fieldValue\": \"lory\" },{ \"fieldId\": \"843625370528186370\", \"fieldValue\": \"北京\" },{ \"fieldId\": \"843625370528186371\", \"fieldValue\": \"大专\" },{ \"fieldId\": \"843625370528186372\", \"fieldValue\": \"6000\" }]}\n返回示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| reportId | Long | 表单数据ID |\nJava sdk调用示例："
+}

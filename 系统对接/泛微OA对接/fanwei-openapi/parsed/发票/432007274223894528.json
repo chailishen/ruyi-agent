@@ -1,0 +1,73 @@
+{
+  "id": "432007274223894528",
+  "name": "432007274223894528",
+  "module": "发票",
+  "module_path": [
+    "发票"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户id"
+    },
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户key"
+    },
+    {
+      "name": "cid",
+      "required": "是",
+      "type": "String",
+      "description": "发票云团队id"
+    },
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "公共返回信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误消息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "简要描述",
+    "请求URL",
+    "请求方式",
+    "参数",
+    "响应",
+    "返回示例",
+    "返回说明",
+    "备注"
+  ],
+  "raw_text": "# 简要描述\n- 开放平台增加租户关联\n## 请求URL\n{OpenApiOrigin}/papi/openapi/api/inc/biz/v1/addTenantKey\n## 请求方式\n- POST\n## 参数\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| userid | 是 | Long | 用户id |\n| tenantKey | 是 | String | 租户key |\n| cid | 是 | String | 发票云团队id |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n租户取值方法：\n发票云团队id取值方法：\n用户id取值方法：\nF12的console菜单中，输入：TEAMS.currentUser\n找到userId：\n# 响应\n## 返回示例\n## 返回说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 公共返回信息 |\n| errcode | String | 错误码 |\n| errmsg | String | 错误消息 |\n# 备注\n- 更多返回错误代码请看首页的错误代码描述\n- "
+}

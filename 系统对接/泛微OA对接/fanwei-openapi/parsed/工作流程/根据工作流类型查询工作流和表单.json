@@ -1,0 +1,77 @@
+{
+  "id": "840693728847601665",
+  "name": "根据工作流类型查询工作流和表单",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/getFormByCategoryId",
+  "url_template": "{OpenApiOrigin}/workflow/v2/getFormByCategoryId",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "categoryId",
+      "required": "是",
+      "type": "Long",
+      "description": "工作流类型ID 获取工作流类型ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "forms",
+      "required": "",
+      "type": "object",
+      "description": "表单列表"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "String",
+      "description": "工作流ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "工作流名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：此接口校验的是工作流修改权限，仅返回有修改权限的工作流，是工作流维护权限+工作流菜单修改权限的合集数据。\n请求URL：\n- {OpenApiOrigin}/workflow/v2/getFormByCategoryId\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| categoryId | 是 | Long | 工作流类型ID 获取工作流类型ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/getFormByCategoryId?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userid=717929201362116609&categoryId=1111\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| forms | object | 表单列表 |\n| id | String | 表单ID |\n| workflowId | String | 工作流ID |\n| name | String | 工作流名称 |\nJava sdk调用示例："
+}

@@ -1,0 +1,186 @@
+{
+  "id": "840678301375406081",
+  "name": "按更新时间查询团队项目",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/queryUpdateMainlines",
+  "url_template": "{OpenApiOrigin}/mainline/v2/queryUpdateMainlines",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "startTime",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式(yyyy-MM-dd HH:mm:ss)"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式(yyyy-MM-dd HH:mm:ss)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "返回信息对象"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "mainlines",
+      "required": "",
+      "type": "List<Object>",
+      "description": "项目对象集合"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "项目名称"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Date",
+      "description": "创建时间"
+    },
+    {
+      "name": "startTime",
+      "required": "",
+      "type": "Date",
+      "description": "起始日期"
+    },
+    {
+      "name": "endTime",
+      "required": "",
+      "type": "Date",
+      "description": "到期日期"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "项目描述"
+    },
+    {
+      "name": "percentFinished",
+      "required": "",
+      "type": "String",
+      "description": "进度"
+    },
+    {
+      "name": "icon",
+      "required": "",
+      "type": "String",
+      "description": "项目图标"
+    },
+    {
+      "name": "finished",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否完成"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否锁定"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "所属模块"
+    },
+    {
+      "name": "finishTime",
+      "required": "",
+      "type": "Date",
+      "description": "结束时间"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建者"
+    },
+    {
+      "name": "isDelete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否已删除"
+    },
+    {
+      "name": "groupId",
+      "required": "",
+      "type": "Long",
+      "description": "项目分类ID"
+    },
+    {
+      "name": "groupName",
+      "required": "",
+      "type": "String",
+      "description": "项目分类名称"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "团队key"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "项目ID"
+    },
+    {
+      "name": "stage",
+      "required": "",
+      "type": "List",
+      "description": "项目的计划任务分组信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "按更新时间查询团队项目"
+  ],
+  "raw_text": "## 按更新时间查询团队项目\n简要描述：\n- 根据更新时间查询团队项目接口\n- 增量查询项目\n请求URL：\n- {OpenApiOrigin}/mainline/v2/queryUpdateMainlines\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| startTime | 是 | Date | 开始时间，格式(yyyy-MM-dd HH:mm:ss) |\n| endTime | 是 | Date | 结束时间，格式(yyyy-MM-dd HH:mm:ss) |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/queryUpdateMainlines?access_token=354172290dc12f9fb82e430b4d51df7f&startTime=2021-09-23 00:00:00&endTime=2021-09-23 23:00:00\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 返回信息对象 |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| mainlines | List<Object> | 项目对象集合 |\n| name | String | 项目名称 |\n| createTime | Date | 创建时间 |\n| startTime | Date | 起始日期 |\n| endTime | Date | 到期日期 |\n| description | String | 项目描述 |\n| percentFinished | String | 进度 |\n| icon | String | 项目图标 |\n| finished | Boolean | 是否完成 |\n| locked | Boolean | 是否锁定 |\n| status | String | 状态 |\n| module | String | 所属模块 |\n| finishTime | Date | 结束时间 |\n| manager | Object | 负责人 |\n| creator | Object | 创建者 |\n| isDelete | Boolean | 是否已删除 |\n| groupId | Long | 项目分类ID |\n| groupName | String | 项目分类名称 |\n| tenantKey | String | 团队key |\n| id | Long | 项目ID |\n| stage | List | 项目的计划任务分组信息 |\nJava sdk调用示例："
+}

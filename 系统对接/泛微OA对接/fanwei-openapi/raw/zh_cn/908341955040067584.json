@@ -1,0 +1,2173 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "修改日程",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "修改日程"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/calendar/openapi/v1/updateById",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/api/calendar/openapi/v1/updateById",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "#f44e3b",
+                        "backgroundColor": null,
+                        "fontSize": null,
+                        "fontFamily": null,
+                        "align": null,
+                        "underline": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Content-Type：application/json"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840673319280451584');",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "要修改的日程id"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userId"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "操作人的id "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取用户ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840674921396404224');",
+                            "title": null
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "propertyName"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "需要修改的参数名"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "propertyValue"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "要修改为的参数值"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "propertyName支持的参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程名称"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "startDate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程开始时间"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "endDate"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程结束时间"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "manager"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程负责人"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "secret"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程公开程度（normal：上级可见， self：仅自己可见， dept：本部门可见， all：公开）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "priority"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程紧急程度"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "receiptSwitch"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程回执开关，（开启：open，关闭：close）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "place"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程地点"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "repeatSetting"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "重复日程设置"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "entityRemind"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程提醒设置"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "calendarStatus"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程状态"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "signType"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程签到设置。none：不签到；scan：扫码签到；position：定位签到"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "allDay"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "全天设置,（开启：true，关闭：false）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "calendarType"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日程类型"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"message\": {\n\t\t\"errcode\": \"0\",\n\t\t\"errmsg\": \"success\"\n\t}\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errcode"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errmsg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "CalendarRequestVo calendarRequestVo = new CalendarRequestVo();\ncalendarRequestVo.setAccessToken(accessToken);\ncalendarRequestVo.setUserId(2225304380394396551L);\ncalendarRequestVo.setId(9100600778469287825L);\ncalendarRequestVo.setPropertyName(\"name\");\ncalendarRequestVo.setPropertyValue(\"SDK修改日程名称\");\nMessageResult messageResult = CalendarService.updateById(calendarRequestVo, \"https://api.yunteams.cn\", null);\nSystem.out.println(JSONObject.toJSONString(messageResult));"
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

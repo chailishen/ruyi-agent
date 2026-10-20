@@ -1,0 +1,26 @@
+{
+  "id": "921610998648463360",
+  "name": "接口人员信息转换使用说明",
+  "module": "对接说明",
+  "module_path": [
+    "对接说明"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "开放平台人员信息动态转换功能",
+    "前言",
+    "功能介绍",
+    "一：人员信息转换使用说明",
+    "二：部门信息转换使用说明"
+  ],
+  "raw_text": "### 开放平台人员信息动态转换功能\n#### 前言\n在第三方系统还未进行人员信息同步的情况下，调用开放平台相关接口时无法传递人员ID等相关信息，因此在开放平台层面提供三方人员信息动态转换功能\n#### 功能介绍\n第三方系统在调用开放平台接口时，支持传入工号、邮箱、手机号、身份证、登陆名、账号等信息，开放平台层面会对这些信息进行动态转换并获取到OA中对应的人员信息，从而实现第三方系统还未进行人员信息同步的情况下可以正常调用开放平台接口，提升开放平台与第三方系统交互的灵活性、扩展性\n##### 一：人员信息转换使用说明\n在原有OpenApi请求参数上新增userType参数用来标识当前传入需要转换为人员ID的人员信息。\nuserType支持以下类型：\nJOB_NUM：工号\nEMAIL：邮箱\nMOBILE：手机号\nidNos：身份证\nloginID：登录名\naccount：账号\n使用示例：\n原有openApi接口为{OpenApiOrigin}/form/v2/classify?userid=2225304380394396551\n以工号为例，使用转换功能后为\n{OpenApiOrigin}/form/v2/classify?userid=工号&userType=JOB_NUM\n##### 二：部门信息转换使用说明\n在原有OpenApi请求参数上新增deptType参数用来标识当前传入需要转换为部门ID的部门信息。\ndeptType支持以下类型：\nDEPT_CODE：部门编号\nDEPT_NAME：部门名称\n使用示例：\n原有openApi接口为{OpenApiOrigin}/department/v2/get?depid=2225304380394396551\n以部门编号为例，使用转换功能后为\n{OpenApiOrigin}/department/v2/get?depid=部门编号&deptType=DEPT_CODE\n注：涉及文件上传的相关接口暂不支持人员信息转换"
+}

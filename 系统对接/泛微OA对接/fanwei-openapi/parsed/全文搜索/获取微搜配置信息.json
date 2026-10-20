@@ -1,0 +1,144 @@
+{
+  "id": "367843401627860992",
+  "name": "获取微搜配置信息",
+  "module": "全文搜索",
+  "module_path": [
+    "全文搜索"
+  ],
+  "is_api": true,
+  "url": "/api/esearch/search/xiaoe/getSearchSetForXE",
+  "url_template": "{OpenApiOrigin}/api/esearch/search/xiaoe/getSearchSetForXE",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户编码"
+    },
+    {
+      "name": "employeeId",
+      "required": "是",
+      "type": "String",
+      "description": "人员ID"
+    },
+    {
+      "name": "fromSystem",
+      "required": "否",
+      "type": "String",
+      "description": "是否来源于后台页面"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "groups",
+      "required": "",
+      "type": "Object",
+      "description": "配置项分组信息"
+    },
+    {
+      "name": "groups.id",
+      "required": "",
+      "type": "String",
+      "description": "分组id"
+    },
+    {
+      "name": "groups.title",
+      "required": "",
+      "type": "String",
+      "description": "分组标题"
+    },
+    {
+      "name": "groups.visible",
+      "required": "",
+      "type": "boolen",
+      "description": "分组可见性"
+    },
+    {
+      "name": "groups.order",
+      "required": "",
+      "type": "integer",
+      "description": "分组排序"
+    },
+    {
+      "name": "layout",
+      "required": "",
+      "type": "Object",
+      "description": "分组下的配置的布局信息"
+    },
+    {
+      "name": "layout.label",
+      "required": "",
+      "type": "String",
+      "description": "配置标题"
+    },
+    {
+      "name": "layout.groupId",
+      "required": "",
+      "type": "String",
+      "description": "关联的分组ID"
+    },
+    {
+      "name": "layout.items",
+      "required": "",
+      "type": "List<String>",
+      "description": "关联的配置详细信息Key"
+    },
+    {
+      "name": "items",
+      "required": "",
+      "type": "Object",
+      "description": "配置的详细信息"
+    },
+    {
+      "name": "items.itemType",
+      "required": "",
+      "type": "String",
+      "description": "配置类型如下拉框、选择框等等"
+    },
+    {
+      "name": "items.visible",
+      "required": "",
+      "type": "boolen",
+      "description": "配置可见性"
+    },
+    {
+      "name": "items.disable",
+      "required": "",
+      "type": "boolen",
+      "description": "配置是禁用"
+    },
+    {
+      "name": "items.required",
+      "required": "",
+      "type": "boolen",
+      "description": "配置是否必填"
+    },
+    {
+      "name": "items.readOnly",
+      "required": "",
+      "type": "boolen",
+      "description": "配置只读"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取微搜模块基础信息"
+  ],
+  "raw_text": "## 获取微搜模块基础信息\n请求URL：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/getSearchSetForXE\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| tenantKey | 是 | String | 租户编码 |\n| employeeId | 是 | String | 人员ID |\n| fromSystem | 否 | String | 是否来源于后台页面 |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/getSearchSetForXE\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| groups | Object | 配置项分组信息 |\n| groups.id | String | 分组id |\n| groups.title | String | 分组标题 |\n| groups.visible | boolen | 分组可见性 |\n| groups.order | integer | 分组排序 |\n| layout | Object | 分组下的配置的布局信息 |\n| layout.label | String | 配置标题 |\n| layout.groupId | String | 关联的分组ID |\n| layout.items | List<String> | 关联的配置详细信息Key |\n| items | Object | 配置的详细信息 |\n| items.itemType | String | 配置类型如下拉框、选择框等等 |\n| items.visible | boolen | 配置可见性 |\n| items.disable | boolen | 配置是禁用 |\n| items.required | boolen | 配置是否必填 |\n| items.readOnly | boolen | 配置只读 |"
+}

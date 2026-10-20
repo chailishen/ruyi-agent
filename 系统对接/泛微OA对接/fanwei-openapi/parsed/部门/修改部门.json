@@ -1,0 +1,78 @@
+{
+  "id": "840674071017168897",
+  "name": "修改部门",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/department/v2/update",
+  "url_template": "{OpenApiOrigin}/department/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "depid",
+      "required": "是",
+      "type": "Long",
+      "description": "部门ID 获取部门ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "部门名称"
+    },
+    {
+      "name": "parentId",
+      "required": "否",
+      "type": "Long",
+      "description": "上级部门ID 获取部门ID"
+    },
+    {
+      "name": "disporder",
+      "required": "否",
+      "type": "Integer",
+      "description": "排序"
+    },
+    {
+      "name": "code",
+      "required": "否",
+      "type": "String",
+      "description": "编号"
+    },
+    {
+      "name": "description",
+      "required": "否",
+      "type": "String",
+      "description": "描述信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改部门"
+  ],
+  "raw_text": "## 修改部门\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用同步部门接口\n请求URL：\n- {OpenApiOrigin}/department/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| depid | 是 | Long | 部门ID 获取部门ID |\n| name | 否 | String | 部门名称 |\n| parentId | 否 | Long | 上级部门ID 获取部门ID |\n| disporder | 否 | Integer | 排序 |\n| code | 否 | String | 编号 |\n| description | 否 | String | 描述信息 |\n请求示例：\nquery方式\n{OpenApiOrigin}/department/v2/update?access_token=c29ac4198fbfc218c95617852df4732b&depid=35777652445994479&name=数据组修改后的部门\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

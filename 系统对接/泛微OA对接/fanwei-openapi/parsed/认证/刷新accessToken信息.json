@@ -1,0 +1,69 @@
+{
+  "id": "228362355153567744",
+  "name": "刷新accessToken信息",
+  "module": "认证",
+  "module_path": [
+    "认证"
+  ],
+  "is_api": true,
+  "url": "/oauth2/refresh_token",
+  "url_template": "{OpenApiOrigin}/oauth2/refresh_token",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type: application/json",
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "grant_type",
+      "required": "是",
+      "type": "String",
+      "description": "授权类型，固定：refresh_token"
+    },
+    {
+      "name": "refresh_token",
+      "required": "是",
+      "type": "String",
+      "description": "刷新令牌凭证，有效时间默认为24小时"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "accessToken",
+      "required": "",
+      "type": "String",
+      "description": "接口凭证，有效时间默认为2小时"
+    },
+    {
+      "name": "refreshToken",
+      "required": "",
+      "type": "String",
+      "description": "刷新令牌，有效时间默认为24小时"
+    },
+    {
+      "name": "expire_in",
+      "required": "",
+      "type": "Int",
+      "description": "有效时间，单位为秒"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "刷新accessToken信息"
+  ],
+  "raw_text": "## 刷新accessToken信息\n请求URL：\n- {OpenApiOrigin}/oauth2/refresh_token\n请求方式：\n- POST\n- Content-Type: application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| grant_type | 是 | String | 授权类型，固定：refresh_token |\n| refresh_token | 是 | String | 刷新令牌凭证，有效时间默认为24小时 |\n备注：\n- 刷新access_token有效期       access_token是调用授权关系接口的调用凭证，由于access_token有效期（目前默认为2个小时）较短，当access_token超时后，可以使用refresh_token进行刷新，access_token刷新结果有两种：        1. 若access_token已超时，那么进行refresh_token会获取一个新的access_token，新的refresh_token，新的超时时间；        2. 若access_token未超时，那么进行refresh_token不会改变access_token，但超时时间会刷新，相当于续期access_token。        refresh_token拥有较长的有效期（默认为24小时），当refresh_token失效后，需要用户重新授权。\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| accessToken | String | 接口凭证，有效时间默认为2小时 |\n| refreshToken | String | 刷新令牌，有效时间默认为24小时 |\n| expire_in | Int | 有效时间，单位为秒 |\nJava sdk调用示例："
+}

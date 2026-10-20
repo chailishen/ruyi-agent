@@ -1,0 +1,1422 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "任务可变更状态列表查询接口支持批量",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "任务可变更状态列表查询接口（支持批量）"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/task/v3/status/changeableList",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/task/v3/status/changeableList",
+                        "title": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "#e27300",
+                        "backgroundColor": null,
+                        "fontSize": null,
+                        "fontFamily": null,
+                        "align": null,
+                        "underline": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840673319280451584');",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userid"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "当前操作人ID "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取用户ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840674921396404224');",
+                            "title": "获取用户ID"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "propertyDataList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "任务属性集合，支持多个map对象"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "任务ID "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取任务ID",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840678649250979841');",
+                            "title": "获取任务ID"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "备注",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "参数格式为Content-Type: “application/json”"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n    \"userid\": 1565437404915028700, \n    \"propertyDataList\": [\n        {\n            \"id\": 2225344563315640000\n        }, \n        {\n            \"id\": 5114980800848690000\n        }\n    ]\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "json方式",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f840679057390313473.0.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n    \"code\": 200,\n    \"msg\": \"批量查询完毕\",\n    \"status\": true,\n    \"data\": {\n        \"resultList\": [\n            {\n                \"name\": \"taskOpen_i_2\",\n                \"id\": \"2227963799825335592\",\n                \"data\": {\n                    \"changeableStatusList\": [\n                        {\n                            \"id\": \"796870931988488194\",\n                            \"name\": \"进行中\",\n                            \"sort\": 1,\n                            \"enabled\": true,\n                            \"taskTypeId\": \"0\",\n                            \"isDelete\": false,\n                            \"displayColor\": \"#5D9CEC\",\n                            \"stage\": \"todo\",\n                            \"tenantKey\": \"T2K74I3RJO\",\n                            \"remarksRequired\": false\n                        },\n                        {\n                            \"id\": \"796870931988488193\",\n                            \"name\": \"已完成\",\n                            \"sort\": 9999,\n                            \"enabled\": true,\n                            \"taskTypeId\": \"0\",\n                            \"isDelete\": false,\n                            \"displayColor\": \"#5D9CEC\",\n                            \"stage\": \"finished\",\n                            \"tenantKey\": \"T2K74I3RJO\",\n                            \"remarksRequired\": false\n                        }\n                    ],\n                    \"currentStatus\": {\n                        \"id\": \"796870931988488194\",\n                        \"name\": \"进行中\",\n                        \"sort\": 1,\n                        \"enabled\": true,\n                        \"taskTypeId\": \"0\",\n                        \"isDelete\": false,\n                        \"displayColor\": \"#5D9CEC\",\n                        \"stage\": \"todo\",\n                        \"tenantKey\": \"T2K74I3RJO\",\n                        \"remarksRequired\": false\n                    }\n                },\n                \"status\": \"success\"\n            },\n            {\n                \"name\": \"taskOpen_i_3\",\n                \"id\": \"2227963800029635607\",\n                \"data\": {\n                    \"changeableStatusList\": [\n                        {\n                            \"id\": \"796870931988488194\",\n                            \"name\": \"进行中\",\n                            \"sort\": 1,\n                            \"enabled\": true,\n                            \"taskTypeId\": \"0\",\n                            \"isDelete\": false,\n                            \"displayColor\": \"#5D9CEC\",\n                            \"stage\": \"todo\",\n                            \"tenantKey\": \"T2K74I3RJO\",\n                            \"remarksRequired\": false\n                        },\n                        {\n                            \"id\": \"796870931988488193\",\n                            \"name\": \"已完成\",\n                            \"sort\": 9999,\n                            \"enabled\": true,\n                            \"taskTypeId\": \"0\",\n                            \"isDelete\": false,\n                            \"displayColor\": \"#5D9CEC\",\n                            \"stage\": \"finished\",\n                            \"tenantKey\": \"T2K74I3RJO\",\n                            \"remarksRequired\": false\n                        }\n                    ],\n                    \"currentStatus\": {\n                        \"id\": \"796870931988488194\",\n                        \"name\": \"进行中\",\n                        \"sort\": 1,\n                        \"enabled\": true,\n                        \"taskTypeId\": \"0\",\n                        \"isDelete\": false,\n                        \"displayColor\": \"#5D9CEC\",\n                        \"stage\": \"todo\",\n                        \"tenantKey\": \"T2K74I3RJO\",\n                        \"remarksRequired\": false\n                    }\n                },\n                \"status\": \"success\"\n            }\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "javascript:weamdJumpTo('840723540442972161');",
+                            "title": "返回码"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "msg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "resultList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "接口返回结果"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "当前查询任务的ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "当前查询任务的名称"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "status"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "当前查询执行状态（success成功、fail失败）"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "data"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "接口返回"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "currentStatus"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "任务当前的状态"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "changeableStatusList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "任务可变更的状态列表"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "TaskVo taskVo = new TaskVo();\ntaskVo.setAccessToken(accessToken);\ntaskVo.setUserid(5112639914017544118L);\ntaskVo.setId(5118223634453084089L);\nList<PropertyDataList> list = new ArrayList<>();\nPropertyDataList propertyDataList = new PropertyDataList();\npropertyDataList.setId(5118223634453084089L);\nlist.add(propertyDataList);\ntaskVo.setPropertyDataList(list);\nApiResult<BatchOpResultVo> normalRes = TaskService.changeableListV3(taskVo, \"{OpenApiOrigin}\", null);"
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

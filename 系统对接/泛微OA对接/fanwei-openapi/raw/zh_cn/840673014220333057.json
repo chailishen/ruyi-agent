@@ -1,0 +1,560 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "对接示例",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "对接示例"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "开放平台调用接口的完整步骤",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台调用接口的完整步骤"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "前期准备阶段"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "1、注册本系统；"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "2、用本系统的管理员账号登录开放平台；"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "3、进行开发者认证，认证通过之后获取到Corpid，后续调用接口会用到；"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "4、创建所需应用等待应用审核通过，审核通过的应用会显示app_key和app_security，后续调用接口会用到；"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "对接准备阶段"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "5、获取code信息 "
+                },
+                {
+                  "type": "text",
+                  "text": "获取code信息",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840673181800431617');",
+                        "title": "获取code信息"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "，code有效时间为10分钟，且只能使用一次；"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "6、获取accessToken信息 "
+                },
+                {
+                  "type": "text",
+                  "text": "获取accessToken信息",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840673319280451584');",
+                        "title": "获取accessToken信息"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "，access_token有效时间为2小时，建议开发者存储该值，到期后重新获取一次；"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "接口常用参数准备阶段"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "7、获取userid（用户ID）使用 "
+                },
+                {
+                  "type": "text",
+                  "text": "查询部门人员",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840675002832134145');",
+                        "title": "获取成员信息"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " 接口可根据部门ID查询人员信息，调用此接口之前首选要使用 "
+                },
+                {
+                  "type": "text",
+                  "text": "查询部门列表 ",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840674178265522177');",
+                        "title": "查询部门列表"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "获取获取部门ID；"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "对接系统调用接口阶段"
+                },
+                {
+                  "type": "hardbreak"
+                },
+                {
+                  "type": "text",
+                  "text": "8、选择所需要接口进行调试对接。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "示例场景",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "示例场景"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "客户自有一套工单系统，供企业员工记录外部服务。当用户接到新的工单时，可以直接将工单转化为本系统中的任务。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第一步场景分析",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第一步：场景分析"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "工单系统接到工单->传输工单数据到本系统中->在本系统中新增任务"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台所要完成的是新增任务的动作，那么需要使用的是任务模块的新增任务接口。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第二步查看新增任务接口",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第二步：查看新增任务接口"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "新增任务接口："
+        },
+        {
+          "type": "text",
+          "text": "接口详细说明",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "javascript:weamdJumpTo('840678438974619649');",
+                "title": "接口说明"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第三步分析接口所需参数",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第三步：分析接口所需参数"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "新增任务接口需要以下五个参数，且都是必选"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "access_token：调用接口凭证 "
+                },
+                {
+                  "type": "text",
+                  "text": "获取accessToken信息",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840673319280451584');",
+                        "title": "获取accessToken信息"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "userid：用户ID "
+                },
+                {
+                  "type": "text",
+                  "text": "获取用户ID",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840675002832134145');",
+                        "title": "获取用户ID"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "name：任务名称，自定义，由客户系统传入"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "content：任务内容，自定义，由客户系统传入"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "group：任务分组，默认为“today”"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第四步调试接口",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第四步：调试接口"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "根据接口文档，输入接口地址、请求方式和参数后请求接口，如图新建成功，返回taskId（任务ID）"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n    \"message\": {\n        \"errcode\": \"0\", \n        \"errmsg\": \"success\"\n    }, \n    \"taskId\": 2037069168666797800\n}"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第五步接口调试完毕开始客户系统与eteams对接",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第五步：接口调试完毕，开始客户系统与eteams对接"
+        }
+      ]
+    }
+  ]
+}

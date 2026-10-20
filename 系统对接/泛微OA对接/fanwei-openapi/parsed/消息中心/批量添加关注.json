@@ -1,0 +1,90 @@
+{
+  "id": "925780746332143617",
+  "name": "批量添加关注",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/my/watch/batchAddWatch",
+  "url_template": "{OpenApiOrigin}/api/my/watch/batchAddWatch",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "entityIds",
+      "required": "是",
+      "type": "long[]",
+      "description": "事项ID集合"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "关注人员id"
+    },
+    {
+      "name": "watchNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "文件夹ID（默认是根节点）"
+    },
+    {
+      "name": "title",
+      "required": "否",
+      "type": "String",
+      "description": "关注事项名称（不传默认为事项名称）"
+    },
+    {
+      "name": "importance",
+      "required": "否",
+      "type": "Int",
+      "description": "重要程度（1=一般，2=关注，3=重要）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "boolean",
+      "description": "true关注成功 false关注失败"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量添加关注"
+  ],
+  "raw_text": "### 批量添加关注\n请求URL：\n- {OpenApiOrigin}/api/my/watch/batchAddWatch\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| entityIds | 是 | long[] | 事项ID集合 |\n| module | 是 | String | 模块 |\n| userid | 是 | long | 关注人员id |\n| watchNodeId | 否 | long | 文件夹ID（默认是根节点） |\n| title | 否 | String | 关注事项名称（不传默认为事项名称） |\n| importance | 否 | Int | 重要程度（1=一般，2=关注，3=重要） |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| data | boolean | true关注成功 false关注失败 |\n| status | String | 状态 |\nJava sdk调用示例："
+}

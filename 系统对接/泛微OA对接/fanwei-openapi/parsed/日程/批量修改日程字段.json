@@ -1,0 +1,164 @@
+{
+  "id": "925786849436794880",
+  "name": "批量修改日程字段",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/batchUpdateAgenda",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/batchUpdateAgenda",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "要修改的日程id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人的id 获取用户ID"
+    },
+    {
+      "name": "keyValMap",
+      "required": "是",
+      "type": "Object",
+      "description": "修改的属性名称和值"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "startDate",
+      "required": "否",
+      "type": "String",
+      "description": "日程开始时间"
+    },
+    {
+      "name": "endDate",
+      "required": "否",
+      "type": "String",
+      "description": "日程结束时间"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "Long",
+      "description": "日程负责人"
+    },
+    {
+      "name": "secret",
+      "required": "否",
+      "type": "String",
+      "description": "日程公开程度1, 正常(上级可见)2, 仅自己可见4, 公开5, 本部门可见"
+    },
+    {
+      "name": "priority",
+      "required": "否",
+      "type": "String",
+      "description": "日程紧急程度"
+    },
+    {
+      "name": "receiptSwitch",
+      "required": "否",
+      "type": "String",
+      "description": "日程回执开关，（开启：open，关闭：close）"
+    },
+    {
+      "name": "repeatSetting",
+      "required": "否",
+      "type": "Object",
+      "description": "重复日程设置"
+    },
+    {
+      "name": "entityRemind",
+      "required": "否",
+      "type": "String",
+      "description": "日程提醒设置"
+    },
+    {
+      "name": "calendarStatus",
+      "required": "否",
+      "type": "String",
+      "description": "日程状态 todo、finish"
+    },
+    {
+      "name": "calendarType",
+      "required": "否",
+      "type": "Long",
+      "description": "日程类型"
+    },
+    {
+      "name": "signType",
+      "required": "否",
+      "type": "Object",
+      "description": "日程签到设置。none：不签到；scan：扫码签到；position：定位签到"
+    },
+    {
+      "name": "allDay",
+      "required": "否",
+      "type": "String",
+      "description": "全天设置,（开启：true，关闭：false）"
+    },
+    {
+      "name": "permissionEntry",
+      "required": "否",
+      "type": "String",
+      "description": "参与人3、共享人1。permissionEntry参数详情配置见下方"
+    },
+    {
+      "name": "placeType",
+      "required": "否",
+      "type": "List",
+      "description": "地点：other、room。如果是other：需要传place；如果是room：需要传 roomIds   [\"684137373611106305\"]，placeType参数详情配置见下方"
+    },
+    {
+      "name": "roomId",
+      "required": "否",
+      "type": "String",
+      "description": "会议室号列表，如：\"684137373611106305,23423434324235343\"，placeType=room的时候必传"
+    },
+    {
+      "name": "place",
+      "required": "否",
+      "type": "String",
+      "description": "地点，placeType=other的时候必传"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量修改日程字段"
+  ],
+  "raw_text": "## 批量修改日程字段\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/batchUpdateAgenda\n请求方式：\n- POST\n- Content-Type：application/json\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 要修改的日程id |\n| userid | 是 | Long | 操作人的id 获取用户ID |\n| keyValMap | 是 | Object | 修改的属性名称和值 |\nkeyValMap的属性支持的列表：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 否 | String | 日程名称 |\n| startDate | 否 | String | 日程开始时间 |\n| endDate | 否 | String | 日程结束时间 |\n| manager | 否 | Long | 日程负责人 |\n| secret | 否 | String | 日程公开程度1, 正常(上级可见)2, 仅自己可见4, 公开5, 本部门可见 |\n| priority | 否 | String | 日程紧急程度 |\n| receiptSwitch | 否 | String | 日程回执开关，（开启：open，关闭：close） |\n| repeatSetting | 否 | Object | 重复日程设置 |\n| entityRemind | 否 | String | 日程提醒设置 |\n| calendarStatus | 否 | String | 日程状态 todo、finish |\n| calendarType | 否 | Long | 日程类型 |\n| signType | 否 | Object | 日程签到设置。none：不签到；scan：扫码签到；position：定位签到 |\n| allDay | 否 | String | 全天设置,（开启：true，关闭：false） |\n| permissionEntry | 否 | String | 参与人3、共享人1。permissionEntry参数详情配置见下方 |\n| placeType | 否 | List | 地点：other、room。如果是other：需要传place；如果是room：需要传 roomIds   [\"684137373611106305\"]，placeType参数详情配置见下方 |\n| roomId | 否 | String | 会议室号列表，如：\"684137373611106305,23423434324235343\"，placeType=room的时候必传 |\n| place | 否 | String | 地点，placeType=other的时候必传 |\n- repeatSetting重复日程设置对应value格式{\n  \"repeat\": true,\n  \"repeatSetting\": {\n    \"repeatType\": \"everyWeek\",  //everyday:每天；everyWeek:每周；everyMonth:每月；everyYear:每年\n    \"weekCycles\":\"tuesday\",  //具体星期数,规则为周重复时需传此参数\n    \"frequency\": 1,   //重复频率\n    \"triggerType\": \"now\",   //now:立即触发；time：自定义时间\n    \"endRepeatType\": \"number\",   //number:次数；date:日期\n    \"repeatCount\": 3   //结束次数\n  }\n}\n}\n- entityRemind日程提醒设置对应的Value格式{\n  \"type\": \"hour\",\n  \"time\": 1,\n  \"endType\": \"day\",\n  \"endTime\": 2,\n  \"remindedTypes\": [\n    \"create\",\n    \"participants\"\n  ],\n  \"remindWays\": [\n    \"im\",\n    \"email\"\n  ]\n}\n- signType日程签到设置的Value格式{\n\t\"signType\": \"scan\",//none：不签到；scan：扫码签到；position：定位签到\n\t\"signConfig\": {\n\t\t\"addrs\": [\n\t\t\t{\n\t\t\t\t\"longitude\": \"104.070703\",\n\t\t\t\t\"latitude\": \"30.5429\",\n\t\t\t\t\"address\": \"xxx\"\n\t\t\t}\n\t\t],\n\t\t\"signRange\": \"500\",\n\t\t\"clientLimit\": \"pc、app\",\n\t\t\"qrCodePermission\": \"creator&manager&Participant\"\n\t}\n}\n- entityRemind日程提醒设置对应的Value格式{\n        \"type\": \"hour\",\n        \"time\": \"1\",\n        \"endType\": \"hour\",\n        \"endTime\": \"2\",\n        \"remindedTypes\": [\n            \"primary\",\n            \"participants\"\n        ],\n        \"remindWays\": [\n            \"im\",\n            \"email\"\n        ]\n}\n- entityRemind提醒设置\n- 传入type表示使用系统默认的时间，包括如下：type/endTypetime/endTimeminute支持传10或着30，表示10分钟或30分钟hour支持传1或者3，表示1小时或者3小时day支持传1、2、3，表示1天、2天或3天    如果不传递type(或者endType)则表示使用自定义时间，默认是以分钟为单位，比如传入的是120则表示2小时\n- 共享人、参与人permissionEntry：\"permissionEntry\": [\n    {\n        \"targetId\": \"2738319536293147463\",\n        \"targetType\": 1, // 代表该字段是人员\n        \"permissionType\": 1 //共享人\n    },\n    {\n        \"targetId\": \"2738319536293147463\",\n        \"targetType\": 1, // 代表该字段是人员\n        \"permissionType\": 3 // 参与人\n    }\n]\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

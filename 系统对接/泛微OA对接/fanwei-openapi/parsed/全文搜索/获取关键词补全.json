@@ -1,0 +1,84 @@
+{
+  "id": "367844522689822720",
+  "name": "获取关键词补全",
+  "module": "全文搜索",
+  "module_path": [
+    "全文搜索"
+  ],
+  "is_api": true,
+  "url": "/api/esearch/search/xiaoe/querySuggestForXE",
+  "url_template": "{OpenApiOrigin}/api/esearch/search/xiaoe/querySuggestForXE",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户编码"
+    },
+    {
+      "name": "employeeId",
+      "required": "是",
+      "type": "String",
+      "description": "人员ID"
+    },
+    {
+      "name": "moduleKey",
+      "required": "是",
+      "type": "String",
+      "description": "搜索的模块编码"
+    },
+    {
+      "name": "isHighLight",
+      "required": "是",
+      "type": "boolen",
+      "description": "是否高亮显示"
+    },
+    {
+      "name": "prefix",
+      "required": "是",
+      "type": "String",
+      "description": "搜索词"
+    },
+    {
+      "name": "limit",
+      "required": "否",
+      "type": "Integer",
+      "description": "提示词返回个数"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "highLightSuggest",
+      "required": "",
+      "type": "String",
+      "description": "提示词高亮展示"
+    },
+    {
+      "name": "suggest",
+      "required": "",
+      "type": "String",
+      "description": "提示词"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取关键词补全"
+  ],
+  "raw_text": "## 获取关键词补全\n请求URL：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/querySuggestForXE\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| tenantKey | 是 | String | 租户编码 |\n| employeeId | 是 | String | 人员ID |\n| moduleKey | 是 | String | 搜索的模块编码 |\n| isHighLight | 是 | boolen | 是否高亮显示 |\n| prefix | 是 | String | 搜索词 |\n| limit | 否 | Integer | 提示词返回个数 |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/querySuggestForXE\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| highLightSuggest | String | 提示词高亮展示 |\n| suggest | String | 提示词 |"
+}

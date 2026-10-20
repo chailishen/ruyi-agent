@@ -1,0 +1,96 @@
+{
+  "id": "840716866071306240",
+  "name": "表单支持动态参数查询",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/getInfoByIDAndParam",
+  "url_template": "{OpenApiOrigin}/form/v2/getInfoByIDAndParam",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "分页页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "分页展示数据数，默认最大20"
+    },
+    {
+      "name": "datamap",
+      "required": "是",
+      "type": "String",
+      "description": "表单名称names，提交时间createTimes，提交人operators，部分自定义字段 表单查询datamap传值说明"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "表单数据提交时间"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单数据ID"
+    },
+    {
+      "name": "reporter",
+      "required": "",
+      "type": "String",
+      "description": "提交人信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "表单支持动态参数查询"
+  ],
+  "raw_text": "## 表单支持动态参数查询\n请求URL：\n- {OpenApiOrigin}/form/v2/getInfoByIDAndParam\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单ID 获取表单ID |\n| pageNo | 是 | Int | 分页页码 |\n| pageSize | 是 | Int | 分页展示数据数，默认最大20 |\n| datamap | 是 | String | 表单名称names，提交时间createTimes，提交人operators，部分自定义字段 表单查询datamap传值说明 |\ndatamap传值示例：\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/getInfoByIDAndParam?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&pageNo=1&pageSize=10&id=843625344723992576&datamap={\"names\":\"开放平台\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| createTime | String | 表单数据提交时间 |\n| id | String | 表单数据ID |\n| reporter | String | 提交人信息 |\n| status | String | 状态 |\nJava sdk调用示例："
+}

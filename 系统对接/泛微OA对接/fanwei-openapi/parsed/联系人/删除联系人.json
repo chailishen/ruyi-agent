@@ -1,0 +1,60 @@
+{
+  "id": "840675642976075777",
+  "name": "删除联系人",
+  "module": "联系人",
+  "module_path": [
+    "联系人"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/delete",
+  "url_template": "{OpenApiOrigin}/crm/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：contact"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "联系人ID 获取联系人ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除联系人"
+  ],
+  "raw_text": "## 删除联系人\n请求URL：\n- {OpenApiOrigin}/crm/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：contact |\n| id | 是 | Long | 联系人ID 获取联系人ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/delete?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=contact&id=7823238479056267608\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

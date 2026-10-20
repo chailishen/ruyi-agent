@@ -1,0 +1,74 @@
+{
+  "id": "278283069658497024",
+  "name": "流程提交给发送人",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/submitToSender",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/submitToSender",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "package com.weaver.core.demo;\n\nimport cn.hutool.http.HttpRequest;\nimport cn.hutool.json.JSONUtil;\nimport com.alibaba.fastjson.JSONObject;\nimport com.weaver.core.constant.TestConstant;\n\n/**\n * 提交流程给发送人\n *\n * @author:chenwh\n */\npublic class SubmitToSenderDemo extends DemoBase {\n\n    public static void main(String[] args) {\n        String response = new SubmitToSenderDemo().submitToSender(959502823746453508L);\n        System.out.println(response);\n    }\n\n    /**\n     * 提交流程给发送人\n     *\n     * @param requestId\n     * @return\n     */\n    public String submitToSender(long requestId) {\n        String url = HOST + \"/api/workflow/core/paService/v1/submitToSender?access_token=\" + TOKEN;\n        JSONObject param = new JSONObject();\n        param.put(\"userid\", TestConstant.USER_CHENWH);\n        param.put(\"requestId\", requestId);\n        param.put(\"remark\", \"提交给发送人\");\n\n        // 发送请求\n        return HttpRequest.post(url)\n                .header(\"Content-Type\", \"application/json\")\n                .body(JSONUtil.toJsonStr(param))\n                .execute()\n                .body();\n    }\n}"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "当前节点：多个当前节点待办时调用方可指定操作当前节点，如果没有指定，则根据权重计算出一个默认操作节点"
+    },
+    {
+      "name": "customOperateTypeCode",
+      "required": "否",
+      "type": "int",
+      "description": "操作类型code，支持自定义；不传的话，默认批准/确认"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "string",
+      "description": "签字意见"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "流程提交给发送人"
+  ],
+  "raw_text": "## 流程提交给发送人\n提交发送人的条件：\n1、当前操作人是并行分流可直接提交给发送人\n2、如果不是并行分流，需要看节点的操作者设置的会签关系，只有最后一个人提交可流转的情况调用这个接口时才会提交给发送人。比如操作者m提交给a，b两人会签，a调用接口走正常提交不发生流转，a提交后b调用接口，流程可流转则可以直接回到发送人m\n不支持提交发送人的操作类型：\n干预给你、转办给你、手动委托给你、撤回到自己待办的数据\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/submitToSender\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程请求ID |\n| userCurrentNodeId | 否 | long | 当前节点：多个当前节点待办时调用方可指定操作当前节点，如果没有指定，则根据权重计算出一个默认操作节点 |\n| customOperateTypeCode | 否 | int | 操作类型code，支持自定义；不传的话，默认批准/确认 |\n| remark | 否 | string | 签字意见 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

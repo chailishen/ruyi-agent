@@ -1,0 +1,90 @@
+{
+  "id": "840719404272025601",
+  "name": "产品获取自定义表单字段",
+  "module": "产品",
+  "module_path": [
+    "产品"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/getCustomFields",
+  "url_template": "{OpenApiOrigin}/crm/v2/getCustomFields",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：production"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取自定义表单ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "字段名称"
+    },
+    {
+      "name": "componentKey",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "required",
+      "required": "",
+      "type": "Bool",
+      "description": "是否必填"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Bool",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "字段ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "产品获取自定义表单字段"
+  ],
+  "raw_text": "## 产品获取自定义表单字段\n请求URL：\n- {OpenApiOrigin}/crm/v2/getCustomFields\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：production |\n| formId | 是 | Long | 表单ID 获取自定义表单ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/getCustomFields?access_token=db7e733fc168c595e8c847a513a2865d&userid=835851587175096321&module=production&formId=3083469381349879853\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| title | String | 字段名称 |\n| componentKey | String | 字段类型 |\n| required | Bool | 是否必填 |\n| delete | Bool | 是否删除 |\n| id | String | 字段ID |\nJava sdk调用示例："
+}

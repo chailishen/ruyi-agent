@@ -1,0 +1,144 @@
+{
+  "id": "919050206069391360",
+  "name": "添加共享",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/list/paService/v1/addRequestShare",
+  "url_template": "{OpenApiOrigin}/api/workflow/list/paService/v1/addRequestShare",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "shareSourceList",
+      "required": "是",
+      "type": "List",
+      "description": "共享资源集合"
+    },
+    {
+      "name": "requestid",
+      "required": "是",
+      "type": "string",
+      "description": "流程ID"
+    },
+    {
+      "name": "shareTargetList",
+      "required": "是",
+      "type": "List",
+      "description": "共享对象集合下方是其中的参数"
+    },
+    {
+      "name": "shareType",
+      "required": "是",
+      "type": "int",
+      "description": "共享类型（人员：1；部门：2；分部：5；角色：10；群组：14；岗位：1311；所有人：11）"
+    },
+    {
+      "name": "shareObjId",
+      "required": "是",
+      "type": "long",
+      "description": "共享目标id（对应共享类型：人员id；部门id；分部id；角色id；群组id；岗位id；所有人类型时传参为0）"
+    },
+    {
+      "name": "permissionTypeList",
+      "required": "否",
+      "type": "list<Integer>",
+      "description": "权限项集合，传参为“1”时，可查看意见及评论开关打开，不传则开关默认关闭"
+    },
+    {
+      "name": "minSeclevel",
+      "required": "否",
+      "type": "Integer",
+      "description": "最小安全级别"
+    },
+    {
+      "name": "maxSeclevel",
+      "required": "否",
+      "type": "Integer",
+      "description": "最大安全级别"
+    },
+    {
+      "name": "shareCheckBoxList",
+      "required": "否",
+      "type": "List<Integer>",
+      "description": "共享选择框集合，共享类型为“部门”时，此参数有效，传参为3时 共享对象包含下级；传参为2002时 共享对象包含兼职"
+    },
+    {
+      "name": "shareTragetType",
+      "required": "shareTragetType",
+      "type": "int",
+      "description": "共享目标级别，共享类型为“角色/岗位”时，不传本参数默认是总部/全部机构；传参：总部/全部机构：0，分部/指定分部：1，部门/指定部门：2"
+    },
+    {
+      "name": "targetStationBsId",
+      "required": "targetStationBsId",
+      "type": "String",
+      "description": "共享目标级别id，共享类型为“岗位”时，此参数有效，指定分部传对应分部id，指定部门传对应部门id"
+    },
+    {
+      "name": "needWriteLog",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：流程详情-操作日志中显示共享数据，false/不传本参数：操作日志中不显示共享数据"
+    },
+    {
+      "name": "needSendMsg",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：有IM消息提醒，false/不传本参数：没有IM消息提醒"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "状态码0：成功，1.接口内部异常，2.必填字段异常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误信息"
+    },
+    {
+      "name": "sourceId",
+      "required": "",
+      "type": "String",
+      "description": "共享资源的id"
+    },
+    {
+      "name": "result",
+      "required": "",
+      "type": "String",
+      "description": "共享资源是否添加成功true:成功，false：失败"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "添加共享"
+  ],
+  "raw_text": "## 添加共享\n请求URL：\n- {OpenApiOrigin}/api/workflow/list/paService/v1/addRequestShare\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| shareSourceList | 是 | List | 共享资源集合 |\n| requestid | 是 | string | 流程ID |\n| shareTargetList | 是 | List | 共享对象集合下方是其中的参数 |\n| shareType | 是 | int | 共享类型（人员：1；部门：2；分部：5；角色：10；群组：14；岗位：1311；所有人：11） |\n| shareObjId | 是 | long | 共享目标id（对应共享类型：人员id；部门id；分部id；角色id；群组id；岗位id；所有人类型时传参为0） |\n| permissionTypeList | 否 | list<Integer> | 权限项集合，传参为“1”时，可查看意见及评论开关打开，不传则开关默认关闭 |\n| minSeclevel | 否 | Integer | 最小安全级别 |\n| maxSeclevel | 否 | Integer | 最大安全级别 |\n| shareCheckBoxList | 否 | List<Integer> | 共享选择框集合，共享类型为“部门”时，此参数有效，传参为3时 共享对象包含下级；传参为2002时 共享对象包含兼职 |\n| shareTragetType | shareTragetType | int | 共享目标级别，共享类型为“角色/岗位”时，不传本参数默认是总部/全部机构；传参：总部/全部机构：0，分部/指定分部：1，部门/指定部门：2 |\n| targetStationBsId | targetStationBsId | String | 共享目标级别id，共享类型为“岗位”时，此参数有效，指定分部传对应分部id，指定部门传对应部门id |\n| needWriteLog | 否 | boolean | true：流程详情-操作日志中显示共享数据，false/不传本参数：操作日志中不显示共享数据 |\n| needSendMsg | 否 | boolean | true：有IM消息提醒，false/不传本参数：没有IM消息提醒 |\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 状态码0：成功，1.接口内部异常，2.必填字段异常 |\n| errmsg | String | 错误信息 |\n| sourceId | String | 共享资源的id |\n| result | String | 共享资源是否添加成功true:成功，false：失败 |\n| msg | String | 返回信息 |\nJava sdk调用示例："
+}

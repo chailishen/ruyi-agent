@@ -1,0 +1,92 @@
+{
+  "id": "871464725802074112",
+  "name": "查询会议列表",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/getMeetingInfoList",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/getMeetingInfoList",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST（Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "当前人员ID 获取用户ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "会议名称"
+    },
+    {
+      "name": "mtStatus",
+      "required": "否",
+      "type": "Integer",
+      "description": "0：草稿  1：待审批 2：未开始 3：退回 4：取消 7：锁定 8：结束（普通会议决议时更新）9：进行中"
+    },
+    {
+      "name": "beginDate",
+      "required": "否",
+      "type": "String",
+      "description": "会议开始日期（格式：yyyy-MM-dd）"
+    },
+    {
+      "name": "endDate",
+      "required": "否",
+      "type": "String",
+      "description": "会议结束日期（格式：yyyy-MM-dd）"
+    },
+    {
+      "name": "current",
+      "required": "否",
+      "type": "String",
+      "description": "当前页"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "String",
+      "description": "当前页展示数量"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询会议列表"
+  ],
+  "raw_text": "## 查询会议列表\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/getMeetingInfoList\n请求方式：\n- POST\n- （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 当前人员ID 获取用户ID |\n| name | 否 | String | 会议名称 |\n| mtStatus | 否 | Integer | 0：草稿  1：待审批 2：未开始 3：退回 4：取消 7：锁定 8：结束（普通会议决议时更新）9：进行中 |\n| beginDate | 否 | String | 会议开始日期（格式：yyyy-MM-dd） |\n| endDate | 否 | String | 会议结束日期（格式：yyyy-MM-dd） |\n| current | 否 | String | 当前页 |\n| pageSize | 否 | String | 当前页展示数量 |\n请求结示例：\n返回结果：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| id | String | 会议id |\nJava sdk调用示例："
+}

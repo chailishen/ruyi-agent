@@ -1,0 +1,812 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "开放平台接口数据的加解密功能",
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台接口数据的加解密功能"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "前言",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "前言"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "针对于一些存在密级要求的接口调用场景，开放平台提供接口数据加密功能，客户在调用开放平台相关接口时，对请求数据加密后传输，同时，开放平台也同样会对返回的响应数据进行加密传输，客户端收到响应后自行解密获取最终数据。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：涉及文件上传的相关接口暂不支持加解密",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            },
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "功能介绍",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "功能介绍"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台支持对称加密AES方式加密和RSA非对称加密方式。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台创建应用时绑定加密相关配置："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：仅通用型应用套件支持加密相关设置",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            },
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.0.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "一aes对称加密",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "一：AES对称加密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在创建应用时选择AES加密方式，开放平台AES加密模式支持 CBC,ECB,CFB，其中："
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": false
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "CBC和ECB加密填充方式固定为PKCS5Padding填充方式"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "CFB模式填充方式固定为NoPadding填充方式。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "CBC模式支持偏移量设置"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "三种类型均需要必填秘钥，可随机生成16位字符"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "案例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.1.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "二rsa非对称加密",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "二：RSA非对称加密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在创建应用时选择RAS加密方式，填写私钥，公钥，可一键生成。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.2.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "生成的私钥和公钥客户端均需要保存，用于请求参数的加密以及响应数据的解密。使用公钥加密，私钥解密。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：考虑到开放平台各参数均需要单独加密，因此暂不提供签名验证功能",
+          "marks": [
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            },
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "相关的加密配置好后提交保存即可，等待管理员审核，如无需加密传输，请不要配置此项。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "三接口调用说明",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "三：接口调用说明"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：接口调用的access_token或者其它认证方式，如用户名，密码均不需要参与加密。除了认证相关的信息之外的所有参数均需要加密",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            },
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": "#d33115",
+                "backgroundColor": null,
+                "fontSize": null,
+                "fontFamily": null,
+                "align": null,
+                "underline": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "前置说明：加密后以及解密前，均需要对参数值进行Base64 encode 以及 decode",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "加密顺序：原参数 -> AES或者RSA加密 -> 加密后的值 Base64 encode -> 调用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "解密顺序：响应数据 -> base64 decode -> AES或者RSA解密 -> 获取最终结果"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "1.GET请求案例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.3.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：对于get请求params类型参数，加密后的值必须使用UrlEncode 进行编码后传递（此过程发生在base64 encode之后），以避免特殊字符污染参数值。",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "2.POST"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "FORM-DATA请求案例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "原请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.4.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "加密后请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.5.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "x-www-form-urlencode请求案例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "原请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.6.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "加密后请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.7.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "3.Body JSON请求"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "直接对body的内容全部加密即可"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "原请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.8.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "加密后请求："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.9.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "4.响应"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "响应案例："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.10.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "5.可使用第三方工具调试"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "AES加密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.11.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "AES解密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.12.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "RSA公钥加密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.13.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "RSA私钥解密"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f907518450903343104.14.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "四加密过程",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "四：加密过程"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "暂提供Java版加解密代码说明，其他方式请查阅资料"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "1.AES加解密"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import com.weaver.open.gateway.entity.AuthAppEncipher;\nimport org.apache.commons.lang3.StringUtils;\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;\nimport javax.crypto.Cipher;\nimport javax.crypto.spec.IvParameterSpec;\nimport javax.crypto.spec.SecretKeySpec;\nimport java.nio.charset.StandardCharsets;\nimport java.util.*;\n\npublic class EncipherUtils {\n\n    private static final Logger logger = LoggerFactory.getLogger(EncipherUtils.class);\n\n    private static final String AES = \"AES\";\n\n    private static final String RSA = \"RSA\";\n\n    /***\n     * <h2>空校验</h2>\n     * @param str 需要判断的值\n     */\n    public static boolean isEmpty(Object str) {\n        return null == str || \"\".equals(str);\n    }\n\n    /***\n     * <h2>String 转 byte</h2>\n     * @param str 需要转换的字符串\n     */\n    public static byte[] getBytes(String str) {\n        if (isEmpty(str)) {\n            return null;\n        }\n\n        try {\n            return str.getBytes(StandardCharsets.UTF_8);\n        } catch (Exception e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    /***\n     * <h2>获取一个 AES 密钥规范</h2>\n     */\n    public static SecretKeySpec getSecretKeySpec(String key) {\n        return new SecretKeySpec(Objects.requireNonNull(getBytes(key)), \"AES\");\n    }\n\n    /**\n     * <h2>加密 - 模式 ECB</h2>\n     *\n     * @param text 需要加密的文本内容\n     */\n    public static String encrypt(String text, AuthAppEncipher encipher) {\n        try {\n            if (StringUtils.isNotEmpty(encipher.getEncipherType())) {\n                switch (encipher.getEncipherType()) {\n                    case AES:\n                        return encryptAES(text, encipher.getPrivateKey(), encipher.getEncipherOffset(), encipher.getEncipherType() + \"/\" +\n                                encipher.getEncipherMode() + \"/\" + encipher.getEncipherFillIn());\n                    case RSA:\n                        return RSAUtil.encryptByPublicKey(encipher.getPublicKey(), text, encipher.getEncipherKeyLength());\n                }\n            }\n            return text;\n        } catch (Exception e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n    /**\n     * 解密主入口\n     *\n     * @param text 需要解密的文本内容\n     */\n    public static String decrypt(String text, AuthAppEncipher encipher) {\n        try {\n            switch (encipher.getEncipherType()) {\n                case AES:\n                    return decryptAES(text, encipher.getPrivateKey(), encipher.getEncipherOffset(), encipher.getEncipherType() + \"/\" +\n                            encipher.getEncipherMode() + \"/\" + encipher.getEncipherFillIn());\n                case RSA:\n                    return RSAUtil.decryptByPrivateKey(encipher.getPrivateKey(), text, encipher.getEncipherKeyLength());\n                default:\n                    throw new RuntimeException(\"参数解密异常,请检查您的加密方式是否正确\");\n            }\n        }catch (Exception e) {\n            throw new RuntimeException(e);\n        }\n    }\n\n\n    /**\n     * <h2>加密 - AES自定义加密模式</h2>\n     *\n     * @param text 需要加密的文本内容\n     * @param key  加密的密钥 key\n     * @param iv   初始化向量\n     * @param mode 加密模式\n     */\n    public static String encryptAES(String text, String key, String iv, String mode) {\n        if (isEmpty(text) || isEmpty(key)) {\n            return null;\n        }\n        try {\n            // 创建AES加密器\n            Cipher cipher = Cipher.getInstance(mode);\n            SecretKeySpec secretKeySpec = getSecretKeySpec(key);\n            if (StringUtils.isNotEmpty(iv)) {\n                cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, new IvParameterSpec(Objects.requireNonNull(getBytes(iv))));\n            } else {\n                cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);\n            }\n            // 加密字节数组\n            byte[] encryptedBytes = cipher.doFinal(Objects.requireNonNull(getBytes(text)));\n            // 将密文转换为 Base64 编码字符串\n            return Base64.getEncoder().encodeToString(encryptedBytes);\n        } catch (Exception e) {\n            logger.error(\"encrypt data got error\", e);\n            throw new RuntimeException(\"参数解密异常,请检查您的加密方式是否正确\");\n        }\n    }\n\n    /**\n     * <h2>解密 - 自定义加密模式</h2>\n     *\n     * @param text 需要解密的文本内容\n     * @param key  解密的密钥 key\n     * @param iv   初始化向量\n     * @param mode 加密模式\n     */\n    public static String decryptAES(String text, String key, String iv, String mode) {\n        if (isEmpty(text) || isEmpty(key)) {\n            return null;\n        }\n        // 将密文 base64解密\n        byte[] textBytes = Base64.getDecoder().decode(text);\n        try {\n            // 创建AES加密器\n            Cipher cipher = Cipher.getInstance(mode);\n            SecretKeySpec secretKeySpec = getSecretKeySpec(key);\n            if (StringUtils.isNotEmpty(iv)) {\n                cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, new IvParameterSpec(Objects.requireNonNull(getBytes(iv))));\n            } else {\n                cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);\n            }\n            // 解密字节数组\n            byte[] decryptedBytes = cipher.doFinal(textBytes);\n            // 将明文转换为字符串\n            return new String(decryptedBytes, StandardCharsets.UTF_8);\n        } catch (Exception e) {\n            logger.error(\"decrypt data got an error \", e);\n            throw new RuntimeException(e);\n        }\n    }\n\n\n}\n"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "2.RSA加解密"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "import cn.hutool.core.codec.Base64;\nimport org.apache.commons.lang3.StringUtils;\n\nimport javax.crypto.Cipher;\nimport java.io.ByteArrayOutputStream;\nimport java.nio.charset.StandardCharsets;\nimport java.security.KeyFactory;\nimport java.security.Signature;\nimport java.security.interfaces.RSAPrivateKey;\nimport java.security.interfaces.RSAPublicKey;\nimport java.security.spec.PKCS8EncodedKeySpec;\nimport java.security.spec.X509EncodedKeySpec;\nimport java.util.Arrays;\n\npublic class RSAUtil {\n\n    /**\n     * 加密算法RSA.\n     */\n    private static final String KEY_ALGORITHM = \"RSA\";\n\n    /**\n     * 签名算法.\n     */\n    private static final String SIGNATURE_ALGORITHM = \"SHA1withRSA\";\n\n    /**\n     * 公钥加密过程.\n     *\n     * @param publicKeyStr  公钥\n     * @param plainTextData 明文数据\n     * @return\n     */\n    public static String encryptByPublicKey(String publicKeyStr, String plainTextData, Integer keySize) throws Exception {\n        if (StringUtils.isBlank(publicKeyStr)) {\n            throw new Exception(\"加密公钥为空, 请设置\");\n        }\n        try {\n            return encryptByPublicKey(publicKeyStr, plainTextData.getBytes(StandardCharsets.UTF_8), keySize);\n        } catch (Exception e) {\n            log.error(\"公钥加密异常\", e);\n            throw new Exception(\"公钥加密异常\");\n        }\n    }\n\n    /**\n     * 公钥加密过程.\n     *\n     * @param publicKeyStr  公钥\n     * @param plainTextData 明文数据\n     * @return\n     */\n    public static String encryptByPublicKey(String publicKeyStr, byte[] plainTextData, Integer keySize) throws Exception {\n        if (StringUtils.isBlank(publicKeyStr)) {\n            throw new Exception(\"加密公钥为空, 请设置\");\n        }\n        try {\n            return encrypt(loadPublicKeyByStr(publicKeyStr), plainTextData, keySize);\n        } catch (Exception e) {\n            log.error(\"公钥加密异常\", e);\n            throw new Exception(\"公钥加密异常\");\n        }\n    }\n\n    /**\n     * 公钥加密过程.\n     *\n     * @param publicKey     公钥\n     * @param plainTextData 明文数据\n     * @return\n     */\n    public static String encrypt(RSAPublicKey publicKey, byte[] plainTextData, Integer keySize) throws Exception {\n        if (publicKey == null) {\n            throw new Exception(\"加密公钥为空, 请设置\");\n        }\n        try {\n            // 使用默认RSA\n            Cipher cipher = Cipher.getInstance(KEY_ALGORITHM);\n            cipher.init(Cipher.ENCRYPT_MODE, publicKey);\n            byte[] dataBytes = processData(cipher, plainTextData, keySize / 8 - 11);\n            return Base64.encode(dataBytes);\n        } catch (Exception e) {\n            log.error(\"公钥加密异常\", e);\n            throw new Exception(\"公钥加密异常\");\n        }\n    }\n\n    /**\n     * 私钥解密过程.\n     *\n     * @param privateKeyStr 私钥\n     * @param baseData      密文数据(base64加密)\n     * @return 明文\n     * @throws Exception 解密过程中的异常信息\n     */\n    public static String decryptByPrivateKey(String privateKeyStr, String baseData, Integer keySize) throws Exception {\n        if (StringUtils.isBlank(privateKeyStr)) {\n            throw new Exception(\"解密私钥为空, 请设置\");\n        }\n        try {\n            return decryptByPrivateKey(privateKeyStr, Base64.decode(baseData), keySize);\n        } catch (Exception e) {\n            log.error(\"私钥解密异常\", e);\n            throw new Exception(\"私钥解密异常\");\n        }\n    }\n\n    /**\n     * 私钥解密过程.\n     *\n     * @param privateKeyStr 私钥\n     * @param cipherData    密文数据\n     * @return 明文\n     * @throws Exception 解密过程中的异常信息\n     */\n    public static String decryptByPrivateKey(String privateKeyStr, byte[] cipherData, Integer keySize) throws Exception {\n        if (StringUtils.isBlank(privateKeyStr)) {\n            throw new Exception(\"解密私钥为空, 请设置\");\n        }\n        try {\n            // 获取私钥\n            RSAPrivateKey privateKey = loadPrivateKeyByStr(privateKeyStr);\n            return decrypt(privateKey, cipherData, keySize);\n        } catch (Exception e) {\n            log.error(\"私钥解密异常\", e);\n            throw new Exception(\"私钥解密异常\");\n        }\n    }\n\n    /**\n     * 私钥解密过程.\n     *\n     * @param privateKey 私钥\n     * @param cipherData 密文数据\n     * @return 明文\n     * @throws Exception 解密过程中的异常信息\n     */\n    public static String decrypt(RSAPrivateKey privateKey, byte[] cipherData, Integer keySize) throws Exception {\n        if (privateKey == null) {\n            throw new Exception(\"解密私钥为空, 请设置\");\n        }\n        try {\n            // 使用默认RSA\n            Cipher cipher = Cipher.getInstance(KEY_ALGORITHM);\n            cipher.init(Cipher.DECRYPT_MODE, privateKey);\n            byte[] bytes = processData(cipher, cipherData, keySize / 8);\n            return new String(bytes);\n        } catch (Exception e) {\n            log.error(\"私钥解密异常\", e);\n            throw new Exception(\"私钥解密异常\");\n        }\n    }\n\n    /**\n     * 从字符串中加载公钥.\n     *\n     * @param publicKeyStr 公钥数据字符串\n     * @return\n     */\n    private RSAPublicKey loadPublicKeyByStr(String publicKeyStr) throws Exception {\n        try {\n            byte[] buffer = Base64.decode(publicKeyStr);\n            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);\n            X509EncodedKeySpec keySpec = new X509EncodedKeySpec(buffer);\n            return (RSAPublicKey) keyFactory.generatePublic(keySpec);\n        } catch (Exception e) {\n            log.error(\"公钥异常\", e);\n            throw new Exception(\"公钥异常\");\n        }\n    }\n\n    /**\n     * 获取 私钥.\n     *\n     * @param privateKeyStr 私钥数据字符串\n     * @throws Exception 加载私钥时产生的异常\n     */\n    private RSAPrivateKey loadPrivateKeyByStr(String privateKeyStr) throws Exception {\n        try {\n            byte[] buffer = Base64.decode(privateKeyStr);\n            PKCS8EncodedKeySpec keySpec = new PKCS8EncodedKeySpec(buffer);\n            KeyFactory keyFactory = KeyFactory.getInstance(KEY_ALGORITHM);\n            return (RSAPrivateKey) keyFactory.generatePrivate(keySpec);\n        } catch (Exception e) {\n            log.error(\"私钥异常\", e);\n            throw new Exception(\"私钥异常\");\n        }\n    }\n\n    /**\n     * 分段处理数据.\n     *\n     * @param cipher      密码算法\n     * @param dataes      数据\n     * @param segmentSize 分段大小（小于等于0不分段）\n     * @return\n     */\n    private byte[] processData(Cipher cipher, byte[] dataes, int segmentSize) {\n        byte[] decBytes = null;\n        try {\n            ByteArrayOutputStream out = new ByteArrayOutputStream();\n            int inputLength = dataes.length;\n            int offSet = 0;\n            for (int i = 0; inputLength - offSet > 0; offSet = i * segmentSize) {\n                byte[] cache;\n                if (inputLength - offSet > segmentSize) {\n                    cache = cipher.doFinal(dataes, offSet, segmentSize);\n                } else {\n                    cache = cipher.doFinal(dataes, offSet, inputLength - offSet);\n                }\n                out.write(cache, 0, cache.length);\n                ++i;\n            }\n            decBytes = out.toByteArray();\n            out.close();\n        } catch (Exception e) {\n            log.error(\"分段处理数据异常\", e);\n        }\n        return decBytes;\n    }\n    \n}\n"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": []
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "840722243203465216",
+  "name": "获取列表数据",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "页面"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/coms/list/getData",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/coms/list/getData",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageId",
+      "required": "是",
+      "type": "Long",
+      "description": "页面id"
+    },
+    {
+      "name": "compId",
+      "required": "是",
+      "type": "String",
+      "description": "组件id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "Number",
+      "description": "状态码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "接口是否请求成功"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "组件配置信息"
+    },
+    {
+      "name": "data.count",
+      "required": "",
+      "type": "Number",
+      "description": "总数"
+    },
+    {
+      "name": "data.pageSize",
+      "required": "",
+      "type": "Number",
+      "description": "每页大小"
+    },
+    {
+      "name": "data.statisticsResult",
+      "required": "",
+      "type": "json",
+      "description": "列表字段统计信息"
+    },
+    {
+      "name": "data.list",
+      "required": "",
+      "type": "List",
+      "description": "数据列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取列表数据"
+  ],
+  "raw_text": "## 获取列表数据\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/coms/list/getData\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageId | 是 | Long | 页面id |\n| compId | 是 | String | 组件id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | Number | 状态码 |\n| msg | String | 返回信息 |\n| status | Boolean | 接口是否请求成功 |\n| data | Object | 组件配置信息 |\n| data.count | Number | 总数 |\n| data.pageSize | Number | 每页大小 |\n| data.statisticsResult | json | 列表字段统计信息 |\n| data.list | List | 数据列表 |\n备注：\n- 返回值data.list中的每条数据对应的key为字段id，非固定"
+}

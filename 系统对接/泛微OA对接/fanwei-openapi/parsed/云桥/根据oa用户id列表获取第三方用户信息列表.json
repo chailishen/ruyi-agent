@@ -1,0 +1,56 @@
+{
+  "id": "908343007256723457",
+  "name": "根据oa用户id列表获取第三方用户信息列表",
+  "module": "云桥",
+  "module_path": [
+    "云桥"
+  ],
+  "is_api": true,
+  "url": "/api/eb/open/hrm/v1/getThirdUserListByOaEmployeeIdList",
+  "url_template": "{OpenApiOrigin}/api/eb/open/hrm/v1/getThirdUserListByOaEmployeeIdList",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "注：body中需要传递oa用户id列表；Content-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证  获取accessToken信息"
+    },
+    {
+      "name": "corpKey",
+      "required": "是",
+      "type": "string",
+      "description": "企业key"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "第三方用户信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据oa用户id列表获取第三方用户信息列表"
+  ],
+  "raw_text": "## 根据oa用户id列表获取第三方用户信息列表\n简要描述：\n- 根据oa用户id列表获取第三方用户信息列表\n请求URL：\n- {OpenApiOrigin}/api/eb/open/hrm/v1/getThirdUserListByOaEmployeeIdList\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证  获取accessToken信息 |\n| corpKey | 是 | string | 企业key |\n- 注：body中需要传递oa用户id列表；Content-Type：application/json\n传参示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 第三方用户信息 |"
+}

@@ -1,0 +1,66 @@
+{
+  "id": "383093188614684672",
+  "name": "获取文件第三方预览地址",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/online/getFilePreviewUrl",
+  "url_template": "{OpenApiOrigin}/api/file/online/getFilePreviewUrl",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "body参数（content-type : application/json）："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "返回数据"
+    },
+    {
+      "name": "previewUrl",
+      "required": "",
+      "type": "String",
+      "description": "文件预览地址"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：\n- 获取文件使用第三方服务预览的预览地址，支持获取永中和wps中台\n请求URL：\n- {OpenApiOrigin}/api/file/online/getFilePreviewUrl\n请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| userid | 是 | string | 用户id |\nbody参数（content-type : application/json）：\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| fileId | 是 | Long | 文件id |\n| plugType | 是 | String | 要使用的预览插件，支持获取wps中台和永中wps中台：WPS_MIDDLE_STATION_GENERIC永中：YOZO_FCS |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 错误编码 |\n| errmsg | String | 错误提示 |\n| data | Object | 返回数据 |\n| previewUrl | String | 文件预览地址 |"
+}

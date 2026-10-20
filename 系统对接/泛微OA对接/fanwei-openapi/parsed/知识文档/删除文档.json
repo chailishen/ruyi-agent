@@ -1,0 +1,72 @@
+{
+  "id": "908306268118474752",
+  "name": "删除文档",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/destory",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/destory",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "message.errcode",
+      "required": "",
+      "type": "string",
+      "description": "0-成功，其他-失败"
+    },
+    {
+      "name": "message.errmsg",
+      "required": "",
+      "type": "string",
+      "description": "失败原因"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "array",
+      "description": "成功时，文档删除结果"
+    },
+    {
+      "name": "data.docDelCode",
+      "required": "",
+      "type": "string",
+      "description": "状态：SUCCESS-成功，NOT_FOUND-文档不存在，NO_AUTHORITY-无权限"
+    },
+    {
+      "name": "data.ids",
+      "required": "",
+      "type": "string",
+      "description": "对应状态的文档id集合"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除文档"
+  ],
+  "raw_text": "## 删除文档\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/destory\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| docIds | 是 | string | 删除的文档id集合，多个逗号隔开 |\n| definitieve | 否 | string | 是否物理删除（1-硬删除，0-软删除至回收站）,若此参数不传默认为软删除 |\n请求参数示例\n成功返回示例\n成功返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| message.errcode | string | 0-成功，其他-失败 |\n| message.errmsg | string | 失败原因 |\n| data | array | 成功时，文档删除结果 |\n| data.docDelCode | string | 状态：SUCCESS-成功，NOT_FOUND-文档不存在，NO_AUTHORITY-无权限 |\n| data.ids | string | 对应状态的文档id集合 |\nJava sdk调用示例："
+}

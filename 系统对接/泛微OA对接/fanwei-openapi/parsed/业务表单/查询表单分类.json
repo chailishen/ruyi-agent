@@ -1,0 +1,60 @@
+{
+  "id": "840716105695199233",
+  "name": "查询表单分类",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/classify",
+  "url_template": "{OpenApiOrigin}/form/v2/classify",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单分类ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "表单分类名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询表单分类"
+  ],
+  "raw_text": "## 查询表单分类\n请求URL：\n- {OpenApiOrigin}/form/v2/classify\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/classify?access_token=2661a838932c000549cade448f12b6ac&userid=717929201362116609\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | String | 表单分类ID |\n| name | String | 表单分类名称 |\nJava sdk调用示例："
+}

@@ -1,0 +1,482 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": "left",
+        "id": "datamap传值说明",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "datamap传值说明"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "单个控件传单个值"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"控件id\":\"控件值\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "控件传多个值，用逗号分隔"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"控件id\":\"控件值A,控件值B\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "明细表中的控件，不同行用 _*分隔 (一个下划线+星号)"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"控件A的id\":\"第一行控件值_*第二行控件值_*第N行控件值\",\"控件B的id\":\"第一行控件值_*第二行控件值_*第N行控件值\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "选项用逗号分隔，明细表中不同行用_*分隔"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": "left",
+        "id": "第一类文本输入框text多行文本框textarea单选框radiobox下拉菜单select日期datecomponent数字输入框numbercomponent金额money邮箱email电话phone手机mobile运算控件monitor评分控件raty进度条progressbar身份证idcard地理位置positioncomponent",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第一类：文本输入框（Text）、多行文本框(Textarea)、单选框(RadioBox)、下拉菜单(Select)、日期(DateComponent)、数字输入框(NumberComponent)、金额(Money)、邮箱(Email)、电话(Phone)、手机(Mobile)、运算控件(Monitor)、评分控件(Raty)、进度条(ProgressBar)、身份证(IDCard)、地理位置(PositionComponent)"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例1：单选框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局的单选框\n# {\"控件id\":\"控件值\"}\n{\"8745859598518169947\":\"选项1\"}\n# 明细表中的单选框 \n# {\"控件id\":\"第一行控件值_*第二行控件值\"}\n{\"8745859598518169947\":\"选项1_*选项2\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例2：日期控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的日期控件\n# {\"控件id\":\"控件值\"}\n{\"2175859602838099975\":\"2019-05-25\"}\n# 明细表中的日期控件\n# {\"控件id\":\"第一行控件值_*第二行控件值\",\"控件id\":\"第一行控件值_*第二行控件值\"}\n{\"2175859602838099974\":\"2019-05-23_*2019-05-24\",\"2175859602838099975\":\"2019-05-25_*2019-05-26\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例3：人员控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的人员控件\n# {\"控件id\":\"姓名\",\"控件ID\":\"##工号\"}\n{\"2175859602838099975\":\"姓名A\", \"2175859602838099976\":\"##A3385\",}\n# 明细表中的人员控件\n# {\"控件id\":\"第一行控件值_*第二行控件值\",\"控件id\":\"第一行控件值_*第二行控件值\"}\n{\"2175859602838099974\":\"姓名A_*姓名B\",\"2175859602838099975\":\"##A3385_*##A3386\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "textAlign": "left",
+        "id": "第二类复选框checkbox日期区间dateinterval多级下拉框comboselect关联项目mainline关联任务task关联文档document关联审批workflow关联日程agendacomponent关联表单数据formcomponent关联客户customercomponent关联线索cluecomponent关联订单ordercomponent客户联系人contactcomponent关联商机chancecomponent关联产品productioncomponent关联合同contractcomponent人员employee部门department",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第二类：复选框(CheckBox)、日期区间(DateInterval)、多级下拉框(ComboSelect)、关联项目(Mainline)、关联任务(Task)、关联文档(Document)、关联审批(Workflow)、关联日程(AgendaComponent)、关联表单数据(FormComponent)、关联客户(CustomerComponent)、关联线索(ClueComponent)、关联订单(OrderComponent)、客户联系人(ContactComponent)、关联商机(ChanceComponent)、关联产品(ProductionComponent)、关联合同(ContractComponent)、人员(Employee)、部门(Department)"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例1：复选框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的复选框\n# {\"控件id\":\"选项1,选项2\"} 选项用逗号分隔\n{\"8745859625727369995\":\"选项1,选项2\"}\n# 明细表中的复选框\n# {\"控件id\":\"选项1,选项2_*选项1\"} 选项用逗号分隔，不同行用_*分隔\n{\"8745859625727369995\":\"选项1,选项2_*选项1\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例2：多级下拉框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的多级下拉框\n# {\"控件id\":\"一级选项,二级选项\"}\n{\"8745859598518169950\":\"选项1,选项11\"}\n# 明细表中多级下拉框\n# {\"控件id\":\"一级选项,二级选项_*一级选项,二级选项\"}\n{\"8745859598518169950\":\"选项1,选项11_*选项2,选项21\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例3：关联任务"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的关联任务,关联单个任务\n# {\"控件id\":\"任务名称\"}\n{\"8745859625727369995\":\"任务A\"}\n# 普通布局中的关联任务,关联多个任务用逗号分隔\n# {\"控件id\":\"任务A,任务B\"}\n{\"8745859625727369995\":\"任务1,任务2\"}\n# 明细表中的关联任务\n# {\"控件id\":\"任务A,任务B_*任务C,任务D\"}\n{\"8745859625727369995\":\"任务A,任务B_*任务C,任务D\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例4：日期区间"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 普通布局中的日期区间\n# {\"日期区间控件id\":\"开始时间,结束时间\"}\n{\"2175859602838099976\":\"2019-05-22,2019-05-26\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例5：关联审批"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 审批未开启流水号\n# {\"审批控件ID\":\"审批名称\"}\n{\"2175859602838099979\":\"审批A\"}\n# 审批开启流水号，需要将审批名称和审批流水号拼接，str字符串拼接即可\n# {\"审批控件ID\":\"审批名称审批流水号\"}\n{\"2175859602838099979\":\"审批A审批流水号\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "注：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "hardbreak"
+        },
+        {
+          "type": "text",
+          "text": "暂不支持：数据源、图片单选、图片多选、图片、签名、电子发票、子表控件"
+        },
+        {
+          "type": "hardbreak"
+        },
+        {
+          "type": "text",
+          "text": "不需要传值：编号控件、分割线、描述文字，轮播控件"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "hardbreak"
+        },
+        {
+          "type": "text",
+          "text": "datamap传参如下："
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"控件ID1\": \"值1\",\n\t\"控件ID2\": \"值2\",\n\t\"控件ID3\": \"值3\",\n\t\"商品名称控件ID1\": \"商品名称A_*商品名称B\",\n\t\"商品数量控件ID1\": \"商品数量A_*商品数量B\",\n\t\"商品单价控件ID1\": \"商品单价A_*商品单价B\"\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      }
+    }
+  ]
+}

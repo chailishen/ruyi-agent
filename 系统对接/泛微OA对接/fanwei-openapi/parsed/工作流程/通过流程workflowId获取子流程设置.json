@@ -1,0 +1,68 @@
+{
+  "id": "874490929781153792",
+  "name": "通过流程workflowId获取子流程设置",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getSubRequestSetByWorkflowId",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getSubRequestSetByWorkflowId",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIdStr",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "Long",
+      "description": "流程workflowId"
+    },
+    {
+      "name": "enable",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否查询开启的子流程设置，false表示查询所有子流程设置，true表示查询仅开启的子流程设置，默认为false。"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Map",
+      "description": "流程数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "通过流程workflowId获取子流程设置"
+  ],
+  "raw_text": "## 通过流程workflowId获取子流程设置\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getSubRequestSetByWorkflowId\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIdStr | 是 | Long | 用户ID |\n| workflowId | 是 | Long | 流程workflowId |\n| enable | 否 | boolean | 是否查询开启的子流程设置，false表示查询所有子流程设置，true表示查询仅开启的子流程设置，默认为false。 |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Map | 流程数据 |\nJava sdk调用示例："
+}

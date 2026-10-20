@@ -1,0 +1,110 @@
+{
+  "id": "840674178265522177",
+  "name": "查询部门列表",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/department/v2/list",
+  "url_template": "{OpenApiOrigin}/department/v2/list",
+  "method": "GET",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "depid",
+      "required": "否",
+      "type": "Long",
+      "description": "部门ID（不传时，获取企业整个部门列表）"
+    },
+    {
+      "name": "status",
+      "required": "否",
+      "type": "String",
+      "description": "启用状态（默认 启用; 0 禁用; all 查询全部）"
+    },
+    {
+      "name": "isDelete",
+      "required": "否",
+      "type": "String",
+      "description": "是否删除（默认 未删除; 1 删除; all 查询全部）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "部门名称"
+    },
+    {
+      "name": "rank",
+      "required": "",
+      "type": "Int",
+      "description": "层级"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "部门备注信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "部门ID"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父部门信息"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除 (false,未删除; true 删除)"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否禁用 (true,启用 ; false 停用)"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询部门列表"
+  ],
+  "raw_text": "## 查询部门列表\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用组织（含分部、部门）查询接口\n请求URL：\n- {OpenApiOrigin}/department/v2/list\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| depid | 否 | Long | 部门ID（不传时，获取企业整个部门列表） |\n| status | 否 | String | 启用状态（默认 启用; 0 禁用; all 查询全部） |\n| isDelete | 否 | String | 是否删除（默认 未删除; 1 删除; all 查询全部） |\n备注：\n- status以及isDelete参数,除了0和all(isDelete是1和all)特定以外,其余传值均代表默认\n请求示例：\nquery方式\n{OpenApiOrigin}/department/v2/list?access_token=c29ac4198fbfc218c95617852df4732b\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| department | List | 部门信息 |\n| name | String | 部门名称 |\n| rank | Int | 层级 |\n| description | String | 部门备注信息 |\n| id | String | 部门ID |\n| parent | Object | 父部门信息 |\n| delete | Boolean | 是否删除 (false,未删除; true 删除) |\n| status | Boolean | 是否禁用 (true,启用 ; false 停用) |\nJava sdk调用示例："
+}

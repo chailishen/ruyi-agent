@@ -1,0 +1,78 @@
+{
+  "id": "840723196753313793",
+  "name": "账号密码校验",
+  "module": "基础架构",
+  "module_path": [
+    "基础架构"
+  ],
+  "is_api": true,
+  "url": "/api/basicserver/v1/logincheck/checkAccount",
+  "url_template": "{OpenApiOrigin}/api/basicserver/v1/logincheck/checkAccount",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "param1",
+      "required": "是",
+      "type": "String",
+      "description": "账号"
+    },
+    {
+      "name": "param2",
+      "required": "是",
+      "type": "String",
+      "description": "密码"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "employeeId",
+      "required": "",
+      "type": "String",
+      "description": "人员ID"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "团队识别码"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "账号id"
+    },
+    {
+      "name": "checkResult",
+      "required": "",
+      "type": "String",
+      "description": "校验是否通过 true/false"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "账号密码校验"
+  ],
+  "raw_text": "## 账号密码校验\n请求URL：\n- {OpenApiOrigin}/api/basicserver/v1/logincheck/checkAccount\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| param1 | 是 | String | 账号 |\n| param2 | 是 | String | 密码 |\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| employeeId | String | 人员ID |\n| tenantKey | String | 团队识别码 |\n| userId | String | 账号id |\n| checkResult | String | 校验是否通过 true/false |\nJava sdk调用示例："
+}

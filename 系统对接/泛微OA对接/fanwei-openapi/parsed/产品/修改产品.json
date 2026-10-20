@@ -1,0 +1,138 @@
+{
+  "id": "840719064944443392",
+  "name": "修改产品",
+  "module": "产品",
+  "module_path": [
+    "产品"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/update",
+  "url_template": "{OpenApiOrigin}/crm/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为： production"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "产品信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "产品ID 获取产品ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "产品名称"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "productionPrice",
+      "required": "是",
+      "type": "String",
+      "description": "单价"
+    },
+    {
+      "name": "productionUnit",
+      "required": "是",
+      "type": "String",
+      "description": "规格"
+    },
+    {
+      "name": "productionType",
+      "required": "是",
+      "type": "String",
+      "description": "类型"
+    },
+    {
+      "name": "productionStatus",
+      "required": "是",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "productionCurrency",
+      "required": "是",
+      "type": "String",
+      "description": "货币单位"
+    },
+    {
+      "name": "productionCount",
+      "required": "是",
+      "type": "String",
+      "description": "库存"
+    },
+    {
+      "name": "productionDescription",
+      "required": "是",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "dataMap",
+      "required": "否",
+      "type": "Object",
+      "description": "通用自定义字段 产品获取自定义表单字段 传值说明"
+    },
+    {
+      "name": "typeDataMap",
+      "required": "否",
+      "type": "Object",
+      "description": "专用自定义字段 产品获取自定义表单字段 传值说明"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "产品信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改产品"
+  ],
+  "raw_text": "## 修改产品\n请求URL：\n- {OpenApiOrigin}/crm/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为： production |\n| entity | 是 | Object | 产品信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 产品ID 获取产品ID |\n| name | 是 | String | 产品名称 |\n| manager | 是 | String | 负责人 |\n| productionPrice | 是 | String | 单价 |\n| productionUnit | 是 | String | 规格 |\n| productionType | 是 | String | 类型 |\n| productionStatus | 是 | String | 状态 |\n| productionCurrency | 是 | String | 货币单位 |\n| productionCount | 是 | String | 库存 |\n| productionDescription | 是 | String | 备注 |\n| dataMap | 否 | Object | 通用自定义字段 产品获取自定义表单字段 传值说明 |\n| typeDataMap | 否 | Object | 专用自定义字段 产品获取自定义表单字段 传值说明 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=db7e733fc168c595e8c847a513a2865d&userid=835851587175096321&module=production&entity={\"id\":\"1555043600490957835\",\"name\":\"ThinkPadE490\",\"manager\":{\"name\":\"张三\"},\"productionPrice\":\"1000\",\"productionUnit\":\"箱\",\"productionType\":{\"name\":\"电脑\"},\"productionStatus\":{\"name\":\"在售\"},\"productionCurrency\":{\"name\":\"人民币\"},\"productionCount\":\"100\",\"productionDescription\":\"备注内容\",\"dataMap\":{\"4785043561149566106\":\"4399\"},\"typeDataMap\":{\"7345043540377834615\":\"E490改\",\"7345043540377834616\":\"戴尔\"}}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 产品信息（JSON格式） |\nJava sdk调用示例："
+}

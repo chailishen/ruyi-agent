@@ -1,0 +1,76 @@
+{
+  "id": "236323267994976256",
+  "name": "判断子流程是否到达指定节点",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/judgeSubRequestAllArrived",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/judgeSubRequestAllArrived",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIdStr",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "nodeId",
+      "required": "是",
+      "type": "Long",
+      "description": "需要判断的节点nodeId,流程节点的唯一标识"
+    },
+    {
+      "name": "mainRequestId",
+      "required": "是",
+      "type": "Long",
+      "description": "主流程的唯一标识"
+    },
+    {
+      "name": "subRequestIds",
+      "required": "否",
+      "type": "List",
+      "description": "子流程的唯一标识，如果不传该参数则校验当前主流程下的所有子流程"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码 状态码 0：成功 , 500：系统异常 100001：参数异常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "isAllArrived",
+      "required": "",
+      "type": "Boolean",
+      "description": "true:代表所有子流程全部到达该节点。false:代表还有子流程未到达"
+    },
+    {
+      "name": "requestIdList",
+      "required": "",
+      "type": "List",
+      "description": "如果有未到达该节点的子流程，则返回未到达该节点的子流程requestid。如果全部都到达该节点了，该参数为空"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/judgeSubRequestAllArrived\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIdStr | 是 | Long | 用户ID 获取用户ID |\n| nodeId | 是 | Long | 需要判断的节点nodeId,流程节点的唯一标识 |\n| mainRequestId | 是 | Long | 主流程的唯一标识 |\n| subRequestIds | 否 | List | 子流程的唯一标识，如果不传该参数则校验当前主流程下的所有子流程 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 状态码 0：成功 , 500：系统异常 100001：参数异常 |\n| errmsg | String | 返回信息 |\n| isAllArrived | Boolean | true:代表所有子流程全部到达该节点。false:代表还有子流程未到达 |\n| requestIdList | List | 如果有未到达该节点的子流程，则返回未到达该节点的子流程requestid。如果全部都到达该节点了，该参数为空 |"
+}

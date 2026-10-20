@@ -1,0 +1,168 @@
+{
+  "id": "840715538717573121",
+  "name": "根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据（支持高级搜索）",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v3/getAllById",
+  "url_template": "{OpenApiOrigin}/workflow/v3/getAllById",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "param",
+      "required": "是",
+      "type": "String",
+      "description": "高级搜索条件（参数JSON格式）"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Int",
+      "description": "分页展示数据数，默认最大200"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "flowName",
+      "required": "否",
+      "type": "String",
+      "description": "流程名称数组"
+    },
+    {
+      "name": "flowStatus",
+      "required": "否",
+      "type": "String",
+      "description": "流程状态：审批中notFinish、已结束finish"
+    },
+    {
+      "name": "flowFinishTime",
+      "required": "否",
+      "type": "String",
+      "description": "结束时间区间(startTime、endTime)"
+    },
+    {
+      "name": "flowSubmitTime",
+      "required": "否",
+      "type": "String",
+      "description": "提交时间区间(startTime、endTime)"
+    },
+    {
+      "name": "flowCreator",
+      "required": "否",
+      "type": "Long",
+      "description": "申请人列表"
+    },
+    {
+      "name": "flowCreatorDepartment",
+      "required": "否",
+      "type": "Long",
+      "description": "申请人部门列表"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "申请人信息"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "String",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "流程数据ID"
+    },
+    {
+      "name": "requestTime",
+      "required": "",
+      "type": "Date",
+      "description": "流程提交时间"
+    },
+    {
+      "name": "finishTime",
+      "required": "",
+      "type": "Date",
+      "description": "流程结束时间"
+    },
+    {
+      "name": "flowSequence",
+      "required": "",
+      "type": "Long",
+      "description": "固定流程表id-workflowid"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "Long",
+      "description": "表单数据Id"
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "Long",
+      "description": "表单id"
+    },
+    {
+      "name": "serNum",
+      "required": "",
+      "type": "serNum",
+      "description": "serNum"
+    },
+    {
+      "name": "statusType",
+      "required": "",
+      "type": "String",
+      "description": "流程状态类型（已结束：finish\u000b审批中：inProcess\u000b待提交（草稿箱的不算待提交）：unSubmit）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据（支持高级搜索）"
+  ],
+  "raw_text": "## 根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据（支持高级搜索）\n请求URL：\n- {OpenApiOrigin}/workflow/v3/getAllById\n请求方式：\n- GET\n描述：\n- 根据审批表单ID获取审批左侧菜单全部数据下的所有相关数据\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单ID 获取表单ID |\n| param | 是 | String | 高级搜索条件（参数JSON格式） |\n| pageNo | 否 | Int | 分页页码 |\n| pageSize | 否 | Int | 分页展示数据数，默认最大200 |\nparam参数示例：\nparam参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| flowName | 否 | String | 流程名称数组 |\n| flowStatus | 否 | String | 流程状态：审批中notFinish、已结束finish |\n| flowFinishTime | 否 | String | 结束时间区间(startTime、endTime) |\n| flowSubmitTime | 否 | String | 提交时间区间(startTime、endTime) |\n| flowCreator | 否 | Long | 申请人列表 |\n| flowCreatorDepartment | 否 | Long | 申请人部门列表 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| creator | String | 申请人信息 |\n| delete | String | 是否删除 |\n| id | String | 流程数据ID |\n| requestTime | Date | 流程提交时间 |\n| finishTime | Date | 流程结束时间 |\n| flowSequence | Long | 固定流程表id-workflowid |\n| formData | Long | 表单数据Id |\n| formId | Long | 表单id |\n| serNum | serNum | serNum |\n| statusType | String | 流程状态类型（已结束：finish\u000b审批中：inProcess\u000b待提交（草稿箱的不算待提交）：unSubmit） |\nJava sdk调用示例："
+}

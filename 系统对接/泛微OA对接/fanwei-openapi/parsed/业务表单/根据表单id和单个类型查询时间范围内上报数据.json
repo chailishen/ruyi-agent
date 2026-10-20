@@ -1,0 +1,102 @@
+{
+  "id": "840717093637464065",
+  "name": "根据表单id和单个类型查询时间范围内上报数据",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/queryChangedReportsByType",
+  "url_template": "{OpenApiOrigin}/form/v2/queryChangedReportsByType",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "新建create、编辑update、删除delete"
+    },
+    {
+      "name": "datamap",
+      "required": "是",
+      "type": "String",
+      "description": "查询日期区间"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Int",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Int",
+      "description": "每页显示条数"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "String",
+      "description": "表单数据ID"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单ID"
+    },
+    {
+      "name": "reporter",
+      "required": "",
+      "type": "String",
+      "description": "提交人信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据表单id和单个类型查询时间范围内上报数据"
+  ],
+  "raw_text": "## 根据表单id和单个类型查询时间范围内上报数据\n请求URL：\n- {OpenApiOrigin}/form/v2/queryChangedReportsByType\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单ID 获取表单ID |\n| type | 是 | String | 新建create、编辑update、删除delete |\n| datamap | 是 | String | 查询日期区间 |\n| pageNo | 否 | Int | 页码 |\n| pageSize | 否 | Int | 每页显示条数 |\ndatamap传值说明\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/queryChangedReportsByType?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&pageNo=1&pageSize=10&id=843625344723992576&datamap={\"filterTimes\":\"2023-03-23,2023-03-25\"}&type=create\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| formData | String | 表单数据ID |\n| id | String | 表单ID |\n| reporter | String | 提交人信息 |\n| status | String | 状态 |\nJava sdk调用示例："
+}

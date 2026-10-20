@@ -1,0 +1,97 @@
+{
+  "id": "405519450171768832",
+  "name": "查询角色",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "角色同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/role/v1/getRoleByCondition",
+  "url_template": "{OpenApiOrigin}/api/auth/role/v1/getRoleByCondition",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "roleIdList",
+      "required": "",
+      "type": "array[integer]",
+      "description": "角色ID列表"
+    },
+    {
+      "name": "roleCodeList",
+      "required": "",
+      "type": "array[string]",
+      "description": "角色编码列表"
+    },
+    {
+      "name": "outKeyList",
+      "required": "",
+      "type": "array[string]",
+      "description": "第三方外键列表"
+    },
+    {
+      "name": "filterAdmin",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否过滤管理员（包含系统管理员、分权管理员、三员管理员）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "roleId",
+      "required": "",
+      "type": "integer",
+      "description": "角色id"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "string",
+      "description": "租户key"
+    },
+    {
+      "name": "roleName",
+      "required": "",
+      "type": "string",
+      "description": "角色名称"
+    },
+    {
+      "name": "roleCode",
+      "required": "",
+      "type": "string",
+      "description": "角色编码"
+    },
+    {
+      "name": "parentId",
+      "required": "",
+      "type": "integer",
+      "description": "父级角色id"
+    },
+    {
+      "name": "isDefault",
+      "required": "",
+      "type": "string",
+      "description": "是否系统管理员"
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "string",
+      "description": "备注"
+    },
+    {
+      "name": "operatorId",
+      "required": "",
+      "type": "integer",
+      "description": "操作人员工id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询角色接口"
+  ],
+  "raw_text": "## 查询角色接口\n请求URL：\n- {OpenApiOrigin}/api/auth/role/v1/getRoleByCondition\n请求方式：\n- POST\n请求参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| roleIdList | array[integer] | 角色ID列表 |\n| roleCodeList | array[string] | 角色编码列表 |\n| outKeyList | array[string] | 第三方外键列表 |\n| filterAdmin | Boolean | 是否过滤管理员（包含系统管理员、分权管理员、三员管理员） |\n请求示例：\n返回示例：\n参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| roleId | integer | 角色id |\n| tenantKey | string | 租户key |\n| roleName | string | 角色名称 |\n| roleCode | string | 角色编码 |\n| parentId | integer | 父级角色id |\n| isDefault | string | 是否系统管理员 |\n| remark | string | 备注 |\n| operatorId | integer | 操作人员工id |"
+}

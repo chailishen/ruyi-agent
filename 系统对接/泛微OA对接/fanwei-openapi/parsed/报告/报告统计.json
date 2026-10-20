@@ -1,0 +1,96 @@
+{
+  "id": "840720134507864064",
+  "name": "报告统计",
+  "module": "报告",
+  "module_path": [
+    "报告"
+  ],
+  "is_api": true,
+  "url": "/workreport/v2/queryWorkreportSta",
+  "url_template": "{OpenApiOrigin}/workreport/v2/queryWorkreportSta",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "报告创建人ID集合 获取用户ID"
+    },
+    {
+      "name": "year",
+      "required": "是",
+      "type": "String",
+      "description": "年份"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "周week、月month、季season、年year（包含了年中报告和年度报告）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "delay延期提交、normal正常提交、none未提交"
+    },
+    {
+      "name": "serialNumber",
+      "required": "",
+      "type": "String",
+      "description": "第几周、月、季等"
+    },
+    {
+      "name": "year",
+      "required": "",
+      "type": "String",
+      "description": "所属年份"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "姓名"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "year",
+      "description": "周报week、月报month、季报season、年中报告halfYear、年度报告year"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "报告统计"
+  ],
+  "raw_text": "## 报告统计\n请求URL：\n- {OpenApiOrigin}/workreport/v2/queryWorkreportSta\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 报告创建人ID集合 获取用户ID |\n| year | 是 | String | 年份 |\n| type | 是 | String | 周week、月month、季season、年year（包含了年中报告和年度报告） |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| status | String | delay延期提交、normal正常提交、none未提交 |\n| serialNumber | String | 第几周、月、季等 |\n| year | String | 所属年份 |\n| userId | String | 用户ID |\n| userName | String | 姓名 |\n| type | year | 周报week、月报month、季报season、年中报告halfYear、年度报告year |\nJava sdk调用示例："
+}

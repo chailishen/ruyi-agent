@@ -1,0 +1,138 @@
+{
+  "id": "840675488172703745",
+  "name": "查询客户",
+  "module": "客户",
+  "module_path": [
+    "客户"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：customer"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "客户ID 获取客户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "customerStatus",
+      "required": "",
+      "type": "Object",
+      "description": "客户状态"
+    },
+    {
+      "name": "customerType",
+      "required": "",
+      "type": "Object",
+      "description": "客户类型"
+    },
+    {
+      "name": "customerIndustry",
+      "required": "",
+      "type": "Object",
+      "description": "客户行业"
+    },
+    {
+      "name": "customerRegion",
+      "required": "",
+      "type": "Object",
+      "description": "客户地区"
+    },
+    {
+      "name": "customerFax",
+      "required": "",
+      "type": "String",
+      "description": "客户传真"
+    },
+    {
+      "name": "customerEmail",
+      "required": "",
+      "type": "String",
+      "description": "客户邮箱"
+    },
+    {
+      "name": "customerZipCode",
+      "required": "",
+      "type": "String",
+      "description": "客户邮编"
+    },
+    {
+      "name": "customerTelephone",
+      "required": "",
+      "type": "String",
+      "description": "客户电话"
+    },
+    {
+      "name": "customerWebsite",
+      "required": "",
+      "type": "String",
+      "description": "客户网站"
+    },
+    {
+      "name": "customerAddress",
+      "required": "",
+      "type": "String",
+      "description": "客户地址"
+    },
+    {
+      "name": "customerDescription",
+      "required": "",
+      "type": "String",
+      "description": "客户描述"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询客户"
+  ],
+  "raw_text": "## 查询客户\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：customer |\n| id | 是 | Long | 客户ID 获取客户ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=customer&id=1713193685646177241\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 名称 |\n| manager | Object | 负责人 |\n| customerStatus | Object | 客户状态 |\n| customerType | Object | 客户类型 |\n| customerIndustry | Object | 客户行业 |\n| customerRegion | Object | 客户地区 |\n| customerFax | String | 客户传真 |\n| customerEmail | String | 客户邮箱 |\n| customerZipCode | String | 客户邮编 |\n| customerTelephone | String | 客户电话 |\n| customerWebsite | String | 客户网站 |\n| customerAddress | String | 客户地址 |\n| customerDescription | String | 客户描述 |\nJava sdk调用示例："
+}

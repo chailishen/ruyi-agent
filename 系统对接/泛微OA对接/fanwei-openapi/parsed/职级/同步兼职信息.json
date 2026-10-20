@@ -1,0 +1,153 @@
+{
+  "id": "949484876885180417",
+  "name": "同步兼职信息",
+  "module": "职级",
+  "module_path": [
+    "职级"
+  ],
+  "is_api": true,
+  "url": "/api/hrm/restful/syncExtra",
+  "url_template": "{OpenApiOrigin}/api/hrm/restful/syncExtra",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "data",
+      "required": "是",
+      "type": "Array[Object]",
+      "description": "岗位对象"
+    },
+    {
+      "name": "externalSyncType",
+      "required": "否",
+      "type": "String",
+      "description": "同步类型（客户可能会集成多种同步类型；内容可以自定义，但是相同来源的externalSyncId要保证唯一）"
+    },
+    {
+      "name": "externalSyncId",
+      "required": "否",
+      "type": "String",
+      "description": "同步外键id（同步的时候，外键id与employeeid唯一确认一条数据；外键id保证租户内唯一）"
+    },
+    {
+      "name": "departmentId",
+      "required": "否",
+      "type": "String",
+      "description": "兼职部门"
+    },
+    {
+      "name": "deleted",
+      "required": "是",
+      "type": "Integer",
+      "description": "是否删除（1 删除；0 否）"
+    },
+    {
+      "name": "positionId",
+      "required": "是",
+      "type": "String",
+      "description": "兼职岗位"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "String",
+      "description": "所属人员"
+    },
+    {
+      "name": "superiorId",
+      "required": "是",
+      "type": "String",
+      "description": "兼职上级"
+    },
+    {
+      "name": "remark",
+      "required": "是",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "dataRule",
+      "required": "是",
+      "type": "Object",
+      "description": "同步规则"
+    },
+    {
+      "name": "employee",
+      "required": "是",
+      "type": "String",
+      "description": "岗位规则（id:按照岗位id来检查；name:按照岗位名称来检查；code:按照岗位编号来检查）"
+    },
+    {
+      "name": "department",
+      "required": "是",
+      "type": "String",
+      "description": "部门检测规则（id:按照部门id来检查；name:按照组织名称来检查；code:按照部门编号来检查）"
+    },
+    {
+      "name": "dataInited",
+      "required": "是",
+      "type": "boolean",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "Integer",
+      "description": "200 成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Array[Object]",
+      "description": "人员id"
+    },
+    {
+      "name": "keyValue",
+      "required": "",
+      "type": "String",
+      "description": "数据唯一字段值"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态（SUCCESS 成功；ERROR 失败）"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "失败原因"
+    },
+    {
+      "name": "needRepush",
+      "required": "",
+      "type": "boolean",
+      "description": "是否重推"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "同步兼职信息"
+  ],
+  "raw_text": "## 同步兼职信息\n请求URL：\n- {OpenApiOrigin}/api/hrm/restful/syncExtra\n请求方式：\n- POST\n备注:\n- Body 参数格式(application/json)\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| data | 是 | Array[Object] | 岗位对象 |\n| externalSyncType | 否 | String | 同步类型（客户可能会集成多种同步类型；内容可以自定义，但是相同来源的externalSyncId要保证唯一） |\n| externalSyncId | 否 | String | 同步外键id（同步的时候，外键id与employeeid唯一确认一条数据；外键id保证租户内唯一） |\n| departmentId | 否 | String | 兼职部门 |\n| deleted | 是 | Integer | 是否删除（1 删除；0 否） |\n| positionId | 是 | String | 兼职岗位 |\n| id | 是 | String | 所属人员 |\n| superiorId | 是 | String | 兼职上级 |\n| remark | 是 | String | 备注 |\n| dataRule | 是 | Object | 同步规则 |\n| employee | 是 | String | 岗位规则（id:按照岗位id来检查；name:按照岗位名称来检查；code:按照岗位编号来检查） |\n| department | 是 | String | 部门检测规则（id:按照部门id来检查；name:按照组织名称来检查；code:按照部门编号来检查） |\n| dataInited | 是 | boolean |  |\n参数示例：\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | Integer | 200 成功 |\n| msg | String | 描述 |\n| data | Array[Object] | 人员id |\n| keyValue | String | 数据唯一字段值 |\n| status | String | 状态（SUCCESS 成功；ERROR 失败） |\n| errcode | String | 失败原因 |\n| needRepush | boolean | 是否重推 |"
+}

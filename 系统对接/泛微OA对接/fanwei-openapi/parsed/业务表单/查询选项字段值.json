@@ -1,0 +1,108 @@
+{
+  "id": "840717531792113664",
+  "name": "查询选项字段值",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/api/formdatareport/v2/getFieldOption",
+  "url_template": "{OpenApiOrigin}/api/formdatareport/v2/getFieldOption",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "string",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "fieldId",
+      "required": "否",
+      "type": "string",
+      "description": "字段ID 字段ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "fieldId",
+      "required": "",
+      "type": "String",
+      "description": "字段ID"
+    },
+    {
+      "name": "fieldOptionList",
+      "required": "",
+      "type": "List",
+      "description": "字段选项集合"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "选项值ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "选项名称"
+    },
+    {
+      "name": "order",
+      "required": "",
+      "type": "String",
+      "description": "选项顺序值"
+    },
+    {
+      "name": "children",
+      "required": "",
+      "type": "List",
+      "description": "子选项集合"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询选项字段值"
+  ],
+  "raw_text": "## 查询选项字段值\n简要描述：\n- 查询表单中选项类型字段值\n请求URL：\n- {OpenApiOrigin}/api/formdatareport/v2/getFieldOption\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户ID 获取用户ID |\n| formId | 是 | string | 表单ID 获取表单ID |\n| fieldId | 否 | string | 字段ID 字段ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/api/formdatareport/v2/getFieldOption?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userid=5140826883110054023&formId=843625344723992576&fieldId=843625370528186372\n返回示例：\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userid | String | 用户ID |\n| fieldId | String | 字段ID |\n| fieldOptionList | List | 字段选项集合 |\n| delete | Boolean | 是否删除 |\n| id | String | 选项值ID |\n| name | String | 选项名称 |\n| order | String | 选项顺序值 |\n| children | List | 子选项集合 |\nJava sdk调用示例："
+}

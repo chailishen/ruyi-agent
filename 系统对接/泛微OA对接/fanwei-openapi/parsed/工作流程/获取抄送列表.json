@@ -1,0 +1,91 @@
+{
+  "id": "408049279182045184",
+  "name": "获取抄送列表",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getCCBackListData?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getCCBackListData?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "current",
+      "required": "",
+      "type": "int",
+      "description": "页码（默认值：1）"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "Int",
+      "description": "每页数据量（默认值：10）"
+    },
+    {
+      "name": "afterAllowBack",
+      "required": "",
+      "type": "int",
+      "description": "0 获取所有数据；2：获取未批注数据；默认值：0"
+    },
+    {
+      "name": "viewBack",
+      "required": "",
+      "type": "int",
+      "description": "0：不允许收回；1：只能收回未查看数据；2：查看前，查看后的都可以收回。默认值：2"
+    },
+    {
+      "name": "isMonitor",
+      "required": "",
+      "type": "int",
+      "description": "是否监控权限 0：否 1：是"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取抄送列表"
+  ],
+  "raw_text": "## 获取抄送列表\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getCCBackListData?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n| current | 否 | int | 页码（默认值：1） |\n| pageSize | 否 | Int | 每页数据量（默认值：10） |\n| afterAllowBack | 否 | int | 0 获取所有数据；2：获取未批注数据；默认值：0 |\n| viewBack | 否 | int | 0：不允许收回；1：只能收回未查看数据；2：查看前，查看后的都可以收回。默认值：2 |\n| isMonitor | 否 | int | 是否监控权限 0：否 1：是 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |"
+}

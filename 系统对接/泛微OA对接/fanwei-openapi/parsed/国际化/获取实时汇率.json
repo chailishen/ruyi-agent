@@ -1,0 +1,115 @@
+{
+  "id": "249279927545757696",
+  "name": "获取实时汇率",
+  "module": "国际化",
+  "module_path": [
+    "国际化",
+    "汇率"
+  ],
+  "is_api": true,
+  "url": "/api/i18n/rate/v1/getCurrentFXRate",
+  "url_template": "{OpenApiOrigin}/api/i18n/rate/v1/getCurrentFXRate",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "sourceCurrency",
+      "required": "否",
+      "type": "long",
+      "description": "原币种ID"
+    },
+    {
+      "name": "targetCurrency",
+      "required": "否",
+      "type": "long",
+      "description": "目标币种ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "状态码 200：成功 , 500：系统异常"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "响应信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "boolean",
+      "description": "状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "汇率信息"
+    },
+    {
+      "name": "data.rate",
+      "required": "",
+      "type": "String",
+      "description": "汇率"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "状态码 200：成功 , 500：系统异常"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "响应信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "boolean",
+      "description": "状态"
+    },
+    {
+      "name": "data.enableRates",
+      "required": "",
+      "type": "String",
+      "description": "已启用币种汇率信息"
+    },
+    {
+      "name": "data.enableRates.unit",
+      "required": "",
+      "type": "long",
+      "description": "币种ID"
+    },
+    {
+      "name": "data.enableRates.isEnable",
+      "required": "",
+      "type": "int",
+      "description": "是否启用"
+    },
+    {
+      "name": "data.enableRates.rate",
+      "required": "",
+      "type": "String",
+      "description": "汇率"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/i18n/rate/v1/getCurrentFXRate\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| sourceCurrency | 否 | long | 原币种ID |\n| targetCurrency | 否 | long | 目标币种ID |\n备注：\n1、实时汇率：取当天浮动汇率>固定汇率\n2、只传sourceCurrency：返回 原币种兑本位币的汇率\n3、只传targetCurrency：返回 本位币兑目标币种的汇率\n4、同时传sourceCurrency和targetCurrency： 返回 原币种兑目标币种的汇率\n5、sourceCurrency和targetCurrency都不传： 返回所有已启用币种相对于本位币的最新汇率\n请求示例1：\n返回示例1：\n返回参数说明1：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 状态码 200：成功 , 500：系统异常 |\n| msg | String | 响应信息 |\n| status | boolean | 状态 |\n| data | Object | 汇率信息 |\n| data.rate | String | 汇率 |\n请求示例2：\n返回示例2：\n返回参数说明2：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 状态码 200：成功 , 500：系统异常 |\n| msg | String | 响应信息 |\n| status | boolean | 状态 |\n| data.enableRates | String | 已启用币种汇率信息 |\n| data.enableRates.unit | long | 币种ID |\n| data.enableRates.isEnable | int | 是否启用 |\n| data.enableRates.rate | String | 汇率 |"
+}

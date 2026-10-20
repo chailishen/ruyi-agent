@@ -1,0 +1,107 @@
+{
+  "id": "840712334848131073",
+  "name": "查询时间段内新增、更新、删除的工作流列表",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryChangedFormsByType",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryChangedFormsByType",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "类型 create、update、delete"
+    },
+    {
+      "name": "datamap",
+      "required": "是",
+      "type": "Object",
+      "description": "时间参数"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Integer",
+      "description": "当前页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Integer",
+      "description": "每页数量，最大:200"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "startTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始时间(年-月-日)"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束时间(年-月-日)"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "工作流名称"
+    },
+    {
+      "name": "formIds",
+      "required": "",
+      "type": "List<Long>",
+      "description": "表单ID"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "工作流ID"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "工作流状态(enable启用,disable禁用)"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/workflow/v2/queryChangedFormsByType\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| type | 是 | String | 类型 create、update、delete |\n| datamap | 是 | Object | 时间参数 |\n| pageNo | 否 | Integer | 当前页数 |\n| pageSize | 否 | Integer | 每页数量，最大:200 |\ndatamap参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| startTime | 是 | String | 开始时间(年-月-日) |\n| endTime | 是 | String | 结束时间(年-月-日) |\ndatamap参数示例：\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/queryChangedFormsByType?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&type=delete&datamap={\"startTime\":\"2023-03-22\",\"endTime\":\"2023-12-05\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 工作流名称 |\n| formIds | List<Long> | 表单ID |\n| id | Long | 工作流ID |\n| status | String | 工作流状态(enable启用,disable禁用) |\nJava sdk调用示例："
+}

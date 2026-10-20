@@ -1,0 +1,247 @@
+{
+  "id": "840714924662202369",
+  "name": "获取流程签字意见",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestLog",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestLog",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "otherParams",
+      "required": "否",
+      "type": "String",
+      "description": "其他参数，pageSize：一页显示多少条数据，pageNumber：查询第几页数据。pageSize默认为10,pageNumber默认为1{“pageSize”:10,”pageNumber”:1}"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "意见详细数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "签字意见id"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "租户ke"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "String",
+      "description": "是否删除"
+    },
+    {
+      "name": "commentor",
+      "required": "",
+      "type": "String",
+      "description": "创建人信息"
+    },
+    {
+      "name": "targetId",
+      "required": "",
+      "type": "String",
+      "description": "审批数据id"
+    },
+    {
+      "name": "targetName",
+      "required": "",
+      "type": "String",
+      "description": "审批名称"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "内容"
+    },
+    {
+      "name": "originContent",
+      "required": "",
+      "type": "String",
+      "description": "内容"
+    },
+    {
+      "name": "addTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "privy",
+      "required": "",
+      "type": "String",
+      "description": "是否是私评"
+    },
+    {
+      "name": "client",
+      "required": "",
+      "type": "String",
+      "description": "客户端类型"
+    },
+    {
+      "name": "userData",
+      "required": "",
+      "type": "String",
+      "description": "@人员信息"
+    },
+    {
+      "name": "commentType",
+      "required": "",
+      "type": "String",
+      "description": "签字意见内容，如果为空就是评论"
+    },
+    {
+      "name": "stepName",
+      "required": "",
+      "type": "String",
+      "description": "意见节点"
+    },
+    {
+      "name": "commentName",
+      "required": "",
+      "type": "String",
+      "description": "意见类型名称"
+    },
+    {
+      "name": "rootId",
+      "required": "",
+      "type": "String",
+      "description": "根评论id"
+    },
+    {
+      "name": "isInclude",
+      "required": "",
+      "type": "String",
+      "description": "是否引用"
+    },
+    {
+      "name": "hasRootId",
+      "required": "",
+      "type": "String",
+      "description": "是否有根评论"
+    },
+    {
+      "name": "hasChild",
+      "required": "",
+      "type": "String",
+      "description": "是否有子评论"
+    },
+    {
+      "name": "flowType",
+      "required": "",
+      "type": "String",
+      "description": "是否审批意见"
+    },
+    {
+      "name": "enableComment",
+      "required": "",
+      "type": "String",
+      "description": "是否显示下级评论"
+    },
+    {
+      "name": "receivedPersonIds",
+      "required": "",
+      "type": "String",
+      "description": "接收人id"
+    },
+    {
+      "name": "receiveHasMore",
+      "required": "",
+      "type": "String",
+      "description": "是否显示更多"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "String",
+      "description": "节点id"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "String",
+      "description": "部门id"
+    },
+    {
+      "name": "departmentName",
+      "required": "",
+      "type": "String",
+      "description": "部门名称"
+    },
+    {
+      "name": "userDataMap",
+      "required": "",
+      "type": "String",
+      "description": "创建人信息"
+    },
+    {
+      "name": "agentUserId",
+      "required": "",
+      "type": "String",
+      "description": "代理id"
+    },
+    {
+      "name": "agent",
+      "required": "",
+      "type": "String",
+      "description": "是否代理"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程签字意见"
+  ],
+  "raw_text": "## 获取流程签字意见\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestLog\n请求方式：\n- GET\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n| otherParams | 否 | String | 其他参数，pageSize：一页显示多少条数据，pageNumber：查询第几页数据。pageSize默认为10,pageNumber默认为1{“pageSize”:10,”pageNumber”:1} |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 意见详细数据 |\n| id | String | 签字意见id |\n| tenantKey | String | 租户ke |\n| deleteType | String | 是否删除 |\n| commentor | String | 创建人信息 |\n| targetId | String | 审批数据id |\n| targetName | String | 审批名称 |\n| content | String | 内容 |\n| originContent | String | 内容 |\n| addTime | String | 创建时间 |\n| module | String | 模块 |\n| privy | String | 是否是私评 |\n| client | String | 客户端类型 |\n| userData | String | @人员信息 |\n| commentType | String | 签字意见内容，如果为空就是评论 |\n| stepName | String | 意见节点 |\n| commentName | String | 意见类型名称 |\n| rootId | String | 根评论id |\n| isInclude | String | 是否引用 |\n| hasRootId | String | 是否有根评论 |\n| hasChild | String | 是否有子评论 |\n| flowType | String | 是否审批意见 |\n| enableComment | String | 是否显示下级评论 |\n| receivedPersonIds | String | 接收人id |\n| receiveHasMore | String | 是否显示更多 |\n| nodeId | String | 节点id |\n| department | String | 部门id |\n| departmentName | String | 部门名称 |\n| userDataMap | String | 创建人信息 |\n| agentUserId | String | 代理id |\n| agent | String | 是否代理 |\nJava sdk调用示例：\n1. "
+}

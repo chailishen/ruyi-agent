@@ -1,0 +1,151 @@
+{
+  "id": "405523275800641536",
+  "name": "查询角色成员",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "角色成员同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/role/user/v1/getUserRoleByCondition",
+  "url_template": "{OpenApiOrigin}/api/auth/role/user/v1/getUserRoleByCondition",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "idList",
+      "required": "",
+      "type": "array[integer]",
+      "description": "ID列表"
+    },
+    {
+      "name": "roleIdList",
+      "required": "",
+      "type": "array[string]",
+      "description": "角色ID列表"
+    },
+    {
+      "name": "outKeyList",
+      "required": "",
+      "type": "array[string]",
+      "description": "第三方外键列表"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "",
+      "type": "integer",
+      "description": "ID主键"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "string",
+      "description": "租户key"
+    },
+    {
+      "name": "resourceType",
+      "required": "",
+      "type": "string",
+      "description": "对象类型（RESOURCE-人员，DEPARTMENT-部门，SUBCOMPANY-分部，CHANNEL-群组，JOBTITLE-岗位，ALL-所有人）"
+    },
+    {
+      "name": "roleId",
+      "required": "",
+      "type": "integer",
+      "description": "角色id"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "integer",
+      "description": "对象id"
+    },
+    {
+      "name": "memberLevel",
+      "required": "",
+      "type": "string",
+      "description": "成员级别（1-总部，2-分部，3-部门）"
+    },
+    {
+      "name": "secLevelFrom",
+      "required": "",
+      "type": "integer",
+      "description": "最小安全级别"
+    },
+    {
+      "name": "secLevelTo",
+      "required": "",
+      "type": "integer",
+      "description": "最大安全级别"
+    },
+    {
+      "name": "includeFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否含下级"
+    },
+    {
+      "name": "postFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否含兼职人员"
+    },
+    {
+      "name": "positionLevel",
+      "required": "",
+      "type": "integer",
+      "description": "岗位级别1-全部2-指定分部3-指定部门"
+    },
+    {
+      "name": "outKey",
+      "required": "",
+      "type": "string",
+      "description": "第三方外键"
+    },
+    {
+      "name": "postionOrgIdList",
+      "required": "",
+      "type": "array",
+      "description": "指定机构id列表"
+    },
+    {
+      "name": "userOrg",
+      "required": "",
+      "type": "object",
+      "description": "组织架构权限"
+    },
+    {
+      "name": "operatorId",
+      "required": "",
+      "type": "integer",
+      "description": "操作人员工id"
+    },
+    {
+      "name": "scopeType",
+      "required": "",
+      "type": "string",
+      "description": "组织架构权限类型（ALL_SCOPE-全部机构，ORIGINAL_DEPT_SCOPE-同部门，ORIGINAL_DEPT_SUB_SCOPE-同部门的下级部门，ORIGINAL_DEPT_INCLUDE_SUB_SCOPE-同部门及下级部门，ORIGINAL_SUBCOMPANY_SCOPE-同分部，ORIGINAL_SUBCOMPANY_SUB_SCOPE-同分部的下级分部，ORIGINAL_SUBCOMPANY_INCLUDE_SUB_SCOPE-同分部及下级分部，SUBCOMPANY-指定分部，DEPARTMENT-指定部门）"
+    },
+    {
+      "name": "orgIdList",
+      "required": "",
+      "type": "array[integer]",
+      "description": "机构id列表"
+    },
+    {
+      "name": "includeFlag",
+      "required": "",
+      "type": "Boolean",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询角色接口"
+  ],
+  "raw_text": "## 查询角色接口\n请求URL：\n- {OpenApiOrigin}/api/auth/role/user/v1/getUserRoleByCondition\n请求方式：\n- POST\n请求参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| idList | array[integer] | ID列表 |\n| roleIdList | array[string] | 角色ID列表 |\n| outKeyList | array[string] | 第三方外键列表 |\n请求示例：\n返回示例：\n参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| id | integer | ID主键 |\n| tenantKey | string | 租户key |\n| resourceType | string | 对象类型（RESOURCE-人员，DEPARTMENT-部门，SUBCOMPANY-分部，CHANNEL-群组，JOBTITLE-岗位，ALL-所有人） |\n| roleId | integer | 角色id |\n| userId | integer | 对象id |\n| memberLevel | string | 成员级别（1-总部，2-分部，3-部门） |\n| secLevelFrom | integer | 最小安全级别 |\n| secLevelTo | integer | 最大安全级别 |\n| includeFlag | Boolean | 是否含下级 |\n| postFlag | Boolean | 是否含兼职人员 |\n| positionLevel | integer | 岗位级别1-全部2-指定分部3-指定部门 |\n| outKey | string | 第三方外键 |\n| postionOrgIdList | array | 指定机构id列表 |\n| userOrg | object | 组织架构权限 |\n| operatorId | integer | 操作人员工id |\n组织架构权限参数：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| scopeType | string | 组织架构权限类型（ALL_SCOPE-全部机构，ORIGINAL_DEPT_SCOPE-同部门，ORIGINAL_DEPT_SUB_SCOPE-同部门的下级部门，ORIGINAL_DEPT_INCLUDE_SUB_SCOPE-同部门及下级部门，ORIGINAL_SUBCOMPANY_SCOPE-同分部，ORIGINAL_SUBCOMPANY_SUB_SCOPE-同分部的下级分部，ORIGINAL_SUBCOMPANY_INCLUDE_SUB_SCOPE-同分部及下级分部，SUBCOMPANY-指定分部，DEPARTMENT-指定部门） |\n| orgIdList | array[integer] | 机构id列表 |\n| includeFlag | Boolean |  |"
+}

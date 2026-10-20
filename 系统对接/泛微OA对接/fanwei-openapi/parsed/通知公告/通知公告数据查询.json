@@ -1,0 +1,102 @@
+{
+  "id": "908325054167597056",
+  "name": "通知公告数据查询",
+  "module": "通知公告",
+  "module_path": [
+    "通知公告"
+  ],
+  "is_api": true,
+  "url": "/api/placard/v1/allDatas",
+  "url_template": "{OpenApiOrigin}/api/placard/v1/allDatas",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "int",
+      "description": "当前页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "int",
+      "description": "每页条数"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "状态码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "提示信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "数据保存状态"
+    },
+    {
+      "name": "fail",
+      "required": "",
+      "type": "boolean",
+      "description": "是否失败"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": "分页数据"
+    },
+    {
+      "name": "placards",
+      "required": "",
+      "type": "array",
+      "description": "公告明细"
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "int",
+      "description": "当前页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "int",
+      "description": "每页行数"
+    },
+    {
+      "name": "totalCount",
+      "required": "",
+      "type": "int",
+      "description": "公告总数"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "通知公告数据查询"
+  ],
+  "raw_text": "## 通知公告数据查询\n请求URL：\n- {OpenApiOrigin}/api/placard/v1/allDatas\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageNo | 否 | int | 当前页数 |\n| pageSize | 否 | int | 每页条数 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 状态码 |\n| msg | String | 提示信息 |\n| status | String | 数据保存状态 |\n| fail | boolean | 是否失败 |\n| data | JSON | 分页数据 |\n| placards | array | 公告明细 |\n| pageNo | int | 当前页数 |\n| pageSize | int | 每页行数 |\n| totalCount | int | 公告总数 |\nJava sdk调用示例："
+}

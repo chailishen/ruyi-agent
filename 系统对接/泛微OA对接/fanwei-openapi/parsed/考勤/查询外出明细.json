@@ -1,0 +1,102 @@
+{
+  "id": "840692831435194368",
+  "name": "查询外出明细",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/getOut",
+  "url_template": "{OpenApiOrigin}/attend/v2/getOut",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID集合 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期 (格式：YYYY-MM-DD)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "outItems",
+      "required": "",
+      "type": "List",
+      "description": "出差明细"
+    },
+    {
+      "name": "dayType",
+      "required": "",
+      "type": "String",
+      "description": "类型：weekend（周末）workDay（工作日）holiday（节假日）"
+    },
+    {
+      "name": "start",
+      "required": "",
+      "type": "Long",
+      "description": "开始时间"
+    },
+    {
+      "name": "end",
+      "required": "",
+      "type": "Long",
+      "description": "结束时间"
+    },
+    {
+      "name": "timeLength",
+      "required": "",
+      "type": "String",
+      "description": "时长（小时）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询外出明细"
+  ],
+  "raw_text": "## 查询外出明细\n请求URL：\n- {OpenApiOrigin}/attend/v2/getOut\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID集合 获取用户ID |\n| startDate | 是 | Date | 开始日期 (格式：YYYY-MM-DD) |\n| endDate | 是 | Date | 结束日期 (格式：YYYY-MM-DD) |\n请求示例：\nquery方式\n{OpenApiOrigin}/attend/v2/getOut?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userIds=717929201362116609,778007431387290207&startDate=2023-01-01&endDate=2023-01-30\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | Long | 用户ID |\n| userName | String | 用户名 |\n| outItems | List | 出差明细 |\n| dayType | String | 类型：weekend（周末）workDay（工作日）holiday（节假日） |\n| start | Long | 开始时间 |\n| end | Long | 结束时间 |\n| timeLength | String | 时长（小时） |\nJava sdk调用示例："
+}

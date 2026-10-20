@@ -1,0 +1,22 @@
+{
+  "id": "840672644928643072",
+  "name": "对接说明",
+  "module": "对接说明",
+  "module_path": [
+    "对接说明"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "对接说明"
+  ],
+  "raw_text": "## 对接说明\n一、openapi接口调用流程\n1. 含有eteams团队管理员账号登录开放平台，系统分配corpId；\n2. 创建应用并提交审核，审核通过后会生成应用人员唯一userid、系统分配app_key及app_secret；\n3. 获取授权码CODE(参见 获取code信息)；\n4. 根据code获取应用令牌access_token(参见 获取accessToken信息 )；\n5. 使用access_token调用具体接口。\n注意：\n- code：有效时间为10分钟，且只能使用一次\n- access_token：有效时间为2小时，建议开发者存储该值，到期后自动获取一次，目前不支持access_token的刷新即续期。\n二、通讯录对接说明\neteams开放平台部分接口涉及到权限及单个人员时，需要成员userid方可进行调用,因此第三方应用提供商需要获得开放平台的组织架构。\n获取步骤：\n1. 获取应用令牌access_token信息；\n2. 获取企业部门列表，参见查询部门列表；\n3. 根据部门列表获取成员信息，参见获取成员信息。\n注意：目前eteams开放平台不支持向第三方增量同步组织架构变更，为了确保获取人员一致，建议开发者预留主动同步eteams组织架构功能。\n三、审批/表单接口说明\n审批/表单接口有些特殊，与其他api接口(任务/客户)有些不一样。以审批为例，每个团队每个审批的内容都不一样，主要都是由用户自定义组成。故需要您登录后查看自己团队审批/表单详细接口。\n四、python对接说明\npython request方法对json字符串进行urlencode时会多+号，E10系统使用金蝶中间件无法识别这类urlencode，需要修改，具体修复办法：\n1、引包：from urllib.parse import urlencode\n2、params参数进行编码：encoded_data = urlencode(data).replace('+', '%20')"
+}

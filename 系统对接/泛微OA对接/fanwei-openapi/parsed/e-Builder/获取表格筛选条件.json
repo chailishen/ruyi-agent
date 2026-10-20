@@ -1,0 +1,133 @@
+{
+  "id": "840721156559085568",
+  "name": "获取表格筛选条件",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/formcfg/list/listFilter/v1/getSearchFilters",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/formcfg/list/listFilter/v1/getSearchFilters",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "listId",
+      "required": "是",
+      "type": "Long",
+      "description": "表格 id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "commonFilters",
+      "required": "",
+      "type": "List",
+      "description": "常用搜索"
+    },
+    {
+      "name": "quickFilters",
+      "required": "",
+      "type": "List",
+      "description": "快捷搜索"
+    },
+    {
+      "name": "groupFilters",
+      "required": "",
+      "type": "List",
+      "description": "分类搜索"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "配置id"
+    },
+    {
+      "name": "fieldId",
+      "required": "",
+      "type": "String",
+      "description": "字段id"
+    },
+    {
+      "name": "fieldName",
+      "required": "",
+      "type": "String",
+      "description": "字段显示名"
+    },
+    {
+      "name": "fieldType",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "showOrder",
+      "required": "",
+      "type": "int",
+      "description": "显示顺序"
+    },
+    {
+      "name": "componentKey",
+      "required": "",
+      "type": "String",
+      "description": "字段组件类型"
+    },
+    {
+      "name": "isQuick",
+      "required": "",
+      "type": "String",
+      "description": "是否快捷搜索 0不是/1是"
+    },
+    {
+      "name": "isAdvance",
+      "required": "",
+      "type": "String",
+      "description": "是否高级搜索 0不是/1是"
+    },
+    {
+      "name": "startValue",
+      "required": "",
+      "type": "String",
+      "description": "默认条件起始值"
+    },
+    {
+      "name": "endValue",
+      "required": "",
+      "type": "String",
+      "description": "默认条件结束值"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表格筛选条件"
+  ],
+  "raw_text": "## 获取表格筛选条件\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/formcfg/list/listFilter/v1/getSearchFilters\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| listId | 是 | Long | 表格 id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| commonFilters | List | 常用搜索 |\n| quickFilters | List | 快捷搜索 |\n| groupFilters | List | 分类搜索 |\n| id | String | 配置id |\n| fieldId | String | 字段id |\n| fieldName | String | 字段显示名 |\n| fieldType | String | 字段类型 |\n| showOrder | int | 显示顺序 |\n| componentKey | String | 字段组件类型 |\n| isQuick | String | 是否快捷搜索 0不是/1是 |\n| isAdvance | String | 是否高级搜索 0不是/1是 |\n| startValue | String | 默认条件起始值 |\n| endValue | String | 默认条件结束值 |\nJava sdk调用示例："
+}

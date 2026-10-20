@@ -1,0 +1,92 @@
+{
+  "id": "874508788146118656",
+  "name": "获取公文列表数据",
+  "module": "公文管理",
+  "module_path": [
+    "公文管理"
+  ],
+  "is_api": true,
+  "url": "/api/odoc/list/getCustomlistData",
+  "url_template": "{OpenApiOrigin}/api/odoc/list/getCustomlistData",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "**备注：**Content-Type格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户id，对应系统内employeeid"
+    },
+    {
+      "name": "listId",
+      "required": "否",
+      "type": "Long",
+      "description": "列表listId（系统内列表listId）"
+    },
+    {
+      "name": "tabId",
+      "required": "是",
+      "type": "Long",
+      "description": "列表页签tabId（系统内列表页签tabId)"
+    },
+    {
+      "name": "pageNum",
+      "required": "否",
+      "type": "Integer",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Integer",
+      "description": "页数据量（建议不超过10）"
+    },
+    {
+      "name": "searchParams",
+      "required": "否",
+      "type": "Map<String,Object>",
+      "description": "高级搜索条件参数，保持和内部列表getCustomPageList请求中searchParams参数一致即可。"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "接口状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": "数据结果集合(datas:数据结果，column：列信息，total：总数)"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取公文列表数据"
+  ],
+  "raw_text": "## 获取公文列表数据\n请求URL：\n- {OpenApiOrigin}/api/odoc/list/getCustomlistData\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户id，对应系统内employeeid |\n| listId | 否 | Long | 列表listId（系统内列表listId） |\n| tabId | 是 | Long | 列表页签tabId（系统内列表页签tabId) |\n| pageNum | 否 | Integer | 页码 |\n| pageSize | 否 | Integer | 页数据量（建议不超过10） |\n| searchParams | 否 | Map<String,Object> | 高级搜索条件参数，保持和内部列表getCustomPageList请求中searchParams参数一致即可。 |\n**备注：**Content-Type格式为application/json\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | String | 接口状态 |\n| data | JSON | 数据结果集合(datas:数据结果，column：列信息，total：总数) |\nJava sdk调用示例："
+}

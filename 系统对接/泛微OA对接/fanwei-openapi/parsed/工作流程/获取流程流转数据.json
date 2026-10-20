@@ -1,0 +1,445 @@
+{
+  "id": "840714821499101184",
+  "name": "获取流程流转数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestOperatorInfo请求方式：",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestOperatorInfo请求方式：",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": ""
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": ""
+    },
+    {
+      "name": "otherParams",
+      "required": "否",
+      "type": "Object",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "审批流转数据"
+    },
+    {
+      "name": "addByUserId",
+      "required": "",
+      "type": "String",
+      "description": "会签添加人员Id"
+    },
+    {
+      "name": "agentCid",
+      "required": "",
+      "type": "String",
+      "description": "代理人操作记录id"
+    },
+    {
+      "name": "agentFormOperateLogId",
+      "required": "",
+      "type": "String",
+      "description": "代理人操作id"
+    },
+    {
+      "name": "agentUserId",
+      "required": "",
+      "type": "String",
+      "description": "代理人ID"
+    },
+    {
+      "name": "agentUserType",
+      "required": "",
+      "type": "String",
+      "description": "代理人类型"
+    },
+    {
+      "name": "arrivalRoundId",
+      "required": "",
+      "type": "String",
+      "description": "到达轮次号(每次同时到达的记录相同，多次到达不同，多次到达会签关系互不影响)"
+    },
+    {
+      "name": "beAgentAddByUserId",
+      "required": "",
+      "type": "String",
+      "description": "代理人记录时，这个字段记录被代理人是否是会签出来的"
+    },
+    {
+      "name": "beAgentAddByUserIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "岗位"
+    },
+    {
+      "name": "beAgentOperateId",
+      "required": "",
+      "type": "String",
+      "description": "被代理人操作ID"
+    },
+    {
+      "name": "beAgentUserId",
+      "required": "",
+      "type": "String",
+      "description": "被代理人ID"
+    },
+    {
+      "name": "beAgentUserIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "被代理人岗位id"
+    },
+    {
+      "name": "beAgentUserType",
+      "required": "",
+      "type": "String",
+      "description": "被代理类型"
+    },
+    {
+      "name": "beReject",
+      "required": "",
+      "type": "String",
+      "description": "是否是退回操作"
+    },
+    {
+      "name": "branchMark",
+      "required": "",
+      "type": "String",
+      "description": "分叉标记"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "创建人ID"
+    },
+    {
+      "name": "datasrc",
+      "required": "",
+      "type": "String",
+      "description": "数据来源"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "String",
+      "description": "是否删除 3删除"
+    },
+    {
+      "name": "formOperateLogId",
+      "required": "",
+      "type": "String",
+      "description": "记录这条数据是哪个操作id产生的"
+    },
+    {
+      "name": "forwardRight",
+      "required": "",
+      "type": "String",
+      "description": "转发接收人权限EXTEND_NODE_CONFIG：取节点转发设置，ALLOW_FORWARD：允许转发，ALLOW_ANNOTATION：允许批注，ALLOW_ALL：允许转发及批注，NO_RIGHT：禁止转发"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "记录id"
+    },
+    {
+      "name": "isProcessed",
+      "required": "",
+      "type": "String",
+      "description": "是否已经超时处理过,1:自动流转到下一操作者,2:退回到指定节点,3:提交到指定节点,4:指定干预对象,5:没开启超时自动处理,6:超时自动处理失败,7:et超时"
+    },
+    {
+      "name": "isRemark",
+      "required": "",
+      "type": "String",
+      "description": "流程操作状态"
+    },
+    {
+      "name": "needWfBack",
+      "required": "",
+      "type": "String",
+      "description": "后续操作后是否需要反馈给该操作人"
+    },
+    {
+      "name": "nextSuperCircle",
+      "required": "",
+      "type": "String",
+      "description": "是否下一上级逐级审批人员"
+    },
+    {
+      "name": "nodeAttr",
+      "required": "",
+      "type": "String",
+      "description": "节点属性"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "String",
+      "description": "节点id"
+    },
+    {
+      "name": "nodeOrder",
+      "required": "",
+      "type": "String",
+      "description": "节点排序"
+    },
+    {
+      "name": "nodeType",
+      "required": "",
+      "type": "String",
+      "description": "节点类型"
+    },
+    {
+      "name": "onebyoneHrmId",
+      "required": "",
+      "type": "String",
+      "description": "关联依次逐个处理人员表"
+    },
+    {
+      "name": "operateRound",
+      "required": "",
+      "type": "String",
+      "description": "记录节点第几次到达"
+    },
+    {
+      "name": "optGroupDetailId",
+      "required": "",
+      "type": "String",
+      "description": "操作人所属操作组明细Id"
+    },
+    {
+      "name": "optGroupId",
+      "required": "",
+      "type": "String",
+      "description": "操作人所属操作组Id"
+    },
+    {
+      "name": "preIsRemark",
+      "required": "",
+      "type": "String",
+      "description": "操作记录操作前状态值"
+    },
+    {
+      "name": "processUser",
+      "required": "",
+      "type": "String",
+      "description": "非会签关系记录实际提交人"
+    },
+    {
+      "name": "processUserIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "非会签关系记录实际提岗位"
+    },
+    {
+      "name": "processing",
+      "required": "",
+      "type": "String",
+      "description": "该记录是否属于处理中"
+    },
+    {
+      "name": "receiveDatetime",
+      "required": "",
+      "type": "String",
+      "description": "接收时间"
+    },
+    {
+      "name": "replyNotice",
+      "required": "",
+      "type": "String",
+      "description": "转发接收人批注是否通知转发人"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "请求id"
+    },
+    {
+      "name": "requestLogId",
+      "required": "",
+      "type": "String",
+      "description": "这条记录对应的签字意见id"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "String",
+      "description": "密级"
+    },
+    {
+      "name": "showOrder",
+      "required": "",
+      "type": "String",
+      "description": "同一个节点操作人顺序"
+    },
+    {
+      "name": "signGroup",
+      "required": "",
+      "type": "String",
+      "description": "会签组"
+    },
+    {
+      "name": "signOrder",
+      "required": "",
+      "type": "String",
+      "description": "会签关系"
+    },
+    {
+      "name": "sourceUserId",
+      "required": "",
+      "type": "String",
+      "description": "原操作人员ID"
+    },
+    {
+      "name": "sourceUserIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "原操作人员岗位"
+    },
+    {
+      "name": "superCircle",
+      "required": "",
+      "type": "String",
+      "description": "是否上级循环审批 1：是 0：否"
+    },
+    {
+      "name": "supervisionStatus",
+      "required": "",
+      "type": "String",
+      "description": "督办状态，是否被督办"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "租户key"
+    },
+    {
+      "name": "userDeptId",
+      "required": "",
+      "type": "String",
+      "description": "操作人部门Id"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "操作人ID"
+    },
+    {
+      "name": "userIdentityId",
+      "required": "",
+      "type": "String",
+      "description": "操作人岗位ID"
+    },
+    {
+      "name": "userJobId",
+      "required": "",
+      "type": "String",
+      "description": "操作人岗位Id"
+    },
+    {
+      "name": "userMasterDeptId",
+      "required": "",
+      "type": "String",
+      "description": "操作人主身份部门Id"
+    },
+    {
+      "name": "userMasterId",
+      "required": "",
+      "type": "String",
+      "description": "操作人主身份Id"
+    },
+    {
+      "name": "userMasterJobId",
+      "required": "",
+      "type": "String",
+      "description": "操作人主身份岗位Id"
+    },
+    {
+      "name": "userMasterSubcomId",
+      "required": "",
+      "type": "String",
+      "description": "操作人主身份分部Id"
+    },
+    {
+      "name": "userSource",
+      "required": "",
+      "type": "String",
+      "description": "操作人主身份分部Id"
+    },
+    {
+      "name": "userSource",
+      "required": "",
+      "type": "String",
+      "description": "操作者来源方式"
+    },
+    {
+      "name": "userSubcomId",
+      "required": "",
+      "type": "String",
+      "description": "操作人分部Id"
+    },
+    {
+      "name": "userType",
+      "required": "",
+      "type": "String",
+      "description": "操作人类型"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "String",
+      "description": "流程Id"
+    },
+    {
+      "name": "workflowType",
+      "required": "",
+      "type": "String",
+      "description": "路径类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程流转数据"
+  ],
+  "raw_text": "## 获取流程流转数据\n请求URL：\n- \n| 说明 |\n| --- |\n- \n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestOperatorInfo请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 |  |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n| otherParams | 否 | Object | 如果以监控权限删除流程则需要传该参数在body中传入，否则以流程权限判断{“ismonitor”:”1”} |\n请求示例：\nparams方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 审批流转数据 |\n| addByUserId | String | 会签添加人员Id |\n| agentCid | String | 代理人操作记录id |\n| agentFormOperateLogId | String | 代理人操作id |\n| agentUserId | String | 代理人ID |\n| agentUserType | String | 代理人类型 |\n| arrivalRoundId | String | 到达轮次号(每次同时到达的记录相同，多次到达不同，多次到达会签关系互不影响) |\n| beAgentAddByUserId | String | 代理人记录时，这个字段记录被代理人是否是会签出来的 |\n| beAgentAddByUserIdentityId | String | 岗位 |\n| beAgentOperateId | String | 被代理人操作ID |\n| beAgentUserId | String | 被代理人ID |\n| beAgentUserIdentityId | String | 被代理人岗位id |\n| beAgentUserType | String | 被代理类型 |\n| beReject | String | 是否是退回操作 |\n| branchMark | String | 分叉标记 |\n| creator | String | 创建人ID |\n| datasrc | String | 数据来源 |\n| deleteType | String | 是否删除 3删除 |\n| formOperateLogId | String | 记录这条数据是哪个操作id产生的 |\n| forwardRight | String | 转发接收人权限EXTEND_NODE_CONFIG：取节点转发设置，ALLOW_FORWARD：允许转发，ALLOW_ANNOTATION：允许批注，ALLOW_ALL：允许转发及批注，NO_RIGHT：禁止转发 |\n| id | String | 记录id |\n| isProcessed | String | 是否已经超时处理过,1:自动流转到下一操作者,2:退回到指定节点,3:提交到指定节点,4:指定干预对象,5:没开启超时自动处理,6:超时自动处理失败,7:et超时 |\n| isRemark | String | 流程操作状态 |\n| needWfBack | String | 后续操作后是否需要反馈给该操作人 |\n| nextSuperCircle | String | 是否下一上级逐级审批人员 |\n| nodeAttr | String | 节点属性 |\n| nodeId | String | 节点id |\n| nodeOrder | String | 节点排序 |\n| nodeType | String | 节点类型 |\n| onebyoneHrmId | String | 关联依次逐个处理人员表 |\n| operateRound | String | 记录节点第几次到达 |\n| optGroupDetailId | String | 操作人所属操作组明细Id |\n| optGroupId | String | 操作人所属操作组Id |\n| preIsRemark | String | 操作记录操作前状态值 |\n| processUser | String | 非会签关系记录实际提交人 |\n| processUserIdentityId | String | 非会签关系记录实际提岗位 |\n| processing | String | 该记录是否属于处理中 |\n| receiveDatetime | String | 接收时间 |\n| replyNotice | String | 转发接收人批注是否通知转发人 |\n| requestId | String | 请求id |\n| requestLogId | String | 这条记录对应的签字意见id |\n| secLevel | String | 密级 |\n| showOrder | String | 同一个节点操作人顺序 |\n| signGroup | String | 会签组 |\n| signOrder | String | 会签关系 |\n| sourceUserId | String | 原操作人员ID |\n| sourceUserIdentityId | String | 原操作人员岗位 |\n| superCircle | String | 是否上级循环审批 1：是 0：否 |\n| supervisionStatus | String | 督办状态，是否被督办 |\n| tenantKey | String | 租户key |\n| userDeptId | String | 操作人部门Id |\n| userId | String | 操作人ID |\n| userIdentityId | String | 操作人岗位ID |\n| userJobId | String | 操作人岗位Id |\n| userMasterDeptId | String | 操作人主身份部门Id |\n| userMasterId | String | 操作人主身份Id |\n| userMasterJobId | String | 操作人主身份岗位Id |\n| userMasterSubcomId | String | 操作人主身份分部Id |\n| userSource | String | 操作人主身份分部Id |\n| userSource | String | 操作者来源方式 |\n| userSubcomId | String | 操作人分部Id |\n| userType | String | 操作人类型 |\n| workflowId | String | 流程Id |\n| workflowType | String | 路径类型 |\nJava sdk调用示例："
+}

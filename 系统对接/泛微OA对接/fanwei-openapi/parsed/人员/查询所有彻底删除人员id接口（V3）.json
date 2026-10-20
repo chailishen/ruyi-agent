@@ -1,0 +1,48 @@
+{
+  "id": "840675131816247296",
+  "name": "查询所有彻底删除人员id接口（V3）",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v3/findAllPermanentlyDeleteUsers",
+  "url_template": "{OpenApiOrigin}/user/v3/findAllPermanentlyDeleteUsers",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "人员ID列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询所有彻底删除人员id接口（V3）"
+  ],
+  "raw_text": "## 查询所有彻底删除人员id接口（V3）\n简要描述：\n- 查询所有彻底删除人员id接口\n请求URL：\n- {OpenApiOrigin}/user/v3/findAllPermanentlyDeleteUsers\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v3/findAllPermanentlyDeleteUsers?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2\n返回示例\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | List | 人员ID列表 |\nJava sdk调用示例："
+}

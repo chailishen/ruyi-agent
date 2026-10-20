@@ -1,0 +1,84 @@
+{
+  "id": "284143217912315904",
+  "name": "获取指定编码单位信息",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/getDepartmentByCodes",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/getDepartmentByCodes",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "receiveUnitCodes",
+      "required": "是",
+      "type": "List<String>",
+      "description": "收文单位编码集合"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": ""
+    },
+    {
+      "name": "departmentCode",
+      "required": "",
+      "type": "String",
+      "description": "单位编码"
+    },
+    {
+      "name": "departmentName",
+      "required": "",
+      "type": "String",
+      "description": "单位名称"
+    },
+    {
+      "name": "unitType",
+      "required": "",
+      "type": "String",
+      "description": "单位类型：6：标准单位"
+    },
+    {
+      "name": "sort",
+      "required": "",
+      "type": "String",
+      "description": "排序码"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取指定编码单位信息"
+  ],
+  "raw_text": "## 获取指定编码单位信息\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/getDepartmentByCodes\n请求方式：\n- GET\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n请求参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| receiveUnitCodes | 是 | List<String> | 收文单位编码集合 |\n请求参数示例（以raw，JSON格式）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | List |  |\n| departmentCode | String | 单位编码 |\n| departmentName | String | 单位名称 |\n| unitType | String | 单位类型：6：标准单位 |\n| sort | String | 排序码 |"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "871464429544153089",
+  "name": "获取门户最新会议",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/getGatewayNewMeetingPortal",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/getGatewayNewMeetingPortal",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST（Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人id 获取用户ID"
+    },
+    {
+      "name": "selectUser",
+      "required": "否",
+      "type": "Long",
+      "description": "选择指定人员id"
+    },
+    {
+      "name": "current",
+      "required": "否",
+      "type": "String",
+      "description": "当前页"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "String",
+      "description": "当前页展示数量"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取门户最新会议"
+  ],
+  "raw_text": "## 获取门户最新会议\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/getGatewayNewMeetingPortal\n请求方式：\n- POST\n- （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 操作人id 获取用户ID |\n| selectUser | 否 | Long | 选择指定人员id |\n| current | 否 | String | 当前页 |\n| pageSize | 否 | String | 当前页展示数量 |\n请求结示例：\n返回结果：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| id | String | 会议id |\nJava sdk调用示例："
+}

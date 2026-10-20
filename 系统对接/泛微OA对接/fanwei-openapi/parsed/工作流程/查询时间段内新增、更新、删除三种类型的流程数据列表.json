@@ -1,0 +1,108 @@
+{
+  "id": "840712609565777920",
+  "name": "查询时间段内新增、更新、删除三种类型的流程数据列表",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryChangedFlowsAllType",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryChangedFlowsAllType",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "Long",
+      "description": "审批表ID 获取流程表ID"
+    },
+    {
+      "name": "datamap",
+      "required": "是",
+      "type": "Object",
+      "description": "时间参数"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Integer",
+      "description": "当前页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Integer",
+      "description": "每页数量，最大:200"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "startTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始时间(年-月-日)"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束时间(年-月-日)"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "流程ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "流程名称"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "String",
+      "description": "是否删除"
+    },
+    {
+      "name": "statusType",
+      "required": "",
+      "type": "String",
+      "description": "分别是’unSubmit’:待提交（草稿箱的不算待提交）, ‘inProcess’:审批中, ‘finish’:已结束"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询时间段内新增、更新、删除三种类型的审批数据列表"
+  ],
+  "raw_text": "## 查询时间段内新增、更新、删除三种类型的审批数据列表\n请求URL：\n- {OpenApiOrigin}/workflow/v2/queryChangedFlowsAllType\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| formId | 是 | Long | 审批表ID 获取流程表ID |\n| datamap | 是 | Object | 时间参数 |\n| pageNo | 否 | Integer | 当前页数 |\n| pageSize | 否 | Integer | 每页数量，最大:200 |\ndatamap参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| startTime | 是 | String | 开始时间(年-月-日) |\n| endTime | 是 | String | 结束时间(年-月-日) |\ndatamap参数示例：\n请求示例：\nquery方式\nhttps://api.yunteams.cn/workflow/v2/queryChangedFlowsAllType?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&datamap={\"startTime\":\"2023-03-22\",\"endTime\":\"2023-12-05\"}&pageNo=1&pageSize=20&formId=6473714586545086123\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | Long | 流程ID |\n| name | String | 流程名称 |\n| delete | String | 是否删除 |\n| statusType | String | 分别是’unSubmit’:待提交（草稿箱的不算待提交）, ‘inProcess’:审批中, ‘finish’:已结束 |\nJava sdk调用示例："
+}

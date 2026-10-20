@@ -1,0 +1,60 @@
+{
+  "id": "840719142279020544",
+  "name": "删除产品",
+  "module": "产品",
+  "module_path": [
+    "产品"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/delete",
+  "url_template": "{OpenApiOrigin}/crm/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：production"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "产品ID 获取产品ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除产品"
+  ],
+  "raw_text": "## 删除产品\n请求URL：\n- {OpenApiOrigin}/crm/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：production |\n| id | 是 | Long | 产品ID 获取产品ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=db7e733fc168c595e8c847a513a2865d&userid=835851587175096321&module=production&entity={\"name\":\"产品名称\",\"manager\":{\"name\":\"张一\"},\"productionPrice\":\"1000\",\"productionUnit\":\"箱\",\"productionType\":{\"name\":\"类型\"},\"productionStatus\":{\"name\":\"预售\"},\"productionCurrency\":{\"name\":\"人民币\"},\"productionCount\":\"100\",\"productionDescription\":\"备注内容\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

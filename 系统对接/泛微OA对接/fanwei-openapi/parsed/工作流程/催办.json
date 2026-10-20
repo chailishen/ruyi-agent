@@ -1,0 +1,116 @@
+{
+  "id": "874488966922379265",
+  "name": "催办",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/requestSupervise",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/requestSupervise",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID 获取审批数据ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "意见"
+    },
+    {
+      "name": "otherParam",
+      "required": "是",
+      "type": "obj",
+      "description": "额外参数,是个对象，下级属性看示例（下级属性非提醒方式的5个属性必须填1个）。"
+    },
+    {
+      "name": "otherParam.otherReminder",
+      "required": "否",
+      "type": "String",
+      "description": "其他提醒人（userId），多个ID用逗号隔开。"
+    },
+    {
+      "name": "otherParam.currentOperator",
+      "required": "否",
+      "type": "int",
+      "description": "当前审批人是否需要提醒，0不提醒；1提醒。"
+    },
+    {
+      "name": "otherParam.messageRemind",
+      "required": "否",
+      "type": "int",
+      "description": "是否短信提醒：0不提醒；1提醒。（提醒方式）"
+    },
+    {
+      "name": "otherParam.doneOperator",
+      "required": "否",
+      "type": "int",
+      "description": "已办审批人是否需要提醒，0不提醒；1提醒。"
+    },
+    {
+      "name": "otherParam.submitOperator",
+      "required": "否",
+      "type": "int",
+      "description": "流程提交人是否需要提醒，0不提醒；1提醒。"
+    },
+    {
+      "name": "otherParam.ccOperator",
+      "required": "否",
+      "type": "int",
+      "description": "流程抄送人是否需要提醒，0不提醒；1提醒。"
+    },
+    {
+      "name": "otherParam.emailRemind",
+      "required": "否",
+      "type": "int",
+      "description": "是否邮件提醒：0不提醒；1提醒。（提醒方式）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Map",
+      "description": "流程数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "催办"
+  ],
+  "raw_text": "## 催办\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/requestSupervise\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID 获取审批数据ID |\n| remark | 否 | String | 意见 |\n| otherParam | 是 | obj | 额外参数,是个对象，下级属性看示例（下级属性非提醒方式的5个属性必须填1个）。 |\n| otherParam.otherReminder | 否 | String | 其他提醒人（userId），多个ID用逗号隔开。 |\n| otherParam.currentOperator | 否 | int | 当前审批人是否需要提醒，0不提醒；1提醒。 |\n| otherParam.messageRemind | 否 | int | 是否短信提醒：0不提醒；1提醒。（提醒方式） |\n| otherParam.doneOperator | 否 | int | 已办审批人是否需要提醒，0不提醒；1提醒。 |\n| otherParam.submitOperator | 否 | int | 流程提交人是否需要提醒，0不提醒；1提醒。 |\n| otherParam.ccOperator | 否 | int | 流程抄送人是否需要提醒，0不提醒；1提醒。 |\n| otherParam.emailRemind | 否 | int | 是否邮件提醒：0不提醒；1提醒。（提醒方式） |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Map | 流程数据 |\nJava sdk调用示例："
+}

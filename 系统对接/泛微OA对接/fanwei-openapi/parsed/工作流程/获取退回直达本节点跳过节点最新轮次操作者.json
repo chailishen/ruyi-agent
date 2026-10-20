@@ -1,0 +1,61 @@
+{
+  "id": "408006533343870976",
+  "name": "获取退回直达本节点跳过节点最新轮次操作者",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getToRejectNodeOperator",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getToRejectNodeOperator",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "getFirstFlowInfo",
+      "required": "",
+      "type": "boolean",
+      "description": "true（默认值）：取最新一次流转记录，若不是直达退回节点则获取不到数据；false：取所有流转记录中最新一次直达退回节点，取这中间跳过的节点操作者；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取退回直达本节点跳过节点最新轮次操作者"
+  ],
+  "raw_text": "## 获取退回直达本节点跳过节点最新轮次操作者\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getToRejectNodeOperator\n请求方式：\n- GET ，备注：access_token放在params中\n说明：\n- 接口作用：A—>B—>C—>D；从D退回到A，且退回时选择提交直达本节点；A提交到D时，调用接口获取BC节点最新轮次操作者；\n- 调用该接口，需要有流程的查看权限。\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n| getFirstFlowInfo | 否 | boolean | true（默认值）：取最新一次流转记录，若不是直达退回节点则获取不到数据；false：取所有流转记录中最新一次直达退回节点，取这中间跳过的节点操作者； |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |"
+}

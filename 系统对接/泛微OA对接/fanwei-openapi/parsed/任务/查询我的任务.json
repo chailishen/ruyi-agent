@@ -1,0 +1,252 @@
+{
+  "id": "840678649250979841",
+  "name": "查询我的任务",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/mineInfo",
+  "url_template": "{OpenApiOrigin}/task/v2/mineInfo",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "type",
+      "required": "否",
+      "type": "string",
+      "description": "查询类型 mine: 我负责和参与的任务、mineCreate: 我创建的任务、mineManager：我负责的任务、mineParticipants：我参与的任务"
+    },
+    {
+      "name": "queryParams",
+      "required": "否",
+      "type": "Object",
+      "description": "查询条件参数Map, 包含如下参数"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "beginDate",
+      "required": "否",
+      "type": "Object",
+      "description": "开始时间，参数值格式为{“value”: “2021-08-12”}"
+    },
+    {
+      "name": "dueDate",
+      "required": "否",
+      "type": "Object",
+      "description": "到期时间，参数值格式为{“value”: “2021-09-12”}"
+    },
+    {
+      "name": "taskTypeId",
+      "required": "否",
+      "type": "Object",
+      "description": "任务类型id，参数值格式为{“value”: “8993376296724213239”}"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "number",
+      "description": "分页页码，参数格式：\"pageNo\":1,默认值1"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "number",
+      "description": "分页容量，参数格式：\"pageSize\":10,默认值50000"
+    },
+    {
+      "name": "taskStatus",
+      "required": "否",
+      "type": "Object",
+      "description": "任务状态, 参数格式为{\"value\":\"ﬁnished\"}"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "task",
+      "required": "",
+      "type": "Object",
+      "description": "任务对象"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "任务名称"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "任务内容"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否锁定"
+    },
+    {
+      "name": "commonForm",
+      "required": "",
+      "type": "Object",
+      "description": "表单通用模板"
+    },
+    {
+      "name": "taskTypeForm",
+      "required": "",
+      "type": "Object",
+      "description": "任务类型（属表单）"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块名"
+    },
+    {
+      "name": "lockable",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否可锁定"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父任务"
+    },
+    {
+      "name": "dueDate",
+      "required": "",
+      "type": "Date",
+      "description": "到期日"
+    },
+    {
+      "name": "finishTime",
+      "required": "",
+      "type": "Date",
+      "description": "结束时间"
+    },
+    {
+      "name": "priority",
+      "required": "",
+      "type": "String",
+      "description": "优先级"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "sn",
+      "required": "",
+      "type": "Long",
+      "description": "排序序号"
+    },
+    {
+      "name": "isDelete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否已删除"
+    },
+    {
+      "name": "progress",
+      "required": "",
+      "type": "Float",
+      "description": "进度"
+    },
+    {
+      "name": "parentIndex",
+      "required": "",
+      "type": "Int",
+      "description": "父任务下的排序"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "tailnum",
+      "required": "",
+      "type": "String",
+      "description": "流水号"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建者"
+    },
+    {
+      "name": "commonFormData",
+      "required": "",
+      "type": "Object",
+      "description": "通用字段数据"
+    },
+    {
+      "name": "taskTypeFormData",
+      "required": "",
+      "type": "Object",
+      "description": "自定义字段数据"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后修改时间"
+    },
+    {
+      "name": "lastCommentTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后评论时间"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "团队key"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "任务ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询我的任务"
+  ],
+  "raw_text": "## 查询我的任务\n请求URL：\n- {OpenApiOrigin}/task/v2/mineInfo\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| type | 否 | string | 查询类型 mine: 我负责和参与的任务、mineCreate: 我创建的任务、mineManager：我负责的任务、mineParticipants：我参与的任务 |\n| queryParams | 否 | Object | 查询条件参数Map, 包含如下参数 |\nqueryParams请求结构体：\nqueryParams参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| beginDate | 否 | Object | 开始时间，参数值格式为{“value”: “2021-08-12”} |\n| dueDate | 否 | Object | 到期时间，参数值格式为{“value”: “2021-09-12”} |\n| taskTypeId | 否 | Object | 任务类型id，参数值格式为{“value”: “8993376296724213239”} |\n| pageNo | 否 | number | 分页页码，参数格式：\"pageNo\":1,默认值1 |\n| pageSize | 否 | number | 分页容量，参数格式：\"pageSize\":10,默认值50000 |\n| taskStatus | 否 | Object | 任务状态, 参数格式为{\"value\":\"ﬁnished\"} |\n请求示例：\nquery方式\nhttps://api.yunteams.cn/task/v2/mineInfo?access_token=3f888283dd7564dd5443a5590a357318&userid=498 0937863852743878&queryParams={\"beginDate\": {\"value\": \"2022-10-29\"},\"dueDate\": {\"value\": \"2023-10- 29\"},\"taskTypeId\": {\"value\": \"8993376296724213239\"},\"pageNo\":1,\"pageSize\":10,\"taskStatus\": {\"value\":\"ﬁnished\"}}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| task | Object | 任务对象 |\n| name | String | 任务名称 |\n| content | String | 任务内容 |\n| locked | Boolean | 是否锁定 |\n| commonForm | Object | 表单通用模板 |\n| taskTypeForm | Object | 任务类型（属表单） |\n| module | String | 模块名 |\n| lockable | Boolean | 是否可锁定 |\n| parent | Object | 父任务 |\n| dueDate | Date | 到期日 |\n| finishTime | Date | 结束时间 |\n| priority | String | 优先级 |\n| manager | Object | 负责人 |\n| sn | Long | 排序序号 |\n| isDelete | Boolean | 是否已删除 |\n| progress | Float | 进度 |\n| parentIndex | Int | 父任务下的排序 |\n| status | String | 状态 |\n| tailnum | String | 流水号 |\n| creator | Object | 创建者 |\n| commonFormData | Object | 通用字段数据 |\n| taskTypeFormData | Object | 自定义字段数据 |\n| lastUpdateTime | Date | 最后修改时间 |\n| lastCommentTime | Date | 最后评论时间 |\n| tenantKey | String | 团队key |\n| id | Long | 任务ID |\nJava sdk调用示例："
+}

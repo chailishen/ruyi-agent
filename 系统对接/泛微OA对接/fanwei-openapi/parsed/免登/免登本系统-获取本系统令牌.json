@@ -1,0 +1,93 @@
+{
+  "id": "840673469570752513",
+  "name": "免登本系统-获取本系统令牌",
+  "module": "免登",
+  "module_path": [
+    "免登"
+  ],
+  "is_api": true,
+  "url": "/oauth2/get_logintoken",
+  "url_template": "{OpenApiOrigin}/oauth2/get_logintoken",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "app_key",
+      "required": "是",
+      "type": "string",
+      "description": "应用app_key"
+    },
+    {
+      "name": "app_security",
+      "required": "是",
+      "type": "string",
+      "description": "应用app_secret"
+    },
+    {
+      "name": "account",
+      "required": "是",
+      "type": "string",
+      "description": "登录账号"
+    },
+    {
+      "name": "authType",
+      "required": "否",
+      "type": "string",
+      "description": "认证类型（默认是登录账号account）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "etLoginToken",
+      "required": "",
+      "type": "String",
+      "description": "本系统令牌"
+    },
+    {
+      "name": "singleToken",
+      "required": "是",
+      "type": "string",
+      "description": "本系统令牌（etLoginToken）"
+    },
+    {
+      "name": "redirect_uri",
+      "required": "是",
+      "type": "string",
+      "description": "免登本系统后的本系统重定向地址"
+    },
+    {
+      "name": "oauthType",
+      "required": "是",
+      "type": "string",
+      "description": "固定值（singlesign）"
+    },
+    {
+      "name": "langType",
+      "required": "否",
+      "type": "string",
+      "description": "语言类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "免登本系统",
+    "开放平台免登套件",
+    "获取本系统令牌",
+    "构建免登链接"
+  ],
+  "raw_text": "## 免登本系统\n#### 开放平台免登套件\n详见：{origin}/sp/openapi/base/doc/kit/token\n### 获取本系统令牌\n简要描述：\n- 免登本系统-获取本系统令牌，第三方系统免登录本系统场景使用。\n请求URL：\n- {OpenApiOrigin}/oauth2/get_logintoken\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| app_key | 是 | string | 应用app_key |\n| app_security | 是 | string | 应用app_secret |\n| account | 是 | string | 登录账号 |\n| authType | 否 | string | 认证类型（默认是登录账号account） |\nauthType说明:\n- account: 本系统人员登录账号\n- id: 本系统人员ID;\n- JOB_NUM: 本系统人员工号;\n- EMAIL：本系统人员邮箱\n- MOBILE：本系统人员手机号\n- idNos: 本系统人力身份证\n- loginID：本系统登录名\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| etLoginToken | String | 本系统令牌 |\n### 构建免登链接\n简要描述：\n- 免登本系统-免登接口，第三方系统免登录本系统场景使用。\n请求URL：\n- {origin}/papi/open/singleSignon\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| singleToken | 是 | string | 本系统令牌（etLoginToken） |\n| redirect_uri | 是 | string | 免登本系统后的本系统重定向地址 |\n| oauthType | 是 | string | 固定值（singlesign） |\n| langType | 否 | string | 语言类型 |\n使用获取到的etLoginToken构建免登链接，通过重定向该地址，即可实现免登进入本系统。{origin}/papi/open/singleSignon?singleToken=c9f5b0803d057a6b2dc6b36dd0f27d8b&oauthType=singlesign&redirect_uri=xxx\n注：singleToken每免登一次，即会失效，所以用户每一次免登都要重新获取新的singleToken\nlangType使用说明：\n为支持第三方系统免登本系统时，可同步设置用户语言，提供标准规范定义和对接方式。\n| langType | 对应语种 |\n| --- | --- |\n| zh_CN | 简体中文 |\n| en_US | 英文 |\n| zh_TW | 繁軆中文 |\n| ko_KR | 韩语 |\n| ru_RU | 俄语 |\n| ja_JP | 日本语 |\n| th_TH | 泰语 |\n| es_ES | 西班牙语 |\n| de_DE | 德语 |\n| fr_FR | 法语 |\n| pt_PT | 葡萄牙语 |\n| ar_AE | 阿拉伯语 |"
+}

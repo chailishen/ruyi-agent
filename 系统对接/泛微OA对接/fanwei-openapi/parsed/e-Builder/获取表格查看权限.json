@@ -1,0 +1,97 @@
+{
+  "id": "840721474344722433",
+  "name": "获取表格查看权限",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/formcfg/list/permission/v1/getList",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/formcfg/list/permission/v1/getList",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "listId",
+      "required": "是",
+      "type": "Long",
+      "description": "表格 id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "权限 id"
+    },
+    {
+      "name": "dataid",
+      "required": "",
+      "type": "String",
+      "description": "数据 id"
+    },
+    {
+      "name": "selectedType",
+      "required": "",
+      "type": "String",
+      "description": "权限类型"
+    },
+    {
+      "name": "containExtra",
+      "required": "",
+      "type": "String",
+      "description": "包含兼岗"
+    },
+    {
+      "name": "minShowlevel",
+      "required": "",
+      "type": "String",
+      "description": "最小安全级别"
+    },
+    {
+      "name": "maxShowlevel",
+      "required": "",
+      "type": "String",
+      "description": "最大安全级别"
+    },
+    {
+      "name": "jobLevel",
+      "required": "",
+      "type": "String",
+      "description": "岗位级别"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表格查看权限"
+  ],
+  "raw_text": "## 获取表格查看权限\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/formcfg/list/permission/v1/getList\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| listId | 是 | Long | 表格 id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| id | String | 权限 id |\n| dataid | String | 数据 id |\n| selectedType | String | 权限类型 |\n| containExtra | String | 包含兼岗 |\n| minShowlevel | String | 最小安全级别 |\n| maxShowlevel | String | 最大安全级别 |\n| jobLevel | String | 岗位级别 |\nJava sdk调用示例："
+}

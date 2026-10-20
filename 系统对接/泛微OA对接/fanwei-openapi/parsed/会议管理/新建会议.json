@@ -1,0 +1,176 @@
+{
+  "id": "871464128810008576",
+  "name": "新建会议",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/addMeeting",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/addMeeting",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST（Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "creator",
+      "required": "是",
+      "type": "Long",
+      "description": "创建人id 获取用户ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "会议名称"
+    },
+    {
+      "name": "beginDatetime",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期时间(格式：yyyy-MM-dd HH:mm)"
+    },
+    {
+      "name": "endDatetime",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期时间(格式：yyyy-MM-dd HH:mm)"
+    },
+    {
+      "name": "caller",
+      "required": "否",
+      "type": "Long",
+      "description": "召集人"
+    },
+    {
+      "name": "contacter",
+      "required": "否",
+      "type": "Long",
+      "description": "联系人"
+    },
+    {
+      "name": "mtDesc",
+      "required": "否",
+      "type": "String",
+      "description": "会议内容"
+    },
+    {
+      "name": "hrmMembers",
+      "required": "否",
+      "type": "String",
+      "description": "参会人员（多个人员以”,”分隔）"
+    },
+    {
+      "name": "address",
+      "required": "否",
+      "type": "String",
+      "description": "会议室地点（多个会议室以”,”分隔）"
+    },
+    {
+      "name": "customizeAddress",
+      "required": "否",
+      "type": "String",
+      "description": "自定义会议地点"
+    },
+    {
+      "name": "orgMembers",
+      "required": "否",
+      "type": "String",
+      "description": "参会部门（多个人员以”,”分隔）"
+    },
+    {
+      "name": "remindType",
+      "required": "否",
+      "type": "String",
+      "description": "提醒方式(2:短信提醒,3:邮件提醒,6:立即提醒;多个以”,”分隔)"
+    },
+    {
+      "name": "remindImmediately",
+      "required": "否",
+      "type": "Integer",
+      "description": "0:不开启立即提醒；1:开启立即提醒"
+    },
+    {
+      "name": "remindBeforeStart",
+      "required": "否",
+      "type": "Integer",
+      "description": "0:不开启开始前提醒；1:开启开始前提醒"
+    },
+    {
+      "name": "remindBeforeEnd",
+      "required": "否",
+      "type": "Integer",
+      "description": "0:不开启结束前提醒；1:开启结束前提醒"
+    },
+    {
+      "name": "remindHoursBeforeStart",
+      "required": "否",
+      "type": "Integer",
+      "description": "开始前提醒小时"
+    },
+    {
+      "name": "remindTimesBeforeStart",
+      "required": "否",
+      "type": "Integer",
+      "description": "开始前提醒分钟"
+    },
+    {
+      "name": "remindHoursBeforeEnd",
+      "required": "否",
+      "type": "Integer",
+      "description": "结束前提醒小时"
+    },
+    {
+      "name": "remindTimesBeforeEnd",
+      "required": "否",
+      "type": "Integer",
+      "description": "结束前提醒分钟"
+    },
+    {
+      "name": "customParams",
+      "required": "否",
+      "type": "Map<String,Object>",
+      "description": "自定义参数（key：表单字段管理中数据key；vlue：表单自定义字段的值）"
+    },
+    {
+      "name": "备注：customParams支持传递表单自定义参数（20250801基线开始支持）；表单主表自定义字段传参格式为：key-value（key：表单字段管理中数据key；vlue：表单自定义字段的值）；明细表自定义字段传参格式为：key(明细表名)、value（value为json数组）;",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "meetingId",
+      "required": "",
+      "type": "String",
+      "description": "会议id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建会议"
+  ],
+  "raw_text": "## 新建会议\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/addMeeting\n请求方式：\n- POST\n- （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| creator | 是 | Long | 创建人id 获取用户ID |\n| name | 是 | String | 会议名称 |\n| beginDatetime | 是 | Date | 开始日期时间(格式：yyyy-MM-dd HH:mm) |\n| endDatetime | 是 | Date | 结束日期时间(格式：yyyy-MM-dd HH:mm) |\n| caller | 否 | Long | 召集人 |\n| contacter | 否 | Long | 联系人 |\n| mtDesc | 否 | String | 会议内容 |\n| hrmMembers | 否 | String | 参会人员（多个人员以”,”分隔） |\n| address | 否 | String | 会议室地点（多个会议室以”,”分隔） |\n| customizeAddress | 否 | String | 自定义会议地点 |\n| orgMembers | 否 | String | 参会部门（多个人员以”,”分隔） |\n| remindType | 否 | String | 提醒方式(2:短信提醒,3:邮件提醒,6:立即提醒;多个以”,”分隔) |\n| remindImmediately | 否 | Integer | 0:不开启立即提醒；1:开启立即提醒 |\n| remindBeforeStart | 否 | Integer | 0:不开启开始前提醒；1:开启开始前提醒 |\n| remindBeforeEnd | 否 | Integer | 0:不开启结束前提醒；1:开启结束前提醒 |\n| remindHoursBeforeStart | 否 | Integer | 开始前提醒小时 |\n| remindTimesBeforeStart | 否 | Integer | 开始前提醒分钟 |\n| remindHoursBeforeEnd | 否 | Integer | 结束前提醒小时 |\n| remindTimesBeforeEnd | 否 | Integer | 结束前提醒分钟 |\n| customParams | 否 | Map<String,Object> | 自定义参数（key：表单字段管理中数据key；vlue：表单自定义字段的值） |\n| 备注：customParams支持传递表单自定义参数（20250801基线开始支持）；表单主表自定义字段传参格式为：key-value（key：表单字段管理中数据key；vlue：表单自定义字段的值）；明细表自定义字段传参格式为：key(明细表名)、value（value为json数组）; |  |  |  |\n请求结示例：\n返回结果：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| meetingId | String | 会议id |\nJava sdk调用示例："
+}

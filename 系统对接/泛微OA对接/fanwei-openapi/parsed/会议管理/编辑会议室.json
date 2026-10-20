@@ -1,0 +1,174 @@
+{
+  "id": "840720349290659840",
+  "name": "编辑会议室",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/room/v2/updateRoom",
+  "url_template": "{OpenApiOrigin}/room/v2/updateRoom",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "会议室ID 获取会议室ID"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "需要修改的参数名"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "String",
+      "description": "参数值"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "place",
+      "required": "",
+      "type": "String",
+      "description": "会议室地点"
+    },
+    {
+      "name": "galleryful",
+      "required": "",
+      "type": "Integer",
+      "description": "容纳人数"
+    },
+    {
+      "name": "projector",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否有投影，有true，无false"
+    },
+    {
+      "name": "remarks",
+      "required": "",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否禁用，禁用true，不禁用false"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "place",
+      "required": "",
+      "type": "String",
+      "description": "会议室地点"
+    },
+    {
+      "name": "galleryful",
+      "required": "",
+      "type": "Integer",
+      "description": "容纳人数"
+    },
+    {
+      "name": "projector",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否有投影"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否禁用"
+    },
+    {
+      "name": "remarks",
+      "required": "",
+      "type": "String",
+      "description": "会议室备注"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "String",
+      "description": "更新时间"
+    },
+    {
+      "name": "creater",
+      "required": "",
+      "type": "String",
+      "description": "创建人信息"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议室ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "编辑会议室"
+  ],
+  "raw_text": "## 编辑会议室\n请求URL：\n- {OpenApiOrigin}/room/v2/updateRoom\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 会议室ID 获取会议室ID |\n| propertyName | 是 | String | 需要修改的参数名 |\n| propertyValue | 是 | String | 参数值 |\npropertyName参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| name | String | 会议室名称 |\n| place | String | 会议室地点 |\n| galleryful | Integer | 容纳人数 |\n| projector | Boolean | 是否有投影，有true，无false |\n| remarks | String | 备注 |\n| locked | Boolean | 是否禁用，禁用true，不禁用false |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 会议室名称 |\n| place | String | 会议室地点 |\n| galleryful | Integer | 容纳人数 |\n| projector | Boolean | 是否有投影 |\n| locked | Boolean | 是否禁用 |\n| remarks | String | 会议室备注 |\n| createTime | String | 创建时间 |\n| lastUpdateTime | String | 更新时间 |\n| creater | String | 创建人信息 |\n| module | String | 模块 |\n| delete | Boolean | 是否删除 |\n| id | String | 会议室ID |\nJava sdk调用示例："
+}

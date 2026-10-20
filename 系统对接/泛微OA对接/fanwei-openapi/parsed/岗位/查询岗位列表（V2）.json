@@ -1,0 +1,78 @@
+{
+  "id": "840674418775302144",
+  "name": "查询岗位列表（V2）",
+  "module": "岗位",
+  "module_path": [
+    "岗位"
+  ],
+  "is_api": true,
+  "url": "/position/v2/list",
+  "url_template": "{OpenApiOrigin}/position/v2/list",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "posnid",
+      "required": "否",
+      "type": "Long",
+      "description": "岗位ID（不传时，获取企业整个岗位列表）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "position",
+      "required": "",
+      "type": "List",
+      "description": "岗位信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "岗位名称"
+    },
+    {
+      "name": "rank",
+      "required": "",
+      "type": "Int",
+      "description": "层级"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父岗位信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "岗位ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询岗位列表（V2）"
+  ],
+  "raw_text": "## 查询岗位列表（V2）\n请求URL：\n- {OpenApiOrigin}/position/v2/list\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| posnid | 否 | Long | 岗位ID（不传时，获取企业整个岗位列表） |\n请求示例：\nquery方式\n{OpenApiOrigin}/position/v2/list?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&posnid=6490013933795226117\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| position | List | 岗位信息 |\n| name | String | 岗位名称 |\n| rank | Int | 层级 |\n| parent | Object | 父岗位信息 |\n| id | String | 岗位ID |\nJava sdk调用示例："
+}

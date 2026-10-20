@@ -1,0 +1,126 @@
+{
+  "id": "840675715789193217",
+  "name": "查询联系人",
+  "module": "联系人",
+  "module_path": [
+    "联系人"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：contact"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "联系人ID 获取联系人ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "创建人"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "contactBelongCustomer",
+      "required": "",
+      "type": "String",
+      "description": "联系人所属客户信息"
+    },
+    {
+      "name": "contactTitle",
+      "required": "",
+      "type": "String",
+      "description": "联系人头衔"
+    },
+    {
+      "name": "contactCall",
+      "required": "",
+      "type": "String",
+      "description": "联系人称呼"
+    },
+    {
+      "name": "contactTelephone",
+      "required": "",
+      "type": "String",
+      "description": "联系人电话"
+    },
+    {
+      "name": "contactPhoneNumber",
+      "required": "",
+      "type": "String",
+      "description": "联系人手机"
+    },
+    {
+      "name": "contactEmail",
+      "required": "",
+      "type": "String",
+      "description": "联系人邮箱"
+    },
+    {
+      "name": "contactSex",
+      "required": "",
+      "type": "String",
+      "description": "联系人性别，1男、2女、3未知"
+    },
+    {
+      "name": "contactInterest",
+      "required": "",
+      "type": "String",
+      "description": "联系人兴趣"
+    },
+    {
+      "name": "contactDescription",
+      "required": "",
+      "type": "String",
+      "description": "联系人备注"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询联系人"
+  ],
+  "raw_text": "## 查询联系人\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：contact |\n| id | 是 | Long | 联系人ID 获取联系人ID |\n返回示例：\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=contact&id=4733238489170829056\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| creator | String | 创建人 |\n| manager | String | 负责人 |\n| contactBelongCustomer | String | 联系人所属客户信息 |\n| contactTitle | String | 联系人头衔 |\n| contactCall | String | 联系人称呼 |\n| contactTelephone | String | 联系人电话 |\n| contactPhoneNumber | String | 联系人手机 |\n| contactEmail | String | 联系人邮箱 |\n| contactSex | String | 联系人性别，1男、2女、3未知 |\n| contactInterest | String | 联系人兴趣 |\n| contactDescription | String | 联系人备注 |\nJava sdk调用示例："
+}

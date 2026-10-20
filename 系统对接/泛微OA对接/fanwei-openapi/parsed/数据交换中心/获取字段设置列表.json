@@ -1,0 +1,90 @@
+{
+  "id": "215992677705973760",
+  "name": "获取字段设置列表",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/listExchangeField",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/listExchangeField",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "字段信息"
+    },
+    {
+      "name": "-id",
+      "required": "",
+      "type": "String",
+      "description": "字段id唯一标识"
+    },
+    {
+      "name": "-fieldType",
+      "required": "",
+      "type": "Integer",
+      "description": "字段类型"
+    },
+    {
+      "name": "-fieldCode",
+      "required": "",
+      "type": "String",
+      "description": "字段编码"
+    },
+    {
+      "name": "-fieldName",
+      "required": "",
+      "type": "String",
+      "description": "字段名称"
+    },
+    {
+      "name": "-fieldDesc",
+      "required": "",
+      "type": "String",
+      "description": "字段描述"
+    },
+    {
+      "name": "-isOpen",
+      "required": "",
+      "type": "Integer",
+      "description": "是否封存（0：封存，1：正常）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取交换平台字段设置"
+  ],
+  "raw_text": "## 获取交换平台字段设置\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/listExchangeField\n请求方式：\n- GET\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求地址:https://api.yunteams.cn/api/odocexchange/v1/listExchangeField?access_token=df035c8146663ea21bd28438845ce9f6\n请求头Header：\ndepartmentCode：fwpg01\nplatformTenant：tq2uz86iuo\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | List | 字段信息 |\n| -id | String | 字段id唯一标识 |\n| -fieldType | Integer | 字段类型 |\n| -fieldCode | String | 字段编码 |\n| -fieldName | String | 字段名称 |\n| -fieldDesc | String | 字段描述 |\n| -isOpen | Integer | 是否封存（0：封存，1：正常） |"
+}

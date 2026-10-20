@@ -1,0 +1,121 @@
+{
+  "id": "840693883516755968",
+  "name": "根据流程数据ID查询审批数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/getInfoByID",
+  "url_template": "{OpenApiOrigin}/workflow/v2/getInfoByID",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "审批数据ID 获取审批数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "String",
+      "description": "审批表数据详情"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "审批表数据创建时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块名称"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "审批数据名称"
+    },
+    {
+      "name": "dataStatus",
+      "required": "",
+      "type": "String",
+      "description": "审批数据状态"
+    },
+    {
+      "name": "dataDetails",
+      "required": "",
+      "type": "String",
+      "description": "审批数据各字段详情"
+    },
+    {
+      "name": "fileDownload_Urls",
+      "required": "",
+      "type": "Object",
+      "description": "附件下载地址"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "审批提交人信息"
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "Long",
+      "description": "表单ID"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "审批数据ID"
+    },
+    {
+      "name": "statusType",
+      "required": "",
+      "type": "String",
+      "description": "分别是’unSubmit’:待提交（草稿箱的不算待提交）, ‘inProcess’:审批中, ‘finish’:已结束"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据审批数据ID查询审批数据"
+  ],
+  "raw_text": "## 根据审批数据ID查询审批数据\n请求URL：\n- {OpenApiOrigin}/workflow/v2/getInfoByID\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 审批数据ID 获取审批数据ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/getInfoByID?access_token=e94b9a88696283ab7ed688790daf5b89&userid=717929201362116609&id=843623747084992512\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| formData | String | 审批表数据详情 |\n| createTime | String | 审批表数据创建时间 |\n| module | String | 模块名称 |\n| name | String | 审批数据名称 |\n| dataStatus | String | 审批数据状态 |\n| dataDetails | String | 审批数据各字段详情 |\n| fileDownload_Urls | Object | 附件下载地址 |\n| creator | String | 审批提交人信息 |\n| formId | Long | 表单ID |\n| id | Long | 审批数据ID |\n| statusType | String | 分别是’unSubmit’:待提交（草稿箱的不算待提交）, ‘inProcess’:审批中, ‘finish’:已结束 |\nJava sdk调用示例："
+}

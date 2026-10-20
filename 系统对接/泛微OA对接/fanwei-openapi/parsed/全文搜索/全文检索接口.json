@@ -1,0 +1,198 @@
+{
+  "id": "367839216941400064",
+  "name": "全文检索接口",
+  "module": "全文搜索",
+  "module_path": [
+    "全文搜索"
+  ],
+  "is_api": true,
+  "url": "/api/esearch/search/fullsearch/searchByModule",
+  "url_template": "{OpenApiOrigin}/api/esearch/search/fullsearch/searchByModule",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Integer",
+      "description": "页码, 注意: 是从0开始的，0为第一页"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Integer",
+      "description": "每页展示的数量，默认为20"
+    },
+    {
+      "name": "searchModule",
+      "required": "是",
+      "type": "String",
+      "description": "查询模块全部模块使用ALL"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "Integer",
+      "description": "搜索类型。0: 搜索内容（默认）；1：搜索标题；2：搜索图片"
+    },
+    {
+      "name": "keyword",
+      "required": "是",
+      "type": "String",
+      "description": "查询关键词"
+    },
+    {
+      "name": "searchTagId",
+      "required": "否",
+      "type": "String",
+      "description": "页面定制搜索标签ID"
+    },
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户key 开放平台接口使用"
+    },
+    {
+      "name": "employeeId",
+      "required": "是",
+      "type": "String",
+      "description": "人员id 开放平台接口使用"
+    },
+    {
+      "name": "orderByFileds",
+      "required": "否",
+      "type": "Map",
+      "description": "排序字段"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "http返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "Integer",
+      "description": "当前页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "Integer",
+      "description": "每页数据量"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "查询模块"
+    },
+    {
+      "name": "keyword",
+      "required": "",
+      "type": "String",
+      "description": "查询关键词"
+    },
+    {
+      "name": "took",
+      "required": "",
+      "type": "Integer",
+      "description": "es查询耗时"
+    },
+    {
+      "name": "totalTook",
+      "required": "",
+      "type": "Integer",
+      "description": "查询总耗时"
+    },
+    {
+      "name": "hasNext",
+      "required": "",
+      "type": "boolen",
+      "description": "是否有下一页"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "Integer",
+      "description": "命中总数"
+    },
+    {
+      "name": "totalPage",
+      "required": "",
+      "type": "Integer",
+      "description": "命中总页数"
+    },
+    {
+      "name": "result",
+      "required": "",
+      "type": "Object",
+      "description": "查询结果"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "数据id"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "数据所属的模块"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "数据标题"
+    },
+    {
+      "name": "titleLink",
+      "required": "",
+      "type": "String",
+      "description": "数据标题跳转地址"
+    },
+    {
+      "name": "titleLinkOpenNewTab",
+      "required": "",
+      "type": "boolen",
+      "description": "新标签页打开数据"
+    },
+    {
+      "name": "footInfo",
+      "required": "",
+      "type": "Object",
+      "description": "数据角标信息"
+    },
+    {
+      "name": "highLightName",
+      "required": "",
+      "type": "String",
+      "description": "标题命中高亮"
+    },
+    {
+      "name": "highLightContent",
+      "required": "",
+      "type": "String",
+      "description": "内容命中高亮"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "全文检索接口"
+  ],
+  "raw_text": "## 全文检索接口\n请求URL：\n- {OpenApiOrigin}/api/esearch/search/fullsearch/searchByModule\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| pageNo | 是 | Integer | 页码, 注意: 是从0开始的，0为第一页 |\n| pageSize | 是 | Integer | 每页展示的数量，默认为20 |\n| searchModule | 是 | String | 查询模块全部模块使用ALL |\n| type | 是 | Integer | 搜索类型。0: 搜索内容（默认）；1：搜索标题；2：搜索图片 |\n| keyword | 是 | String | 查询关键词 |\n| searchTagId | 否 | String | 页面定制搜索标签ID |\n| tenantKey | 是 | String | 租户key 开放平台接口使用 |\n| employeeId | 是 | String | 人员id 开放平台接口使用 |\n| orderByFileds | 否 | Map | 排序字段 |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/esearch/search/fullsearch/searchByModule\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | http返回码 |\n| msg | String | 返回信息 |\n| pageNo | Integer | 当前页码 |\n| pageSize | Integer | 每页数据量 |\n| module | String | 查询模块 |\n| keyword | String | 查询关键词 |\n| took | Integer | es查询耗时 |\n| totalTook | Integer | 查询总耗时 |\n| hasNext | boolen | 是否有下一页 |\n| total | Integer | 命中总数 |\n| totalPage | Integer | 命中总页数 |\n| result | Object | 查询结果 |\n| id | String | 数据id |\n| module | String | 数据所属的模块 |\n| title | String | 数据标题 |\n| titleLink | String | 数据标题跳转地址 |\n| titleLinkOpenNewTab | boolen | 新标签页打开数据 |\n| footInfo | Object | 数据角标信息 |\n| highLightName | String | 标题命中高亮 |\n| highLightContent | String | 内容命中高亮 |"
+}

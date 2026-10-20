@@ -1,0 +1,162 @@
+{
+  "id": "840720499580960768",
+  "name": "查询会议室",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/room/v2/queryRooms",
+  "url_template": "{OpenApiOrigin}/room/v2/queryRooms",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "否",
+      "type": "String",
+      "description": "会议室ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "place",
+      "required": "否",
+      "type": "String",
+      "description": "会议室地点"
+    },
+    {
+      "name": "galleryful",
+      "required": "否",
+      "type": "Integer",
+      "description": "容纳人数"
+    },
+    {
+      "name": "projector",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否有投影"
+    },
+    {
+      "name": "remarks",
+      "required": "否",
+      "type": "String",
+      "description": "会议室备注"
+    },
+    {
+      "name": "locked",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否禁用"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "place",
+      "required": "",
+      "type": "String",
+      "description": "会议室地点"
+    },
+    {
+      "name": "galleryful",
+      "required": "",
+      "type": "Integer",
+      "description": "容纳人数"
+    },
+    {
+      "name": "projector",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否有投影"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否禁用"
+    },
+    {
+      "name": "remarks",
+      "required": "",
+      "type": "String",
+      "description": "会议室备注"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "String",
+      "description": "更新时间"
+    },
+    {
+      "name": "creater",
+      "required": "",
+      "type": "String",
+      "description": "创建人信息"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议室ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询会议室"
+  ],
+  "raw_text": "## 查询会议室\n请求URL：\n- {OpenApiOrigin}/room/v2/queryRooms\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 否 | String | 会议室ID |\n| name | 否 | String | 会议室名称 |\n| place | 否 | String | 会议室地点 |\n| galleryful | 否 | Integer | 容纳人数 |\n| projector | 否 | Boolean | 是否有投影 |\n| remarks | 否 | String | 会议室备注 |\n| locked | 否 | Boolean | 是否禁用 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 会议室名称 |\n| place | String | 会议室地点 |\n| galleryful | Integer | 容纳人数 |\n| projector | Boolean | 是否有投影 |\n| locked | Boolean | 是否禁用 |\n| remarks | String | 会议室备注 |\n| createTime | String | 创建时间 |\n| lastUpdateTime | String | 更新时间 |\n| creater | String | 创建人信息 |\n| module | String | 模块 |\n| delete | Boolean | 是否删除 |\n| id | String | 会议室ID |\nJava sdk调用示例："
+}

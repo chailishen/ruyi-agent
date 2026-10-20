@@ -1,0 +1,29 @@
+{
+  "id": "377910343805960192",
+  "name": "获取工作时长-每日统计列表数据",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/dailyStatis/getAttendDailyStatisReport",
+  "url_template": "{OpenApiOrigin}/api/attend/web/dailyStatis/getAttendDailyStatisReport",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/attend/web/dailyStatis/getAttendDailyStatisReport\n请求方式：\n- POST\nURL参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\nbody参数：参考正式接口/api/attend/web/dailyStatis/getAttendDailyStatisReport的传参\n注：新增加currentUserId（登陆人用户id（根据此id进行分权判断））、currentTenantKey（登陆人的租户key）必传\nbody传参格式为application/json\n请求示例：\n返回示例：与正式接口/api/attend/web/dailyStatis/getAttendDailyStatisReport的返回参数一致"
+}

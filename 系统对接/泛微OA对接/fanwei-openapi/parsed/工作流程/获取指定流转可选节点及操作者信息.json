@@ -1,0 +1,91 @@
+{
+  "id": "408047245129154560",
+  "name": "获取指定流转可选节点及操作者信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getSelectFlowNodeInfos?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getSelectFlowNodeInfos?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "",
+      "type": "long",
+      "description": "指定当前节点，不传的话会根据权限计算出一个当前节点，如果传的是未经过的节点，userId需要传一个有监控权限的userId"
+    },
+    {
+      "name": "needNodeOperator",
+      "required": "",
+      "type": "int",
+      "description": "是否需要计算节点的操作者信息0：否（默认）、1：是"
+    },
+    {
+      "name": "needCalOperatorRange",
+      "required": "",
+      "type": "int",
+      "description": "计算节点的操作者时，是否需要排除指定流转接收人范围外的人员0：否、1：是（默认）"
+    },
+    {
+      "name": "needCanSelectUser",
+      "required": "",
+      "type": "int",
+      "description": "是否计算返回可选人员信息0：否（默认）、1：是（默认）；needNodeOperator、needCalOperatorRange必须传1"
+    },
+    {
+      "name": "orgParamMap",
+      "required": "",
+      "type": "map",
+      "description": "浏览按钮扩展参数，支持计算范围时是否禁用分权"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取指定流转可选节点及操作者信息"
+  ],
+  "raw_text": "## 获取指定流转可选节点及操作者信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getSelectFlowNodeInfos?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n说明：\n- 计算当前节点的指定流转信息。\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n| userCurrentNodeId | 否 | long | 指定当前节点，不传的话会根据权限计算出一个当前节点，如果传的是未经过的节点，userId需要传一个有监控权限的userId |\n| needNodeOperator | 否 | int | 是否需要计算节点的操作者信息0：否（默认）、1：是 |\n| needCalOperatorRange | 否 | int | 计算节点的操作者时，是否需要排除指定流转接收人范围外的人员0：否、1：是（默认） |\n| needCanSelectUser | 否 | int | 是否计算返回可选人员信息0：否（默认）、1：是（默认）；needNodeOperator、needCalOperatorRange必须传1 |\n| orgParamMap | 否 | map | 浏览按钮扩展参数，支持计算范围时是否禁用分权 |\n请求参数示例：\n返回示例：\n1、只需关注返回的data中nodeInfos属性，里面包含了节点以及节点操作者的信息；\n下方示例中去除了其他属性。\n2、needCanSelectUser传递后，开启了选人范围设置的节点会返回节点的可选人员信息；包含两个属性：canSelelctOperatorMap、canSelelctCcOperatorMap；\ncanSelelctOperatorMap：操作者可选人员\ncanSelelctCcOperatorMap：抄送人可选人员（特殊场景抄送可选人和操作者可选人范围是不一样的）；canSelelctCcOperatorMap节点没有数据时，则取canSelelctOperatorMap里面的数据\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |"
+}

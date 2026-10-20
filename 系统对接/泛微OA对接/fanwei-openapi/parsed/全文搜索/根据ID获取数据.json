@@ -1,0 +1,96 @@
+{
+  "id": "367844910646165504",
+  "name": "根据ID获取数据",
+  "module": "全文搜索",
+  "module_path": [
+    "全文搜索"
+  ],
+  "is_api": true,
+  "url": "/api/esearch/search/xiaoe/queryByIdsForXE",
+  "url_template": "{OpenApiOrigin}/api/esearch/search/xiaoe/queryByIdsForXE",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "ids",
+      "required": "是",
+      "type": "List<String>",
+      "description": "数据id"
+    },
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "tenantKey",
+      "description": "租户Key"
+    },
+    {
+      "name": "moduleKey",
+      "required": "是",
+      "type": "moduleKey",
+      "description": "模块编码"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "数据id"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "租户编码"
+    },
+    {
+      "name": "moduleKey",
+      "required": "",
+      "type": "String",
+      "description": "模块编码"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "标题"
+    },
+    {
+      "name": "contents",
+      "required": "",
+      "type": "String",
+      "description": "内容"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "updateTime",
+      "required": "",
+      "type": "String",
+      "description": "更新时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据ID获取数据"
+  ],
+  "raw_text": "## 根据ID获取数据\n请求URL：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/queryByIdsForXE\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| ids | 是 | List<String> | 数据id |\n| tenantKey | 是 | tenantKey | 租户Key |\n| moduleKey | 是 | moduleKey | 模块编码 |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/esearch/search/xiaoe/queryByIdsForXE\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| id | String | 数据id |\n| tenantKey | String | 租户编码 |\n| moduleKey | String | 模块编码 |\n| title | String | 标题 |\n| contents | String | 内容 |\n| createTime | String | 创建时间 |\n| updateTime | String | 更新时间 |"
+}

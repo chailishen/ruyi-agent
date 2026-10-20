@@ -1,0 +1,74 @@
+{
+  "id": "871465859597942785",
+  "name": "会议室冲突检测",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/meetingChkRoom",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/meetingChkRoom",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST（Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "creator",
+      "required": "是",
+      "type": "Long",
+      "description": "创建人id 获取用户ID"
+    },
+    {
+      "name": "mtId",
+      "required": "否",
+      "type": "Long",
+      "description": "mtId"
+    },
+    {
+      "name": "address",
+      "required": "是",
+      "type": "String",
+      "description": "会议地点（多个地点以”,”分隔）"
+    },
+    {
+      "name": "beginDatetime",
+      "required": "是",
+      "type": "Date",
+      "description": "会议开始日期时间(格式：yyyy-MM-dd HH:mm)"
+    },
+    {
+      "name": "endDatetime",
+      "required": "是",
+      "type": "Date",
+      "description": "会议结束日期时间(格式：yyyy-MM-dd HH:mm)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "会议室冲突检测"
+  ],
+  "raw_text": "## 会议室冲突检测\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/meetingChkRoom\n请求方式：\n- POST\n- （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| creator | 是 | Long | 创建人id 获取用户ID |\n| mtId | 否 | Long | mtId |\n| address | 是 | String | 会议地点（多个地点以”,”分隔） |\n| beginDatetime | 是 | Date | 会议开始日期时间(格式：yyyy-MM-dd HH:mm) |\n| endDatetime | 是 | Date | 会议结束日期时间(格式：yyyy-MM-dd HH:mm) |\n请求结示例：\n返回结果：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\nJava sdk调用示例："
+}

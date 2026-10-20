@@ -1,0 +1,270 @@
+{
+  "id": "840716243309436929",
+  "name": "根据表单ID查询字段",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/getFieldById",
+  "url_template": "{OpenApiOrigin}/form/v2/getFieldById",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "componentKey",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "字段ID"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "字段名称"
+    },
+    {
+      "name": "Text",
+      "required": "",
+      "type": "文本输入框",
+      "description": ""
+    },
+    {
+      "name": "Textarea",
+      "required": "",
+      "type": "多行文本框",
+      "description": ""
+    },
+    {
+      "name": "RadioBox",
+      "required": "",
+      "type": "单选框",
+      "description": ""
+    },
+    {
+      "name": "Select",
+      "required": "",
+      "type": "下拉菜单",
+      "description": ""
+    },
+    {
+      "name": "DateComponent",
+      "required": "",
+      "type": "日期",
+      "description": ""
+    },
+    {
+      "name": "NumberComponent",
+      "required": "",
+      "type": "数字输入框",
+      "description": ""
+    },
+    {
+      "name": "Money",
+      "required": "",
+      "type": "金额",
+      "description": ""
+    },
+    {
+      "name": "Email",
+      "required": "",
+      "type": "邮箱",
+      "description": ""
+    },
+    {
+      "name": "Phone",
+      "required": "",
+      "type": "电话",
+      "description": ""
+    },
+    {
+      "name": "Mobile",
+      "required": "",
+      "type": "手机",
+      "description": ""
+    },
+    {
+      "name": "Monitor",
+      "required": "",
+      "type": "运算控件",
+      "description": ""
+    },
+    {
+      "name": "Raty",
+      "required": "",
+      "type": "评分控件",
+      "description": ""
+    },
+    {
+      "name": "ProgressBar",
+      "required": "",
+      "type": "进度条",
+      "description": ""
+    },
+    {
+      "name": "IDCard",
+      "required": "",
+      "type": "身份证",
+      "description": ""
+    },
+    {
+      "name": "PositionComponent",
+      "required": "",
+      "type": "地理位置",
+      "description": ""
+    },
+    {
+      "name": "CheckBox",
+      "required": "",
+      "type": "复选框",
+      "description": ""
+    },
+    {
+      "name": "DateInterval",
+      "required": "",
+      "type": "日期区间",
+      "description": ""
+    },
+    {
+      "name": "ComboSelect",
+      "required": "",
+      "type": "多级下拉框",
+      "description": ""
+    },
+    {
+      "name": "Mainline",
+      "required": "",
+      "type": "关联项目",
+      "description": ""
+    },
+    {
+      "name": "Task",
+      "required": "",
+      "type": "关联任务",
+      "description": ""
+    },
+    {
+      "name": "Document",
+      "required": "",
+      "type": "关联文档",
+      "description": ""
+    },
+    {
+      "name": "Workflow",
+      "required": "",
+      "type": "关联审批",
+      "description": ""
+    },
+    {
+      "name": "AgendaComponent",
+      "required": "",
+      "type": "关联日程",
+      "description": ""
+    },
+    {
+      "name": "FormComponent",
+      "required": "",
+      "type": "关联表单数据",
+      "description": ""
+    },
+    {
+      "name": "CustomerComponent",
+      "required": "",
+      "type": "关联客户",
+      "description": ""
+    },
+    {
+      "name": "ClueComponent",
+      "required": "",
+      "type": "关联线索",
+      "description": ""
+    },
+    {
+      "name": "OrderComponent",
+      "required": "",
+      "type": "关联订单",
+      "description": ""
+    },
+    {
+      "name": "ContactComponent",
+      "required": "",
+      "type": "客户联系人",
+      "description": ""
+    },
+    {
+      "name": "ChanceComponent",
+      "required": "",
+      "type": "关联商机",
+      "description": ""
+    },
+    {
+      "name": "ProductionComponent",
+      "required": "",
+      "type": "关联产品",
+      "description": ""
+    },
+    {
+      "name": "ContractComponent",
+      "required": "",
+      "type": "关联合同",
+      "description": ""
+    },
+    {
+      "name": "Employee",
+      "required": "",
+      "type": "人员",
+      "description": ""
+    },
+    {
+      "name": "Department",
+      "required": "",
+      "type": "部门",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据表单ID查询字段"
+  ],
+  "raw_text": "## 根据表单ID查询字段\n请求URL：\n- {OpenApiOrigin}/form/v2/getFieldById\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单ID 获取表单ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/getFieldById?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&id=843625344723992576\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| componentKey | String | 字段类型 |\n| id | Long | 字段ID |\n| title | String | 字段名称 |\ncomponentKey参数说明：\n| 参数名 | 类型 |\n| --- | --- |\n| Text | 文本输入框 |\n| Textarea | 多行文本框 |\n| RadioBox | 单选框 |\n| Select | 下拉菜单 |\n| DateComponent | 日期 |\n| NumberComponent | 数字输入框 |\n| Money | 金额 |\n| Email | 邮箱 |\n| Phone | 电话 |\n| Mobile | 手机 |\n| Monitor | 运算控件 |\n| Raty | 评分控件 |\n| ProgressBar | 进度条 |\n| IDCard | 身份证 |\n| PositionComponent | 地理位置 |\n| CheckBox | 复选框 |\n| DateInterval | 日期区间 |\n| ComboSelect | 多级下拉框 |\n| Mainline | 关联项目 |\n| Task | 关联任务 |\n| Document | 关联文档 |\n| Workflow | 关联审批 |\n| AgendaComponent | 关联日程 |\n| FormComponent | 关联表单数据 |\n| CustomerComponent | 关联客户 |\n| ClueComponent | 关联线索 |\n| OrderComponent | 关联订单 |\n| ContactComponent | 客户联系人 |\n| ChanceComponent | 关联商机 |\n| ProductionComponent | 关联产品 |\n| ContractComponent | 关联合同 |\n| Employee | 人员 |\n| Department | 部门 |\nJava sdk调用示例："
+}

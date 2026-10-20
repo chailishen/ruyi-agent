@@ -1,0 +1,52 @@
+{
+  "id": "249253161456369664",
+  "name": "移动端退出登录",
+  "module": "基础架构",
+  "module_path": [
+    "基础架构"
+  ],
+  "is_api": true,
+  "url": "/api/basicserver/open/mobileOffline",
+  "url_template": "{OpenApiOrigin}/api/basicserver/open/mobileOffline",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "userId人员id,loginName登录名,jobNum工号,account账号,mobile电话,email邮箱"
+    },
+    {
+      "name": "account",
+      "required": "是",
+      "type": "String",
+      "description": "账号 当type为非userId时必填"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/basicserver/open/mobileOffline\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| type | 是 | String | userId人员id,loginName登录名,jobNum工号,account账号,mobile电话,email邮箱 |\n| account | 是 | String | 账号 当type为非userId时必填 |\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |"
+}

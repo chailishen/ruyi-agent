@@ -1,0 +1,92 @@
+{
+  "id": "840716367629484033",
+  "name": "根据表单数据ID查询表单数据（V2）",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/queryDataReportById",
+  "url_template": "{OpenApiOrigin}/form/v2/queryDataReportById",
+  "method": "GET",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单数据ID 获取表单数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "String",
+      "description": "表单数据提交时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "所属模块"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "表单数据名称"
+    },
+    {
+      "name": "dataStatus",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "dataDetails",
+      "required": "",
+      "type": "String",
+      "description": "各字段详情"
+    },
+    {
+      "name": "fileDownload_Urls",
+      "required": "",
+      "type": "Object",
+      "description": "附件下载地址"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据表单数据ID查询表单数据（V2）"
+  ],
+  "raw_text": "## 根据表单数据ID查询表单数据（V2）\n请求URL：\n- {OpenApiOrigin}/form/v2/queryDataReportById\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单数据ID 获取表单数据ID |\n备注：\n- 若表单字段名称相同,只会获取其中一个字段的值,可选择使用v3接口获取相同字段的两个值(同一张表中字段名称不建议一样)\n请求示例：\nquery方式\nhttps://api.yunteams.cn/form/v2/queryDataReportById?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&id=7837962272907799167\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| createTime | String | 表单数据提交时间 |\n| module | String | 所属模块 |\n| name | String | 表单数据名称 |\n| dataStatus | String | 状态 |\n| dataDetails | String | 各字段详情 |\n| fileDownload_Urls | Object | 附件下载地址 |\nJava sdk调用示例："
+}

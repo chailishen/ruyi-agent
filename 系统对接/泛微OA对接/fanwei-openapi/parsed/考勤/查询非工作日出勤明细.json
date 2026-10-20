@@ -1,0 +1,108 @@
+{
+  "id": "840692466345320448",
+  "name": "查询非工作日出勤明细",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/getPlayWork",
+  "url_template": "{OpenApiOrigin}/attend/v2/getPlayWork",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID集合 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期 (格式：YYYY-MM-DD)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "days",
+      "required": "",
+      "type": "List",
+      "description": "日期"
+    },
+    {
+      "name": "workItems",
+      "required": "",
+      "type": "List",
+      "description": "出勤明细"
+    },
+    {
+      "name": "time",
+      "required": "",
+      "type": "String",
+      "description": "出勤时长"
+    },
+    {
+      "name": "date",
+      "required": "",
+      "type": "Long",
+      "description": "出勤日"
+    },
+    {
+      "name": "signIn",
+      "required": "",
+      "type": "Long",
+      "description": "签到时间"
+    },
+    {
+      "name": "signOut",
+      "required": "",
+      "type": "Long",
+      "description": "签退时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询非工作日出勤明细"
+  ],
+  "raw_text": "## 查询非工作日出勤明细\n请求URL：\n- {OpenApiOrigin}/attend/v2/getPlayWork\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID集合 获取用户ID |\n| startDate | 是 | Date | 开始日期 (格式：YYYY-MM-DD) |\n| endDate | 是 | Date | 结束日期 (格式：YYYY-MM-DD) |\n请求示例：\nquery方式\n{OpenApiOrigin}/attend/v2/getPlayWork?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userIds=717929201362116609,778007431387290207&startDate=2023-01-01&endDate=2023-01-30\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | Long | 用户ID |\n| userName | String | 用户名 |\n| days | List | 日期 |\n| workItems | List | 出勤明细 |\n| time | String | 出勤时长 |\n| date | Long | 出勤日 |\n| signIn | Long | 签到时间 |\n| signOut | Long | 签退时间 |\nJava sdk调用示例："
+}

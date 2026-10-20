@@ -1,0 +1,486 @@
+{
+  "id": "840713485857423360",
+  "name": "所有流程列表",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/list/paService/v1/getAllWorkflowRequestList",
+  "url_template": "{OpenApiOrigin}/api/workflow/list/paService/v1/getAllWorkflowRequestList",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "页数"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "单页大小"
+    },
+    {
+      "name": "mergeShow",
+      "required": "否",
+      "type": "Boolean",
+      "description": "主次账号是否统一显示\"mergeShow\":true/false（参数必须传递，且传递为true，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ）"
+    },
+    {
+      "name": "condition",
+      "required": "否",
+      "type": "Object",
+      "description": "高级搜索条件（详细内容请看后续文档说明）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "createrList",
+      "required": "否",
+      "type": "String",
+      "description": "高级搜索-发起人属于指定人员(多个以,分隔)"
+    },
+    {
+      "name": "excludeCreater",
+      "required": "否",
+      "type": "String",
+      "description": "高级搜索-发起人不属于指定人员(多个以,分隔)"
+    },
+    {
+      "name": "requestname",
+      "required": "否",
+      "type": "String",
+      "description": "审批标题"
+    },
+    {
+      "name": "creatorcode",
+      "required": "否",
+      "type": "String",
+      "description": "创建人编号"
+    },
+    {
+      "name": "createdate",
+      "required": "否",
+      "type": "String",
+      "description": "发起日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间）"
+    },
+    {
+      "name": "createdateCustomStart",
+      "required": "否",
+      "type": "String",
+      "description": "自定义发起日期区间-开始时间，createdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "createdateCustomEnd",
+      "required": "否",
+      "type": "String",
+      "description": "自定义发起日期区间-结束时间，createdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "finishdate",
+      "required": "否",
+      "type": "String",
+      "description": "结束日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间）"
+    },
+    {
+      "name": "finishdateCustomStart",
+      "required": "否",
+      "type": "String",
+      "description": "自定义结束日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "finishdateCustomEnd",
+      "required": "否",
+      "type": "String",
+      "description": "自定义结束日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "receivedate",
+      "required": "否",
+      "type": "String",
+      "description": "接收日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间。注意：全部列表不支持操作日期和接收日期）"
+    },
+    {
+      "name": "receivedateCustomStart",
+      "required": "否",
+      "type": "String",
+      "description": "自定义接收日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "receivedateCustomEnd",
+      "required": "否",
+      "type": "String",
+      "description": "自定义接收日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "operatedate",
+      "required": "否",
+      "type": "String",
+      "description": "操作日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间。注意：待办列表不支持操作日期）"
+    },
+    {
+      "name": "operatedateCustomStart",
+      "required": "否",
+      "type": "String",
+      "description": "自定义操作日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "operatedateCustomEnd",
+      "required": "否",
+      "type": "String",
+      "description": "自定义操作日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”)"
+    },
+    {
+      "name": "requestlevel",
+      "required": "否",
+      "type": "Int",
+      "description": "紧急程度0：正常 1：重要 2：紧急"
+    },
+    {
+      "name": "creatorDepartment",
+      "required": "否",
+      "type": "Long",
+      "description": "发起人所在部门"
+    },
+    {
+      "name": "creatorSubCompany",
+      "required": "否",
+      "type": "Long",
+      "description": "发起人所在分部"
+    },
+    {
+      "name": "creater",
+      "required": "否",
+      "type": "long",
+      "description": "发起人"
+    },
+    {
+      "name": "requestmark",
+      "required": "否",
+      "type": "String",
+      "description": "审批编号"
+    },
+    {
+      "name": "workflowid",
+      "required": "否",
+      "type": "String",
+      "description": "审批流id集合(多个以,分隔)"
+    },
+    {
+      "name": "workflowtype",
+      "required": "否",
+      "type": "String",
+      "description": "审批流类型id集合(多个以,分隔)"
+    },
+    {
+      "name": "flowStatusList",
+      "required": "否",
+      "type": "list",
+      "description": "流程流转的状态;0-草稿,1-审批中,2-已退回,3-正常归档,4-强制结束,5-已作废,6-待提交,7-暂停,8-撤销,-99-已删除(例：\"flowStatusList\":[0,1,2,3,4,5] )"
+    },
+    {
+      "name": "requestIds",
+      "required": "否",
+      "type": "List<String>",
+      "description": "返回指定requestid的数据"
+    },
+    {
+      "name": "excludeRequestIdList",
+      "required": "否",
+      "type": "List<String>",
+      "description": "排除指定requestid返回数据"
+    },
+    {
+      "name": "isremarks",
+      "required": "否",
+      "type": "String",
+      "description": "当前人员身份标识，多个以英文逗号拼接。0:节点操作者,1:节点操作者(代理),2:节点协办人,5:超时指定干预人,6:超时指定干预人(代理),7:异常处理指定干预人,8:异常处理指定干预人(代理),10:意见征询接收人,11:意见征询接收人(代理),20:传阅接收人,21:传阅代理接收人(代理),30:抄送需反馈,31:抄送需反馈(代理),33:抄送协办人,40:转发接收人,41:转发接收人(代理),50:协办人,60:传阅接收人无需反馈,61:传阅接收人无需反馈(代理),70:抄送不需反馈,71:抄送不需反馈(代理),80:转发接收人不需反馈,81:转发接收人不需反馈(代理),100:已提交、已转办、已退回,101:已提交、已转办、已退回 (代理),102:被代理人代理后状态,103:流程被撤回后状态,110:超时流转,111:超时流转(代理),120:节点操作者征询后状态,121:节点操作人征询后状态(代理),130:征询人征询后状态,131:征询人征询后状态(代理),140:意见征询接收人已回复,141:意见征询接收人已回复(代理),150:已批注、已阅,151:已批注、已阅(代理),152:传阅、抄送、转发被代理人代理后状态,160:无需反馈已查看,161:无需反馈已查看(代理),170:征询人转办后状态,180:暂停后状态,181:撤销后状态,182:启用后状态,183:暂停,184:撤销,185:启用"
+    },
+    {
+      "name": "preisremarks",
+      "required": "否",
+      "type": "String",
+      "description": "当前人员上一个身份标识，多个以英文逗号拼接。0:节点操作者,1:节点操作者(代理),2:节点协办人,5:超时指定干预人,6:超时指定干预人(代理),7:异常处理指定干预人,8:异常处理指定干预人(代理),10:意见征询接收人,11:意见征询接收人(代理),20:传阅接收人,21:传阅代理接收人(代理),30:抄送需反馈,31:抄送需反馈(代理),33:抄送协办人,40:转发接收人,41:转发接收人(代理),50:协办人,60:传阅接收人无需反馈,61:传阅接收人无需反馈(代理),70:抄送不需反馈,71:抄送不需反馈(代理),80:转发接收人不需反馈,81:转发接收人不需反馈(代理),100:已提交、已转办、已退回,101:已提交、已转办、已退回 (代理),102:被代理人代理后状态,103:流程被撤回后状态,110:超时流转,111:超时流转(代理),120:节点操作者征询后状态,121:节点操作人征询后状态(代理),130:征询人征询后状态,131:征询人征询后状态(代理),140:意见征询接收人已回复,141:意见征询接收人已回复(代理),150:已批注、已阅,151:已批注、已阅(代理),152:传阅、抄送、转发被代理人代理后状态,160:无需反馈已查看,161:无需反馈已查看(代理),170:征询人转办后状态,180:暂停后状态,181:撤销后状态,182:启用后状态,183:暂停,184:撤销,185:启用"
+    },
+    {
+      "name": "unOperatorParam",
+      "required": "否",
+      "type": "Object",
+      "description": "流程未操作者信息（详细内容请看后续文档说明）"
+    },
+    {
+      "name": "formFilterParam",
+      "required": "否",
+      "type": "Map",
+      "description": "高级搜索表单过滤条件（详细内容请看后续文档说明）"
+    },
+    {
+      "name": "resultDataParam",
+      "required": "否",
+      "type": "Map",
+      "description": "表单返回值信息（详细内容请看后续文档说明）"
+    },
+    {
+      "name": "currentNodeId",
+      "required": "否",
+      "type": "String",
+      "description": "当前节点ID条件，多个用英文逗号隔开"
+    },
+    {
+      "name": "needUnOperators",
+      "required": "否",
+      "type": "boolean",
+      "description": "true/false：是否需要未操作者数据"
+    },
+    {
+      "name": "needAllUnOperators",
+      "required": "否",
+      "type": "boolean",
+      "description": "true/false：是否需要查全部未操作者（true：查系统最大未操作者数‘目前为200，后续会支持自定义最大数目’。false：查7个未操作者的名字，当实际存在未操作者大于7的时候 返回参数hasmore属性会为true）"
+    },
+    {
+      "name": "typeList",
+      "required": "否",
+      "type": "List<String>",
+      "description": "未操作者类型集合：0-节点操作者、1-转办接收人、2-转发接收人、3-抄送接收人、4-传阅接收人、5-意见征询接收人、6-其他(多个以,分隔)。typeList参数不传时会读取系统个人设置的节点未操作者显示类型"
+    },
+    {
+      "name": "filterFormDataParamList",
+      "required": "否",
+      "type": "Object",
+      "description": "此参数与前台流程列表高级搜索中请求Data接口获取数据时传递的searchParams->formDatas->filterFormDatas参数相同"
+    },
+    {
+      "name": "formid",
+      "required": "否",
+      "type": "Long",
+      "description": "表单id（formid和workflowid两个参数必须二选一传参，否则过滤条件失效显示列表全部数据）"
+    },
+    {
+      "name": "workflowid",
+      "required": "否",
+      "type": "Long",
+      "description": "流程id（当传流程id时，会根据工作流id获取对应的表单id，默认会根据表单id搜索，如果需要限制所属工作流请在condition中限制，此处仅为了获取表单id）"
+    },
+    {
+      "name": "needFormDetail",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包括表单详情信息"
+    },
+    {
+      "name": "needCurrentNode",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含流程当前节点信息"
+    },
+    {
+      "name": "needSpecificWfIds",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：请求入参workflowid只查询指定ID工作流数据，不包含其他版本数据"
+    },
+    {
+      "name": "needWfNames",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含工作流及工作流类型名称"
+    },
+    {
+      "name": "needLastOperatorInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含流程最后操作人及操作时间信息"
+    },
+    {
+      "name": "needUserDepartmentName",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含流程参与人、发起人部门信息"
+    },
+    {
+      "name": "needUserSubcompanyName",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含流程参与人、发起人分部信息"
+    },
+    {
+      "name": "needSysName",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含系统名称（需要在后台管理中心—统一待办中心集成—功能设置中启用显示在流程列表，以及显示系统名称设置）"
+    },
+    {
+      "name": "needFormId",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：返回参数包含流程所属表单id"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestid",
+      "required": "",
+      "type": "string",
+      "description": "审批ID"
+    },
+    {
+      "name": "requestname",
+      "required": "",
+      "type": "string",
+      "description": "审批名称"
+    },
+    {
+      "name": "flowStatus",
+      "required": "",
+      "type": "Int",
+      "description": "流转状态。0：”草稿”，1：”审批中”，2：”已退回”，3：”正常归档”，4：”强制归档”，5：”已作废”，6：”待提交”，7：”暂停”，8：”撤销”，-99：”已删除”"
+    },
+    {
+      "name": "creatorId",
+      "required": "",
+      "type": "string",
+      "description": "发起人id"
+    },
+    {
+      "name": "creatorName",
+      "required": "",
+      "type": "string",
+      "description": "发起人名称"
+    },
+    {
+      "name": "creatorSubCompanyId",
+      "required": "",
+      "type": "string",
+      "description": "发起人所在分部"
+    },
+    {
+      "name": "creatorDepartmentId",
+      "required": "",
+      "type": "string",
+      "description": "发起人所在部门"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "string",
+      "description": "发起时间"
+    },
+    {
+      "name": "receiveTime",
+      "required": "",
+      "type": "string",
+      "description": "接收时间"
+    },
+    {
+      "name": "viewTime",
+      "required": "",
+      "type": "string",
+      "description": "查看时间"
+    },
+    {
+      "name": "requestMark",
+      "required": "",
+      "type": "string",
+      "description": "审批编号"
+    },
+    {
+      "name": "isbereject",
+      "required": "",
+      "type": "Int",
+      "description": "是否是退回数据"
+    },
+    {
+      "name": "isProcessed",
+      "required": "",
+      "type": "Int",
+      "description": "超时标识"
+    },
+    {
+      "name": "beagentuserid",
+      "required": "",
+      "type": "string",
+      "description": "被代理人数据的代理人id，代理人数据的被代理人id"
+    },
+    {
+      "name": "unOperatorName",
+      "required": "",
+      "type": "string",
+      "description": "流程未操作人员"
+    },
+    {
+      "name": "formDatas",
+      "required": "",
+      "type": "Map",
+      "description": "表单信息（formDatas属性中的每个id，代表表单中的字段的id，值就是此字段的值）"
+    },
+    {
+      "name": "sdkModule",
+      "required": "",
+      "type": "long",
+      "description": "模块标识（流程：0，公文：2，eb流程：3，业务表单：4，财务：10）"
+    },
+    {
+      "name": "workflowCode",
+      "required": "",
+      "type": "String",
+      "description": "异构系统及SDK工作流对应的唯一ID"
+    },
+    {
+      "name": "requestCode",
+      "required": "",
+      "type": "String",
+      "description": "异构系统及SDK流程对应的唯一ID"
+    },
+    {
+      "name": "pcUrl",
+      "required": "",
+      "type": "String",
+      "description": "pc端地址"
+    },
+    {
+      "name": "appUrl",
+      "required": "",
+      "type": "String",
+      "description": "移动端地址"
+    },
+    {
+      "name": "sysCode",
+      "required": "",
+      "type": "String",
+      "description": "异构系统或SDK工作流类型id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "所有流程列表"
+  ],
+  "raw_text": "## 所有流程列表\n简要描述：接口默认返回当前用户参与的流程数据\n请求URL：\n- {OpenApiOrigin}/api/workflow/list/paService/v1/getAllWorkflowRequestList\n请求方式：\n- POST\n- 备注：access_token参数请放置于param中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageNo | 是 | Int | 页数 |\n| pageSize | 是 | Int | 单页大小 |\n| mergeShow | 否 | Boolean | 主次账号是否统一显示\"mergeShow\":true/false（参数必须传递，且传递为true，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ） |\n| condition | 否 | Object | 高级搜索条件（详细内容请看后续文档说明） |\ncondition参数详细说明\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| createrList | 否 | String | 高级搜索-发起人属于指定人员(多个以,分隔) |\n| excludeCreater | 否 | String | 高级搜索-发起人不属于指定人员(多个以,分隔) |\n| requestname | 否 | String | 审批标题 |\n| creatorcode | 否 | String | 创建人编号 |\n| createdate | 否 | String | 发起日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间） |\n| createdateCustomStart | 否 | String | 自定义发起日期区间-开始时间，createdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| createdateCustomEnd | 否 | String | 自定义发起日期区间-结束时间，createdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| finishdate | 否 | String | 结束日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间） |\n| finishdateCustomStart | 否 | String | 自定义结束日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| finishdateCustomEnd | 否 | String | 自定义结束日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| receivedate | 否 | String | 接收日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间。注意：全部列表不支持操作日期和接收日期） |\n| receivedateCustomStart | 否 | String | 自定义接收日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| receivedateCustomEnd | 否 | String | 自定义接收日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| operatedate | 否 | String | 操作日期（TODAY：今天，CURRENT_WEEK：本周，CURRENT_MONTH：本月，CURRENT_SEASON：本季度，CURRENT_YEAR：本年，PRE_MONTH：上一月，PRE_YEAR：上一年，CUSTOM_DATE：自定义日期区间。注意：待办列表不支持操作日期） |\n| operatedateCustomStart | 否 | String | 自定义操作日期区间-开始时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| operatedateCustomEnd | 否 | String | 自定义操作日期区间-结束时间，finishdate传递CUSTOM_DATE时生效，传参格式:“yyyy-MM-dd HH:mm:ss”(例:“2023-10-04 11:11:11”) |\n| requestlevel | 否 | Int | 紧急程度0：正常 1：重要 2：紧急 |\n| creatorDepartment | 否 | Long | 发起人所在部门 |\n| creatorSubCompany | 否 | Long | 发起人所在分部 |\n| creater | 否 | long | 发起人 |\n| requestmark | 否 | String | 审批编号 |\n| workflowid | 否 | String | 审批流id集合(多个以,分隔) |\n| workflowtype | 否 | String | 审批流类型id集合(多个以,分隔) |\n| flowStatusList | 否 | list | 流程流转的状态;0-草稿,1-审批中,2-已退回,3-正常归档,4-强制结束,5-已作废,6-待提交,7-暂停,8-撤销,-99-已删除(例：\"flowStatusList\":[0,1,2,3,4,5] ) |\n| requestIds | 否 | List<String> | 返回指定requestid的数据 |\n| excludeRequestIdList | 否 | List<String> | 排除指定requestid返回数据 |\n| isremarks | 否 | String | 当前人员身份标识，多个以英文逗号拼接。0:节点操作者,1:节点操作者(代理),2:节点协办人,5:超时指定干预人,6:超时指定干预人(代理),7:异常处理指定干预人,8:异常处理指定干预人(代理),10:意见征询接收人,11:意见征询接收人(代理),20:传阅接收人,21:传阅代理接收人(代理),30:抄送需反馈,31:抄送需反馈(代理),33:抄送协办人,40:转发接收人,41:转发接收人(代理),50:协办人,60:传阅接收人无需反馈,61:传阅接收人无需反馈(代理),70:抄送不需反馈,71:抄送不需反馈(代理),80:转发接收人不需反馈,81:转发接收人不需反馈(代理),100:已提交、已转办、已退回,101:已提交、已转办、已退回 (代理),102:被代理人代理后状态,103:流程被撤回后状态,110:超时流转,111:超时流转(代理),120:节点操作者征询后状态,121:节点操作人征询后状态(代理),130:征询人征询后状态,131:征询人征询后状态(代理),140:意见征询接收人已回复,141:意见征询接收人已回复(代理),150:已批注、已阅,151:已批注、已阅(代理),152:传阅、抄送、转发被代理人代理后状态,160:无需反馈已查看,161:无需反馈已查看(代理),170:征询人转办后状态,180:暂停后状态,181:撤销后状态,182:启用后状态,183:暂停,184:撤销,185:启用 |\n| preisremarks | 否 | String | 当前人员上一个身份标识，多个以英文逗号拼接。0:节点操作者,1:节点操作者(代理),2:节点协办人,5:超时指定干预人,6:超时指定干预人(代理),7:异常处理指定干预人,8:异常处理指定干预人(代理),10:意见征询接收人,11:意见征询接收人(代理),20:传阅接收人,21:传阅代理接收人(代理),30:抄送需反馈,31:抄送需反馈(代理),33:抄送协办人,40:转发接收人,41:转发接收人(代理),50:协办人,60:传阅接收人无需反馈,61:传阅接收人无需反馈(代理),70:抄送不需反馈,71:抄送不需反馈(代理),80:转发接收人不需反馈,81:转发接收人不需反馈(代理),100:已提交、已转办、已退回,101:已提交、已转办、已退回 (代理),102:被代理人代理后状态,103:流程被撤回后状态,110:超时流转,111:超时流转(代理),120:节点操作者征询后状态,121:节点操作人征询后状态(代理),130:征询人征询后状态,131:征询人征询后状态(代理),140:意见征询接收人已回复,141:意见征询接收人已回复(代理),150:已批注、已阅,151:已批注、已阅(代理),152:传阅、抄送、转发被代理人代理后状态,160:无需反馈已查看,161:无需反馈已查看(代理),170:征询人转办后状态,180:暂停后状态,181:撤销后状态,182:启用后状态,183:暂停,184:撤销,185:启用 |\n| unOperatorParam | 否 | Object | 流程未操作者信息（详细内容请看后续文档说明） |\n| formFilterParam | 否 | Map | 高级搜索表单过滤条件（详细内容请看后续文档说明） |\n| resultDataParam | 否 | Map | 表单返回值信息（详细内容请看后续文档说明） |\n| currentNodeId | 否 | String | 当前节点ID条件，多个用英文逗号隔开 |\nunOperatorParam参数详细说明\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| needUnOperators | 否 | boolean | true/false：是否需要未操作者数据 |\n| needAllUnOperators | 否 | boolean | true/false：是否需要查全部未操作者（true：查系统最大未操作者数‘目前为200，后续会支持自定义最大数目’。false：查7个未操作者的名字，当实际存在未操作者大于7的时候 返回参数hasmore属性会为true） |\n| typeList | 否 | List<String> | 未操作者类型集合：0-节点操作者、1-转办接收人、2-转发接收人、3-抄送接收人、4-传阅接收人、5-意见征询接收人、6-其他(多个以,分隔)。typeList参数不传时会读取系统个人设置的节点未操作者显示类型 |\nformFilterParam参数详细说明\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| filterFormDataParamList | 否 | Object | 此参数与前台流程列表高级搜索中请求Data接口获取数据时传递的searchParams->formDatas->filterFormDatas参数相同 |\n| formid | 否 | Long | 表单id（formid和workflowid两个参数必须二选一传参，否则过滤条件失效显示列表全部数据） |\n| workflowid | 否 | Long | 流程id（当传流程id时，会根据工作流id获取对应的表单id，默认会根据表单id搜索，如果需要限制所属工作流请在condition中限制，此处仅为了获取表单id） |\nresultDataParam参数详细说明\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| needFormDetail | 否 | boolean | true：返回参数包括表单详情信息 |\n| needCurrentNode | 否 | boolean | true：返回参数包含流程当前节点信息 |\n| needSpecificWfIds | 否 | boolean | true：请求入参workflowid只查询指定ID工作流数据，不包含其他版本数据 |\n| needWfNames | 否 | boolean | true：返回参数包含工作流及工作流类型名称 |\n| needLastOperatorInfo | 否 | boolean | true：返回参数包含流程最后操作人及操作时间信息 |\n| needUserDepartmentName | 否 | boolean | true：返回参数包含流程参与人、发起人部门信息 |\n| needUserSubcompanyName | 否 | boolean | true：返回参数包含流程参与人、发起人分部信息 |\n| needSysName | 否 | boolean | true：返回参数包含系统名称（需要在后台管理中心—统一待办中心集成—功能设置中启用显示在流程列表，以及显示系统名称设置） |\n| needFormId | 否 | boolean | true：返回参数包含流程所属表单id |\n传参示例：\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestid | string | 审批ID |\n| requestname | string | 审批名称 |\n| flowStatus | Int | 流转状态。0：”草稿”，1：”审批中”，2：”已退回”，3：”正常归档”，4：”强制归档”，5：”已作废”，6：”待提交”，7：”暂停”，8：”撤销”，-99：”已删除” |\n| creatorId | string | 发起人id |\n| creatorName | string | 发起人名称 |\n| creatorSubCompanyId | string | 发起人所在分部 |\n| creatorDepartmentId | string | 发起人所在部门 |\n| createTime | string | 发起时间 |\n| receiveTime | string | 接收时间 |\n| viewTime | string | 查看时间 |\n| requestMark | string | 审批编号 |\n| isbereject | Int | 是否是退回数据 |\n| isProcessed | Int | 超时标识 |\n| beagentuserid | string | 被代理人数据的代理人id，代理人数据的被代理人id |\n| unOperatorName | string | 流程未操作人员 |\n| formDatas | Map | 表单信息（formDatas属性中的每个id，代表表单中的字段的id，值就是此字段的值） |\n| sdkModule | long | 模块标识（流程：0，公文：2，eb流程：3，业务表单：4，财务：10） |\n| workflowCode | String | 异构系统及SDK工作流对应的唯一ID |\n| requestCode | String | 异构系统及SDK流程对应的唯一ID |\n| pcUrl | String | pc端地址 |\n| appUrl | String | 移动端地址 |\n| sysCode | String | 异构系统或SDK工作流类型id |\nJava sdk调用示例："
+}

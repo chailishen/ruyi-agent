@@ -1,0 +1,60 @@
+{
+  "id": "840717802324721665",
+  "name": "删除订单",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/delete",
+  "url_template": "{OpenApiOrigin}/crm/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：orderform"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "订单ID 获取订单ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除订单"
+  ],
+  "raw_text": "## 删除订单\n请求URL：\n- {OpenApiOrigin}/crm/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：orderform |\n| id | 是 | Long | 订单ID 获取订单ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/update?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&entity={\"id\":\"3578058074788063706\",\"module\":\"orderform\",\"creator\":{\"id\":\"835851587175096321\",\"name\":\"陈兰兰\"},\"manager\":{\"id\":\"835851587175096321\",\"name\":\"陈兰兰\"},\"participants\":[],\"sharers\":[],\"createTime\":1680580748000,\"updateTime\":1680580748000,\"deleteStatus\":0,\"name\":\"李浩订单006\",\"orderformStatus\":{\"id\":\"8517333981018675013\",\"name\":\"下单\"},\"orderformNumber\":\"DD_2019_000001\",\"orderformCustomer\":{\"id\":\"3578058070992363693\",\"name\":\"小小陈客户\"},\"orderformTotalMoney\":10000.0,\"orderformNonReceiveMoney\":10000.0,\"orderformNonPayMoney\":0.0,\"orderformStartTime\":1665360000000,\"orderformEndTime\":1666224000000,\"orderformDescription\":\"备注内容\",\"orderformExchangeRate\":1.0}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

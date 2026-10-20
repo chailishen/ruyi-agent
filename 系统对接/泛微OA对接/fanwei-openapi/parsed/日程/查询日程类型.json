@@ -1,0 +1,104 @@
+{
+  "id": "908340352911826944",
+  "name": "查询日程类型",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/queryTypes",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/queryTypes",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "日程类型id"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "Integer",
+      "description": "是否删除的标识"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "日程类型名称"
+    },
+    {
+      "name": "customizeType",
+      "required": "",
+      "type": "String",
+      "description": "日程类型类别标识"
+    },
+    {
+      "name": "color",
+      "required": "",
+      "type": "String",
+      "description": "日程类型显示颜色"
+    },
+    {
+      "name": "sort",
+      "required": "",
+      "type": "Integer",
+      "description": "日程类型显示排序"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "创建人id"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Long",
+      "description": "创建时间"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "启用标识（enabled：启用，disabled：未启用）"
+    },
+    {
+      "name": "selected",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否是默认类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询日程类型"
+  ],
+  "raw_text": "## 查询日程类型\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/queryTypes\n请求方式：\n- POST\n- Content-Type：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | String | 日程类型id |\n| deleteType | Integer | 是否删除的标识 |\n| name | String | 日程类型名称 |\n| customizeType | String | 日程类型类别标识 |\n| color | String | 日程类型显示颜色 |\n| sort | Integer | 日程类型显示排序 |\n| creator | String | 创建人id |\n| createTime | Long | 创建时间 |\n| status | String | 启用标识（enabled：启用，disabled：未启用） |\n| selected | Boolean | 是否是默认类型 |\nJava sdk调用示例："
+}

@@ -1,0 +1,56 @@
+{
+  "id": "908341044364394496",
+  "name": "删除日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/deleteById",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/deleteById",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "要删除的日程id"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人的id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除日程"
+  ],
+  "raw_text": "## 删除日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/deleteById\n请求方式：\n- POST\n- Content-Type：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 要删除的日程id |\n| userId | 是 | Long | 操作人的id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

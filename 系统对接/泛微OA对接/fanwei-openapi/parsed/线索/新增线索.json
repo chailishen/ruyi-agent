@@ -1,0 +1,162 @@
+{
+  "id": "840675840333979648",
+  "name": "新增线索",
+  "module": "线索",
+  "module_path": [
+    "线索"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/create",
+  "url_template": "{OpenApiOrigin}/crm/v2/create",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：clue"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "线索信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "clueStatus",
+      "required": "否",
+      "type": "String",
+      "description": "线索状态"
+    },
+    {
+      "name": "clueSource",
+      "required": "否",
+      "type": "String",
+      "description": "线索来源"
+    },
+    {
+      "name": "clueContact",
+      "required": "否",
+      "type": "String",
+      "description": "联系人"
+    },
+    {
+      "name": "clueIndustry",
+      "required": "否",
+      "type": "String",
+      "description": "行业"
+    },
+    {
+      "name": "clueRegion",
+      "required": "否",
+      "type": "String",
+      "description": "地区"
+    },
+    {
+      "name": "clueTelephone",
+      "required": "否",
+      "type": "String",
+      "description": "电话"
+    },
+    {
+      "name": "cluePhoneNumber",
+      "required": "否",
+      "type": "String",
+      "description": "手机"
+    },
+    {
+      "name": "clueSex",
+      "required": "否",
+      "type": "String",
+      "description": "性别。1-男，2-女，3-未知"
+    },
+    {
+      "name": "clueEmail",
+      "required": "否",
+      "type": "String",
+      "description": "邮件"
+    },
+    {
+      "name": "clueAddress",
+      "required": "否",
+      "type": "String",
+      "description": "地址"
+    },
+    {
+      "name": "clueFollowStatus",
+      "required": "否",
+      "type": "String",
+      "description": "跟进状态"
+    },
+    {
+      "name": "clueProcessResult",
+      "required": "否",
+      "type": "String",
+      "description": "处理结果"
+    },
+    {
+      "name": "clueDescription",
+      "required": "否",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "cluePool",
+      "required": "否",
+      "type": "String",
+      "description": "线索池"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "线索信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增线索"
+  ],
+  "raw_text": "## 新增线索\n请求URL：\n- {OpenApiOrigin}/crm/v2/create\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：clue |\n| entity | 是 | Object | 线索信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 是 | String | 名称 |\n| manager | 否 | String | 负责人 |\n| clueStatus | 否 | String | 线索状态 |\n| clueSource | 否 | String | 线索来源 |\n| clueContact | 否 | String | 联系人 |\n| clueIndustry | 否 | String | 行业 |\n| clueRegion | 否 | String | 地区 |\n| clueTelephone | 否 | String | 电话 |\n| cluePhoneNumber | 否 | String | 手机 |\n| clueSex | 否 | String | 性别。1-男，2-女，3-未知 |\n| clueEmail | 否 | String | 邮件 |\n| clueAddress | 否 | String | 地址 |\n| clueFollowStatus | 否 | String | 跟进状态 |\n| clueProcessResult | 否 | String | 处理结果 |\n| clueDescription | 否 | String | 备注 |\n| cluePool | 否 | String | 线索池 |\n线索负责人说明：未开启线索池的情况下，线索负责人为manager传入负责人；开启线索池的情况下，线索负责人根据线索池设置来显示。\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=clue&entity={\"name\": \"新线索\",\"manager\": { \"name\": \"陈兰\"},\"clueSource\": { \"name\": \"网站注册\"},\"clueContact\": \"李四\",\"clueIndustry\": { \"name\": \"金融\"},\"clueRegion\": { \"name\": \"上海\"},\"clueTelephone\": \"02888888888\",\"cluePhoneNumber\": \"13888888888\",\"clueSex\": \"2\",\"clueEmail\": \"test@qq.com\",\"clueAddress\": \"莱蒙都会\",\"clueFollowStatus\": { \"name\": \"客户有意向\"},\"clueProcessResult\": \"成功了\",\"clueDescription\": \"测试\",\"cluePool\": { \"name\": \"chl\"}}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 线索信息（JSON格式） |\nJava sdk调用示例："
+}

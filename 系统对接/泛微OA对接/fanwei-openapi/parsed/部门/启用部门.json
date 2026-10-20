@@ -1,0 +1,75 @@
+{
+  "id": "840674302753341440",
+  "name": "启用部门",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/api/hrm/restful/enableDepartment",
+  "url_template": "{OpenApiOrigin}/api/hrm/restful/enableDepartment",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "String",
+      "description": "部门id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "部门ID"
+    },
+    {
+      "name": "operate",
+      "required": "",
+      "type": "string",
+      "description": "操作类型"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "string",
+      "description": "状态"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误说明"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "启用部门"
+  ],
+  "raw_text": "## 启用部门\n请求URL：\n- {OpenApiOrigin}/api/hrm/restful/enableDepartment\n请求方式：\n- POST\n备注:\n- Body 参数格式(application/json)\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | String | 部门id |\n参数示例：\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | string | 部门ID |\n| operate | string | 操作类型 |\n| status | string | 状态 |\n| errcode | string | 错误说明 |\nJava sdk调用示例："
+}

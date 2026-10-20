@@ -1,0 +1,216 @@
+{
+  "id": "908311950301487104",
+  "name": "获取指定目录下的文档列表",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/folderDocList",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/folderDocList",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码(0-成功；其他:失败)"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "docList",
+      "required": "",
+      "type": "array",
+      "description": "文档列表"
+    },
+    {
+      "name": "docList.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "docList.name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "docList.createTime",
+      "required": "",
+      "type": "string",
+      "description": "创建时间"
+    },
+    {
+      "name": "docList.lastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "更新时间"
+    },
+    {
+      "name": "docList.orderTime",
+      "required": "",
+      "type": "string",
+      "description": "排序时间"
+    },
+    {
+      "name": "docList.module",
+      "required": "",
+      "type": "string",
+      "description": "所属模块"
+    },
+    {
+      "name": "docList.commentCount",
+      "required": "",
+      "type": "string",
+      "description": "评论数"
+    },
+    {
+      "name": "docList.summary",
+      "required": "",
+      "type": "string",
+      "description": "文档内容"
+    },
+    {
+      "name": "docList.type",
+      "required": "",
+      "type": "string",
+      "description": "文档类型"
+    },
+    {
+      "name": "docList.deleted",
+      "required": "",
+      "type": "string",
+      "description": "是否删除"
+    },
+    {
+      "name": "docList.docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "docList.downloadCount",
+      "required": "",
+      "type": "string",
+      "description": "下载次数"
+    },
+    {
+      "name": "docList.readCount",
+      "required": "",
+      "type": "string",
+      "description": "文档阅读数"
+    },
+    {
+      "name": "docList.folder",
+      "required": "",
+      "type": "object",
+      "description": "所属文件夹"
+    },
+    {
+      "name": "docList.folder.id",
+      "required": "",
+      "type": "string",
+      "description": "所属文件夹id"
+    },
+    {
+      "name": "docList.folder.transformFolderName",
+      "required": "",
+      "type": "string",
+      "description": "所属文件夹国际化名称"
+    },
+    {
+      "name": "docList.contentType",
+      "required": "",
+      "type": "string",
+      "description": "内容类型"
+    },
+    {
+      "name": "docList.praise",
+      "required": "",
+      "type": "string",
+      "description": "点赞数"
+    },
+    {
+      "name": "docList.watched",
+      "required": "",
+      "type": "boolean",
+      "description": "是否关注"
+    },
+    {
+      "name": "docList.unread",
+      "required": "",
+      "type": "boolean",
+      "description": "是否未读（true:未读；false:已读）"
+    },
+    {
+      "name": "docList.openClassifiedProtection",
+      "required": "",
+      "type": "string",
+      "description": "是否开启分级保护功能"
+    },
+    {
+      "name": "docList.secLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "docList.validity",
+      "required": "",
+      "type": "string",
+      "description": "保密期限"
+    },
+    {
+      "name": "docList.alreadySetToDoMatter",
+      "required": "",
+      "type": "string",
+      "description": "已设为待办事项"
+    },
+    {
+      "name": "docList.versionId",
+      "required": "",
+      "type": "string",
+      "description": "版本id"
+    },
+    {
+      "name": "docList.isHistory",
+      "required": "",
+      "type": "string",
+      "description": "是否历史版本"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取指定目录下的文档列表"
+  ],
+  "raw_text": "## 获取指定目录下的文档列表\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/folderDocList\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| folderId | 是 | string | 文件夹id |\n| current | 否 | string | 页码(不传默认第一页) |\n| pageSize | 否 | string | 每页数量（不传默认10，超过1000，按1000） |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码(0-成功；其他:失败) |\n| errmsg | string | 错误提示 |\n| data | object | 返回数据 |\n| docList | array | 文档列表 |\n| docList.id | string | 文档id |\n| docList.name | string | 文档名称 |\n| docList.createTime | string | 创建时间 |\n| docList.lastUpdateTime | string | 更新时间 |\n| docList.orderTime | string | 排序时间 |\n| docList.module | string | 所属模块 |\n| docList.commentCount | string | 评论数 |\n| docList.summary | string | 文档内容 |\n| docList.type | string | 文档类型 |\n| docList.deleted | string | 是否删除 |\n| docList.docStatus | string | 文档状态 |\n| docList.downloadCount | string | 下载次数 |\n| docList.readCount | string | 文档阅读数 |\n| docList.folder | object | 所属文件夹 |\n| docList.folder.id | string | 所属文件夹id |\n| docList.folder.transformFolderName | string | 所属文件夹国际化名称 |\n| docList.contentType | string | 内容类型 |\n| docList.praise | string | 点赞数 |\n| docList.watched | boolean | 是否关注 |\n| docList.unread | boolean | 是否未读（true:未读；false:已读） |\n| docList.openClassifiedProtection | string | 是否开启分级保护功能 |\n| docList.secLevel | string | 密级 |\n| docList.validity | string | 保密期限 |\n| docList.alreadySetToDoMatter | string | 已设为待办事项 |\n| docList.versionId | string | 版本id |\n| docList.isHistory | string | 是否历史版本 |\nJava sdk调用示例："
+}

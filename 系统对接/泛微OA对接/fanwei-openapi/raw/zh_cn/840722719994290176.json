@@ -1,0 +1,1552 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "删除消息",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "删除消息"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/mc/msg/deleteMsg",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/mc/msg/deleteMsg",
+                        "title": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 "
+                    },
+                    {
+                      "type": "text",
+                      "text": "获取accessToken信息",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://open-doc.eteams.cn/web/#/1?page_id=2",
+                            "title": "获取accessToken信息"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "operator"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "操作人"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "operator.employeeId",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "操作人id"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "operator.tenantKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "操作人团队标识"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "msgId"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "消息id，调用发送接口获取"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "recivers",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object[]",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "消息接受人，支持撤回部分人员消息时传递",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "recivers.employeeId",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "long",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "接受人id",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "recivers.tenantKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "接受人团队标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "recivers.workCode",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "string",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(248, 248, 248)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "接受人工号,与employeeId二选一,优先employeeId",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(51, 51, 51)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "Microsoft YaHei, Helvetica, Meiryo UI, Malgun Gothic, Segoe UI, Trebuchet MS, Monaco, monospace, Tahoma, STXihei, 华文细黑, STHeiti, Helvetica Neue, Droid Sans, wenquanyi micro hei, FreeSans, Arimo, Arial, SimSun, 宋体, Heiti, 黑体, sans-serif",
+                            "fontSize": "14px"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "参数示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n  \"operator\": {\n    \"employeeId\": \"5805818419368081366\",\n    \"tenantKey\": \"ty0tu018gk\"\n  },\n  \"msgId\": 735713703098744833， \"recivers\": [{\n    \"employeeId\": \"5805818419368081366\",\n    \"tenantKey\": \"ty0tu018gk\",\n    \"workCode\": \"xxx\"\n  }]\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "content": [
+        {
+          "type": "text",
+          "text": "  {\n    \"code\": 200,\n    \"msg\":\"成功\"，\n    “status”:true\n  }"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "code"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码",
+                      "marks": [
+                        {
+                          "type": "link",
+                          "attrs": {
+                            "href": "https://open-doc.eteams.cn/web/#/1?page_id=194",
+                            "title": "返回码"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "msg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "status"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "alignment": "left"
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "消息发送状态"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "Java",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " "
+        },
+        {
+          "type": "text",
+          "text": "sdk调用示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java"
+      },
+      "content": []
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

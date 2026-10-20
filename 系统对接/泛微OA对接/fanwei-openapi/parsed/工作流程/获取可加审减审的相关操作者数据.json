@@ -1,0 +1,85 @@
+{
+  "id": "408011944323186688",
+  "name": "获取可加审减审的相关操作者数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getAddMinusOperatorInfo?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getAddMinusOperatorInfo?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "",
+      "type": "long",
+      "description": "减审操作者人操作所在节点，不传的话默认计算一个操作者节点"
+    },
+    {
+      "name": "canMinusDoneOperate",
+      "required": "",
+      "type": "int",
+      "description": "是否加载可减审已办节点的数据 1:是 默认不能"
+    },
+    {
+      "name": "isMonitor",
+      "required": "",
+      "type": "int",
+      "description": "是否是监控操作，默认是否，传1的话取监控权限（会校验是否有监控的加减审权限）"
+    },
+    {
+      "name": "allNode",
+      "required": "",
+      "type": "int",
+      "description": "是否加载所有节点数据；传1是加载所有数据，默认是只加载可加减审的节点数据"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取可加审减审的相关操作者数据"
+  ],
+  "raw_text": "## 获取可加审减审的相关操作者数据\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getAddMinusOperatorInfo?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n| userCurrentNodeId | 否 | long | 减审操作者人操作所在节点，不传的话默认计算一个操作者节点 |\n| canMinusDoneOperate | 否 | int | 是否加载可减审已办节点的数据 1:是 默认不能 |\n| isMonitor | 否 | int | 是否是监控操作，默认是否，传1的话取监控权限（会校验是否有监控的加减审权限） |\n| allNode | 否 | int | 是否加载所有节点数据；传1是加载所有数据，默认是只加载可加减审的节点数据 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |"
+}

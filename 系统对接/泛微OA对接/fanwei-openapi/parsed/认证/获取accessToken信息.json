@@ -1,0 +1,80 @@
+{
+  "id": "840673319280451584",
+  "name": "获取accessToken信息",
+  "module": "认证",
+  "module_path": [
+    "认证"
+  ],
+  "is_api": true,
+  "url": "/oauth2/access_token",
+  "url_template": "{OpenApiOrigin}/oauth2/access_token",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "Content-Type: application/json"
+  ],
+  "parameters": [
+    {
+      "name": "app_key",
+      "required": "是",
+      "type": "String",
+      "description": "应用app_key 应用审核通过后显示"
+    },
+    {
+      "name": "app_secret",
+      "required": "是",
+      "type": "String",
+      "description": "应用app_secret 应用审核通过后显示"
+    },
+    {
+      "name": "grant_type",
+      "required": "是",
+      "type": "String",
+      "description": "授权类型，固定：authorization_code"
+    },
+    {
+      "name": "code",
+      "required": "是",
+      "type": "String",
+      "description": "身份票据 获取code信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "accessToken",
+      "required": "",
+      "type": "String",
+      "description": "接口凭证，有效时间默认为2小时"
+    },
+    {
+      "name": "refreshToken",
+      "required": "",
+      "type": "String",
+      "description": "刷新令牌，有效时间默认为24小时"
+    },
+    {
+      "name": "expires_in",
+      "required": "",
+      "type": "Int",
+      "description": "有效时间，单位为秒"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取accessToken信息"
+  ],
+  "raw_text": "## 获取accessToken信息\n请求URL：\n- {OpenApiOrigin}/oauth2/access_token\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| app_key | 是 | String | 应用app_key 应用审核通过后显示 |\n| app_secret | 是 | String | 应用app_secret 应用审核通过后显示 |\n| grant_type | 是 | String | 授权类型，固定：authorization_code |\n| code | 是 | String | 身份票据 获取code信息 |\nFORM格式的请求参数示例：\nContent-Type: application/x-www-form-urlencoded\nJSON格式的请求参数示例：\nContent-Type: application/json\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| accessToken | String | 接口凭证，有效时间默认为2小时 |\n| refreshToken | String | 刷新令牌，有效时间默认为24小时 |\n| expires_in | Int | 有效时间，单位为秒 |\nJava sdk调用示例："
+}

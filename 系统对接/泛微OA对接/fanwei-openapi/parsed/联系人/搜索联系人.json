@@ -1,0 +1,114 @@
+{
+  "id": "840675754586505217",
+  "name": "搜索联系人",
+  "module": "联系人",
+  "module_path": [
+    "联系人"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/search",
+  "url_template": "{OpenApiOrigin}/crm/v2/search",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：contact"
+    },
+    {
+      "name": "query",
+      "required": "是",
+      "type": "Object",
+      "description": "查询参数对象"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "每页显示条数"
+    },
+    {
+      "name": "orderPropertyName",
+      "required": "是",
+      "type": "String",
+      "description": "排序字段name"
+    },
+    {
+      "name": "asc",
+      "required": "是",
+      "type": "String",
+      "description": "true升序，false降序"
+    },
+    {
+      "name": "conditions",
+      "required": "是",
+      "type": "String",
+      "description": "查询条件集"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "属性名。暂时只支持name"
+    },
+    {
+      "name": "compareType",
+      "required": "是",
+      "type": "String",
+      "description": "比较类型：like包含、eq等于、neq不等于、notEmpty不为空"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "String",
+      "description": "属性值"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "联系人对象"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "搜索联系人"
+  ],
+  "raw_text": "## 搜索联系人\n请求URL：\n- {OpenApiOrigin}/crm/v2/search\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：contact |\n| query | 是 | Object | 查询参数对象 |\nquery请求结构体：\nquery参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| pageNo | 是 | Int | 页码 |\n| pageSize | 是 | Int | 每页显示条数 |\n| orderPropertyName | 是 | String | 排序字段name |\n| asc | 是 | String | true升序，false降序 |\n| conditions | 是 | String | 查询条件集 |\n| propertyName | 是 | String | 属性名。暂时只支持name |\n| compareType | 是 | String | 比较类型：like包含、eq等于、neq不等于、notEmpty不为空 |\n| propertyValue | 是 | String | 属性值 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/search?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=contact&query={\"pageNo\": \"1\",\"pageSize\": \"15\",\"orderPropertyName\": \"name\",\"asc\": \"true\",\"conditions\": [ { \"propertyName\": \"name\", \"compareType\": \"like\", \"propertyValue\": \"联系人名称\"}]}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 联系人对象 |\nJava sdk调用示例："
+}

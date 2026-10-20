@@ -1,0 +1,260 @@
+{
+  "id": "840674702276698112",
+  "name": "修改人员（V3）",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v3/updateUser",
+  "url_template": "{OpenApiOrigin}/user/v3/updateUser",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注：1、原有必填字段userid改为非必填，加上wechatUserId字段；2、Userid和wechatUserId传其中一个即可，userid优先，都没传则提示错误；3、若没传userid，传了wechatUserId，根据wechatUserId查询处人员信息，拿到userid再进行原有的逻辑；"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "optId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人员ID"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "被修改人员ID"
+    },
+    {
+      "name": "wechatUserId",
+      "required": "否",
+      "type": "String",
+      "description": "企业微信账号（userid和wechatUserId）必填其中一个，如果两个都填了则userid的优先级高于wechatUserId"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "用户名称"
+    },
+    {
+      "name": "mobile",
+      "required": "否",
+      "type": "String",
+      "description": "手机号（默认为登录账号）"
+    },
+    {
+      "name": "department",
+      "required": "否",
+      "type": "List",
+      "description": "所属部门ID集合 获取部门ID"
+    },
+    {
+      "name": "email",
+      "required": "否",
+      "type": "String",
+      "description": "邮箱"
+    },
+    {
+      "name": "jobNum",
+      "required": "否",
+      "type": "String",
+      "description": "工号"
+    },
+    {
+      "name": "telephone",
+      "required": "否",
+      "type": "String",
+      "description": "电话"
+    },
+    {
+      "name": "hireDate",
+      "required": "否",
+      "type": "String",
+      "description": "入职日期（格式：2019-08-20）"
+    },
+    {
+      "name": "sex",
+      "required": "否",
+      "type": "String",
+      "description": "性别（male、female）"
+    },
+    {
+      "name": "position",
+      "required": "否",
+      "type": "List",
+      "description": "所属岗位ID集合"
+    },
+    {
+      "name": "grade",
+      "required": "否",
+      "type": "Long",
+      "description": "所属职级ID"
+    },
+    {
+      "name": "superior",
+      "required": "否",
+      "type": "List",
+      "description": "上级ID集合"
+    },
+    {
+      "name": "assistant",
+      "required": "否",
+      "type": "List",
+      "description": "助理ID集合"
+    },
+    {
+      "name": "access",
+      "required": "否",
+      "type": "List",
+      "description": "权限开放ID集合"
+    },
+    {
+      "name": "idNo",
+      "required": "否",
+      "type": "String",
+      "description": "身份证号码"
+    },
+    {
+      "name": "birthday",
+      "required": "否",
+      "type": "String",
+      "description": "出生日期（格式：2019-08-20）"
+    },
+    {
+      "name": "age",
+      "required": "否",
+      "type": "String",
+      "description": "年龄(0-120)"
+    },
+    {
+      "name": "maritalStatus",
+      "required": "否",
+      "type": "String",
+      "description": "婚姻状况(married（已婚）,unmarried（未婚）,divorced（离异）)"
+    },
+    {
+      "name": "education",
+      "required": "否",
+      "type": "String",
+      "description": "学历(senior(高中及以下),technicalSecondary(中技,中专,技校,职高),junior(大专),regular(本科),master(硕士研究生),MBA,doctor(博士研究生))"
+    },
+    {
+      "name": "degree",
+      "required": "否",
+      "type": "String",
+      "description": "学位(doctor(博士),master(硕士),bachelor(学士))"
+    },
+    {
+      "name": "graduateSchool",
+      "required": "否",
+      "type": "String",
+      "description": "毕业院校"
+    },
+    {
+      "name": "graduateDate",
+      "required": "否",
+      "type": "String",
+      "description": "毕业日期（格式：2019-08-20）"
+    },
+    {
+      "name": "nativePlace",
+      "required": "否",
+      "type": "String",
+      "description": "籍贯"
+    },
+    {
+      "name": "nation",
+      "required": "否",
+      "type": "String",
+      "description": "民族(汉族，壮族等)"
+    },
+    {
+      "name": "householdType",
+      "required": "否",
+      "type": "String",
+      "description": "户口类型（thisCityTown(本市城镇)，thisCityRural(本市农村)，otherCityTown(外埠城镇)，otherCityRural(外埠农村)）"
+    },
+    {
+      "name": "politicsStatus",
+      "required": "否",
+      "type": "String",
+      "description": "政治面貌（partyMember(党员,预备党员)，groupMember(团员)，democraticParty(民主党派)，nonparty(无党派人士,群众)，other(其他)）"
+    },
+    {
+      "name": "residencePlace",
+      "required": "否",
+      "type": "String",
+      "description": "现居住地"
+    },
+    {
+      "name": "familyContact",
+      "required": "否",
+      "type": "String",
+      "description": "家庭联系方式"
+    },
+    {
+      "name": "firstWorkDate",
+      "required": "否",
+      "type": "String",
+      "description": "首次工作时间（格式：2019-08-20）"
+    },
+    {
+      "name": "workYear",
+      "required": "否",
+      "type": "String",
+      "description": "工龄"
+    },
+    {
+      "name": "alias",
+      "required": "否",
+      "type": "String",
+      "description": "别名"
+    },
+    {
+      "name": "childStatus",
+      "required": "否",
+      "type": "String",
+      "description": "子女状态"
+    },
+    {
+      "name": "formDataMap",
+      "required": "否",
+      "type": "String",
+      "description": "人事档案自定义字段 获取自定义表单字段 传值说明"
+    },
+    {
+      "name": "otherSuperior",
+      "required": "否",
+      "type": "List",
+      "description": "其他上级"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改人员（V3）"
+  ],
+  "raw_text": "## 修改人员（V3）\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用同步人员接口\n请求URL：\n- {OpenApiOrigin}/user/v3/updateUser\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| optId | 是 | Long | 操作人员ID |\n| userid | 是 | Long | 被修改人员ID |\n| wechatUserId | 否 | String | 企业微信账号（userid和wechatUserId）必填其中一个，如果两个都填了则userid的优先级高于wechatUserId |\n| name | 否 | String | 用户名称 |\n| mobile | 否 | String | 手机号（默认为登录账号） |\n| department | 否 | List | 所属部门ID集合 获取部门ID |\n| email | 否 | String | 邮箱 |\n| jobNum | 否 | String | 工号 |\n| telephone | 否 | String | 电话 |\n| hireDate | 否 | String | 入职日期（格式：2019-08-20） |\n| sex | 否 | String | 性别（male、female） |\n| position | 否 | List | 所属岗位ID集合 |\n| grade | 否 | Long | 所属职级ID |\n| superior | 否 | List | 上级ID集合 |\n| assistant | 否 | List | 助理ID集合 |\n| access | 否 | List | 权限开放ID集合 |\n| idNo | 否 | String | 身份证号码 |\n| birthday | 否 | String | 出生日期（格式：2019-08-20） |\n| age | 否 | String | 年龄(0-120) |\n| maritalStatus | 否 | String | 婚姻状况(married（已婚）,unmarried（未婚）,divorced（离异）) |\n| education | 否 | String | 学历(senior(高中及以下),technicalSecondary(中技,中专,技校,职高),junior(大专),regular(本科),master(硕士研究生),MBA,doctor(博士研究生)) |\n| degree | 否 | String | 学位(doctor(博士),master(硕士),bachelor(学士)) |\n| graduateSchool | 否 | String | 毕业院校 |\n| graduateDate | 否 | String | 毕业日期（格式：2019-08-20） |\n| nativePlace | 否 | String | 籍贯 |\n| nation | 否 | String | 民族(汉族，壮族等) |\n| householdType | 否 | String | 户口类型（thisCityTown(本市城镇)，thisCityRural(本市农村)，otherCityTown(外埠城镇)，otherCityRural(外埠农村)） |\n| politicsStatus | 否 | String | 政治面貌（partyMember(党员,预备党员)，groupMember(团员)，democraticParty(民主党派)，nonparty(无党派人士,群众)，other(其他)） |\n| residencePlace | 否 | String | 现居住地 |\n| familyContact | 否 | String | 家庭联系方式 |\n| firstWorkDate | 否 | String | 首次工作时间（格式：2019-08-20） |\n| workYear | 否 | String | 工龄 |\n| alias | 否 | String | 别名 |\n| childStatus | 否 | String | 子女状态 |\n| formDataMap | 否 | String | 人事档案自定义字段 获取自定义表单字段 传值说明 |\n| otherSuperior | 否 | List | 其他上级 |\n备注：1、原有必填字段userid改为非必填，加上wechatUserId字段；2、Userid和wechatUserId传其中一个即可，userid优先，都没传则提示错误；3、若没传userid，传了wechatUserId，根据wechatUserId查询处人员信息，拿到userid再进行原有的逻辑；\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v3/updateUser?access_token=46519d75b6e5fd71eddb05a40446344f&userid=4980937863852743878&name=小小陈咯新想阿萨德&mobile=11111111111&department=4539973033980907968&email=1234@qq.com&jobNum=002&telephone=13312345678&hireDate=2016-08-20&sex=male&position=6490013933795226117&grade=4539973034491107987&superior=6483193578931353652&assistant=[123]&access=[123]&idNo=123123123&birthday=1999-05-05&age=26&maritalStatus=unmarried&education=regular&degree=bachelor&graduateSchool=上海大学&graduateDate=2018-7-20&nativePlace=&nation=&householdType=&politicsStatus=&residencePlace=&familyContact=&firstWorkDate=&workYear=&childStatus=&formDataMap=\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

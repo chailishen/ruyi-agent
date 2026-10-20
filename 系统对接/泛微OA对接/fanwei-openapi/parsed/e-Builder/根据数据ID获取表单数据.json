@@ -1,0 +1,148 @@
+{
+  "id": "840721255360987136",
+  "name": "根据数据ID获取表单数据",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模",
+    "表单数据操作"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/dataset/v1/getDataById",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/dataset/v1/getDataById",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "datajson",
+      "required": "是",
+      "type": "Object",
+      "description": "数据信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "数据id"
+    },
+    {
+      "name": "objId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单id"
+    },
+    {
+      "name": "isReturnDetail",
+      "required": "否",
+      "type": "String",
+      "description": "是否需要返回明细(默认不返回; y返回; n不返回)"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "创建人"
+    },
+    {
+      "name": "obj_id",
+      "required": "",
+      "type": "String",
+      "description": "表单id"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "数据id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "数据标题"
+    },
+    {
+      "name": "fieldKey",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "fieldName",
+      "required": "",
+      "type": "String",
+      "description": "字段显示名"
+    },
+    {
+      "name": "value",
+      "required": "",
+      "type": "String",
+      "description": "字段值"
+    },
+    {
+      "name": "showName",
+      "required": "",
+      "type": "String",
+      "description": "字段显示值"
+    },
+    {
+      "name": "subFormId",
+      "required": "",
+      "type": "Long",
+      "description": "字段id"
+    },
+    {
+      "name": "dataIndex",
+      "required": "",
+      "type": "int",
+      "description": "明细下标id"
+    },
+    {
+      "name": "fieldOptionId",
+      "required": "",
+      "type": "String",
+      "description": "字段选项id"
+    },
+    {
+      "name": "fieldOptionName",
+      "required": "",
+      "type": "String",
+      "description": "字段选项名"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据数据ID获取表单数据"
+  ],
+  "raw_text": "## 根据数据ID获取表单数据\n注：本接口为老接口，推荐使用获取数据详情（V2）接口，交互和响应更好\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/dataset/v1/getDataById\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| datajson | 是 | Object | 数据信息 |\ndatajson示例：\ndatajson示例参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 数据id |\n| objId | 是 | Long | 表单id |\n| isReturnDetail | 否 | String | 是否需要返回明细(默认不返回; y返回; n不返回) |\n备注：\n- isReturnDetail参数，除说明描述中值除外，其他传值均代表默认\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| creator | String | 创建人 |\n| obj_id | String | 表单id |\n| id | String | 数据id |\n| name | String | 数据标题 |\n| fieldKey | String | 字段类型 |\n| fieldName | String | 字段显示名 |\n| value | String | 字段值 |\n| showName | String | 字段显示值 |\n| subFormId | Long | 字段id |\n| dataIndex | int | 明细下标id |\n| fieldOptionId | String | 字段选项id |\n| fieldOptionName | String | 字段选项名 |"
+}

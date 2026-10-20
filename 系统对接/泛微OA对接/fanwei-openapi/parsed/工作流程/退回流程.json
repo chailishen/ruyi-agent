@@ -1,0 +1,116 @@
+{
+  "id": "840713326833704960",
+  "name": "退回流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/rejectRequest",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/rejectRequest",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "Long",
+      "description": "用户信息 获取用户信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "Long",
+      "description": "流程实例Id，流程创建接口返回requestId"
+    },
+    {
+      "name": "RejectToType",
+      "required": "",
+      "type": "int",
+      "description": "流程退回方式：0：自由退回；1：逐级退回；2：指定范围退回；3：按出口退回；不传则获取后台设置的退回方式进行退回；"
+    },
+    {
+      "name": "RejectToNodeid",
+      "required": "",
+      "type": "Long",
+      "description": "退回到目标节点Id：当RejectToType传0或2时传递；"
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "String",
+      "description": "意见内容"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "",
+      "type": "Long",
+      "description": "当前节点"
+    },
+    {
+      "name": "otherParams",
+      "required": "",
+      "type": "json",
+      "description": "在body中传入，退回到指定节点。RejectToType：0，自由退回，1，逐级退回，2，指定范围退回，3，按出口退回；RejectToNodeid：在自由退回和指定范围内退回使用（节点）id，例如{“RejectToType”:0,”RejectToNodeid”:3974}"
+    },
+    {
+      "name": "isSubmitDirect",
+      "required": "",
+      "type": "int",
+      "description": "退回后提交方式：0：逐级审批，1：直达本节点。只有当节点操作菜单退回设置中的【退回后再提交到达节点】设置【操作者选择】时该参数才生效。"
+    },
+    {
+      "name": "useMaxWeightUser",
+      "required": "",
+      "type": "boolean",
+      "description": "当userid 为主身份时，是否获取主次账号所有待办数据，选取权重最大的进行操作；"
+    },
+    {
+      "name": "customLogType",
+      "required": "",
+      "type": "int",
+      "description": "自定义意见类型（未传递自动计算默认意见类型）"
+    },
+    {
+      "name": "skipFlowPointVerify",
+      "required": "",
+      "type": "int",
+      "description": "默认值：0；1：跳过要点校验；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "审批数据ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "退回流程"
+  ],
+  "raw_text": "## 退回流程\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/rejectRequest\n请求方式：\n- POST\n说明：\n- 机器人退回流程，userid传递0即可；\n- 调用该接口必须是有退回权限的人，即userid传递的人员打开流程必须有退回按钮。\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户信息 获取用户信息 |\n| requestId | 是 | Long | 流程实例Id，流程创建接口返回requestId |\n| RejectToType | 否 | int | 流程退回方式：0：自由退回；1：逐级退回；2：指定范围退回；3：按出口退回；不传则获取后台设置的退回方式进行退回； |\n| RejectToNodeid | 否 | Long | 退回到目标节点Id：当RejectToType传0或2时传递； |\n| remark | 否 | String | 意见内容 |\n| userCurrentNodeId | 否 | Long | 当前节点 |\n| otherParams | 否 | json | 在body中传入，退回到指定节点。RejectToType：0，自由退回，1，逐级退回，2，指定范围退回，3，按出口退回；RejectToNodeid：在自由退回和指定范围内退回使用（节点）id，例如{“RejectToType”:0,”RejectToNodeid”:3974} |\n| isSubmitDirect | 否 | int | 退回后提交方式：0：逐级审批，1：直达本节点。只有当节点操作菜单退回设置中的【退回后再提交到达节点】设置【操作者选择】时该参数才生效。 |\n| useMaxWeightUser | 否 | boolean | 当userid 为主身份时，是否获取主次账号所有待办数据，选取权重最大的进行操作； |\n| customLogType | 否 | int | 自定义意见类型（未传递自动计算默认意见类型） |\n| skipFlowPointVerify | 否 | int | 默认值：0；1：跳过要点校验； |\n备注\n- body传参格式为json\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestId | String | 审批数据ID |\nJava sdk调用示例："
+}

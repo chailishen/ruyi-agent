@@ -1,0 +1,120 @@
+{
+  "id": "840720606778982401",
+  "name": "会议室使用情况",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/room/v2/queryEvents",
+  "url_template": "{OpenApiOrigin}/room/v2/queryEvents",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "start",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式为（yy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "end",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式为（yy-MM-dd HH:mm:ss）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "room.name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "room.id",
+      "required": "",
+      "type": "String",
+      "description": "会议室ID"
+    },
+    {
+      "name": "agenda.name",
+      "required": "",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "agenda.id",
+      "required": "",
+      "type": "String",
+      "description": "日程ID"
+    },
+    {
+      "name": "agenda.startDate",
+      "required": "",
+      "type": "String",
+      "description": "开始时间"
+    },
+    {
+      "name": "agenda.endDate",
+      "required": "",
+      "type": "String",
+      "description": "结束时间"
+    },
+    {
+      "name": "agenda.allDay",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否全天"
+    },
+    {
+      "name": "agenda.repeat",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否重复"
+    },
+    {
+      "name": "agenda.repeatNum",
+      "required": "",
+      "type": "String",
+      "description": "重复次数"
+    },
+    {
+      "name": "agenda.secret",
+      "required": "",
+      "type": "String",
+      "description": "公开程度"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "会议室使用情况"
+  ],
+  "raw_text": "## 会议室使用情况\n请求URL：\n- {OpenApiOrigin}/room/v2/queryEvents\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| start | 是 | Date | 开始时间，格式为（yy-MM-dd HH:mm:ss） |\n| end | 是 | Date | 结束时间，格式为（yy-MM-dd HH:mm:ss） |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| room.name | String | 会议室名称 |\n| room.id | String | 会议室ID |\n| agenda.name | String | 日程名称 |\n| agenda.id | String | 日程ID |\n| agenda.startDate | String | 开始时间 |\n| agenda.endDate | String | 结束时间 |\n| agenda.allDay | Boolean | 是否全天 |\n| agenda.repeat | Boolean | 是否重复 |\n| agenda.repeatNum | String | 重复次数 |\n| agenda.secret | String | 公开程度 |\nJava sdk调用示例："
+}

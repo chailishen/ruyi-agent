@@ -1,0 +1,246 @@
+{
+  "id": "840717862429097985",
+  "name": "查询订单",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：orderform"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "订单ID 获取订单ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "订单信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "订单名称"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "orderformCustomer",
+      "required": "",
+      "type": "String",
+      "description": "客户"
+    },
+    {
+      "name": "orderformContract",
+      "required": "",
+      "type": "String",
+      "description": "订单合同"
+    },
+    {
+      "name": "orderformStatus",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "orderformType",
+      "required": "",
+      "type": "String",
+      "description": "类型"
+    },
+    {
+      "name": "orderformUnit",
+      "required": "",
+      "type": "String",
+      "description": "单位"
+    },
+    {
+      "name": "orderformPayMethod",
+      "required": "",
+      "type": "String",
+      "description": "支付方式"
+    },
+    {
+      "name": "orderformNumber",
+      "required": "",
+      "type": "String",
+      "description": "编号"
+    },
+    {
+      "name": "orderformTotalMoney",
+      "required": "",
+      "type": "Double",
+      "description": "总金额"
+    },
+    {
+      "name": "orderformStartTime",
+      "required": "",
+      "type": "String",
+      "description": "下单日期"
+    },
+    {
+      "name": "orderformEndTime",
+      "required": "",
+      "type": "String",
+      "description": "结单日期"
+    },
+    {
+      "name": "orderformDescription",
+      "required": "",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "productions",
+      "required": "",
+      "type": "Object",
+      "description": "产品信息"
+    },
+    {
+      "name": "dataDetails",
+      "required": "",
+      "type": "Object",
+      "description": "通用自定义字段"
+    },
+    {
+      "name": "typeDataDetails",
+      "required": "",
+      "type": "Object",
+      "description": "专用自定义字段"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "产品名称"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "String",
+      "description": "产品负责人"
+    },
+    {
+      "name": "inventory",
+      "required": "",
+      "type": "Double",
+      "description": "产品库存"
+    },
+    {
+      "name": "price",
+      "required": "",
+      "type": "Double",
+      "description": "产品价格"
+    },
+    {
+      "name": "count",
+      "required": "",
+      "type": "Double",
+      "description": "产品数量"
+    },
+    {
+      "name": "norm",
+      "required": "",
+      "type": "Integer",
+      "description": "产品规格数"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "String",
+      "description": "产品类型"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "产品状态"
+    },
+    {
+      "name": "currency",
+      "required": "",
+      "type": "String",
+      "description": "产品货币单位"
+    },
+    {
+      "name": "unitPrice",
+      "required": "",
+      "type": "Double",
+      "description": "产品单价"
+    },
+    {
+      "name": "unit",
+      "required": "",
+      "type": "String",
+      "description": "产品规格"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "产品备注"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询订单"
+  ],
+  "raw_text": "## 查询订单\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：orderform |\n| id | 是 | Long | 订单ID 获取订单ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&id=3578058074788063706\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userid | String | 用户ID |\n| module | String | 模块 |\n| data | Object | 订单信息 |\n| name | String | 订单名称 |\n| manager | String | 负责人 |\n| orderformCustomer | String | 客户 |\n| orderformContract | String | 订单合同 |\n| orderformStatus | String | 状态 |\n| orderformType | String | 类型 |\n| orderformUnit | String | 单位 |\n| orderformPayMethod | String | 支付方式 |\n| orderformNumber | String | 编号 |\n| orderformTotalMoney | Double | 总金额 |\n| orderformStartTime | String | 下单日期 |\n| orderformEndTime | String | 结单日期 |\n| orderformDescription | String | 备注 |\n| productions | Object | 产品信息 |\n| dataDetails | Object | 通用自定义字段 |\n| typeDataDetails | Object | 专用自定义字段 |\nproductions说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| name | String | 产品名称 |\n| manager | String | 产品负责人 |\n| inventory | Double | 产品库存 |\n| price | Double | 产品价格 |\n| count | Double | 产品数量 |\n| norm | Integer | 产品规格数 |\n| type | String | 产品类型 |\n| status | String | 产品状态 |\n| currency | String | 产品货币单位 |\n| unitPrice | Double | 产品单价 |\n| unit | String | 产品规格 |\n| description | String | 产品备注 |\nJava sdk调用示例："
+}

@@ -1,0 +1,5385 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "接口说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            },
+            {
+              "type": "font-span",
+              "attrs": {
+                "color": null,
+                "backgroundColor": null,
+                "fontFamily": null,
+                "fontSize": "16px"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1、本接口支持创建表单，和批量修改表单字段信息，包括新增、修改、删除字段信息"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2、接口内部有鉴权，需要有工作流管理新建权限或者工作流管理修改权限的人，才能调用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "color": "",
+            "backgroundColor": "",
+            "fontFamily": "",
+            "fontSize": ""
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchSaveFormFieldManage",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "{OpenApiOrigin}/api/workflow/core/paService/v1/getFieldOption",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": "null"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "color": "",
+            "backgroundColor": "",
+            "fontFamily": "",
+            "fontSize": ""
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(211, 49, 21)",
+                        "backgroundColor": "",
+                        "fontFamily": "",
+                        "fontSize": ""
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": " （Content_Type: application/json），备注：access_token放在params中"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 获取accessToken信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userid"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "用户ID 获取用户ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "formFieldManageDto"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "com.weaver.common.form.dto.field.formfield.FormFieldManageDto"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "表单字段详细保存信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "请求参数示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"userid\": 5116374622026176523,\n\t\"formFieldManageDto\": {\n\t\t\"autoCompare\": true,\n\t\t\"form\": {\n\t\t\t\"dataKey\": \"form_main_tablexxx\",\n\t\t\t\"name\": \"业务表\",\n\t\t\t\"isPhysical\": true,\n\t\t\t\"describe\": \"用于XX业务的表\"\n\t\t},\n\t\t\"subFormList\": [\n\t\t\t{\n\t\t\t\t\"dataKey\": \"mxb1\",\n\t\t\t\t\"title\": \"业务明细表1\",\n\t\t\t\t\"describe\": \"用于XX业务的明细表1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"mxb2\",\n\t\t\t\t\"title\": \"业务明细表2\",\n\t\t\t\t\"describe\": \"用于XX业务的明细表2\"\n\t\t\t}\n\t\t],\n\t\t\"formTableList\": [\n\t\t\t{\n\t\t\t\t\"dataKey\": \"formtable1\",\n\t\t\t\t\"name\": \"多物理表1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"formtable2\",\n\t\t\t\t\"name\": \"多物理表2\"\n\t\t\t}\n\t\t],\n\t\t\"formFieldList\": [\n\t\t\t{\n\t\t\t\t//单行文本\n\t\t\t\t\"dataKey\": \"dhwb\",\n\t\t\t\t//\"mainDataKey\": \"formtable1\", 属于多物理表时维护明细表的datakey\n\t\t\t\t//\"subFormDataKey\": \"mxb1\", 属于明细表时维护明细表的datakey\n\t\t\t\t\"title\": \"单行文本\", //标题\n\t\t\t\t\"describe\": \"这是一个单行文本字段\", //描述信息\n\t\t\t\t\"type\": \"Text\", //类型标识\n\t\t\t\t\"maxLen\": 500, //最大长度\n\t\t\t\t\"unique\": true, //唯一值\n\t\t\t\t\"isDefault\": true, //是否开启默认值\n\t\t\t\t\"content\": \"字段的默认值\" //默认值的内容\n\t\t\t},\n\t\t\t{ //金额、数字\n\t\t\t\t\"dataKey\": \"xs\",\n\t\t\t\t\"title\": \"小数字段\",\n\t\t\t\t\"describe\": \"这是一个小数字段\",\n\t\t\t\t\"type\": \"Number\",\n\t\t\t\t\"pointSize\": 2, //小数位数\n\t\t\t\t\"maxNum\": \"1\", //数字范围最大值\n\t\t\t\t\"minNum\": \"100\", //数字范围-最小值\n\t\t\t\t\"isDelimiter\": true, //是否显示千分位\n\t\t\t\t\"isCapital\": true, //金额是否开启大写\n\t\t\t\t\"numberType\": \"number\", //类型 number=数值 percentage=百分比 permil=千分比 默认number\n\t\t\t\t\"capitalPosition\": \"outside\" //大写显示位置 outside=输入框外 inside=输入框内\n\t\t\t},\n\t\t\t{\n\t\t\t\t//多行文本\n\t\t\t\t\"dataKey\": \"duohwb\",\n\t\t\t\t\"title\": \"多行文本\",\n\t\t\t\t\"describe\": \"这是一个多行文本字段\",\n\t\t\t\t\"type\": \"TextArea\",\n\t\t\t\t\"height\": \"3\", //高度\n\t\t\t\t\"richEditor\": true, //是否富文本编辑器\n\t\t\t\t\"maxLen\": 4000 //最大长度限制\n\t\t\t},\n\t\t\t{\n\t\t\t\t//选择框\n\t\t\t\t\"dataKey\": \"xlxzk\",\n\t\t\t\t\"title\": \"选择框\",\n\t\t\t\t\"describe\": \"这是一个选择框字段\",\n\t\t\t\t\"type\": \"Select\", //Select=下拉单选 SelectMultiple=下拉复选 RadioBox=单选框 CheckBox=复选框\n\t\t\t\t\"showType\": \"RadioBox\", //展示方式，参考type \n\t\t\t\t\"options\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项1\", //选项名\n\t\t\t\t\t\t\"valueKey\": \"101\", //valueKey 选项的唯一标识，为空会自动生成随机ID\n\t\t\t\t\t\t\"parentOptionIds\": \"101,102\" //父选项所属的当前选项valueKey集合\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项2\",\n\t\t\t\t\t\t\"valueKey\": \"102\",\n\t\t\t\t\t\t\"parentOptionIds\": \"102,103\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项3\",\n\t\t\t\t\t\t\"valueKey\": \"103\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"其它\",\n\t\t\t\t\t\t\"other\": true, //其它选项标识\n\t\t\t\t\t\t\"valueKey\": \"999\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"parentDataKey\": \"fjxx\" //父级选项字段的dataKey\n\t\t\t},\n\t\t\t{ //日期/时间\n\t\t\t\t\"dataKey\": \"rq\",\n\t\t\t\t\"title\": \"日期\",\n\t\t\t\t\"describe\": \"这是一个日期类型的字段\",\n\t\t\t\t\"type\": \"Date\", //Date=日期 Time=时间\n\t\t\t\t\"format\": \"yyyy-MM-dd HH:mm:ss\" //格式\n\t\t\t},\n\t\t\t{ //人员选择\n\t\t\t\t\"dataKey\": \"rxxz\",\n\t\t\t\t\"title\": \"人员选择\",\n\t\t\t\t\"describe\": \"这是一个人员选择类型的字段\",\n\t\t\t\t\"type\": \"Employee\",\n\t\t\t\t\"isSingle\": true, //是否单选\n\t\t\t\t\"enableAggregation\": true, //是否开启聚合\n\t\t\t\t\"displayType\": \"多选显示方式\",\n\t\t\t\t\"defaultExtend\": { //默认值\n\t\t\t\t\t\"type\": \"current\", //当前操作者\n\t\t\t\t\t\"relation\": \"current\" //操作者本人\n\t\t\t\t}\n\t\t\t},\n\t\t\t{ //部门选择\n\t\t\t\t\"dataKey\": \"bmxz\",\n\t\t\t\t\"title\": \"部门选择\",\n\t\t\t\t\"describe\": \"这是一个部门选择类型的字段\",\n\t\t\t\t\"type\": \"Department\",\n\t\t\t\t\"isSingle\": true\n\t\t\t},\n\t\t\t{ //关联e-Builder\n\t\t\t\t\"dataKey\": \"gleb\",\n\t\t\t\t\"title\": \"关联EB\",\n\t\t\t\t\"describe\": \"这是一个关联流程EB的字段\",\n\t\t\t\t\"type\": \"EBuilder\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"sformId\": \"1209888993052991488\", //选择的eb表单ID，可以在EB表单基础设置页面拿到\n\t\t\t\t\"appId\": \"752062285654753281\", //eb表单所属应用的ID，可以在EB表单设置的地址栏拿到，通常是第一个参数\n\t\t\t\t\"formName\": \"关联EB的数据表单\", //eb的表名称\n\t\t\t\t\"dataTitle\": \"1091670168698912769\" //标题显示字段的字段ID\n\t\t\t},\n\t\t\t{ //关联流程 其余关联类型和这个基本一致，主要区别在于type，属性基本通用\n\t\t\t\t\"dataKey\": \"gllc\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联流程类型的字段\",\n\t\t\t\t\"type\": \"Flow\",\n\t\t\t\t\"isSingle\": true\n\t\t\t},\n\t\t\t{ //关联浏览-系统浏览\n\t\t\t\t\"dataKey\": \"glllxtzd\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联浏览-系统浏览类型的字段\",\n\t\t\t\t\"type\": \"RelateBrowser\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"browserType\": { //系统浏览类型\n\t\t\t\t\t\"module\": \"hr\",\n\t\t\t\t\t\"name\": \"专业\",\n\t\t\t\t\t\"id\": \"2005096031068185554\",\n\t\t\t\t\t\"type\": \"hrSpeciality\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{ //关联浏览-自定义浏览\n\t\t\t\t\"dataKey\": \"glllzdylc\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联浏览-自定义浏览类型的字段\",\n\t\t\t\t\"type\": \"RelateBrowser\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"browserType\": { //自定义浏览类型\n\t\t\t\t\t\"extProperties\": {\n\t\t\t\t\t\t\"isEBuilderBrowser\": false\n\t\t\t\t\t},\n\t\t\t\t\t\"module\": \"bcw\",\n\t\t\t\t\t\"name\": \"CLM-合同类型\",\n\t\t\t\t\t\"id\": \"938744314811188572\",\n\t\t\t\t\t\"type\": \"customBrowser_clm_contract_type\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t//附件\n\t\t\t\t\"dataKey\": \"fj\",\n\t\t\t\t\"title\": \"附件字段\",\n\t\t\t\t\"describe\": \"这是一个附件类型的字段\",\n\t\t\t\t\"type\": \"File\",\n\t\t\t\t\"fileMenuValue\": \"sortable,reupload,delete,batchDownload,download,preview,edit,rename,version\", //隐藏菜单清单\n\t\t\t\t\"folderType\": \"1\", //上传目录设置 0=通用 1=自定义\n\t\t\t\t\"folderSelectType\": \"0\", //附件上传目录0：固定目录 1选项关联\n\t\t\t\t\"folderId\": \"106\", //附件目录\n\t\t\t\t\"limitType\": \"1\", //限制格式设置 0=通用 1=自定义\n\t\t\t\t\"customLimitFormat\": \"txt,pdf,doc,docx,xls,xlsx,ppt,pptx,wps,rtf,hlp,\", //自定义附件上传格式\n\t\t\t\t\"isCopyUpload\": true, //开启复制上传\n\t\t\t\t\"attmentSizeLimit\": \"6\", //0=1MB 1=5MB 2=10MB 3=20MB 4=50MB 5=100MB, 6=自定义\n\t\t\t\t\"customAttmentSize\": \"350\" //自定义附件大小,attmentSizeLimit=6时维护\n\t\t\t}\n\t\t],\n\t\t\"module\": \"workflow\" //所属模块标识\n\t}\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "FormFieldManageDto对象属性详细说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "属性",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "具体属性",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必传",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 4,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "form",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "dataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "表唯一标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "由不超过30位长度的数字、字母、下划线组成",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "rgb(255, 255, 255)",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "表名称",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "isPhysical",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Boolean",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否物理表，不传默认建物理表",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "describe",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "表的描述信息",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 2,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "formTableList",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "dataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "多物理表唯一标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "由不超过30位长度的数字、字母、下划线组成",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "多物理表名称",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 3,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "subFormList",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "dataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "明细表唯一标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "由不超过30位长度的数字、字母、下划线组成",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "明细表名称",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "describe",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "明细表的描述信息",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 17,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "formFieldList",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "dataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "字段唯一标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "由不超过20位长度的数字、字母、下划线组成",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "subFormDataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "所属明细表的dataKey，没有则属于主表",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mainDataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "所属多物理表的dataKey，没有则属于主表",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "title",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "字段标题",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "type",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "字段类型",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgb(0, 0, 0)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "不同字段类型不同，具体可以参考下面的示例",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "describe",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "字段描述信息",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "showOrder",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Double",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "字段顺序",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 5,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "options",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Array",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "选项类型必传",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "name",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "选项名称",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "valueKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(241, 8, 8, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "选项唯一标识",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "other",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否是”其它”类型选项",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "order",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "选项顺序",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "parentDataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "存在父级选项时必传",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "父级选项时",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "对应父选项的字段dataKey",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "format",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日期类型必传",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "日期格式",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "single",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Boolean",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否单选",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "浏览/附件类型字段需要，默认false",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "center"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "browserType",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Object",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "自定义浏览",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型必传",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "自定义浏览类型的具体属性",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "这几个参数可以从选择自定义浏览页面的请求接口获取到：",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "/api/bcw/relevanceBrowser/getBrowserBean",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "格式请参考示例",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 4,
+                "rowspan": 1,
+                "colwidth": [
+                  107,
+                  61,
+                  90,
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "这里只罗列了字段通用的几种属性，更多每个字段的特有属性可以参考下面的【字段属性数据字典】",
+                      "marks": [
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": "rgba(0, 0, 0, 0.973)",
+                            "backgroundColor": "",
+                            "fontFamily": "",
+                            "fontSize": ""
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  95
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "autoCompare"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  107
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  61
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  90
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  }
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  343
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否支持自动比对差异"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "当传true时，如果表单已存在，会进行更新"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "规则：不传的字段会"
+                    },
+                    {
+                      "type": "text",
+                      "text": "删除",
+                      "marks": [
+                        {
+                          "type": "strong",
+                          "attrs": {}
+                        },
+                        {
+                          "type": "font-span",
+                          "attrs": {
+                            "color": null,
+                            "backgroundColor": "#ffffff",
+                            "fontFamily": null,
+                            "fontSize": null
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "text": "，传的字段会比对后进行新增、覆盖"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"message\": {\n\t\t\"errcode\": \"0\",\n\t\t\"errmsg\": \"success\"\n\t},\n\t\"data\": {\n\t\t\"autoCompare\": true,\n\t\t\"form\": {\n\t\t\t\"dataKey\": \"form_main_tablexxx\",\n\t\t\t\"name\": \"业务表\",\n\t\t\t\"isPhysical\": true,\n\t\t\t\"describe\": \"用于XX业务的表\"\n\t\t},\n\t\t\"subFormList\": [\n\t\t\t{\n\t\t\t\t\"dataKey\": \"mxb1\",\n\t\t\t\t\"title\": \"业务明细表1\",\n\t\t\t\t\"describe\": \"用于XX业务的明细表1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"mxb2\",\n\t\t\t\t\"title\": \"业务明细表2\",\n\t\t\t\t\"describe\": \"用于XX业务的明细表2\"\n\t\t\t}\n\t\t],\n\t\t\"formTableList\": [\n\t\t\t{\n\t\t\t\t\"dataKey\": \"formtable1\",\n\t\t\t\t\"name\": \"多物理表1\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"formtable2\",\n\t\t\t\t\"name\": \"多物理表2\"\n\t\t\t}\n\t\t],\n\t\t\"formFieldList\": [\n\t\t\t{\n\t\t\t\t\"dataKey\": \"dhwb\",\n\t\t\t\t\"title\": \"单行文本\",\n\t\t\t\t\"describe\": \"这是一个单行文本字段\",\n\t\t\t\t\"type\": \"Text\",\n\t\t\t\t\"maxLen\": 500,\n\t\t\t\t\"unique\": true,\n\t\t\t\t\"isDefault\": true,\n\t\t\t\t\"content\": \"字段的默认值\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"xs\",\n\t\t\t\t\"title\": \"小数字段\",\n\t\t\t\t\"describe\": \"这是一个小数字段\",\n\t\t\t\t\"type\": \"Number\",\n\t\t\t\t\"pointSize\": 2,\n\t\t\t\t\"maxNum\": \"1\",\n\t\t\t\t\"minNum\": \"100\",\n\t\t\t\t\"isDelimiter\": true,\n\t\t\t\t\"isCapital\": true,\n\t\t\t\t\"numberType\": \"number\",\n\t\t\t\t\"capitalPosition\": \"outside\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"duohwb\",\n\t\t\t\t\"title\": \"多行文本\",\n\t\t\t\t\"describe\": \"这是一个多行文本字段\",\n\t\t\t\t\"type\": \"TextArea\",\n\t\t\t\t\"height\": \"3\",\n\t\t\t\t\"richEditor\": true,\n\t\t\t\t\"maxLen\": 4000\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"xlxzk\",\n\t\t\t\t\"title\": \"选择框\",\n\t\t\t\t\"describe\": \"这是一个选择框字段\",\n\t\t\t\t\"type\": \"Select\",\n\t\t\t\t\"showType\": \"RadioBox\",\n\t\t\t\t\"options\": [\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项1\",\n\t\t\t\t\t\t\"valueKey\": \"101\",\n\t\t\t\t\t\t\"parentOptionIds\": \"101,102\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项2\",\n\t\t\t\t\t\t\"valueKey\": \"102\",\n\t\t\t\t\t\t\"parentOptionIds\": \"102,103\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"选项3\",\n\t\t\t\t\t\t\"valueKey\": \"103\"\n\t\t\t\t\t},\n\t\t\t\t\t{\n\t\t\t\t\t\t\"name\": \"其它\",\n\t\t\t\t\t\t\"other\": true,\n\t\t\t\t\t\t\"valueKey\": \"999\"\n\t\t\t\t\t}\n\t\t\t\t],\n\t\t\t\t\"parentDataKey\": \"fjxx\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"rq\",\n\t\t\t\t\"title\": \"日期\",\n\t\t\t\t\"describe\": \"这是一个日期类型的字段\",\n\t\t\t\t\"type\": \"Date\",\n\t\t\t\t\"format\": \"yyyy-MM-dd HH:mm:ss\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"rxxz\",\n\t\t\t\t\"title\": \"人员选择\",\n\t\t\t\t\"describe\": \"这是一个人员选择类型的字段\",\n\t\t\t\t\"type\": \"Employee\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"enableAggregation\": true,\n\t\t\t\t\"displayType\": \"多选显示方式\",\n\t\t\t\t\"defaultExtend\": {\n\t\t\t\t\t\"type\": \"current\",\n\t\t\t\t\t\"relation\": \"current\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"bmxz\",\n\t\t\t\t\"title\": \"部门选择\",\n\t\t\t\t\"describe\": \"这是一个部门选择类型的字段\",\n\t\t\t\t\"type\": \"Department\",\n\t\t\t\t\"isSingle\": true\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"gleb\",\n\t\t\t\t\"title\": \"关联EB\",\n\t\t\t\t\"describe\": \"这是一个关联流程EB的字段\",\n\t\t\t\t\"type\": \"EBuilder\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"sformId\": \"1209888993052991488\",\n\t\t\t\t\"appId\": \"752062285654753281\",\n\t\t\t\t\"formName\": \"关联EB的数据表单\",\n\t\t\t\t\"dataTitle\": \"1091670168698912769\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"gllc\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联流程类型的字段\",\n\t\t\t\t\"type\": \"Flow\",\n\t\t\t\t\"isSingle\": true\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"glllxtzd\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联浏览-系统浏览类型的字段\",\n\t\t\t\t\"type\": \"RelateBrowser\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"browserType\": {\n\t\t\t\t\t\"module\": \"hr\",\n\t\t\t\t\t\"name\": \"专业\",\n\t\t\t\t\t\"id\": \"2005096031068185554\",\n\t\t\t\t\t\"type\": \"hrSpeciality\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"glllzdylc\",\n\t\t\t\t\"title\": \"关联流程\",\n\t\t\t\t\"describe\": \"这是一个关联浏览-自定义浏览类型的字段\",\n\t\t\t\t\"type\": \"RelateBrowser\",\n\t\t\t\t\"isSingle\": true,\n\t\t\t\t\"browserType\": {\n\t\t\t\t\t\"extProperties\": {\n\t\t\t\t\t\t\"isEBuilderBrowser\": false\n\t\t\t\t\t},\n\t\t\t\t\t\"module\": \"bcw\",\n\t\t\t\t\t\"name\": \"CLM-合同类型\",\n\t\t\t\t\t\"id\": \"938744314811188572\",\n\t\t\t\t\t\"type\": \"customBrowser_clm_contract_type\"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"dataKey\": \"fj\",\n\t\t\t\t\"title\": \"附件字段\",\n\t\t\t\t\"describe\": \"这是一个附件类型的字段\",\n\t\t\t\t\"type\": \"File\",\n\t\t\t\t\"fileMenuValue\": \"sortable,reupload,delete,batchDownload,download,preview,edit,rename,version\",\n\t\t\t\t\"folderType\": \"1\",\n\t\t\t\t\"folderSelectType\": \"0\",\n\t\t\t\t\"folderId\": \"106\",\n\t\t\t\t\"limitType\": \"1\",\n\t\t\t\t\"customLimitFormat\": \"txt,pdf,doc,docx,xls,xlsx,ppt,pptx,wps,rtf,hlp,\",\n\t\t\t\t\"isCopyUpload\": true,\n\t\t\t\t\"attmentSizeLimit\": \"6\",\n\t\t\t\t\"customAttmentSize\": \"350\"\n\t\t\t}\n\t\t],\n\t\t\"module\": \"workflow\"\n\t}\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  246
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  246
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errcode"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  246
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errmsg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  246
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "data"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "com.weaver.common.form.dto.field.formfield.FormFieldManageDto"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "保存结果对象"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "字段属性字典：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "[\n\t{\n\t\t//文本 type=Text\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxLen\": \"最大长度\",\n\t\t\"unique\": \"是否启用唯一值\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值内容内容\",\n\t\t\"regular\": \"正则校验设置\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"readonlyTransLink\": \"是否解析超链接\",\n\t\t\"quickCopy\": \"快速复制\",\n\t\t\"passwordMode\": \"密码模式\",\n\t\t\"showCount\": \"显示上限计数\",\n\t\t\"innerPrefix\": \"前缀\",\n\t\t\"innerSuffix\": \"后缀\",\n\t\t\"quickSelect\": \"是否开启快速选择\",\n\t\t\"browserType\": \"关联浏览-浏览类型\",\n\t\t\"expandList\": \"是否展开全部数据列表\",\n\t\t\"supportHtml\": \"是否支持html\"\n\t},\n\t{\n\t\t//时间 type=Time\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"format\": \"日期格式类型\",\n\t\t\"showSeconds\": \"是否显示时分秒\",\n\t\t\"showMeridian\": \"是否显示子午线\",\n\t\t\"isDefault\": \"是否显示默认值\",\n\t\t\"defaultTime\": \"默认时间\",\n\t\t\"maxHours\": \"最大时间\",\n\t\t\"minuteStep\": \"分钟步长\",\n\t\t\"secondStep\": \"秒步长\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"timePanelStyle\": \"时间面板样式\",\n\t\t\"min\": \"最早时间\",\n\t\t\"max\": \"最晚时间\",\n\t\t\"earlyDate\": \"是否设置最早日期\",\n\t\t\"lateDate\": \"是否设置最晚日期\"\n\t},\n\t{\n\t\t//选项类型 type=Select:下拉单选 SelectMultiple:下拉复选 RadioBox:单选框 CheckBox:复选框\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"OptionBackgroundStyle\": \"选项背景样式\",\n\t\t\"optionLayout\": \"选项背景布局\",\n\t\t\"options\": {\n\t\t\t\"valueKey\": \"字段-选项valueKey\",\n\t\t\t\"name\": \"名称\",\n\t\t\t\"styleConfig\": \"样式类型\",\n\t\t\t\"score\": \"分数\",\n\t\t\t\"other\": \"是否是其他\",\n\t\t\t\"order\": \"顺序\",\n\t\t\t\"parent\": \"父选项\",\n\t\t\t\"archive\": \"是否封存\",\n\t\t\t\"optionNum\": \"名额\",\n\t\t\t\"optionNumber\": \"名额\",\n\t\t\t\"overNum\": \"剩余名额\",\n\t\t\t\"defOption\": \"默认选项\",\n\t\t\t\"objId\": \"关联的文件的ID\",\n\t\t\t\"subCompanyCatalogues\": \"关联分部目录\",\n\t\t\t\"catalogue\": { //关联目录\n\t\t\t\t\"catalogueContent\": \"目录标题\",\n\t\t\t\t\"catalogueId\": \"目录ID\",\n\t\t\t\t\"catalogueParentId\": \"父目录ID\",\n\t\t\t\t\"catalogueTitle\": \"目录全名\"\n\t\t\t},\n\t\t\t\"divisionBranch\": \"是否区分分部\",\n\t\t\t\"extra\": \"扩展属性\",\n\t\t\t\"children\": \"子选项集合\",\n\t\t\t\"isLimit\": \"字段-是否控制选项次数\",\n\t\t\t\"parentOptionIds\": \"字段-父选项ids\",\n\t\t\t\"icon\": \"字段-选项图表\"\n\t\t},\n\t\t\"templateId\": \"选项模版ID\",//如需要绑定选项模版，可以去后台设置查询\n\t\t\"hideScore\": \"隐藏分数\",\n\t\t\"selectedNum\": \"选择的数量\",\n\t\t\"detailDefaultId\": \"数据源默认值\",\n\t\t\"templateScore\": \"数据源选项分数\",\n\t\t\"templateOptionNum\": \"数据源选项名额\",\n\t\t\"remind\": \"提醒\",\n\t\t\"showRemainingNumber\": \"字段选项显示剩余名额\",\n\t\t\"showSelectedNumber\": \"字段选项显示已选名额\",\n\t\t\"showSelectedPerson\": \"字段选项显示已选人员\",\n\t\t\"anonymousDisplayPerson\": \"字段选项已选人员匿名显示\",\n\t\t\"promptTextLabelId\": \"选项名额提示文字国际化标签id\",\n\t\t\"openValueKey\": \"字段选项是否开启valueKey设置\",\n\t\t\"valueKey\": \"自定义选项valueKey值\",\n\t\t\"allowAddOption\": \"是否允许运行时添加选项\",\n\t\t\"selectNewOption\": \"是否默认选中新添加选项\",\n\t\t\"showType\": \"展示类型\"\n\t},\n\t{\n\t\t//日期 type=Date\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"format\": \"日期格式\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"isSystemDate\": \"是否是系统时间\",\n\t\t\"earlyDate\": \"是否设置最早日期\",\n\t\t\"lateDate\": \"是否设置最晚日期\",\n\t\t\"earlyType\": \"最早日期类型\",\n\t\t\"lateType\": \"最晚日期类型\",\n\t\t\"earlySpecDate\": \"最早日期的指定日期\",\n\t\t\"earlyBeforeDay\": \"最早日期之前的天数\",\n\t\t\"earlyAfterDay\": \"最早日期之后的天数\",\n\t\t\"earlyBeforeMonth\": \"最早日期之前的月数\",\n\t\t\"earlyAfterMonth\": \"最早日期之后的月数\",\n\t\t\"earlyBeforeHour\": \"最早日期之前的小时数\",\n\t\t\"earlyAfterHour\": \"最早日期之后的小时数\",\n\t\t\"earlyBeforeYear\": \"最早日期之前的年数\",\n\t\t\"earlyAfterYear\": \"最早日期之后的年数\",\n\t\t\"lateSpecDate\": \"最晚日期的指定的日期\",\n\t\t\"lateBeforeDay\": \"最晚日期之前的天数\",\n\t\t\"lateAfterDay\": \"最晚日期之后的天数\",\n\t\t\"lateBeforeMonth\": \"最晚日期之前的月数\",\n\t\t\"lateAfterMonth\": \"最晚日期之后的月数\",\n\t\t\"lateBeforeHour\": \"最晚日期之前的小时数\",\n\t\t\"lateAfterHour\": \"最晚日期之后的小时数\",\n\t\t\"lateBeforeYear\": \"最晚日期之前的年数\",\n\t\t\"lateAfterYear\": \"最晚日期之后的年数\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"maxHours\": \"最大时间\",\n\t\t\"minuteStep\": \"分钟步长\",\n\t\t\"secondStep\": \"秒步长\",\n\t\t\"timePanelStyle\": \"时间面板样式\",\n\t\t\"enableWeek\": \"可选星期\",\n\t\t\"weekDays\": \"选中星期几\",\n\t\t\"excludePublicHolidays\": \"法定节假日\",\n\t\t\"min\": \"最早日期\",\n\t\t\"max\": \"最晚日期\"\n\t},\n\t{\n\t\t//日期区间 type=DateRange\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"end\": \"结束日期\",\n\t\t\"start\": \"开始日期\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"rangeInterval\": \"区间间隔\"\n\t},\n\t{\n\t\t//部门 type=Department\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"levels\": \"部门层级\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"displayOrder\": \"多选内容显示顺序\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"showDimension\": \"是否展示组织维度\",\n\t\t\"virtualOrganizationIds\": \"组织id列表\",\n\t\t\"defaultVirtualOrganizationId\": \"默认组织id\"\n\t},\n\t{\n\t\t//关联ebuilder type=EBuilder\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"relateExt\": \"关联扩展属性\",\n\t\t\"openLevels\": \"树形列表展开级数\",\n\t\t\"dataTitle\": \"数据标题\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"appId\": \"关联EB控件关联应用ID\",\n\t\t\"customPrimaryKey\": \"自定义主键\",\n\t\t\"pcLink\": \"PC端链接地址\",\n\t\t\"appLink\": \"app端链接地址\",\n\t\t\"virtualTable\": \"虚拟表标识\",\n\t\t\"ffOrderContent\": \"排序设置\",\n\t\t\"ffDisplayColumns\": \"显示列设置\",\n\t\t\"openRelateView\": \"启用关联视图\",\n\t\t\"relateViewData\": \"关联视图数据\",\n\t\t\"quickAdd\": \"快速新增\"\n\t},\n\t{\n\t\t//多行文本 type=TextArea\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"height\": \"文本框高度\",\n\t\t\"richEditor\": \"富文本编辑器\",\n\t\t\"cleanPaste\": \"复制内容过滤样式\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"picZoomRatio\": \"图片缩放比例\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"disableAutoHeight\": \"禁止扩展高度\",\n\t\t\"supportHtml\": \"是否支持html\",\n\t\t\"readonlyTransLink\": \"是否解析超链接\",\n\t\t\"maxLen\": \"最大长度\",\n\t\t\"showCount\": \"显示上限计数\",\n\t\t\"formatMobileStyle\": \"移动端展示适配\"\n\t},\n\t{\n\t\t//城市 type=City\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"displayLevel\": \"显示层级\",\n\t\t\"levelSeparator\": \"级别分隔符\",\n\t\t\"levelSetting\": \"显示层级设置\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"useLetterIndex\": \"是否开启字母索引\",\n\t\t\"mode\": \"分类维度\"\n\t},\n\t{\n\t\t//多级下拉 type=MultiSelect\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"componentLevel\": \"多级下拉级别\",\n\t\t\"selects\": \"级别集合\",\n\t\t\"options\": \"选项集合\",\n\t\t\"OptionBackgroundStyle\": \"选项背景样式\",\n\t\t\"templateId\": \"数据源\",\n\t\t\"selectIds\": \"层级字段集合\",\n\t\t\"detailDefaultId\": \"数据源默认值\",\n\t\t\"openValueKey\": \"字段选项是否开启valueKey设置\"\n\t},\n\t{\n\t\t//区县 type=District\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"displayLevel\": \"显示层级\",\n\t\t\"levelSeparator\": \"级别分隔符\",\n\t\t\"levelSetting\": \"显示层级设置\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"useLetterIndex\": \"是否开启字母索引\"\n\t},\n\t{\n\t\t//省份 type=Province\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"displayLevel\": \"显示层级\",\n\t\t\"levelSeparator\": \"级别分隔符\",\n\t\t\"levelSetting\": \"显示层级设置\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"useLetterIndex\": \"是否开启字母索引\"\n\t},\n\t{\n\t\t//国家 type=Country\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"useLetterIndex\": \"是否开启字母索引\"\n\t},\n\t{\n\t\t//级联选择 type=Cascader\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"templateId\": \"数据源ID\",\n\t\t\"displayLevel\": \"显示层级\",\n\t\t\"detailDefaultId\": \"默认值ID\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"defaultExtend\": \"默认值扩展\"\n\t},\n\t{\n\t\t//关联联系人 type=Contact\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isLinkCustomer\": \"是否与客户控件联动\",\n\t\t\"isLinkCustomerNoData\": \"未选择客户时为空\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//数据源 type=DataSource\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"sourceModule\": \"源模块\",\n\t\t\"displayType\": \"多选显示方式\"\n\t},\n\t{\n\t\t//行车记录 type=DrivingRecord\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"defaultRows\": \"默认行数\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//组合编辑器 type=Editors\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"height\": \"文本框高度\",\n\t\t\"editorsList\": \"编辑器设置\"\n\t},\n\t{\n\t\t//电子发票 type=Einvoice\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"relateExt\": \"关联扩展属性\",\n\t\t\"openLevels\": \"树形列表展开级数\",\n\t\t\"dataTitle\": \"数据标题\",\n\t\t\"invoiceType\": \"发票类型\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//邮箱 type=Email\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"unique\": \"是否启用唯一值\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"内容\",\n\t\t\"regular\": \"正则校验设置\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"readonlyTransLink\": \"是否解析超链接\"\n\t},\n\t{\n\t\t//人员 type=Employee\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"displayOrder\": \"多选内容显示顺序\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"enableAggregation\": \"是否开启聚合\",\n\t\t\"showDimension\": \"是否展示组织维度\",\n\t\t\"virtualOrganizationIds\": \"组织id列表\",\n\t\t\"defaultVirtualOrganizationId\": \"默认组织id\"\n\t},\n\t{\n\t\t//人员组织多选 type=EmployeeOrganization\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDetail\": \"是否开启查看详情\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"browserTypeList\": \"可选对象类型\",\n\t\t\"showDimension\": \"是否展示组织维度\",\n\t\t\"virtualOrganizationIds\": \"组织id列表\",\n\t\t\"defaultVirtualOrganizationId\": \"默认组织id\"\n\t},\n\t{\n\t\t//人员范围选择 type=EmployeeScope\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDetail\": \"是否开启查看详情\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"enableAggregation\": \"是否开启聚合\",\n\t\t\"browserTypeList\": \"可选对象类型\",\n\t\t\"showDimension\": \"是否展示组织维度\",\n\t\t\"virtualOrganizationIds\": \"组织id列表\",\n\t\t\"defaultVirtualOrganizationId\": \"默认组织id\"\n\t},\n\t{\n\t\t//人力资源条件 type=EmployeeAuthShare\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"viewDetail\": \"是否开启查看详情\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"showDimension\": \"是否展示组织维度\",\n\t\t\"virtualOrganizationIds\": \"组织id列表\",\n\t\t\"defaultVirtualOrganizationId\": \"默认组织id\"\n\t},\n\t{\n\t\t//附件 type=File\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"附件最大数量\",\n\t\t\"picWidth\": \"图片宽度\",\n\t\t\"picHeight\": \"图片高度\",\n\t\t\"isSingle\": \"是否开启单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"files\": \"附件默认值\",\n\t\t\"folderSelectType\": \"附件/图片上传目录\",\n\t\t\"folderId\": \"目录id\",\n\t\t\"folderIdValueForLog\": \"目录id\",\n\t\t\"optionId\": \"选项关联字段id\",\n\t\t\"optionName\": \"选项关联字段名称\",\n\t\t\"optionIdValueForLog\": \"选项关联字段id\",\n\t\t\"customLimitFormat\": \"限制附件上传格式\",\n\t\t\"attmentSizeLimit\": \"附件大小限制\",\n\t\t\"customAttmentSize\": \"附件大小限制\",\n\t\t\"customLimitFormatValueForLog\": \"附件大小限制\",\n\t\t\"forbinBatchDownload\": \"禁止附件批量下载\",\n\t\t\"secLevel\": \"密级\",\n\t\t\"showFormat\": \"显示格式\",\n\t\t\"attachUploadUser\": \"附件上传人\",\n\t\t\"attachUploadTime\": \"上传时间\",\n\t\t\"attachFileSize\": \"附件大小\",\n\t\t\"fileMenuValue\": \"附件隐藏菜单清单\",\n\t\t\"configType\": \"设置类型\",\n\t\t\"folderType\": \"上传目录设置\",\n\t\t\"limitType\": \"限制格式设置\",\n\t\t\"displayTip\": \"附件提示语\",\n\t\t\"sizeType\": \"附件大小限制\",\n\t\t\"otherType\": \"其他设置\",\n\t\t\"isCopyUpload\": \"开启复制上传\",\n\t\t\"customFileName\": \"自定义文件名\"\n\t},\n\t{\n\t\t//身份证 type=IDCard\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"unique\": \"是否启用唯一值\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"内容\",\n\t\t\"regular\": \"正则校验设置\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"readonlyTransLink\": \"是否解析超链接\"\n\t},\n\t{\n\t\t//图片上传 type=Image\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"图片最大数量\",\n\t\t\"picWidth\": \"图片宽度\",\n\t\t\"picHeight\": \"图片高度\",\n\t\t\"isSingle\": \"是否开启单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"images\": \"图片默认值\",\n\t\t\"folderSelectType\": \"附件/图片上传目录\",\n\t\t\"folderId\": \"目录id\",\n\t\t\"folderIdValueForLog\": \"目录id\",\n\t\t\"optionId\": \"选项关联字段id\",\n\t\t\"optionIdValueForLog\": \"选项关联字段id\",\n\t\t\"folderType\": \"上传目录设置\",\n\t\t\"optionName\": \"选项关联字段名称\",\n\t\t\"imgQuality\": \"图片质量\",\n\t\t\"isCopyUpload\": \"开启复制上传\",\n\t\t\"thumbnailClarity\": \"缩略图清晰度\"\n\t},\n\t{\n\t\t//选项矩阵 type=Matrix\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"matrixType\": \"矩阵类型\",\n\t\t\"options\": \"选项集合\",\n\t\t\"remind\": \"提醒\",\n\t\t\"showRemainingNumber\": \"字段选项显示剩余名额\",\n\t\t\"showSelectedNumber\": \"字段选项显示已选名额\",\n\t\t\"showSelectedPerson\": \"字段选项显示已选人员\",\n\t\t\"anonymousDisplayPerson\": \"字段选项已选人员匿名显示\",\n\t\t\"promptTextLabelId\": \"选项名额提示文字国际化标签id\",\n\t\t\"openValueKey\": \"字段选项是否开启valueKey设置\",\n\t\t\"hideScore\": \"隐藏分数\"\n\t},\n\t{\n\t\t//手机 type=Mobile\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"unique\": \"是否启用唯一值\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"内容\",\n\t\t\"regular\": \"正则校验设置\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"verifyCode\": \"是否开启短信验证码\",\n\t\t\"selectSignature\": \"选择签名\",\n\t\t\"quickDialing\": \"开启快速拨打\"\n\t},\n\t{\n\t\t//移动交互 type=MobileInteraction\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\"\n\t},\n\t{\n\t\t//金额 type=Money\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"数字范围最大值\",\n\t\t\"minNum\": \"数字范围最小值\",\n\t\t\"pointSize\": \"小数位\",\n\t\t\"isDelimiter\": \"是否显示千分位\",\n\t\t\"isCapital\": \"是否显示大写\",\n\t\t\"submitSel\": \"提交时选择币种\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"typeShort\": \"币种简称\",\n\t\t\"hasExtendColumn\": \"标记是否存在扩展字段\",\n\t\t\"capitalPosition\": \"大写显示位置\",\n\t\t\"displayMethod\": \"显示方式\",\n\t\t\"capitalPrecision\": \"大写“整”精度\",\n\t\t\"capitalSetting\": \"精度设置\",\n\t\t\"capitalFormat\": \"大写展示格式\"\n\t},\n\t{\n\t\t//监控运算 type=Monitor\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"isCapital\": \"是否显示大写\",\n\t\t\"pointSize\": \"小数位\",\n\t\t\"capitalPosition\": \"大写显示位置\",\n\t\t\"isDelimiter\": \"是否显示千分位\",\n\t\t\"ffMonitorType\": \"监控类型\",\n\t\t\"ffFormat\": \"日期格式\",\n\t\t\"ffDateType\": \"日期类型[工作日、自然日]\",\n\t\t\"ffMonitorFields\": \"监控字段\",\n\t\t\"capitalFormat\": \"大写展示格式\"\n\t},\n\t{\n\t\t//数字 type=Number\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"数字范围最大值\",\n\t\t\"minNum\": \"数字范围最小值\",\n\t\t\"pointSize\": \"小数位\",\n\t\t\"isDelimiter\": \"是否显示千分位\",\n\t\t\"isCapital\": \"是否显示大写\",\n\t\t\"numberType\": \"数字类型\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"capitalPosition\": \"大写显示位置\",\n\t\t\"isExchangeRates\": \"是否获取汇率\",\n\t\t\"localCurrency\": \"本币\",\n\t\t\"foreignCurrency\": \"外币\",\n\t\t\"exchangeRatesType\": \"汇率类型\",\n\t\t\"timePeriod\": \"期间字段\",\n\t\t\"capitalPrecision\": \"大写“整”精度\",\n\t\t\"capitalSetting\": \"精度设置\",\n\t\t\"displayFormat\": \"显示格式设置\",\n\t\t\"stepMode\": \"步进模式\",\n\t\t\"step\": \"单位步长\",\n\t\t\"capitalFormat\": \"大写展示格式\"\n\t},\n\t{\n\t\t//收发文单位 type=ODocReceive\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"relateExt\": \"关联扩展属性\",\n\t\t\"openLevels\": \"树形列表展开级数\",\n\t\t\"dataTitle\": \"数据标题\",\n\t\t\"displayOrder\": \"多选内容显示顺序\",\n\t\t\"isTextarea\": \"开启多行文本显示\",\n\t\t\"textBlockType\": \"间隔符\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"enableAggregation\": \"是否开启聚合\"\n\t},\n\t{\n\t\t//电话 type=Phone\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"unique\": \"是否启用唯一值\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"内容\",\n\t\t\"quickDialing\": \"开启快速拨打\"\n\t},\n\t{\n\t\t//地理位置 type=Position\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"defaultLng\": \"默认经度\",\n\t\t\"defaultLat\": \"默认维度\",\n\t\t\"defaultAddress\": \"默认地址\",\n\t\t\"isDefault\": \"是否设置默认值\",\n\t\t\"isAutoPosition\": \"是否开启自动定位\",\n\t\t\"hasExtendColumn\": \"标记是否存在扩展字段\",\n\t\t\"defaultExtend\": \"默认值扩展\"\n\t},\n\t{\n\t\t//评分 type=Raty\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxStar\": \"最大分数\",\n\t\t\"defaultStar\": \"默认选中个数\",\n\t\t\"half\": \"是否支持半星\",\n\t\t\"ratyPic\": \"外观显示\",\n\t\t\"iconSize\": \"图片大小\"\n\t},\n\t{\n\t\t//关联浏览 type=RelateBrowser\n\t\t\"browserType\": \"关联浏览-浏览类型\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"relateExt\": \"关联扩展属性\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\",\n\t\t\"dateRange\": \"时间期间映射\",\n\t\t\"selectRange\": \"可选范围\",\n\t\t\"previewResult\": \"显示效果\",\n\t\t\"includeChild\": \"是否包含下级\",\n\t\t\"isAddForRelation\": \"是否开启新增\"\n\t},\n\t{\n\t\t//关联文档 type=Document\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//关联集成 type=RelateIntegrate\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//关联公文 type=RelateODoc\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"formName\": \"关联表名称\",\n\t\t\"sformId\": \"关联表ID\",\n\t\t\"attendDateType\": \"统计时间\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"isAllFormData\": \"是否选择全部数据\",\n\t\t\"relatedCustomer\": \"关联客户控件ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"formEntity\": \"筛选条件\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"viewDataDetail\": \"是否开启显示详情\"\n\t},\n\t{\n\t\t//关联标签 type=RelateTag\n\t\t\"range\": \"标签选择范围\",\n\t\t\"isAddForRelation\": \"是否是新增\",\n\t\t\"displayType\": \"多选显示方式\"\n\t},\n\t{\n\t\t//提醒方式 type=ReminderMethod\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"reminderContent\": \"提醒内容\",\n\t\t\"reminderType\": \"提醒类型\"\n\t},\n\t{\n\t\t//预约组件 type=Reserve\n\t\t\"title\": \"标题\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"beginTime\": \"开始时间\",\n\t\t\"endTime\": \"结束时间\",\n\t\t\"reserveRoom\": \"预约对象\"\n\t},\n\t{\n\t\t//富文本 type=RichText\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"height\": \"文本框高度\",\n\t\t\"autogrow\": \"允许高度自撑\",\n\t\t\"content\": \"默认值\",\n\t\t\"maxHeight\": \"最大高度\",\n\t\t\"autoFocus\": \"自动获得光标\",\n\t\t\"defaultCursorPosition\": \"光标默认定位\",\n\t\t\"pasteFilter\": \"光标默认定位\",\n\t\t\"readonlyTransLink\": \"是否解析超链接\",\n\t\t\"enableVoiceSearch\": \"是否开启语音搜索\",\n\t\t\"topTools\": \"pc段设置\",\n\t\t\"mTopTools\": \"移动端设置\",\n\t\t\"mHeight\": \"手机端高度\",\n\t\t\"mMaxHeight\": \"手机端最大高度\",\n\t\t\"mAutogrow\": \"手机端是否允许高度自撑\",\n\t\t\"enableAt\": \"启用at功能\",\n\t\t\"enableAi\": \"启用文档AI功能\",\n\t\t\"defaultHideToolBar\": \"设置工具栏是否默认显示\",\n\t\t\"isRouteLayout\": \"新页面编辑\",\n\t\t\"isScrollToolbar\": \"工具栏折行展示\"\n\t},\n\t{\n\t\t//编号 type=SerialNumber\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"serialType\": \"新版编号选项\",\n\t\t\"dateType\": \"日期选项\",\n\t\t\"format\": \"日期格式\",\n\t\t\"dateFieldId\": \"日期字段dataKey\",\n\t\t\"optionFieldId\": \"选项字段dataKey\",\n\t\t\"length\": \"编号长度\",\n\t\t\"before\": \"编号前缀\",\n\t\t\"after\": \"编号后缀\",\n\t\t\"begin\": \"编号起始号码\",\n\t\t\"link\": \"编号连接符\",\n\t\t\"cycle\": \"编号重复周期\",\n\t\t\"optionSerials\": \"关联字段属性\",\n\t\t\"supportCustom\": \"是否支持自定义编号\"\n\t},\n\t{\n\t\t//开关 type=Switch\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"switchType\": \"关联浏览-浏览类型\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"content\": \"默认值\",\n\t\t\"options\": \"选项集合\",\n\t\t\"alias\": \"别名\"\n\t},\n\t{\n\t\t//树形 type=TreeSelect\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"templateId\": \"数据源ID\",\n\t\t\"selectLevel\": \"层级\",\n\t\t\"detailDefaultId\": \"默认值ID\",\n\t\t\"displayType\": \"多选显示方式\",\n\t\t\"isDefault\": \"是否开启默认值\",\n\t\t\"defaultExtend\": \"默认值扩展\",\n\t\t\"isSingle\": \"是否单选\",\n\t\t\"onlyChildSelect\": \"仅允许选择叶子节点\"\n\t},\n\t{\n\t\t//视频 type=VideoRecord\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"最大数量\",\n\t\t\"isSingle\": \"是否开启单选\",\n\t\t\"folderSelectType\": \"附件/图片上传目录\",\n\t\t\"folderId\": \"目录id\",\n\t\t\"folderIdValueForLog\": \"目录id\",\n\t\t\"optionId\": \"选项关联字段id\",\n\t\t\"optionIdValueForLog\": \"选项关联字段id\",\n\t\t\"folderType\": \"上传目录设置\"\n\t},\n\t{\n\t\t//音频 type=AudioRecord\n\t\t\"title\": \"字段名称\",\n\t\t\"showOrder\": \"字段顺序\",\n\t\t\"describe\": \"字段描述\",\n\t\t\"type\": \"组件类型\",\n\t\t\"maxNum\": \"附件最大数量\",\n\t\t\"isSingle\": \"是否开启单选\",\n\t\t\"folderSelectType\": \"附件/图片上传目录\",\n\t\t\"folderId\": \"目录id\",\n\t\t\"folderIdValueForLog\": \"目录id\",\n\t\t\"optionId\": \"选项关联字段id\",\n\t\t\"optionIdValueForLog\": \"选项关联字段id\",\n\t\t\"folderType\": \"上传目录设置\"\n\t}\n]"
+        }
+      ]
+    }
+  ]
+}

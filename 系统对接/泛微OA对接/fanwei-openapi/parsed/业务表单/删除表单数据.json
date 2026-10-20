@@ -1,0 +1,54 @@
+{
+  "id": "840715895266967553",
+  "name": "删除表单数据",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/delete",
+  "url_template": "{OpenApiOrigin}/form/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "reportId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单数据ID 获取表单数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除表单数据"
+  ],
+  "raw_text": "## 删除表单数据\n请求URL：\n- {OpenApiOrigin}/form/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| reportId | 是 | Long | 表单数据ID 获取表单数据ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/delete?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userid=5140826883110054023&reportId=4767963733701166226\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

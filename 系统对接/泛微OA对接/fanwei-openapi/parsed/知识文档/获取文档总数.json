@@ -1,0 +1,87 @@
+{
+  "id": "908315115675607040",
+  "name": "获取文档总数",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/documents/list/getAllCount",
+  "url_template": "{OpenApiOrigin}/api/doc/documents/list/getAllCount",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注content-type : application/json",
+    "备注content-type : application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "enableFullSearch",
+      "required": "",
+      "type": "boolean",
+      "description": "是否开启文档列表微搜查询"
+    },
+    {
+      "name": "invokeFullsearch",
+      "required": "",
+      "type": "boolean",
+      "description": "是否执行了微搜的相关逻辑"
+    },
+    {
+      "name": "count",
+      "required": "",
+      "type": "string",
+      "description": "数量"
+    },
+    {
+      "name": "fromFullSearch",
+      "required": "",
+      "type": "string",
+      "description": "是否最终执行了微搜查询"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取文档总数"
+  ],
+  "raw_text": "## 获取文档总数\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/documents/list/getAllCount\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| keywords | 否 | string | 搜索关键字 |\n| conditions | 否 | array | 搜索条件 |\n| conditions.id | 否 | string | 查询字段（name-名称，creator-创建人，author-负责人，create_time-创建时间，last_update_time-最后修改时间，doc_status-文档状态） |\n| conditions.type | 否 | string | 查询条件类型（array： 字段值是多个；date：日期范围） |\n| conditions.operate | 否 | string | 逻辑符（eq: 等于；like : 模糊查询） |\n| conditions.value | 否 | string | 过滤值 |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\n| data | object | 返回数据 |\n| enableFullSearch | boolean | 是否开启文档列表微搜查询 |\n| invokeFullsearch | boolean | 是否执行了微搜的相关逻辑 |\n| count | string | 数量 |\n| fromFullSearch | string | 是否最终执行了微搜查询 |\n备注content-type : application/json\nJava sdk调用示例："
+}

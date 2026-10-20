@@ -1,0 +1,306 @@
+{
+  "id": "908313002534920193",
+  "name": "新建、编辑文档-是否签出验证",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/checkEditLock",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/checkEditLock",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回消息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "提示语"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回的文档相关信息"
+    },
+    {
+      "name": "client",
+      "required": "",
+      "type": "string",
+      "description": "客户端"
+    },
+    {
+      "name": "document",
+      "required": "",
+      "type": "object",
+      "description": "文档对象"
+    },
+    {
+      "name": "document.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "document.commentCount",
+      "required": "",
+      "type": "string",
+      "description": "评论数量"
+    },
+    {
+      "name": "document.deleted",
+      "required": "",
+      "type": "string",
+      "description": "文档是否删除"
+    },
+    {
+      "name": "document.downloadCount",
+      "required": "",
+      "type": "string",
+      "description": "下载数量"
+    },
+    {
+      "name": "document.readCount",
+      "required": "",
+      "type": "string",
+      "description": "阅读数量"
+    },
+    {
+      "name": "document.praise",
+      "required": "",
+      "type": "string",
+      "description": "点赞数量"
+    },
+    {
+      "name": "document.enPraise",
+      "required": "",
+      "type": "string",
+      "description": "是否开启点赞"
+    },
+    {
+      "name": "document.watched",
+      "required": "",
+      "type": "string",
+      "description": "是否关注"
+    },
+    {
+      "name": "document.unread",
+      "required": "",
+      "type": "string",
+      "description": "是否未读"
+    },
+    {
+      "name": "document.newConment",
+      "required": "",
+      "type": "string",
+      "description": "是否有新的反馈"
+    },
+    {
+      "name": "document.monopoly",
+      "required": "",
+      "type": "string",
+      "description": "是否开启附件独占权限"
+    },
+    {
+      "name": "document.shareOut",
+      "required": "",
+      "type": "string",
+      "description": "是否外部分享"
+    },
+    {
+      "name": "document.hasAttachment",
+      "required": "",
+      "type": "string",
+      "description": "是否包含附件"
+    },
+    {
+      "name": "document.deletePermission",
+      "required": "",
+      "type": "string",
+      "description": "删除权限"
+    },
+    {
+      "name": "document.downloadPermission",
+      "required": "",
+      "type": "string",
+      "description": "下载权限"
+    },
+    {
+      "name": "document.fromSearch",
+      "required": "",
+      "type": "string",
+      "description": "搜索"
+    },
+    {
+      "name": "document.excludeAttach",
+      "required": "",
+      "type": "string",
+      "description": "排除附件"
+    },
+    {
+      "name": "document.withoutPermission",
+      "required": "",
+      "type": "string",
+      "description": "查询的时候不涉及权限"
+    },
+    {
+      "name": "document.excludeDocumentSubscribeFlag",
+      "required": "",
+      "type": "string",
+      "description": "是否排除已订阅的标记"
+    },
+    {
+      "name": "document.openClassifiedProtection",
+      "required": "",
+      "type": "string",
+      "description": "租户是否开启密级"
+    },
+    {
+      "name": "document.alreadySetToDoMatter",
+      "required": "",
+      "type": "string",
+      "description": "是否已经设为待办事项"
+    },
+    {
+      "name": "document.enableListViewPenetrateSubFolder",
+      "required": "",
+      "type": "string",
+      "description": "开启列表视图穿透下级文件夹"
+    },
+    {
+      "name": "document.topType",
+      "required": "",
+      "type": "string",
+      "description": "类型"
+    },
+    {
+      "name": "document.isHistory",
+      "required": "",
+      "type": "string",
+      "description": "是否历史版本"
+    },
+    {
+      "name": "document.extendDefShare",
+      "required": "",
+      "type": "string",
+      "description": "是否继承文件夹默认共享"
+    },
+    {
+      "name": "document.noRight",
+      "required": "",
+      "type": "string",
+      "description": "查询无权限的文档"
+    },
+    {
+      "name": "displayTemplateEnabled",
+      "required": "",
+      "type": "string",
+      "description": "开启显示模板"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "string",
+      "description": "用户id"
+    },
+    {
+      "name": "createNewVersion",
+      "required": "",
+      "type": "string",
+      "description": "创建新版本"
+    },
+    {
+      "name": "resultMap",
+      "required": "",
+      "type": "object",
+      "description": "结果集"
+    },
+    {
+      "name": "resultMap.currentUserFlag",
+      "required": "",
+      "type": "string",
+      "description": "当前用户标志"
+    },
+    {
+      "name": "resultMap.checked",
+      "required": "",
+      "type": "string",
+      "description": "已签出"
+    },
+    {
+      "name": "editActiveTime",
+      "required": "",
+      "type": "string",
+      "description": "过期时间"
+    },
+    {
+      "name": "processEvent",
+      "required": "",
+      "type": "string",
+      "description": "事件"
+    },
+    {
+      "name": "delIdList",
+      "required": "",
+      "type": "array",
+      "description": "删除id集合"
+    },
+    {
+      "name": "canSendMsg",
+      "required": "",
+      "type": "string",
+      "description": "能否发送消息"
+    },
+    {
+      "name": "deleteStatus",
+      "required": "",
+      "type": "string",
+      "description": "删除状态"
+    },
+    {
+      "name": "showAccess",
+      "required": "",
+      "type": "string",
+      "description": "是否显示附件"
+    },
+    {
+      "name": "shouldRefresh",
+      "required": "",
+      "type": "string",
+      "description": "是否刷新"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建、编辑文档-是否签出验证"
+  ],
+  "raw_text": "## 新建、编辑文档-是否签出验证\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/checkEditLock\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| document.id | 是 | string | 文档id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回消息 |\n| errcode | string | 状态码 |\n| errmsg | string | 提示语 |\n| data | object | 返回的文档相关信息 |\n| client | string | 客户端 |\n| document | object | 文档对象 |\n| document.id | string | 文档id |\n| document.commentCount | string | 评论数量 |\n| document.deleted | string | 文档是否删除 |\n| document.downloadCount | string | 下载数量 |\n| document.readCount | string | 阅读数量 |\n| document.praise | string | 点赞数量 |\n| document.enPraise | string | 是否开启点赞 |\n| document.watched | string | 是否关注 |\n| document.unread | string | 是否未读 |\n| document.newConment | string | 是否有新的反馈 |\n| document.monopoly | string | 是否开启附件独占权限 |\n| document.shareOut | string | 是否外部分享 |\n| document.hasAttachment | string | 是否包含附件 |\n| document.deletePermission | string | 删除权限 |\n| document.downloadPermission | string | 下载权限 |\n| document.fromSearch | string | 搜索 |\n| document.excludeAttach | string | 排除附件 |\n| document.withoutPermission | string | 查询的时候不涉及权限 |\n| document.excludeDocumentSubscribeFlag | string | 是否排除已订阅的标记 |\n| document.openClassifiedProtection | string | 租户是否开启密级 |\n| document.alreadySetToDoMatter | string | 是否已经设为待办事项 |\n| document.enableListViewPenetrateSubFolder | string | 开启列表视图穿透下级文件夹 |\n| document.topType | string | 类型 |\n| document.isHistory | string | 是否历史版本 |\n| document.extendDefShare | string | 是否继承文件夹默认共享 |\n| document.noRight | string | 查询无权限的文档 |\n| displayTemplateEnabled | string | 开启显示模板 |\n| userId | string | 用户id |\n| createNewVersion | string | 创建新版本 |\n| resultMap | object | 结果集 |\n| resultMap.currentUserFlag | string | 当前用户标志 |\n| resultMap.checked | string | 已签出 |\n| editActiveTime | string | 过期时间 |\n| processEvent | string | 事件 |\n| delIdList | array | 删除id集合 |\n| canSendMsg | string | 能否发送消息 |\n| deleteStatus | string | 删除状态 |\n| showAccess | string | 是否显示附件 |\n| shouldRefresh | string | 是否刷新 |\nJava sdk调用示例："
+}

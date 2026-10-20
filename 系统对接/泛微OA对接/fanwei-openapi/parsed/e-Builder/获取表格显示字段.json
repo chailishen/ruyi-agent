@@ -1,0 +1,91 @@
+{
+  "id": "840721543157350400",
+  "name": "获取表格显示字段",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/formcfg/list/v1/getListDatas",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/formcfg/list/v1/getListDatas",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "listId",
+      "required": "是",
+      "type": "Long",
+      "description": "表格 id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "int",
+      "description": "分页大小"
+    },
+    {
+      "name": "current",
+      "required": "",
+      "type": "int",
+      "description": "当前页码"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "字段显示名"
+    },
+    {
+      "name": "dataIndex",
+      "required": "",
+      "type": "String",
+      "description": "字段标识"
+    },
+    {
+      "name": "primaryKey",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否主键"
+    },
+    {
+      "name": "columns",
+      "required": "",
+      "type": "List",
+      "description": "字段列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表格显示字段"
+  ],
+  "raw_text": "## 获取表格显示字段\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/formcfg/list/v1/getListDatas\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| listId | 是 | Long | 表格 id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| pageSize | int | 分页大小 |\n| current | int | 当前页码 |\n| title | String | 字段显示名 |\n| dataIndex | String | 字段标识 |\n| primaryKey | Boolean | 是否主键 |\n| columns | List | 字段列表 |\nJava sdk调用示例："
+}

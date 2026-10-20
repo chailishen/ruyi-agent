@@ -1,0 +1,45 @@
+{
+  "id": "840673581315399680",
+  "name": "免登第三方-获取本系统token",
+  "module": "免登",
+  "module_path": [
+    "免登"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": null,
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "app_key",
+      "required": "是",
+      "type": "string",
+      "description": "应用app_key"
+    },
+    {
+      "name": "redirect_uri",
+      "required": "是",
+      "type": "string",
+      "description": "第三方系统接收身份令牌地址"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "eteams_token",
+      "required": "",
+      "type": "String",
+      "description": "三方系统的免登本系统令牌"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "免登第三方-获取本系统token",
+    "开放平台免登套件"
+  ],
+  "raw_text": "## 免登第三方-获取本系统token\n#### 开放平台免登套件\n详见：{origin}/sp/openapi/base/doc/kit/auth\n简要描述：\n- 用于从本系统免登到第三方业务系统\n请求URL：\n- {origin}/api/bs/open/auth/third?app_key=%s&redirect_uri=%s\n备注：\n此请求发起触发必须在本系统中进行，大家可通过构建应用或者菜单设置功能，添加url类型菜单指向该地址实现免登。\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| app_key | 是 | string | 应用app_key |\n| redirect_uri | 是 | string | 第三方系统接收身份令牌地址 |\n请求示例：\nredirect示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| eteams_token | String | 三方系统的免登本系统令牌 |"
+}

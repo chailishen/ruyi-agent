@@ -1,0 +1,258 @@
+{
+  "id": "840675041537171457",
+  "name": "按更新时间查询人员信息",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v3/findUpdateUser",
+  "url_template": "{OpenApiOrigin}/user/v3/findUpdateUser",
+  "method": "GET",
+  "content_type": null,
+  "notes": [
+    "备注"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "beginDate",
+      "required": "是",
+      "type": "string",
+      "description": "开始时间，格式（yyyy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "string",
+      "description": "结束时间，格式（yyyy-MM-dd HH:mm:ss）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门列表"
+    },
+    {
+      "name": "mobile",
+      "required": "",
+      "type": "String",
+      "description": "手机号码"
+    },
+    {
+      "name": "email",
+      "required": "",
+      "type": "String",
+      "description": "邮箱"
+    },
+    {
+      "name": "jobNum",
+      "required": "",
+      "type": "String",
+      "description": "工号"
+    },
+    {
+      "name": "hireDdate",
+      "required": "",
+      "type": "String",
+      "description": "入职日期"
+    },
+    {
+      "name": "sex",
+      "required": "",
+      "type": "String",
+      "description": "性别"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "成员状态：在职normal、离职unavailable、已邀请invited"
+    },
+    {
+      "name": "account",
+      "required": "",
+      "type": "String",
+      "description": "帐号"
+    },
+    {
+      "name": "telephone",
+      "required": "",
+      "type": "String",
+      "description": "电话"
+    },
+    {
+      "name": "otherDepartments",
+      "required": "",
+      "type": "List",
+      "description": "兼职部门列表"
+    },
+    {
+      "name": "position",
+      "required": "",
+      "type": "String",
+      "description": "岗位"
+    },
+    {
+      "name": "otherPositions",
+      "required": "",
+      "type": "List",
+      "description": "兼职岗位列表"
+    },
+    {
+      "name": "grade",
+      "required": "",
+      "type": "String",
+      "description": "职级"
+    },
+    {
+      "name": "superior",
+      "required": "",
+      "type": "String",
+      "description": "上级"
+    },
+    {
+      "name": "education",
+      "required": "",
+      "type": "String",
+      "description": "学历"
+    },
+    {
+      "name": "degree",
+      "required": "",
+      "type": "String",
+      "description": "学位"
+    },
+    {
+      "name": "graduate_School",
+      "required": "",
+      "type": "String",
+      "description": "毕业院校"
+    },
+    {
+      "name": "graduate_Date",
+      "required": "",
+      "type": "String",
+      "description": "毕业日期"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "Object",
+      "description": "自定义字段信息"
+    },
+    {
+      "name": "​updateTime",
+      "required": "",
+      "type": "String",
+      "description": "基本信息更新时间"
+    },
+    {
+      "name": "id_No",
+      "required": "",
+      "type": "String",
+      "description": "身份证"
+    },
+    {
+      "name": "birthday",
+      "required": "",
+      "type": "String",
+      "description": "出生日期"
+    },
+    {
+      "name": "age",
+      "required": "",
+      "type": "Integer",
+      "description": "年龄"
+    },
+    {
+      "name": "marital_Status",
+      "required": "",
+      "type": "String",
+      "description": "婚姻状况：married：已婚、unmarried：未婚、divorced：离异"
+    },
+    {
+      "name": "native_Place",
+      "required": "",
+      "type": "String",
+      "description": "籍贯"
+    },
+    {
+      "name": "nation",
+      "required": "",
+      "type": "String",
+      "description": "民族"
+    },
+    {
+      "name": "householdType",
+      "required": "",
+      "type": "String",
+      "description": "户口类型"
+    },
+    {
+      "name": "politicsStatus",
+      "required": "",
+      "type": "String",
+      "description": "政治面貌"
+    },
+    {
+      "name": "residence_Place",
+      "required": "",
+      "type": "String",
+      "description": "现居住地"
+    },
+    {
+      "name": "family_Contact",
+      "required": "",
+      "type": "String",
+      "description": "家庭联系方式"
+    },
+    {
+      "name": "work_Year",
+      "required": "",
+      "type": "Double",
+      "description": "个人工龄"
+    },
+    {
+      "name": "child_Status",
+      "required": "",
+      "type": "String",
+      "description": "子女状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "注：本接口为老接口，不推荐使用，请优先使用查询人员-高级搜索接口\n简要描述：\n- 根据时间段查询新增或修改的人员信息\n请求URL：\n- {OpenApiOrigin}/user/v3/findUpdateUser\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n| beginDate | 是 | string | 开始时间，格式（yyyy-MM-dd HH:mm:ss） |\n| endDate | 是 | string | 结束时间，格式（yyyy-MM-dd HH:mm:ss） |\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v3/findUpdateUser?access_token=9ca1406ef36c8b92467fb207c6f71296&beginDate=2021-08-26 00:00:00&endDate=2021-08-31 00:00:00\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userid | String | 用户ID |\n| name | String | 用户名 |\n| department | List | 部门列表 |\n| mobile | String | 手机号码 |\n| email | String | 邮箱 |\n| jobNum | String | 工号 |\n| hireDdate | String | 入职日期 |\n| sex | String | 性别 |\n| status | String | 成员状态：在职normal、离职unavailable、已邀请invited |\n| account | String | 帐号 |\n| telephone | String | 电话 |\n| otherDepartments | List | 兼职部门列表 |\n| position | String | 岗位 |\n| otherPositions | List | 兼职岗位列表 |\n| grade | String | 职级 |\n| superior | String | 上级 |\n| education | String | 学历 |\n| degree | String | 学位 |\n| graduate_School | String | 毕业院校 |\n| graduate_Date | String | 毕业日期 |\n| formData | Object | 自定义字段信息 |\n| ​updateTime | String | 基本信息更新时间 |\n| id_No | String | 身份证 |\n| birthday | String | 出生日期 |\n| age | Integer | 年龄 |\n| marital_Status | String | 婚姻状况：married：已婚、unmarried：未婚、divorced：离异 |\n| native_Place | String | 籍贯 |\n| nation | String | 民族 |\n| householdType | String | 户口类型 |\n| politicsStatus | String | 政治面貌 |\n| residence_Place | String | 现居住地 |\n| family_Contact | String | 家庭联系方式 |\n| work_Year | Double | 个人工龄 |\n| child_Status | String | 子女状态 |\n备注\n| 能够触发增量接口的字段 |\n| --- |\n| 基本信息-姓名 |\n| 基本信息-邮箱 |\n| 基本信息-手机号 |\n| 基本信息-入职时间 |\n| 基本信息-性别 |\n| 基本信息-电话 |\n| 基本信息-工号 |\n| 基本信息-部门 |\n| 基本信息-岗位 |\n| 基本信息-职级 |\n| 基本信息-上级 |\n| 基本信息-状态 |\n| 个人信息-身份证号 |\n| 个人信息-出生日期 |\n| 个人信息-年龄 |\n| 个人信息-婚姻状况 |\n| 个人信息-学历 |\n| 个人信息-学位 |\n| 个人信息-毕业院校 |\n| 个人信息-毕业日期 |\n| 个人信息-籍贯 |\n| 个人信息-民族 |\n| 个人信息-户口类型 |\n| 个人信息-政治面貌 |\n| 个人信息-现居地 |\n| 个人信息-家庭联系方式 |\n| 个人信息-个人工龄 |\n| 个人信息-司龄 |\n| 个人信息-子女状态 |\n| 个人信息-自定义字段 |\nJava sdk调用示例："
+}

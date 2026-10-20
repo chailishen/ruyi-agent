@@ -1,0 +1,62 @@
+{
+  "id": "874490457225699328",
+  "name": "征询回复",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/consulReply",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/consulReply",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "意见"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "征询回复"
+  ],
+  "raw_text": "## 征询回复\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/consulReply\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID |\n| remark | 否 | String | 意见 |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

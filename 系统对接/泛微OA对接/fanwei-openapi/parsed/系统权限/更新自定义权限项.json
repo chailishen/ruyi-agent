@@ -1,0 +1,21 @@
+{
+  "id": "405108594141298688",
+  "name": "更新自定义权限项",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "自定义权限项同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/custom/permission/v1/batchUpdateCustomPermissionSet",
+  "url_template": "{OpenApiOrigin}/api/auth/custom/permission/v1/batchUpdateCustomPermissionSet",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/auth/custom/permission/v1/batchUpdateCustomPermissionSet\n请求方式：\n- POST\n参数说明：\n- AuthCustomPermissionSetReq（权限项相关接口参数）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| data | List<CustomPermissionSetDTO> | 具体权限项数据 |\n| langId | Integer | 语言ID-默认为7中文 |\n| idempotent | boolean | 是否幂等 |\n- CustomPermissionSetDTO（权限项详细信息）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| menuCode | String | 菜单编码 |\n| permissionSetName | String | 权限项名称 |\n| permissionSetCode | String | 权限项编码 |\n| parentCode | String | 上级编码 |\n| displayOrder | Integer | 显示顺序 |\n请求示例：\n返回示例：\n返回参数说明：\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| id | Long | 权限项ID |\n| menuCode | String | 菜单编码 |\n| permissionSetCode | String | 权限项编码 |\n| msg | String | 错误信息 |"
+}

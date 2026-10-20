@@ -1,0 +1,162 @@
+{
+  "id": "908316571778572288",
+  "name": "文件夹列表",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/folder/list",
+  "url_template": "{OpenApiOrigin}/api/doc/folder/list",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "array",
+      "description": "返回数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "文件夹id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "文件夹名称"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "object",
+      "description": "父级文件夹"
+    },
+    {
+      "name": "parent.id",
+      "required": "",
+      "type": "string",
+      "description": "父级文件夹id"
+    },
+    {
+      "name": "parent.deleted",
+      "required": "",
+      "type": "string",
+      "description": "父级文件夹是否被删除"
+    },
+    {
+      "name": "parent.transformFolderName",
+      "required": "",
+      "type": "boolean",
+      "description": "父级文件夹名称是否国际化"
+    },
+    {
+      "name": "parent.permissionFromChild",
+      "required": "",
+      "type": "boolean",
+      "description": "父级文件夹是否继承下级文件夹的权限"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "string",
+      "description": "文件夹类型"
+    },
+    {
+      "name": "path",
+      "required": "",
+      "type": "string",
+      "description": "文件夹路径"
+    },
+    {
+      "name": "deleted",
+      "required": "",
+      "type": "string",
+      "description": "文件夹是否被删除"
+    },
+    {
+      "name": "sequence",
+      "required": "",
+      "type": "string",
+      "description": "文件夹顺序"
+    },
+    {
+      "name": "transformFolderName",
+      "required": "",
+      "type": "string",
+      "description": "文件夹名称是否国际化"
+    },
+    {
+      "name": "departmentId",
+      "required": "",
+      "type": "string",
+      "description": "文件夹所属机构"
+    },
+    {
+      "name": "permissionFromChild",
+      "required": "",
+      "type": "boolean",
+      "description": "是否继承下级文件夹的权限"
+    },
+    {
+      "name": "sourceType",
+      "required": "",
+      "type": "string",
+      "description": "资源类型"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "string",
+      "description": "是否删除"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "string",
+      "description": "创建时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文件夹列表"
+  ],
+  "raw_text": "## 文件夹列表\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/folder/list\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| folderId | 是 | string | 文件夹id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\n| data | array | 返回数据 |\n| id | string | 文件夹id |\n| name | string | 文件夹名称 |\n| parent | object | 父级文件夹 |\n| parent.id | string | 父级文件夹id |\n| parent.deleted | string | 父级文件夹是否被删除 |\n| parent.transformFolderName | boolean | 父级文件夹名称是否国际化 |\n| parent.permissionFromChild | boolean | 父级文件夹是否继承下级文件夹的权限 |\n| type | string | 文件夹类型 |\n| path | string | 文件夹路径 |\n| deleted | string | 文件夹是否被删除 |\n| sequence | string | 文件夹顺序 |\n| transformFolderName | string | 文件夹名称是否国际化 |\n| departmentId | string | 文件夹所属机构 |\n| permissionFromChild | boolean | 是否继承下级文件夹的权限 |\n| sourceType | string | 资源类型 |\n| deleteType | string | 是否删除 |\n| createTime | string | 创建时间 |\nJava sdk调用示例："
+}

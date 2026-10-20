@@ -1,0 +1,88 @@
+{
+  "id": "840721848082374656",
+  "name": "表单数据删除",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模",
+    "表单数据操作"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/dataset/v1/deleteData",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/dataset/v1/deleteData",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "datajson",
+      "required": "是",
+      "type": "Object",
+      "description": "数据信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "objId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单id"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "数据id"
+    },
+    {
+      "name": "doAction",
+      "required": "否",
+      "type": "String",
+      "description": "是否执行action动作(默认不执行; y执行; n不执行; )"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "isSuccess",
+      "required": "",
+      "type": "Boolean",
+      "description": "删除状态"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "删除提示"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "表单数据删除"
+  ],
+  "raw_text": "## 表单数据删除\n注：本接口为老接口，推荐使用删除表单数据（V2）接口，交互和响应更好\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/dataset/v1/deleteData\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| datajson | 是 | Object | 数据信息 |\ndatajson示例：\ndatajson示例参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| objId | 是 | Long | 表单id |\n| id | 是 | Long | 数据id |\n| doAction | 否 | String | 是否执行action动作(默认不执行; y执行; n不执行; ) |\n备注：\n- doAction参数，除说明描述中值除外，其他传值均代表默认\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| isSuccess | Boolean | 删除状态 |\n| msg | String | 删除提示 |"
+}

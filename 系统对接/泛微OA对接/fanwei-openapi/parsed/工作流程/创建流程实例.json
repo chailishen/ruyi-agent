@@ -1,0 +1,470 @@
+{
+  "id": "276083048938733568",
+  "name": "创建流程实例",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v2/doCreateRequest",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v2/doCreateRequest",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "package com.weaver.core.demo;\n\nimport cn.hutool.http.HttpRequest;\nimport cn.hutool.json.JSONUtil;\nimport com.alibaba.fastjson.JSONArray;\nimport com.alibaba.fastjson.JSONObject;\nimport com.weaver.core.constant.TestConstant;\n\n/**\n * 创建并加签流程\n *\n * @author:chenwh\n */\npublic class DoCreateRequestDemoV2 extends DemoBase {\n\n    public static void main(String[] args) {\n        String response = new DoCreateRequestDemoV2().doCreateRequest();\n        System.out.println(response);\n    }\n\n    /**\n     * 创建并加签流程\n     * {\"message\":{\"errcode\":\"0\",\"errmsg\":\"流程操作成功，直接刷新流程表单\",\"requestId\":\"959468107453014028\",\"otherData\":{}}}\n     *\n     * @return\n     */\n    public String doCreateRequest() {\n        return doCreateRequest(TestConstant.WORKFLOW_YBLC);\n    }\n\n    public String doCreateRequest(long workflowId) {\n        String url = HOST + \"/api/workflow/core/paService/v2/doCreateRequest?access_token=\" + TOKEN;\n\n        JSONObject param = new JSONObject();\n        param.put(\"userid\", TestConstant.USER_CHENWH);\n        param.put(\"workflowId\", workflowId);\n        param.put(\"requestname\", \"demo创建流程\");\n        // true：流程创建并流转失败时删除流程\n        param.put(\"delReqFlowFaild\", true);\n        // 1：创建并流转流程\n        param.put(\"isnextflow\", 1);\n        // true：创建并流转时，校验表单必填\n        param.put(\"isVerifyFormRequired\", true);\n        // 手写表单数据\n        param.put(\"formData\", getFromDataByDataDetails());\n        // 直接传递dataId\n//        param.put(\"formData\", getFromDataByDataId());\n\n        // 加签参数\n        param.put(\"addSignEntity\", operatorIds());\n//        param.put(\"addSignEntity\", addFreeNodeData());\n\n        return HttpRequest.post(url)\n                .header(\"Content-Type\", \"application/json\")\n                // 参数放入body\n                .body(JSONUtil.toJsonStr(param))\n                .execute()\n                .body();\n    }\n\n    /**\n     * 创建流程时，可以直接传dataId即可。\n     *\n     * @return\n     */\n    private JSONObject getFromDataByDataId() {\n        JSONObject formData = new JSONObject();\n        formData.put(\"dataId\", 889735619860865025L);\n        return formData;\n    }\n\n    private JSONObject getFromDataByDataDetails() {\n        JSONObject formData = new JSONObject();\n        JSONArray dataDetails = new JSONArray();\n        formData.put(\"dataDetails\", dataDetails);\n\n        // 普通字段（输入框）\n        JSONObject input = new JSONObject();\n        input.put(\"fieldId\", 701893257943613457L);\n        input.put(\"content\", \"多行文本\");\n        dataDetails.add(input);\n\n        // 普通字段（输入框），dataKey 和 fieldId 二选一即可。\n        JSONObject inputDataKey = new JSONObject();\n        inputDataKey.put(\"dataKey\", \"dhwb\");\n        inputDataKey.put(\"content\", \"多行文本1\");\n//        dataDetails.add(inputDataKey);\n\n        // 钱\n        JSONObject inputMoney = new JSONObject();\n        inputMoney.put(\"fieldId\", 701893257943613111L);\n        inputMoney.put(\"content\", 999.6);\n        JSONObject extendParams = new JSONObject();\n        extendParams.put(\"moneyType\", \"RMB\");\n        inputMoney.put(\"extendParams\", extendParams);\n        dataDetails.add(inputMoney);\n\n        // 浏览按钮\n        JSONObject details = new JSONObject();\n        JSONArray dataOptions = new JSONArray();\n        JSONObject option = new JSONObject();\n        details.put(\"fieldId\", 701893266516770830L);\n        details.put(\"dataOptions\", dataOptions);\n        option.put(\"content\", \"ydy测试d\");\n        option.put(\"optionId\", 3572045400610556983L);\n        dataOptions.add(option);\n        dataDetails.add(details);\n\n\n        // 明细数据\n        // 明细第一行，某一列\n        JSONObject dateIndex = new JSONObject();\n        dateIndex.put(\"fieldId\", 701893275140259847L);\n        dateIndex.put(\"dataIndex\", 1);\n        dateIndex.put(\"content\", 4);\n        dataDetails.add(dateIndex);\n        // 明细第一行，某一列\n        JSONObject dateIndex1 = new JSONObject();\n        dateIndex1.put(\"fieldId\", 701893275140259852L);\n        dateIndex1.put(\"dataIndex\", 1);\n        dateIndex1.put(\"content\", 5);\n        dataDetails.add(dateIndex1);\n\n        // 明细行，传递dataKey 的形式，必须传递subFormId\n        JSONObject dateIndex2 = new JSONObject();\n        dateIndex2.put(\"dataKey\", \"mxh1\");\n        dateIndex2.put(\"dataIndex\", 1);\n        dateIndex2.put(\"content\", 5);\n        dateIndex2.put(\"subFormId\", 5955300098899145213L);\n//        dataDetails.add(dateIndex1);\n\n        return formData;\n    }\n\n    /**\n     * operatorIds 方式加签\n     *\n     * @return\n     */\n    private JSONObject operatorIds() {\n        JSONObject param = new JSONObject();\n        param.put(\"nextNodeEditPurview\", 0);\n        param.put(\"nodeType\", 1);\n        param.put(\"isParallel\", 1);\n        param.put(\"operatorIds\", TestConstant.USER_CHENWH + \",\" + TestConstant.USER_ZMM);\n        return param;\n    }\n\n    /**\n     * addFreeNodeData 方式加签\n     *\n     * @return\n     */\n    private JSONObject addFreeNodeData() {\n        JSONObject param = new JSONObject();\n        JSONArray array = new JSONArray();\n        param.put(\"addFreeNodeData\", array);\n        // 一个arrays1 就是一个分支\n        JSONArray array1 = new JSONArray();\n        JSONArray array2 = new JSONArray();\n        array.add(array1);\n        array.add(array2);\n\n        // 往分支中添加节点\n        JSONObject node1 = new JSONObject();\n        node1.put(\"nodeName\", \"节点1\");\n        node1.put(\"operatorIds\", TestConstant.USER_CHENWH);\n        node1.put(\"ccOperators\", TestConstant.USER_ZMM);\n        node1.put(\"isModifiable\", 0);\n        node1.put(\"signType\", 1);\n        node1.put(\"ccSignType\", 3);\n        array1.add(node1);\n\n        JSONObject node2 = new JSONObject();\n        node2.put(\"nodeName\", \"节点2\");\n        node2.put(\"operatorIds\", TestConstant.USER_YDY_D);\n        node2.put(\"ccOperators\", TestConstant.USER_ZMM);\n        node2.put(\"isModifiable\", 1);\n        node2.put(\"signType\", 2);\n        node2.put(\"ccSignType\", 4);\n        array2.add(node1);\n        array2.add(node2);\n        return param;\n    }\n}"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "Long",
+      "description": "用户信息 获取用户信息"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "Long",
+      "description": "工作流Id"
+    },
+    {
+      "name": "requestname",
+      "required": "",
+      "type": "String",
+      "description": "创建的流程实例标题（不输入按照默认标题组成生成标题）"
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "String",
+      "description": "签字意见内容"
+    },
+    {
+      "name": "isnextflow",
+      "required": "",
+      "type": "int",
+      "description": "是否流转到下一节点：0 否，1 是。默认值：0"
+    },
+    {
+      "name": "requestSecLevel",
+      "required": "",
+      "type": "int",
+      "description": "密级（系统开启密级才使用这个参数），值大于0 才生效。且开启了密级，则获取创建人能获取的最大密级。"
+    },
+    {
+      "name": "requestSecValidity",
+      "required": "",
+      "type": "String",
+      "description": "保密期限（传递密级时才传递该参数）；非数字；"
+    },
+    {
+      "name": "isVerifyFormRequired",
+      "required": "",
+      "type": "boolean",
+      "description": "isnextflow=1时，true：要校验表单必填。false：不校验表单必填。默认值：false"
+    },
+    {
+      "name": "isExecuteCreateAddAction",
+      "required": "",
+      "type": "boolean",
+      "description": "true：执行创建节点前附加操作，false：不执行创建节点前附加操作。默认值：false"
+    },
+    {
+      "name": "isVerifyPer",
+      "required": "",
+      "type": "int",
+      "description": "是否验证用户创建流程权限；0：不验证。1：验证。默认值： 1；"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "可以自定义流程ID。"
+    },
+    {
+      "name": "delReqFlowFaild",
+      "required": "",
+      "type": "boolean",
+      "description": "创建并流转失败的流程是否要删除掉；true：删除。false：不删除。默认值：false"
+    },
+    {
+      "name": "businessData",
+      "required": "",
+      "type": "String",
+      "description": "数据来源"
+    },
+    {
+      "name": "moduleDataId",
+      "required": "",
+      "type": "long",
+      "description": "关联模块数据ID（默认值0）"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "json",
+      "description": "表单数据(详细字段说明看下方)"
+    },
+    {
+      "name": "requestLevel",
+      "required": "",
+      "type": "int",
+      "description": "紧急程度 0：正常； 1：重要； 2：紧急。默认值：0"
+    },
+    {
+      "name": "addSignEntity",
+      "required": "",
+      "type": "json",
+      "description": "加签参数对象，若传递了则进行加签。"
+    },
+    {
+      "name": "identityId",
+      "required": "",
+      "type": "long",
+      "description": "被代理人ID"
+    },
+    {
+      "name": "identityType",
+      "required": "",
+      "type": "int",
+      "description": "1：兼岗，2：委托"
+    },
+    {
+      "name": "selectFlowParam",
+      "required": "",
+      "type": "JSON",
+      "description": "指定流转相关参数"
+    },
+    {
+      "name": "exceptionHandleInfo",
+      "required": "",
+      "type": "map",
+      "description": "异常处理由用户选择操作者参数；若节点异常处理未设置由用户选择操作者，传递了也不会生效；KEY：节点ID；VALUE：异常处理操作者数据；"
+    },
+    {
+      "name": "imRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送IM提醒"
+    },
+    {
+      "name": "emailRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送邮件提醒"
+    },
+    {
+      "name": "smsRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送短信提醒"
+    },
+    {
+      "name": "mailAndSmsMsgParam",
+      "required": "",
+      "type": "json",
+      "description": "节点允许修改提醒方式时，流转时，可以选择是否发送短信邮件提醒"
+    },
+    {
+      "name": "isNewFormData",
+      "required": "",
+      "type": "boolean",
+      "description": "true：可以传递表单高级参数（seniorFormParam生效）。false：仅仅传递表达数据（默认值）。"
+    },
+    {
+      "name": "seniorFormParam",
+      "required": "",
+      "type": "json",
+      "description": "表单高级参数，isNewFormData=true时才生效"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "needDefaultValue",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：给表单赋值默认值，false：默认值"
+    },
+    {
+      "name": "execRelate",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否执行数据砖取；true：执行。false：默认值。"
+    },
+    {
+      "name": "execMonitor",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否执行运算：true：执行；false：默认值。"
+    },
+    {
+      "name": "validate",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否开启数据查重校验；true：开启。false：默认值。"
+    },
+    {
+      "name": "needValidateInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "validate=true时生效，查重结果是否返回具体信息；true：返回；false：不返回。"
+    },
+    {
+      "name": "userChooseMailRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "false(默认值)：不发邮件；true：发邮件"
+    },
+    {
+      "name": "userChooseSmsRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "false(默认值)：不发邮件；true：发邮件"
+    },
+    {
+      "name": "userChooseReceiver",
+      "required": "",
+      "type": "list",
+      "description": "提醒人人员ID，设置要允许修改操作者才生效"
+    },
+    {
+      "name": "operatorIds",
+      "required": "",
+      "type": "String",
+      "description": "操作者ID，多个ID用逗号隔开。一个操作人就是一个节点。addFreeNodeData为空的情况必填。"
+    },
+    {
+      "name": "nextNodeEditPurview",
+      "required": "",
+      "type": "int",
+      "description": "下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值：0；"
+    },
+    {
+      "name": "isModifiable",
+      "required": "",
+      "type": "int",
+      "description": "是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0."
+    },
+    {
+      "name": "nodeType",
+      "required": "",
+      "type": "int",
+      "description": "节点类型； 9 查阅，1 批准， 2 确认。默认值：1"
+    },
+    {
+      "name": "mergeType",
+      "required": "",
+      "type": "int",
+      "description": "分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值：1；"
+    },
+    {
+      "name": "mergeValue",
+      "required": "",
+      "type": "int",
+      "description": "合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。"
+    },
+    {
+      "name": "isParallel",
+      "required": "",
+      "type": "int",
+      "description": "是否并行；0 串行，1并行。addFreeNodeData为空的情况必填。默认值：0；"
+    },
+    {
+      "name": "signType",
+      "required": "",
+      "type": "int",
+      "description": "会签方式；0 非会签，1会签，2依次逐个处理。addFreeNodeData为空的情况填。默认值：0；"
+    },
+    {
+      "name": "ccOperators",
+      "required": "",
+      "type": "String",
+      "description": "抄送人ID，多个ID用逗号隔开，每个节点都会有这些抄送人。"
+    },
+    {
+      "name": "ccSignType",
+      "required": "",
+      "type": "int",
+      "description": "抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3"
+    },
+    {
+      "name": "nextNodeEditPurview",
+      "required": "",
+      "type": "int",
+      "description": "下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值：0；"
+    },
+    {
+      "name": "mergeType",
+      "required": "",
+      "type": "int",
+      "description": "分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值：1；"
+    },
+    {
+      "name": "mergeValue",
+      "required": "",
+      "type": "int",
+      "description": "合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。"
+    },
+    {
+      "name": "addFreeNodeData",
+      "required": "",
+      "type": "list<list>",
+      "description": "节点对象的二维数组，一维数组就是一串节点，多个一维数组是并行。operatorIds为空的情况必填。"
+    },
+    {
+      "name": "nodeName",
+      "required": "",
+      "type": "String",
+      "description": "节点名称"
+    },
+    {
+      "name": "operatorIds",
+      "required": "",
+      "type": "String",
+      "description": "节点操作者ID，多个ID用英文逗号隔开。"
+    },
+    {
+      "name": "signType",
+      "required": "",
+      "type": "int",
+      "description": "会签方式；0 非会签，1会签，2依次逐个处理。默认值：0."
+    },
+    {
+      "name": "nodeType",
+      "required": "",
+      "type": "int",
+      "description": "节点类型； 9 查阅，1 流程， 2 确认。默认值：1"
+    },
+    {
+      "name": "isModifiable",
+      "required": "",
+      "type": "int",
+      "description": "是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0"
+    },
+    {
+      "name": "ccOperators",
+      "required": "",
+      "type": "String",
+      "description": "抄送人ID，多个ID用逗号隔开"
+    },
+    {
+      "name": "ccSignType",
+      "required": "",
+      "type": "int",
+      "description": "抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3"
+    },
+    {
+      "name": "dataId",
+      "required": "",
+      "type": "long",
+      "description": "业务数据Id"
+    },
+    {
+      "name": "dataDetails",
+      "required": "",
+      "type": "list",
+      "description": "表单数据（传递了dataId就不用传递表单数据了）"
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "long",
+      "description": "表单ID"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块标识，默认workflow"
+    },
+    {
+      "name": "fieldId",
+      "required": "",
+      "type": "long",
+      "description": "字段ID"
+    },
+    {
+      "name": "dataKey",
+      "required": "",
+      "type": "String",
+      "description": "字段数据库字段名(与fieldId二选一传递即可)"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "字段内容（单行文本、多行文本等）"
+    },
+    {
+      "name": "dataOptions",
+      "required": "",
+      "type": "list",
+      "description": "浏览按钮数据，默认为null，有值的时候，以这个值为准，忽略content的内容。"
+    },
+    {
+      "name": "subFormId",
+      "required": "",
+      "type": "long",
+      "description": "明细表ID，当传递明细数据且字段传递的dataKey则该值必填。"
+    },
+    {
+      "name": "dataIndex",
+      "required": "",
+      "type": "long",
+      "description": "明细行序号(主表字段该值不用传递)。1：就代表是明细行第一行。"
+    },
+    {
+      "name": "optionId",
+      "required": "",
+      "type": "long",
+      "description": "选项ID"
+    },
+    {
+      "name": "targetId",
+      "required": "",
+      "type": "long",
+      "description": "图片单选多选的选项的图片ID。"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "long",
+      "description": "选项名称"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "String",
+      "description": "选项类型"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "提示信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增流程"
+  ],
+  "raw_text": "## 新增流程\n说明\n- 当流程创建好后，若传了加签参数（addSignEntity），则进行加签。加签节点结束后流转到下一节点；若传了isnextflow等于1，则提交流程下去。\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v2/doCreateRequest\n请求方式：\n- POST\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户信息 获取用户信息 |\n| workflowId | 是 | Long | 工作流Id |\n| requestname | 否 | String | 创建的流程实例标题（不输入按照默认标题组成生成标题） |\n| remark | 否 | String | 签字意见内容 |\n| isnextflow | 否 | int | 是否流转到下一节点：0 否，1 是。默认值：0 |\n| requestSecLevel | 否 | int | 密级（系统开启密级才使用这个参数），值大于0 才生效。且开启了密级，则获取创建人能获取的最大密级。 |\n| requestSecValidity | 否 | String | 保密期限（传递密级时才传递该参数）；非数字； |\n| isVerifyFormRequired | 否 | boolean | isnextflow=1时，true：要校验表单必填。false：不校验表单必填。默认值：false |\n| isExecuteCreateAddAction | 否 | boolean | true：执行创建节点前附加操作，false：不执行创建节点前附加操作。默认值：false |\n| isVerifyPer | 否 | int | 是否验证用户创建流程权限；0：不验证。1：验证。默认值： 1； |\n| requestId | 否 | long | 可以自定义流程ID。 |\n| delReqFlowFaild | 否 | boolean | 创建并流转失败的流程是否要删除掉；true：删除。false：不删除。默认值：false |\n| businessData | 否 | String | 数据来源 |\n| moduleDataId | 否 | long | 关联模块数据ID（默认值0） |\n| formData | 否 | json | 表单数据(详细字段说明看下方) |\n| requestLevel | 否 | int | 紧急程度 0：正常； 1：重要； 2：紧急。默认值：0 |\n| addSignEntity | 否 | json | 加签参数对象，若传递了则进行加签。 |\n| identityId | 否 | long | 被代理人ID |\n| identityType | 否 | int | 1：兼岗，2：委托 |\n| selectFlowParam | 否 | JSON | 指定流转相关参数 |\n| exceptionHandleInfo | 否 | map | 异常处理由用户选择操作者参数；若节点异常处理未设置由用户选择操作者，传递了也不会生效；KEY：节点ID；VALUE：异常处理操作者数据； |\n| imRemind | 否 | boolean | isnextflow=0时，给发起人发送IM提醒 |\n| emailRemind | 否 | boolean | isnextflow=0时，给发起人发送邮件提醒 |\n| smsRemind | 否 | boolean | isnextflow=0时，给发起人发送短信提醒 |\n| mailAndSmsMsgParam | 否 | json | 节点允许修改提醒方式时，流转时，可以选择是否发送短信邮件提醒 |\n| isNewFormData | 否 | boolean | true：可以传递表单高级参数（seniorFormParam生效）。false：仅仅传递表达数据（默认值）。 |\n| seniorFormParam | 否 | json | 表单高级参数，isNewFormData=true时才生效 |\nseniorFormParam参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| needDefaultValue | 否 | boolean | true：给表单赋值默认值，false：默认值 |\n| execRelate | 否 | boolean | 是否执行数据砖取；true：执行。false：默认值。 |\n| execMonitor | 否 | boolean | 是否执行运算：true：执行；false：默认值。 |\n| validate | 否 | boolean | 是否开启数据查重校验；true：开启。false：默认值。 |\n| needValidateInfo | 否 | boolean | validate=true时生效，查重结果是否返回具体信息；true：返回；false：不返回。 |\nmailAndSmsMsgParam参数说明：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| userChooseMailRemind | 否 | boolean | false(默认值)：不发邮件；true：发邮件 |\n| userChooseSmsRemind | 否 | boolean | false(默认值)：不发邮件；true：发邮件 |\n| userChooseReceiver | 否 | list | 提醒人人员ID，设置要允许修改操作者才生效 |\naddSignEntity说明\n- operatorIds方式加签，一个操作者就是一个节点。\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| operatorIds | 是 | String | 操作者ID，多个ID用逗号隔开。一个操作人就是一个节点。addFreeNodeData为空的情况必填。 |\n| nextNodeEditPurview | 否 | int | 下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值：0； |\n| isModifiable | 否 | int | 是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0. |\n| nodeType | 否 | int | 节点类型； 9 查阅，1 批准， 2 确认。默认值：1 |\n| mergeType | 否 | int | 分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值：1； |\n| mergeValue | 否 | int | 合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。 |\n| isParallel | 否 | int | 是否并行；0 串行，1并行。addFreeNodeData为空的情况必填。默认值：0； |\n| signType | 否 | int | 会签方式；0 非会签，1会签，2依次逐个处理。addFreeNodeData为空的情况填。默认值：0； |\n| ccOperators | 否 | String | 抄送人ID，多个ID用逗号隔开，每个节点都会有这些抄送人。 |\n| ccSignType | 否 | int | 抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3 |\n- addFreeNodeData方式加签\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nextNodeEditPurview | 否 | int | 下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值：0； |\n| mergeType | 否 | int | 分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值：1； |\n| mergeValue | 否 | int | 合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。 |\n| addFreeNodeData | 是 | list<list> | 节点对象的二维数组，一维数组就是一串节点，多个一维数组是并行。operatorIds为空的情况必填。 |\naddFreeNodeData[0][0]：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nodeName | 否 | String | 节点名称 |\n| operatorIds | 是 | String | 节点操作者ID，多个ID用英文逗号隔开。 |\n| signType | 否 | int | 会签方式；0 非会签，1会签，2依次逐个处理。默认值：0. |\n| nodeType | 否 | int | 节点类型； 9 查阅，1 流程， 2 确认。默认值：1 |\n| isModifiable | 否 | int | 是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0 |\n| ccOperators | 否 | String | 抄送人ID，多个ID用逗号隔开 |\n| ccSignType | 否 | int | 抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3 |\n15.3.2 formData说明\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| dataId | 否 | long | 业务数据Id |\n| dataDetails | 否 | list | 表单数据（传递了dataId就不用传递表单数据了） |\n| formId | 否 | long | 表单ID |\n| module | 否 | String | 模块标识，默认workflow |\ndataDetails[0]说明\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| fieldId | 否 | long | 字段ID |\n| dataKey | 否 | String | 字段数据库字段名(与fieldId二选一传递即可) |\n| content | 否 | String | 字段内容（单行文本、多行文本等） |\n| dataOptions | 否 | list | 浏览按钮数据，默认为null，有值的时候，以这个值为准，忽略content的内容。 |\n| subFormId | 否 | long | 明细表ID，当传递明细数据且字段传递的dataKey则该值必填。 |\n| dataIndex | 否 | long | 明细行序号(主表字段该值不用传递)。1：就代表是明细行第一行。 |\ndataDetails[0].dataOptions[0]说明\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| optionId | 否 | long | 选项ID |\n| targetId | 否 | long | 图片单选多选的选项的图片ID。 |\n| content | 否 | long | 选项名称 |\n| type | 否 | String | 选项类型 |\n请求参数示例：\n- dataId：传递dataId\n- 传递表单数据（示例的fieldId均可以换成dataKey）：\n- seniorFormParam表单高级参数\nisNewFormData=true时seniorFormParam参数才生效。\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 提示信息 |\n| requestId | long | 流程ID |\nJava调用示例"
+}

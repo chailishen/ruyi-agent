@@ -1,0 +1,78 @@
+{
+  "id": "840678722449973249",
+  "name": "根据任务类型ID查询自定义字段",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/queryFormInfoByTaskType",
+  "url_template": "{OpenApiOrigin}/task/v2/queryFormInfoByTaskType",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "taskTypeId",
+      "required": "是",
+      "type": "String",
+      "description": "任务类型ID 获取任务类型ID，当不传或为空时，查询通用自定义字段"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "form.id",
+      "required": "",
+      "type": "String",
+      "description": "任务自定义字段表单ID"
+    },
+    {
+      "name": "form.title",
+      "required": "",
+      "type": "String",
+      "description": "控件名称"
+    },
+    {
+      "name": "fields.fieldId",
+      "required": "",
+      "type": "String",
+      "description": "控件ID"
+    },
+    {
+      "name": "selectionId",
+      "required": "",
+      "type": "String",
+      "description": "选项型控件选项ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "选项名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据任务类型ID查询自定义字段"
+  ],
+  "raw_text": "## 根据任务类型ID查询自定义字段\n请求URL：\n- {OpenApiOrigin}/task/v2/queryFormInfoByTaskType\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| taskTypeId | 是 | String | 任务类型ID 获取任务类型ID，当不传或为空时，查询通用自定义字段 |\n请求示例：\nquery方式\n{OpenApiOrigin}/task/v2/queryFormInfoByTaskType?access_token=f5b2eb5fcaf1ef5cc9928a852fb13587&taskTypeId\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| form.id | String | 任务自定义字段表单ID |\n| form.title | String | 控件名称 |\n| fields.fieldId | String | 控件ID |\n| selectionId | String | 选项型控件选项ID |\n| name | String | 选项名称 |\nJava sdk调用示例："
+}

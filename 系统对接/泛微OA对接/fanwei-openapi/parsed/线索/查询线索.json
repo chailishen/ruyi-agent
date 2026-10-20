@@ -1,0 +1,156 @@
+{
+  "id": "840675921956012033",
+  "name": "查询线索",
+  "module": "线索",
+  "module_path": [
+    "线索"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：clue"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "线索ID 获取线索ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "clueStatus",
+      "required": "",
+      "type": "String",
+      "description": "线索状态"
+    },
+    {
+      "name": "clueSource",
+      "required": "",
+      "type": "String",
+      "description": "线索来源"
+    },
+    {
+      "name": "clueContact",
+      "required": "",
+      "type": "String",
+      "description": "联系人"
+    },
+    {
+      "name": "clueIndustry",
+      "required": "",
+      "type": "String",
+      "description": "行业"
+    },
+    {
+      "name": "clueRegion",
+      "required": "",
+      "type": "String",
+      "description": "地区"
+    },
+    {
+      "name": "clueTelephone",
+      "required": "",
+      "type": "String",
+      "description": "电话"
+    },
+    {
+      "name": "cluePhoneNumber",
+      "required": "",
+      "type": "String",
+      "description": "手机"
+    },
+    {
+      "name": "clueSex",
+      "required": "",
+      "type": "String",
+      "description": "性别。1-男，2-女，3-未知"
+    },
+    {
+      "name": "clueEmail",
+      "required": "",
+      "type": "String",
+      "description": "邮件"
+    },
+    {
+      "name": "clueAddress",
+      "required": "",
+      "type": "String",
+      "description": "地址"
+    },
+    {
+      "name": "clueFollowStatus",
+      "required": "",
+      "type": "String",
+      "description": "跟进状态"
+    },
+    {
+      "name": "clueProcessResult",
+      "required": "",
+      "type": "String",
+      "description": "处理结果"
+    },
+    {
+      "name": "clueDescription",
+      "required": "",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "cluePool",
+      "required": "",
+      "type": "String",
+      "description": "线索池"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询线索"
+  ],
+  "raw_text": "## 查询线索\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：clue |\n| id | 是 | Long | 线索ID 获取线索ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=clue&id=2373238677399564922\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 名称 |\n| manager | String | 负责人 |\n| clueStatus | String | 线索状态 |\n| clueSource | String | 线索来源 |\n| clueContact | String | 联系人 |\n| clueIndustry | String | 行业 |\n| clueRegion | String | 地区 |\n| clueTelephone | String | 电话 |\n| cluePhoneNumber | String | 手机 |\n| clueSex | String | 性别。1-男，2-女，3-未知 |\n| clueEmail | String | 邮件 |\n| clueAddress | String | 地址 |\n| clueFollowStatus | String | 跟进状态 |\n| clueProcessResult | String | 处理结果 |\n| clueDescription | String | 备注 |\n| cluePool | String | 线索池 |\nJava sdk调用示例："
+}

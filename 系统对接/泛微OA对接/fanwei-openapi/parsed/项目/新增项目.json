@@ -1,0 +1,102 @@
+{
+  "id": "840677846276644864",
+  "name": "新增项目",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/create",
+  "url_template": "{OpenApiOrigin}/mainline/v2/create",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "项目名称"
+    },
+    {
+      "name": "description",
+      "required": "否",
+      "type": "String",
+      "description": "项目详情"
+    },
+    {
+      "name": "startTime",
+      "required": "否",
+      "type": "Date",
+      "description": "起始日（yyyy-MM-dd）"
+    },
+    {
+      "name": "endTime",
+      "required": "否",
+      "type": "Date",
+      "description": "到期日（yyyy-MM-dd）"
+    },
+    {
+      "name": "commonFormData",
+      "required": "否",
+      "type": "String",
+      "description": "通用字段数据 传值说明"
+    },
+    {
+      "name": "formId",
+      "required": "否",
+      "type": "Long",
+      "description": "自定义字段表单ID 查询表单ID"
+    },
+    {
+      "name": "mainlineGroupFormData",
+      "required": "否",
+      "type": "String",
+      "description": "自定义字段数据 传值说明"
+    },
+    {
+      "name": "tailNum",
+      "required": "否",
+      "type": "String",
+      "description": "类型开启手动编码时生效"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "mainlineId",
+      "required": "",
+      "type": "Long",
+      "description": "项目ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增项目"
+  ],
+  "raw_text": "## 新增项目\n请求URL：\n- {OpenApiOrigin}/mainline/v2/create\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| name | 是 | String | 项目名称 |\n| description | 否 | String | 项目详情 |\n| startTime | 否 | Date | 起始日（yyyy-MM-dd） |\n| endTime | 否 | Date | 到期日（yyyy-MM-dd） |\n| commonFormData | 否 | String | 通用字段数据 传值说明 |\n| formId | 否 | Long | 自定义字段表单ID 查询表单ID |\n| mainlineGroupFormData | 否 | String | 自定义字段数据 传值说明 |\n| tailNum | 否 | String | 类型开启手动编码时生效 |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/create?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&name=测试赛2&description&startTime&endTime\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| mainlineId | Long | 项目ID |\nJava sdk调用示例："
+}

@@ -1,0 +1,132 @@
+{
+  "id": "908310855135158273",
+  "name": "文档日志",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/logs",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/logs",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "string",
+      "description": "当前页，默认第1页"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "string",
+      "description": "每页显示数量，默认10条"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "0-成功，其他-失败"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "结果信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "成功时，返回数据"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "string",
+      "description": "总数"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "array",
+      "description": "数据对象"
+    },
+    {
+      "name": "data.date",
+      "required": "",
+      "type": "string",
+      "description": "操作时间"
+    },
+    {
+      "name": "data.operator",
+      "required": "",
+      "type": "string",
+      "description": "操作人id"
+    },
+    {
+      "name": "data.operatorname",
+      "required": "",
+      "type": "string",
+      "description": "操作人"
+    },
+    {
+      "name": "data.operatetype",
+      "required": "",
+      "type": "string",
+      "description": "操作类型（标识）"
+    },
+    {
+      "name": "data.operatetypename",
+      "required": "",
+      "type": "string",
+      "description": "操作类型"
+    },
+    {
+      "name": "data.old_content",
+      "required": "",
+      "type": "string",
+      "description": "详情"
+    },
+    {
+      "name": "data.clientip",
+      "required": "",
+      "type": "string",
+      "description": "客户端地址"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档日志"
+  ],
+  "raw_text": "## 文档日志\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/logs\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | string | 文档id |\n| userid | 是 | string | 用户id 获取用户ID |\n| pageNo | 否 | string | 当前页，默认第1页 |\n| pageSize | 否 | string | 每页显示数量，默认10条 |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| errcode | string | 0-成功，其他-失败 |\n| errmsg | string | 结果信息 |\n| data | object | 成功时，返回数据 |\n| total | string | 总数 |\n| data | array | 数据对象 |\n| data.date | string | 操作时间 |\n| data.operator | string | 操作人id |\n| data.operatorname | string | 操作人 |\n| data.operatetype | string | 操作类型（标识） |\n| data.operatetypename | string | 操作类型 |\n| data.old_content | string | 详情 |\n| data.clientip | string | 客户端地址 |\nJava sdk调用示例："
+}

@@ -1,0 +1,96 @@
+{
+  "id": "840722719994290176",
+  "name": "删除消息",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/mc/msg/deleteMsg",
+  "url_template": "{OpenApiOrigin}/api/mc/msg/deleteMsg",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "operator",
+      "required": "是",
+      "type": "Object",
+      "description": "操作人"
+    },
+    {
+      "name": "operator.employeeId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人id"
+    },
+    {
+      "name": "operator.tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "操作人团队标识"
+    },
+    {
+      "name": "msgId",
+      "required": "是",
+      "type": "Long",
+      "description": "消息id，调用发送接口获取"
+    },
+    {
+      "name": "recivers",
+      "required": "是",
+      "type": "Object[]",
+      "description": "消息接受人，支持撤回部分人员消息时传递"
+    },
+    {
+      "name": "recivers.employeeId",
+      "required": "是",
+      "type": "long",
+      "description": "接受人id"
+    },
+    {
+      "name": "recivers.tenantKey",
+      "required": "是",
+      "type": "string",
+      "description": "接受人团队标识"
+    },
+    {
+      "name": "recivers.workCode",
+      "required": "否",
+      "type": "string",
+      "description": "接受人工号,与employeeId二选一,优先employeeId"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "消息发送状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除消息"
+  ],
+  "raw_text": "## 删除消息\n请求URL：\n- {OpenApiOrigin}/api/mc/msg/deleteMsg\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| operator | 是 | Object | 操作人 |\n| operator.employeeId | 是 | Long | 操作人id |\n| operator.tenantKey | 是 | String | 操作人团队标识 |\n| msgId | 是 | Long | 消息id，调用发送接口获取 |\n| recivers | 是 | Object[] | 消息接受人，支持撤回部分人员消息时传递 |\n| recivers.employeeId | 是 | long | 接受人id |\n| recivers.tenantKey | 是 | string | 接受人团队标识 |\n| recivers.workCode | 否 | string | 接受人工号,与employeeId二选一,优先employeeId |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | String | 消息发送状态 |\nJava sdk调用示例："
+}

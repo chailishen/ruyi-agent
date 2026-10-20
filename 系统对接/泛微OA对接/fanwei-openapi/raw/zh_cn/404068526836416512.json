@@ -1,0 +1,554 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "如何实现合同流程发起执行模板套用",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ordered_list",
+      "attrs": {
+        "start": 1
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "通过新增",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "流程接口",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('840714220321120257');",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "，发起流程。",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "给流程",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "10.5pt"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "创建套用模板",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "10.5pt"
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('403733879921311744');",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "、",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "10.5pt"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "合同模板执行",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "生成模板套用接口",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('404055565837271040');",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "。",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "使用更新表单字段将套用后文件",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "更新流程",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "javascript:weamdJumpTo('908574153818660864');",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    },
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(51, 51, 51)",
+                        "backgroundColor": "",
+                        "fontFamily": "微软雅黑",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第一步：发起流程。",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "调用"
+        },
+        {
+          "type": "text",
+          "text": "流程新建接口",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "javascript:weamdJumpTo('840714220321120257');",
+                "target": "_blank",
+                "rel": "noopener noreferrer nofollow",
+                "class": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "，生成一条合同流程数据，得到流程数据的requestid。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.0.png",
+            "alt": "合同1.png"
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.1.png",
+            "alt": "合同2.png"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第二步：模板创建",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "调用"
+        },
+        {
+          "type": "text",
+          "text": "模板创建接口",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "javascript:weamdJumpTo('403733879921311744');",
+                "target": "_blank",
+                "rel": "noopener noreferrer nofollow",
+                "class": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "，生成指定模板，获取到模板id（data）。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.2.png",
+            "alt": "合同3.png"
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.3.png",
+            "alt": "合同4.png"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第三步：模板套用",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "调用生成模板套用接口，根据书签名称更新文档中书签对应内容，生成所需合同文件数据"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.4.png",
+            "alt": "合同5.png"
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.5.png",
+            "alt": "合同6.png"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第四步：更新流程",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "调用"
+        },
+        {
+          "type": "text",
+          "text": "更新流程接口",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "javascript:weamdJumpTo('840693432705449984');",
+                "target": "_blank",
+                "rel": "noopener noreferrer nofollow",
+                "class": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "，将二、三步骤中套用生成合同文件数据更新至第一步创建的流程数据内。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.6.png",
+            "alt": "合同7.png"
+          }
+        },
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f404068526836416512.7.png",
+            "alt": "合同8.png"
+          }
+        }
+      ]
+    }
+  ]
+}

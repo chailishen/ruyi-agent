@@ -1,0 +1,60 @@
+{
+  "id": "404052286956896256",
+  "name": "模板列表查询",
+  "module": "合同管理",
+  "module_path": [
+    "合同管理",
+    "模板管理"
+  ],
+  "is_api": true,
+  "url": "/api/contract/jxhs/openApi/template/getTemplate",
+  "url_template": "{OpenApiOrigin}/api/contract/jxhs/openApi/template/getTemplate",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "id",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "empId",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "belongId",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "模板列表信息接口"
+  ],
+  "raw_text": "## 模板列表信息接口\n接口描述：用于查询模板列表。\n请求URL：\n- {OpenApiOrigin}/api/contract/jxhs/openApi/template/getTemplate\n请求方式：\n- GET\n请求参数：\n| 参数名 | 参数值 | 是否必须 | 描述 |\n| --- | --- | --- | --- |\n| id | Long | 是 | 模板Id |\n| access_token | String | 是 | 调用接口凭证 |\n| empId | Long | 是 | 用户ID |\n| pageNo | Integet | 是 | 分页号 |\n| pageSize | Integet | 是 | 分页数量 |\n| belongId | Long | 是 | 1，模板类型Id，传1获取所有 |\n返回示例："
+}

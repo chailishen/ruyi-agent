@@ -1,0 +1,129 @@
+{
+  "id": "840721689261735936",
+  "name": "获取表单字段信息",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/dataset/v1/getFields",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/dataset/v1/getFields",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "objId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单 id"
+    },
+    {
+      "name": "isReturnDetail",
+      "required": "否",
+      "type": "String",
+      "description": "是否需要返回明细(默认不返回; y返回; n不返回； )"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "fieldId",
+      "required": "",
+      "type": "String",
+      "description": "字段id"
+    },
+    {
+      "name": "fieldName",
+      "required": "",
+      "type": "String",
+      "description": "字段名"
+    },
+    {
+      "name": "fieldType",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "fieldKey",
+      "required": "",
+      "type": "String",
+      "description": "实际字段类型"
+    },
+    {
+      "name": "number",
+      "required": "",
+      "type": "Integer",
+      "description": "字段顺序"
+    },
+    {
+      "name": "multiSelect",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否多选"
+    },
+    {
+      "name": "objId",
+      "required": "",
+      "type": "Long",
+      "description": "表单id"
+    },
+    {
+      "name": "subFormIndex",
+      "required": "",
+      "type": "String",
+      "description": "明细表下标"
+    },
+    {
+      "name": "subFormName",
+      "required": "",
+      "type": "String",
+      "description": "明细表名"
+    },
+    {
+      "name": "mainFields",
+      "required": "",
+      "type": "List",
+      "description": "主表字段"
+    },
+    {
+      "name": "detailFields",
+      "required": "",
+      "type": "List",
+      "description": "明细字段"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表单字段信息"
+  ],
+  "raw_text": "## 获取表单字段信息\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/dataset/v1/getFields\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| objId | 是 | Long | 表单 id |\n| isReturnDetail | 否 | String | 是否需要返回明细(默认不返回; y返回; n不返回； ) |\n备注：\n- isReturnDetail参数,除说明描述中值除外，其他传值均代表默认\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| fieldId | String | 字段id |\n| fieldName | String | 字段名 |\n| fieldType | String | 字段类型 |\n| fieldKey | String | 实际字段类型 |\n| number | Integer | 字段顺序 |\n| multiSelect | Boolean | 是否多选 |\n| objId | Long | 表单id |\n| subFormIndex | String | 明细表下标 |\n| subFormName | String | 明细表名 |\n| mainFields | List | 主表字段 |\n| detailFields | List | 明细字段 |\nJava sdk调用示例："
+}

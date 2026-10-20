@@ -1,0 +1,60 @@
+{
+  "id": "908313857330462721",
+  "name": "文档失效",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/invalidate",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/invalidate",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "docId",
+      "required": "是",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档失效"
+  ],
+  "raw_text": "## 文档失效\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/invalidate\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| docId | 是 | string | 文档id |\n| userid | 是 | string | 用户id 获取用户ID |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\nJava sdk调用示例："
+}

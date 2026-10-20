@@ -1,0 +1,66 @@
+{
+  "id": "840716174430576641",
+  "name": "根据分类ID查询表单",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/form/v2/getFormByCategoryId",
+  "url_template": "{OpenApiOrigin}/form/v2/getFormByCategoryId",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "categoryId",
+      "required": "是",
+      "type": "Long",
+      "description": "分类ID 获取表单分类ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "表单ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "表单名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据分类ID查询表单"
+  ],
+  "raw_text": "## 根据分类ID查询表单\n请求URL：\n- {OpenApiOrigin}/form/v2/getFormByCategoryId\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| categoryId | 是 | Long | 分类ID 获取表单分类ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/form/v2/getFormByCategoryId?access_token=2661a838932c000549cade448f12b6ac&userid=5140826883110054023&categoryId=7833410642193797910\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | String | 表单ID |\n| name | String | 表单名称 |\nJava sdk调用示例："
+}

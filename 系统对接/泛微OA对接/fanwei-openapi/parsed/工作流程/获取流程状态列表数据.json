@@ -1,0 +1,59 @@
+{
+  "id": "418961806250213376",
+  "name": "获取流程状态列表数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestStatusData",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatusData",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求id"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "int",
+      "description": "每页数量"
+    },
+    {
+      "name": "current",
+      "required": "",
+      "type": "int",
+      "description": "当前"
+    },
+    {
+      "name": "selectAll",
+      "required": "",
+      "type": "int",
+      "description": "是否返回所有数据：1:是，0:否"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "最低支持基线：10.0.26.01.01\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatusData\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n请求参数说明\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| userId | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求id |\n| pageSize | 否 | int | 每页数量 |\n| current | 否 | int | 当前 |\n| selectAll | 否 | int | 是否返回所有数据：1:是，0:否 |\n请求参数示例\n返回示例\n核心关注两个属性\ndata.data: 数组格式，节点操作数数据\ndata.isEnd：用于分页获取数据时，判断是否是最后一页数据；true: 是；false: 否"
+}

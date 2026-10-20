@@ -1,0 +1,78 @@
+{
+  "id": "944343423028191232",
+  "name": "批量委托接口",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/batchManualAgent",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchManualAgent",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": "接口调用凭证 获取accessToken"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "agentUserId",
+      "required": "",
+      "type": "long",
+      "description": "委托接收人ID"
+    },
+    {
+      "name": "requestIds",
+      "required": "",
+      "type": "array",
+      "description": "委托流程requestId数组"
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "String",
+      "description": "签字意见"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "int",
+      "description": "本次委托总流程数"
+    },
+    {
+      "name": "batchResult",
+      "required": "",
+      "type": "String",
+      "description": "批量委托结果，每条结果见单条委托接口"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量委托接口"
+  ],
+  "raw_text": "## 批量委托接口\n本接口支持多流程进行批量委托，支持传多个requestId进行委托。\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/batchManualAgent\n请求方式：\n- POST\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 接口调用凭证 获取accessToken |\n| userid | 是 | long | 用户ID 获取用户ID |\n| agentUserId | 是 | long | 委托接收人ID |\n| requestIds | 是 | array | 委托流程requestId数组 |\n| remark | 否 | String | 签字意见 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| total | int | 本次委托总流程数 |\n| batchResult | String | 批量委托结果，每条结果见单条委托接口 |\nJava sdk调用示例："
+}

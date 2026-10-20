@@ -1,0 +1,54 @@
+{
+  "id": "908342328668667904",
+  "name": "获取第三方APP的accessToken",
+  "module": "云桥",
+  "module_path": [
+    "云桥"
+  ],
+  "is_api": true,
+  "url": "/api/eb/open/thirdapi/v1/getAccessToken",
+  "url_template": "{OpenApiOrigin}/api/eb/open/thirdapi/v1/getAccessToken",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "agentKey",
+      "required": "是",
+      "type": "string",
+      "description": "应用key"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "第三方APP的accessToken"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取第三方APP的accessToken"
+  ],
+  "raw_text": "## 获取第三方APP的accessToken\n简要描述：\n- 获取第三方APP的accessToken\n请求URL：\n- {OpenApiOrigin}/api/eb/open/thirdapi/v1/getAccessToken\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n| agentKey | 是 | string | 应用key |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 第三方APP的accessToken |\nJava sdk调用示例："
+}

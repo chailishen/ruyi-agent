@@ -1,0 +1,1616 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "WBN0P",
+        "textAlign": "left",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "注意："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1、此接口只有工作流关联内部表单或者关联eb表单的，才支持查询，关联其它表单的均不支持查询，比如会议卡片、外部表单等。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2、返回的表单相关信息包括4个内容：主表信息、明细表信息、主表字段信息、明细表字段信息"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "请求URL：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "color": "",
+            "backgroundColor": "",
+            "fontFamily": "",
+            "fontSize": ""
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{OpenApiOrigin}/api/workflow/pathdef/openapi",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": "null"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "/getFormInfo",
+                  "marks": [
+                    {
+                      "type": "link",
+                      "attrs": {
+                        "href": "",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer nofollow",
+                        "class": null
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "请求方式：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "color": "",
+            "backgroundColor": "",
+            "fontFamily": "",
+            "fontSize": ""
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "attrs": {
+                "textAlign": "left"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "POST",
+                  "marks": [
+                    {
+                      "type": "font-span",
+                      "attrs": {
+                        "color": "rgb(211, 49, 21)",
+                        "backgroundColor": "",
+                        "fontFamily": "",
+                        "fontSize": ""
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "参数：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "必选"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "access_token"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "调用接口凭证 获取accessToken信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "userid"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Long"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "用户ID  获取用户ID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "workflowId"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Int"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "工作流id"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "needMainFormInfo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否需要主表信息，默认false"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "needDetailFormInfo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否需要明细表信息，默认false"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "needMainFieldInfo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否需要主表字段信息，默认false"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  197
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "needDetailFieldInfo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  102
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "否"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1,
+                "colwidth": [
+                  91
+                ]
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "boolean"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "是否需要明细表字段信息，默认false"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "传参示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n   \"access_token\":\"5559854281e0bccd14320a09e3ef8e43\",\n   \"userid\":\"861918323416686620\",\n   \"workflowId\":\"920505087661867013\",\n   \"needMainFormInfo\":true,\n   \"needDetailFormInfo\":true,\n   \"needMainFieldInfo\":true,\n   \"needDetailFieldInfo\":true\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "返回示例：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "{\n\t\"subFormList\": [\n\t\t{\n\t\t\t\"id\": \"1162498899464036353\",\n\t\t\t\"title\": \"明细表2\",\n\t\t\t\"mainFormId\": \"1100907939022979078\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"1100908050541133826\",\n\t\t\t\"title\": \"明细表1\",\n\t\t\t\"mainFormId\": \"1100907939022979078\"\n\t\t}\n\t],\n\t\"mainFieldList\": [\n\t\t{\n\t\t\t\"id\": \"1100908050541133825\",\n\t\t\t\"name\": \"单行文本\",\n\t\t\t\"fieldLabel\": \"单行文本\",\n\t\t\t\"fieldType\": \"Text\",\n\t\t\t\"nativeType\": \"Text\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_MAIN\",\n\t\t\t\t\"WF_TEXT\",\n\t\t\t\t\"WF_SINGLE_TEXT\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"-1\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"dxwb_evzx\",\n\t\t\t\t\"field_order\": 0,\n\t\t\t\t\"dbFieldName\": \"dxwb_evzx\"\n\t\t\t},\n\t\t\t\"detailDes\": \"主表字段\",\n\t\t\t\"detail\": false,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"单行文本\"\n\t\t}\n\t],\n\t\"detailFieldList\": [\n\t\t{\n\t\t\t\"id\": \"1100908050541133827\",\n\t\t\t\"name\": \"人员选择\",\n\t\t\t\"fieldLabel\": \"人员选择\",\n\t\t\t\"fieldType\": \"Employee\",\n\t\t\t\"nativeType\": \"Employee\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_DETAIL\",\n\t\t\t\t\"WF_BROWSER\",\n\t\t\t\t\"WF_HRMRESOURCE\",\n\t\t\t\t\"WF_HRMRESOURCE_NEGATIVE\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"1100908050541133826\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"subFormName\": \"明细表1\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"ryxz_gsel\",\n\t\t\t\t\"field_order\": 4,\n\t\t\t\t\"dbFieldName\": \"ryxz_gsel\",\n\t\t\t\t\"subFormName\": \"明细表1\",\n\t\t\t\t\"isSingleField\": false\n\t\t\t},\n\t\t\t\"detailDes\": \"明细字段\",\n\t\t\t\"detail\": true,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"人员选择\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"1100908050541133828\",\n\t\t\t\"name\": \"单行文本\",\n\t\t\t\"fieldLabel\": \"单行文本\",\n\t\t\t\"fieldType\": \"Text\",\n\t\t\t\"nativeType\": \"Text\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_DETAIL\",\n\t\t\t\t\"WF_TEXT\",\n\t\t\t\t\"WF_SINGLE_TEXT\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"1100908050541133826\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"subFormName\": \"明细表1\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"dxwb_tcoq\",\n\t\t\t\t\"field_order\": 5,\n\t\t\t\t\"dbFieldName\": \"dxwb_tcoq\",\n\t\t\t\t\"subFormName\": \"明细表1\",\n\t\t\t\t\"isSingleField\": false\n\t\t\t},\n\t\t\t\"detailDes\": \"明细字段\",\n\t\t\t\"detail\": true,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"单行文本\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"1162498899464036354\",\n\t\t\t\"name\": \"aaa\",\n\t\t\t\"fieldLabel\": \"aaa\",\n\t\t\t\"fieldType\": \"Text\",\n\t\t\t\"nativeType\": \"Text\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_DETAIL\",\n\t\t\t\t\"WF_TEXT\",\n\t\t\t\t\"WF_SINGLE_TEXT\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"1162498899464036353\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"subFormName\": \"明细表2\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"aaa\",\n\t\t\t\t\"field_order\": 1,\n\t\t\t\t\"dbFieldName\": \"aaa\",\n\t\t\t\t\"subFormName\": \"明细表2\"\n\t\t\t},\n\t\t\t\"detailDes\": \"明细字段\",\n\t\t\t\"detail\": true,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"aaa\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"1162498899464036355\",\n\t\t\t\"name\": \"bbb\",\n\t\t\t\"fieldLabel\": \"bbb\",\n\t\t\t\"fieldType\": \"TextArea\",\n\t\t\t\"nativeType\": \"TextArea\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_DETAIL\",\n\t\t\t\t\"WF_TEXT\",\n\t\t\t\t\"WF_TEXTAREA\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"1162498899464036353\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"subFormName\": \"明细表2\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"bbb\",\n\t\t\t\t\"field_order\": 2,\n\t\t\t\t\"dbFieldName\": \"bbb\",\n\t\t\t\t\"subFormName\": \"明细表2\"\n\t\t\t},\n\t\t\t\"detailDes\": \"明细字段\",\n\t\t\t\"detail\": true,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"bbb\"\n\t\t},\n\t\t{\n\t\t\t\"id\": \"1162498899464036356\",\n\t\t\t\"name\": \"ccc\",\n\t\t\t\"fieldLabel\": \"ccc\",\n\t\t\t\"fieldType\": \"Employee\",\n\t\t\t\"nativeType\": \"Employee\",\n\t\t\t\"fieldTags\": [\n\t\t\t\t\"WF_DETAIL\",\n\t\t\t\t\"WF_BROWSER\",\n\t\t\t\t\"WF_HRMRESOURCE\",\n\t\t\t\t\"WF_HRMRESOURCE_NEGATIVE\"\n\t\t\t],\n\t\t\t\"detailTableId\": \"1162498899464036353\",\n\t\t\t\"required\": false,\n\t\t\t\"dataSource\": \"workflow\",\n\t\t\t\"dataSourceId\": \"-1\",\n\t\t\t\"formId\": \"1100907939022979078\",\n\t\t\t\"complex\": false,\n\t\t\t\"sFormId\": -1,\n\t\t\t\"complexId\": -1,\n\t\t\t\"subFormName\": \"明细表2\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"dataKey\": \"ccc\",\n\t\t\t\t\"field_order\": 3,\n\t\t\t\t\"dbFieldName\": \"ccc\",\n\t\t\t\t\"subFormName\": \"明细表2\",\n\t\t\t\t\"isSingleField\": false\n\t\t\t},\n\t\t\t\"detailDes\": \"明细字段\",\n\t\t\t\"detail\": true,\n\t\t\t\"delete\": false,\n\t\t\t\"nameShowDelete\": \"ccc\"\n\t\t}\n\t],\n\t\"message\": {\n\t\t\"errcode\": \"0\",\n\t\t\"errmsg\": \"success\"\n\t},\n\t\"mainFormList\": [\n\t\t{\n\t\t\t\"id\": \"1100907939022979078\",\n\t\t\t\"name\": \"明细过滤验证\",\n\t\t\t\"state\": \"启用\",\n\t\t\t\"formType\": \"company\",\n\t\t\t\"description\": \"\",\n\t\t\t\"module\": \"workflow\",\n\t\t\t\"otherParams\": {\n\t\t\t\t\"ownerShip\": \"company\",\n\t\t\t\t\"orgId\": 861917357189144576\n\t\t\t},\n\t\t\t\"advance\": false,\n\t\t\t\"new\": true,\n\t\t\t\"oldAdvance\": false\n\t\t}\n\t]\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "返回参数说明：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "参数名"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "类型"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_header",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "说明"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errcode"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回码"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "errmsg"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "String"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "返回信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mainFormList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List<WfFormEntity>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "主表信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "subFormList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List<WfSubFormEntity>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "明细表信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "mainFieldList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List<WfFormFieldEntity>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "主表字段信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "table_row",
+          "content": [
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "detailFieldList"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "List<WfFormFieldEntity>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "table_cell",
+              "attrs": {
+                "colspan": 1,
+                "rowspan": 1
+              },
+              "content": [
+                {
+                  "type": "paragraph",
+                  "attrs": {
+                    "textAlign": "left"
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "明细表字段信息"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1、主表信息，WfFormEntity对象属性说明"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "/**\n     * 表单id，必须封装\n     * 该属性为表单的唯一标识，各类型表单进行实体转换时，将自己的表单id封装到该属性中\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private Long id;\n    /**\n     * 表单名称，必须封装\n     */\n    private String name;\n    /**\n     * 表单状态，非必须封装\n     * 表单引擎表单存在该属性，其他表单根据自身情况，若存在表单状态，则封装该属性\n     */\n    private String state;\n    /**\n     * 表单类型，非必须封装\n     * 表单引擎表单存在该属性，其他表单视自身情况，若存在表单类型，则封装该属性\n     */\n    private String formType;\n    /**\n     * 表单描述，非必须封装\n     * 表单引擎表单存在该属性，若三方表单存在该属性则应该封装\n     */\n    private String description;\n    /**\n     * 是否高级版表单，非必须封装\n     * 表单引擎表单存在该属性，若三方表单存在该属性则应该封装\n     */\n    private Boolean isAdvance;\n    /**\n     * 是否新设计器表单，非必须封装\n     * 表单引擎表单存在该属性，若三方表单存在该属性则应该封装\n     */\n    private Boolean isNew;\n    /**\n     * 模块标识，非必须封装\n     * 表单引擎表单存在该属性，若三方表单存在该属性则应该封装\n     */\n    private String module;\n    /**\n     * 扩展属性，若存在其他特殊属性，则从该属性中扩展\n     */\n    private Map<String, Object> otherParams;"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      }
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2、明细表信息，WfSubFormEntity对象属性说明"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "/**\n     * 明细表id\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private Long id;\n\n    /**\n     * 明细表名称\n     */\n    private String title;\n\n    /**\n     * 明细对应主表id\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private Long mainFormId;\n\n    /**\n     * 扩展参数\n     */\n    private Map<String, Object> otherParams;"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3、字段信息，WfFormFieldEntity对象属性说明"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "java"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "/**\n     * 字段id，必须封装\n     * 表单字段的唯一标识\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private Long id;\n\n    /**\n     * 字段名称，必须封装\n     */\n    private String name;\n\n    /**\n     * 字段显示名（封存），非必须封装\n     */\n    private String fieldLabel;\n\n    /**\n     * 原始字段类型（单级），必须封装\n     * 该属性记录原始表单字段类型，保留以备特殊场景下使用\n     */\n    private String fieldType;\n\n    /**\n     * 原始字段类型（多级），必须封装\n     * 特殊说明：当字段没有类型的多级划分时，fieldType = nativeType\n     * 若字段存在类型的多级划分，则nativeType的值应该为：fieldType.二级type.三级type...\n     * <p>\n     * 例如：业务表单存在关联浏览类型字段，其下客户具体划分为人力模块(hr)的部门类型(department)\n     * 则此时fieldType = RelateBrowser\n     * nativeType = RelateBrowser.hr.department\n     * <p>\n     * RelateBrowser为关联浏览字段本身的一级字段类型\n     */\n    private String nativeType;\n\n    /**\n     * 审批字段标签,必须封装\n     * 以审批的视角标识字段的特征\n     */\n    private List<WfFieldTypeTag> fieldTags;\n\n    /**\n     * 明细表id，非必须封装\n     * 如果字段属于明细字段，则必须封装\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private long detailTableId;\n\n    /**\n     * 字段数据库类型，非必须封装\n     * 字段在数据库表中使用的数据类型\n     */\n    private String fieldDbType;\n\n    /**\n     * 是否明细字段，必须封装\n     * 标识该当前字段师傅明细表字段\n     */\n    private boolean isDetail;\n\n\n    /**\n     * 是否删除，必须封装\n     */\n    private boolean isDelete;\n\n    /**\n     * 是否必填，非必须封装\n     * 标识字段是否必须填写\n     */\n    private boolean required;\n\n    /**\n     * 数据源，非必须封装\n     */\n    private String dataSource;\n\n    /**\n     * 数据源id，非必须封装\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private long dataSourceId;\n\n    /**\n     * 字段所属表单id，必须封装\n     * 标识当前字段属于哪个表单\n     */\n    @JsonSerialize(using = ToStringSerializer.class)\n    private long formId;\n\n    /**\n     * 是否复合类型字段，非必须封装\n     */\n    private boolean complex;\n\n    /**\n     * 子字段列表，非必须封装\n     */\n    private List<WfFormFieldEntity> subFields;\n\n    /**\n     * 字段布局明细，非必须封装\n     */\n    private String layoutDetail;\n\n    /**\n     * 字段所属明细表id，非必须封装\n     * 若当前字段为明细字段，则必须封装\n     */\n    private long sFormId;\n\n    /**\n     * 复杂类型字段id，非必须封装\n     */\n    private long complexId;\n\n    /**\n     * 字段所属明细表名称\n     */\n    private String subFormName;\n\n    /**\n     * 扩展属性，特殊字段通过该字段扩展\n     */\n    private Map<String, Object> otherParams;"
+        }
+      ]
+    }
+  ]
+}

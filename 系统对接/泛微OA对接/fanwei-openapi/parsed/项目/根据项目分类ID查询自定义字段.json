@@ -1,0 +1,78 @@
+{
+  "id": "840678262913638401",
+  "name": "根据项目分类ID查询自定义字段",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/queryFormInfoByMainlineGroup",
+  "url_template": "{OpenApiOrigin}/mainline/v2/queryFormInfoByMainlineGroup",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "groupId",
+      "required": "是",
+      "type": "String",
+      "description": "项目分类ID 获取项目分类ID ，不传或为空时，查询的是通用自定义字段"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "form.id",
+      "required": "",
+      "type": "String",
+      "description": "项目自定义字段表单ID"
+    },
+    {
+      "name": "form.title",
+      "required": "",
+      "type": "String",
+      "description": "控件名称"
+    },
+    {
+      "name": "fields.fieldId",
+      "required": "",
+      "type": "String",
+      "description": "控件ID"
+    },
+    {
+      "name": "selectionId",
+      "required": "",
+      "type": "String",
+      "description": "选项型控件选项ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "选项名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据项目分类ID查询自定义字段"
+  ],
+  "raw_text": "## 根据项目分类ID查询自定义字段\n请求URL：\n- {OpenApiOrigin}/mainline/v2/queryFormInfoByMainlineGroup\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| groupId | 是 | String | 项目分类ID 获取项目分类ID ，不传或为空时，查询的是通用自定义字段 |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/queryFormInfoByMainlineGroup?access_token=3e7c7762a43f6308e7b0c1b10e1d2e11&groupId\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| form.id | String | 项目自定义字段表单ID |\n| form.title | String | 控件名称 |\n| fields.fieldId | String | 控件ID |\n| selectionId | String | 选项型控件选项ID |\n| name | String | 选项名称 |\nJava sdk调用示例："
+}

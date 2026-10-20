@@ -1,0 +1,138 @@
+{
+  "id": "908315553674772481",
+  "name": "查询对应知识库下面的文件夹节点",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/folder/tree/rootNodes",
+  "url_template": "{OpenApiOrigin}/api/doc/folder/tree/rootNodes",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "文件夹id"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "string",
+      "description": "文件夹节点名称"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "string",
+      "description": "文件夹节点名称"
+    },
+    {
+      "name": "isLeaf",
+      "required": "",
+      "type": "string",
+      "description": "true:无下级文件夹，false：有下级文件夹"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "string",
+      "description": "文件夹类型"
+    },
+    {
+      "name": "virtual",
+      "required": "",
+      "type": "boolean",
+      "description": "是否虚拟目录"
+    },
+    {
+      "name": "children",
+      "required": "",
+      "type": "array",
+      "description": "子文件集合"
+    },
+    {
+      "name": "children.id",
+      "required": "",
+      "type": "string",
+      "description": "文件夹id"
+    },
+    {
+      "name": "children.content",
+      "required": "",
+      "type": "string",
+      "description": "文件夹节点名称"
+    },
+    {
+      "name": "children.title",
+      "required": "",
+      "type": "string",
+      "description": "文件夹节点名称"
+    },
+    {
+      "name": "children.isLeaf",
+      "required": "",
+      "type": "string",
+      "description": "true:无下级文件夹，false：有下级文件夹"
+    },
+    {
+      "name": "children.type",
+      "required": "",
+      "type": "string",
+      "description": "文件夹类型"
+    },
+    {
+      "name": "children.virtual",
+      "required": "",
+      "type": "string",
+      "description": "是否虚拟目录"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询对应知识库下面的文件夹节点"
+  ],
+  "raw_text": "## 查询对应知识库下面的文件夹节点\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/folder/tree/rootNodes\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| type | 是 | string | 知识库类型：sys：系统知识库；company：公共知识库；privy：个人知识库。 |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\n| data | object | 返回数据 |\n| id | string | 文件夹id |\n| content | string | 文件夹节点名称 |\n| title | string | 文件夹节点名称 |\n| isLeaf | string | true:无下级文件夹，false：有下级文件夹 |\n| type | string | 文件夹类型 |\n| virtual | boolean | 是否虚拟目录 |\n| children | array | 子文件集合 |\n| children.id | string | 文件夹id |\n| children.content | string | 文件夹节点名称 |\n| children.title | string | 文件夹节点名称 |\n| children.isLeaf | string | true:无下级文件夹，false：有下级文件夹 |\n| children.type | string | 文件夹类型 |\n| children.virtual | string | 是否虚拟目录 |\nJava sdk调用示例："
+}

@@ -1,0 +1,72 @@
+{
+  "id": "216013306958184448",
+  "name": "获取待接收数据（公文）列表",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/listNotReceivedDocument数据：/api/odocexchange/v1/listNotReceivedData",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/listNotReceivedDocument数据：{OpenApiOrigin}/api/odocexchange/v1/listNotReceivedData",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "appTemplateId",
+      "required": "否（数据交换必填）",
+      "type": "String",
+      "description": "交换模板id，公文交换默认为1无需填写，数据交换必填对应交换模板id"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": ""
+    },
+    {
+      "name": "-receiveId",
+      "required": "",
+      "type": "Long",
+      "description": "公文收文标识"
+    },
+    {
+      "name": "-docTitle",
+      "required": "",
+      "type": "String",
+      "description": "公文标题"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取待接收公文列表"
+  ],
+  "raw_text": "## 获取待接收公文列表\n请求URL：\n公文：\n- {OpenApiOrigin}/api/odocexchange/v1/listNotReceivedDocument数据：\n- {OpenApiOrigin}/api/odocexchange/v1/listNotReceivedData\n请求方式：\n- GET\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| appTemplateId | 否（数据交换必填） | String | 交换模板id，公文交换默认为1无需填写，数据交换必填对应交换模板id |\n请求地址：https://api.yunteams.cn/api/odocexchange/v1/listNotReceivedDocument?access_token=df035c8146663ea21bd28438845ce9f6\n请求头Header：\ndepartmentCode：fwpg01\nplatformTenant：tq2uz86iuoq\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | JSON |  |\n| -receiveId | Long | 公文收文标识 |\n| -docTitle | String | 公文标题 |"
+}

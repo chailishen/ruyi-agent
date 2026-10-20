@@ -1,0 +1,66 @@
+{
+  "id": "215999123701104640",
+  "name": "获取单位信息",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/getDepartment",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/getDepartment",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "单位信息"
+    },
+    {
+      "name": "-departmentCode",
+      "required": "",
+      "type": "String",
+      "description": "单位编码"
+    },
+    {
+      "name": "-departmentName",
+      "required": "",
+      "type": "String",
+      "description": "单位名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取单位信息"
+  ],
+  "raw_text": "## 获取单位信息\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/getDepartment\n请求方式：\n- GET\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求示例：\nquery方式：\nhttps://api.yunteams.cn/api/odocexchange/v1/getDepartment?access_token=df035c8146663ea21bd28438845ce9f6\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | List | 单位信息 |\n| -departmentCode | String | 单位编码 |\n| -departmentName | String | 单位名称 |"
+}

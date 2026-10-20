@@ -1,0 +1,77 @@
+{
+  "id": "359878885828984832",
+  "name": "查询会议室(V2)",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/sapi/meeting/meetingOpenApi/getMeetingRooms",
+  "url_template": "{OpenApiOrigin}/sapi/meeting/meetingOpenApi/getMeetingRooms",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "id",
+      "required": "否",
+      "type": "String",
+      "description": "会议室ID（多个地点以”,”分隔）"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "place",
+      "required": "否",
+      "type": "String",
+      "description": "会议室地点"
+    },
+    {
+      "name": "galleryful",
+      "required": "否",
+      "type": "Integer",
+      "description": "容纳人数"
+    },
+    {
+      "name": "projector",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否有投影"
+    },
+    {
+      "name": "remarks",
+      "required": "否",
+      "type": "String",
+      "description": "会议室备注"
+    },
+    {
+      "name": "locked",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否禁用"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：查询有权限的会议室\n请求URL：\n- {OpenApiOrigin}/sapi/meeting/meetingOpenApi/getMeetingRooms\n请求方式：\n- POST （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| userid | 是 | Long | 用户ID |\n| id | 否 | String | 会议室ID（多个地点以”,”分隔） |\n| name | 否 | String | 会议室名称 |\n| place | 否 | String | 会议室地点 |\n| galleryful | 否 | Integer | 容纳人数 |\n| projector | 否 | Boolean | 是否有投影 |\n| remarks | 否 | String | 会议室备注 |\n| locked | 否 | Boolean | 是否禁用 |\n请求示例：\n返回示例：\n|  |\n| --- |"
+}

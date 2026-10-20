@@ -1,0 +1,114 @@
+{
+  "id": "241292137675620352",
+  "name": "会议室使用情况（V2）",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/getRoomUsageEvents",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/getRoomUsageEvents",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "否",
+      "type": "String",
+      "description": "会议室ID（多个地点以”,”分隔）"
+    },
+    {
+      "name": "start",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式为（yy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "end",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式为（yy-MM-dd HH:mm:ss）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "状态"
+    },
+    {
+      "name": "room.name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "room.id",
+      "required": "",
+      "type": "String",
+      "description": "会议室ID"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议id"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "会议名称"
+    },
+    {
+      "name": "start",
+      "required": "",
+      "type": "Date",
+      "description": "开始时间"
+    },
+    {
+      "name": "end",
+      "required": "",
+      "type": "Date",
+      "description": "结束时间"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "创建人"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：查询当前人员有权限的会议室的使用情况\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/getRoomUsageEvents\n请求方式：\n- POST （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 否 | String | 会议室ID（多个地点以”,”分隔） |\n| start | 是 | Date | 开始时间，格式为（yy-MM-dd HH:mm:ss） |\n| end | 是 | Date | 结束时间，格式为（yy-MM-dd HH:mm:ss） |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | Boolean | 状态 |\n| room.name | String | 会议室名称 |\n| room.id | String | 会议室ID |\n| id | String | 会议id |\n| title | String | 会议名称 |\n| start | Date | 开始时间 |\n| end | Date | 结束时间 |\n| creator | String | 创建人 |"
+}

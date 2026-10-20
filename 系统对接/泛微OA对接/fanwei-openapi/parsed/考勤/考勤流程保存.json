@@ -1,0 +1,326 @@
+{
+  "id": "240947803826683904",
+  "name": "考勤流程保存",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/generic/invoke/attend/saveFlowData",
+  "url_template": "{OpenApiOrigin}/api/generic/invoke/attend/saveFlowData",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST  传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "simpleEmployee",
+      "required": "是",
+      "type": "Json",
+      "description": "当前查询人员"
+    },
+    {
+      "name": "flowSettingTypeId",
+      "required": "是",
+      "type": "String",
+      "description": "考勤类型"
+    },
+    {
+      "name": "bizType",
+      "required": "是",
+      "type": "String",
+      "description": "openapi 固定值"
+    },
+    {
+      "name": "bizId",
+      "required": "是",
+      "type": "String",
+      "description": "唯一标识"
+    },
+    {
+      "name": "createTime",
+      "required": "是",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "params",
+      "required": "是",
+      "type": "jsonArray",
+      "description": "不同的考勤流程的参数不一致，参见示例"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "请假人id"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "请假类型id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "销假人id"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "请假类型id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "leaveFlow",
+      "required": "是",
+      "type": "String",
+      "description": "原请假流程的bizId"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "公出人id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "加班人id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "overtype",
+      "required": "否",
+      "type": "String",
+      "description": "0是关联调休，1是不关联调休"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "出差人id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "补签人id"
+    },
+    {
+      "name": "attendDate",
+      "required": "是",
+      "type": "String",
+      "description": "补签日期"
+    },
+    {
+      "name": "manualType",
+      "required": "是",
+      "type": "String",
+      "description": "见manualType参数说明"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "申请人id"
+    },
+    {
+      "name": "substituter",
+      "required": "是",
+      "type": "String",
+      "description": "替班人id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "申请人id"
+    },
+    {
+      "name": "attendShift",
+      "required": "是",
+      "type": "String",
+      "description": "排班班次id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "申请人id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "processChangeType",
+      "required": "是",
+      "type": "String",
+      "description": "0是变更，3是撤销"
+    },
+    {
+      "name": "processChangeFlow",
+      "required": "是",
+      "type": "String",
+      "description": "被变更流程的bizId"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "申请人id"
+    },
+    {
+      "name": "reissueCardDate",
+      "required": "是",
+      "type": "String",
+      "description": "补卡日期时间"
+    },
+    {
+      "name": "reissueCardTime",
+      "required": "否",
+      "type": "String",
+      "description": "如果补卡日期和时间是分开的话，这个只是补卡时间"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "True正常，false异常"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "考勤流程保存"
+  ],
+  "raw_text": "## 考勤流程保存\n请求URL：\n- {OpenApiOrigin}/api/generic/invoke/attend/saveFlowData\n请求方式：\n- POST\n- 传参格式为application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| simpleEmployee | 是 | Json | 当前查询人员 |\n| flowSettingTypeId | 是 | String | 考勤类型 |\n| bizType | 是 | String | openapi 固定值 |\n| bizId | 是 | String | 唯一标识 |\n| createTime | 是 | String | 创建时间 |\n| params | 是 | jsonArray | 不同的考勤流程的参数不一致，参见示例 |\nflowSettingTypeId参数说明\n| 参数 | 说明 |\n| --- | --- |\n| 1000000000000000001 | 请假 |\n| 1000000000000000002 | 销假 |\n| 1000000000000000003 | 公出 |\n| 1000000000000000004 | 加班 |\n| 1000000000000000005 | 出差 |\n| 1000000000000000006 | 补签审批 |\n| 1000000000000000007 | 替班 |\n| 1000000000000000008 | 排班 |\n| 1000000000000000008 | 考勤变更审批 |\n| 1000000000000000010 | 补卡 |\n不同考勤流程params参数说明\n1.请假流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 请假人id |\n| type | 是 | String | 请假类型id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n2.销假流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 销假人id |\n| type | 是 | String | 请假类型id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n| leaveFlow | 是 | String | 原请假流程的bizId |\n3.公出流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 公出人id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n4.加班流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 加班人id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n| overtype | 否 | String | 0是关联调休，1是不关联调休 |\n5.出差流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 出差人id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n6.补签流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 补签人id |\n| attendDate | 是 | String | 补签日期 |\n| manualType | 是 | String | 见manualType参数说明 |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\nmanualType参数说明：\n| 参数 | 说明 |\n| --- | --- |\n| 1000000000000000001 | 迟到 |\n| 1000000000000000002 | 未打卡 |\n| 1000000000000000003 | 早退 |\n| 1000000000000000004 | 未签退 |\n| 1000000000000000005 | 未签到矿工 |\n| 1000000000000000006 | 未签退矿工 |\n| 1000000000000000007 | 未签到 |\n| 1000000000000000008 | 严重迟到 |\n| 1000000000000000009 | 严重早退 |\n7.替班流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 申请人id |\n| substituter | 是 | String | 替班人id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n8.排班流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 申请人id |\n| attendShift | 是 | String | 排班班次id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n9.考勤变更流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 申请人id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\n| processChangeType | 是 | String | 0是变更，3是撤销 |\n| processChangeFlow | 是 | String | 被变更流程的bizId |\n10.补卡流程\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| applicant | 是 | String | 申请人id |\n| reissueCardDate | 是 | String | 补卡日期时间 |\n| reissueCardTime | 否 | String | 如果补卡日期和时间是分开的话，这个只是补卡时间 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | Boolean | True正常，false异常 |"
+}

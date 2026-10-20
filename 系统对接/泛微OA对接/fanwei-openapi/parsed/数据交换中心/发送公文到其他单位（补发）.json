@@ -1,0 +1,66 @@
+{
+  "id": "216012427358109696",
+  "name": "发送公文到其他单位（补发）",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/sendDocToOtherDepartment",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/sendDocToOtherDepartment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "docId",
+      "required": "否（与sendId二选一）",
+      "type": "String",
+      "description": "处理系统中公文唯一标识，与sendId二选一必填"
+    },
+    {
+      "name": "sendId",
+      "required": "否（与docId二选一）",
+      "type": "String",
+      "description": "公文发文标识，与docId二选一必填"
+    },
+    {
+      "name": "receiveUnitCodes",
+      "required": "是",
+      "type": "List",
+      "description": "收文单位编码集合"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "发送公文到其他单位"
+  ],
+  "raw_text": "## 发送公文到其他单位\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/sendDocToOtherDepartment\n请求方式：\n- POST\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| docId | 否（与sendId二选一） | String | 处理系统中公文唯一标识，与sendId二选一必填 |\n| sendId | 否（与docId二选一） | String | 公文发文标识，与docId二选一必填 |\n| receiveUnitCodes | 是 | List | 收文单位编码集合 |\n请求地址:https://api.yunteams.cn/api/odocexchange/v1/sendDocToOtherDepartment?access_token=df035c8146663ea21bd28438845ce9f6\n请求头Header：\ndepartmentCode：fwpg01\nplatformTenant：tq2uz86iuoq\n请求Body（以raw，JSON格式）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |"
+}

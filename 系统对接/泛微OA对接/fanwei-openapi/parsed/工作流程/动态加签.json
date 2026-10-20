@@ -1,0 +1,266 @@
+{
+  "id": "874488747728052224",
+  "name": "动态加签",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/dynamicCreateFreeNode",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/dynamicCreateFreeNode",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "流程ID 获取审批数据ID"
+    },
+    {
+      "name": "currentNodeId",
+      "required": "否",
+      "type": "Long",
+      "description": "加签节点ID（只能是当前节点，仅支持一个节点）"
+    },
+    {
+      "name": "workflowId",
+      "required": "否",
+      "type": "Long",
+      "description": "工作流ID"
+    },
+    {
+      "name": "addSignAndSubmit",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：加签并批准。默认值：false。"
+    },
+    {
+      "name": "defFlowType",
+      "required": "否",
+      "type": "int",
+      "description": "加签节点流转后流转方式  0：流转到下一节点（默认值）；1：回到本节点；"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "批准意见（当addSignAndSubmit=true时该参数才生效）"
+    },
+    {
+      "name": "attachments",
+      "required": "否",
+      "type": "long",
+      "description": "附件ID"
+    },
+    {
+      "name": "signatureData",
+      "required": "否",
+      "type": "json",
+      "description": "手写签批"
+    },
+    {
+      "name": "signatureData.signatureImgId",
+      "required": "否",
+      "type": "long",
+      "description": "手写签批"
+    },
+    {
+      "name": "locationData",
+      "required": "否",
+      "type": "json",
+      "description": "定位"
+    },
+    {
+      "name": "locationData.address",
+      "required": "否",
+      "type": "String",
+      "description": "位置"
+    },
+    {
+      "name": "locationData.value",
+      "required": "否",
+      "type": "String",
+      "description": "经纬度"
+    },
+    {
+      "name": "userSignatureData",
+      "required": "否",
+      "type": "json",
+      "description": "电子签章"
+    },
+    {
+      "name": "userSignatureData.signatureImgId",
+      "required": "否",
+      "type": "long",
+      "description": "电子签章对应图片"
+    },
+    {
+      "name": "useMaxWeightUser",
+      "required": "否",
+      "type": "boolean",
+      "description": "当userid 为主身份时，是否获取主次账号所有待办数据，选取权重最大的进行操作；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "nextNodeEditPurview",
+      "required": "否",
+      "type": "int",
+      "description": "下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值0；"
+    },
+    {
+      "name": "isModifiable",
+      "required": "否",
+      "type": "int",
+      "description": "是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值0"
+    },
+    {
+      "name": "nodeType",
+      "required": "否",
+      "type": "int",
+      "description": "节点类型； 9 查阅，1 批准， 2 确认。默认值：1"
+    },
+    {
+      "name": "mergeType",
+      "required": "否",
+      "type": "int",
+      "description": "分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值为1；"
+    },
+    {
+      "name": "mergeValue",
+      "required": "否",
+      "type": "int",
+      "description": "合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。"
+    },
+    {
+      "name": "isParallel",
+      "required": "否",
+      "type": "int",
+      "description": "是否并行；0 串行，1并行。addFreeNodeData为空的情况必填。默认值为0"
+    },
+    {
+      "name": "operatorIds",
+      "required": "是",
+      "type": "String",
+      "description": "操作者ID，多个ID用逗号隔开。一个操作人就是一个节点。addFreeNodeData为空的情况必填。"
+    },
+    {
+      "name": "signType",
+      "required": "否",
+      "type": "int",
+      "description": "会签方式；0 非会签，1会签，2依次逐个处理。默认值为0；"
+    },
+    {
+      "name": "ccOperators",
+      "required": "否",
+      "type": "String",
+      "description": "抄送人ID，多个ID用逗号隔开，每个节点都会有这些抄送人。"
+    },
+    {
+      "name": "ccSignType",
+      "required": "否",
+      "type": "int",
+      "description": "抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3"
+    },
+    {
+      "name": "nextNodeEditPurview",
+      "required": "否",
+      "type": "int",
+      "description": "下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值0；"
+    },
+    {
+      "name": "mergeType",
+      "required": "否",
+      "type": "int",
+      "description": "分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值为1；"
+    },
+    {
+      "name": "mergeValue",
+      "required": "否",
+      "type": "int",
+      "description": "合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。"
+    },
+    {
+      "name": "addFreeNodeData",
+      "required": "否",
+      "type": "list<list>",
+      "description": "节点对象的二维数组，一维数组就是一串节点，多个一维数组是并行。operatorIds为空的情况必填。"
+    },
+    {
+      "name": "nodeName",
+      "required": "否",
+      "type": "String",
+      "description": "节点名称"
+    },
+    {
+      "name": "operatorIds",
+      "required": "是",
+      "type": "String",
+      "description": "节点操作者ID，多个ID用英文逗号隔开。"
+    },
+    {
+      "name": "signType",
+      "required": "否",
+      "type": "int",
+      "description": "会签方式；0 非会签，1会签，2依次逐个处理。默认值为0."
+    },
+    {
+      "name": "nodeType",
+      "required": "否",
+      "type": "int",
+      "description": "节点类型； 9 查阅，1 流程， 2 确认。默认值：1"
+    },
+    {
+      "name": "isModifiable",
+      "required": "否",
+      "type": "int",
+      "description": "是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0"
+    },
+    {
+      "name": "ccOperators",
+      "required": "否",
+      "type": "String",
+      "description": "抄送人ID，多个ID用逗号隔开"
+    },
+    {
+      "name": "ccSignType",
+      "required": "否",
+      "type": "int",
+      "description": "抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3。"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "动态加签"
+  ],
+  "raw_text": "## 动态加签\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/dynamicCreateFreeNode\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 流程ID 获取审批数据ID |\n| currentNodeId | 否 | Long | 加签节点ID（只能是当前节点，仅支持一个节点） |\n| workflowId | 否 | Long | 工作流ID |\n| addSignAndSubmit | 否 | boolean | true：加签并批准。默认值：false。 |\n| defFlowType | 否 | int | 加签节点流转后流转方式  0：流转到下一节点（默认值）；1：回到本节点； |\n| remark | 否 | String | 批准意见（当addSignAndSubmit=true时该参数才生效） |\n| attachments | 否 | long | 附件ID |\n| signatureData | 否 | json | 手写签批 |\n| signatureData.signatureImgId | 否 | long | 手写签批 |\n| locationData | 否 | json | 定位 |\n| locationData.address | 否 | String | 位置 |\n| locationData.value | 否 | String | 经纬度 |\n| userSignatureData | 否 | json | 电子签章 |\n| userSignatureData.signatureImgId | 否 | long | 电子签章对应图片 |\n| useMaxWeightUser | 否 | boolean | 当userid 为主身份时，是否获取主次账号所有待办数据，选取权重最大的进行操作； |\n加签参数\n- 1、operatorIds方式加签\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nextNodeEditPurview | 否 | int | 下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值0； |\n| isModifiable | 否 | int | 是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值0 |\n| nodeType | 否 | int | 节点类型； 9 查阅，1 批准， 2 确认。默认值：1 |\n| mergeType | 否 | int | 分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值为1； |\n| mergeValue | 否 | int | 合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。 |\n| isParallel | 否 | int | 是否并行；0 串行，1并行。addFreeNodeData为空的情况必填。默认值为0 |\n| operatorIds | 是 | String | 操作者ID，多个ID用逗号隔开。一个操作人就是一个节点。addFreeNodeData为空的情况必填。 |\n| signType | 否 | int | 会签方式；0 非会签，1会签，2依次逐个处理。默认值为0； |\n| ccOperators | 否 | String | 抄送人ID，多个ID用逗号隔开，每个节点都会有这些抄送人。 |\n| ccSignType | 否 | int | 抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3 |\n- 2、addFreeNodeData方式加签\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nextNodeEditPurview | 否 | int | 下一节点编辑权限；0 不可调整 ，1 仅允许添加新节点，2 允许添加新节点且允许修改后续节点。默认值0； |\n| mergeType | 否 | int | 分支合并方式；1：按比例通过合并，2：按分支数通过。并行情况必填。默认值为1； |\n| mergeValue | 否 | int | 合并参数；mergeType=1时，传递的是0-100的整数；mergeType=2时，传递的是需要通过的分支数。 |\n| addFreeNodeData | 否 | list<list> | 节点对象的二维数组，一维数组就是一串节点，多个一维数组是并行。operatorIds为空的情况必填。 |\n- addFreeNodeData[0][0]：优先级最高\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nodeName | 否 | String | 节点名称 |\n| operatorIds | 是 | String | 节点操作者ID，多个ID用英文逗号隔开。 |\n| signType | 否 | int | 会签方式；0 非会签，1会签，2依次逐个处理。默认值为0. |\n| nodeType | 否 | int | 节点类型； 9 查阅，1 流程， 2 确认。默认值：1 |\n| isModifiable | 否 | int | 是否可修改流程表内容；0 不可修改，1可修改。nodeType!=9时才传递。默认值：0 |\n| ccOperators | 否 | String | 抄送人ID，多个ID用逗号隔开 |\n| ccSignType | 否 | int | 抄送人会签关系；3 抄送不需提交，4 抄送需提交。默认值：3。 |\n参数示例：\n- 加签方式operatorIds:\n- 加签方式：addFreeNodeData:\n返回参数示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

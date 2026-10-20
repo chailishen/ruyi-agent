@@ -1,0 +1,66 @@
+{
+  "id": "410224735809437696",
+  "name": "获取邮件未读数SAPI接口",
+  "module": "邮件",
+  "module_path": [
+    "邮件"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "resourceWorkCode",
+      "required": "是",
+      "type": "String",
+      "description": "邮件归属人工号"
+    },
+    {
+      "name": "mailBox",
+      "required": "否",
+      "type": "String",
+      "description": "文件夹（默认inbox）收件箱：inbox已删除：deleted垃圾箱：trash待办：todo标星：star所有邮件：Allmessages"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "失败原因"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误码"
+    },
+    {
+      "name": "count",
+      "required": "",
+      "type": "int",
+      "description": "未读邮件数量"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "支持版本：",
+    "请求URL：",
+    "请求方式：",
+    "请求参数：",
+    "请求示例：",
+    "返回示例：",
+    "返回参数说明："
+  ],
+  "raw_text": "### 支持版本：\n- 251001\n### 请求URL：\n- /sapi/mail/base/v1/getMailUnReadCount\n### 请求方式：\n- GET\n### 请求参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| resourceWorkCode | 是 | String | 邮件归属人工号 |\n| mailBox | 否 | String | 文件夹（默认inbox）收件箱：inbox已删除：deleted垃圾箱：trash待办：todo标星：star所有邮件：Allmessages |\n### 请求示例：\n### 返回示例：\n### 返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errmsg | String | 失败原因 |\n| errcode | String | 错误码 |\n| count | int | 未读邮件数量 |"
+}

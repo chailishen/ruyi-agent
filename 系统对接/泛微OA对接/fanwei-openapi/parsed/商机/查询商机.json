@@ -1,0 +1,120 @@
+{
+  "id": "946544112848494592",
+  "name": "查询商机",
+  "module": "商机",
+  "module_path": [
+    "商机"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：saleChance"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "商机ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建人"
+    },
+    {
+      "name": "saleMoney",
+      "required": "",
+      "type": "Double",
+      "description": "销售金额"
+    },
+    {
+      "name": "saleWinRate",
+      "required": "",
+      "type": "Int",
+      "description": "赢率"
+    },
+    {
+      "name": "saleType",
+      "required": "",
+      "type": "Object",
+      "description": "商机类型"
+    },
+    {
+      "name": "saleOrderDate",
+      "required": "",
+      "type": "Object",
+      "description": "结单时间"
+    },
+    {
+      "name": "saleBelongCustomer",
+      "required": "",
+      "type": "Object",
+      "description": "客户"
+    },
+    {
+      "name": "saleDescription",
+      "required": "",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "saleProcess",
+      "required": "",
+      "type": "Object",
+      "description": "销售过程"
+    },
+    {
+      "name": "saleStage",
+      "required": "",
+      "type": "Object",
+      "description": "商机阶段"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询商机"
+  ],
+  "raw_text": "## 查询商机\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：saleChance |\n| id | 是 | Long | 商机ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 名称 |\n| creator | Object | 创建人 |\n| saleMoney | Double | 销售金额 |\n| saleWinRate | Int | 赢率 |\n| saleType | Object | 商机类型 |\n| saleOrderDate | Object | 结单时间 |\n| saleBelongCustomer | Object | 客户 |\n| saleDescription | String | 备注 |\n| saleProcess | Object | 销售过程 |\n| saleStage | Object | 商机阶段 |\nJava sdk调用示例："
+}

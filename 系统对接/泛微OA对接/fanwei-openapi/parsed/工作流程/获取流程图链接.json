@@ -1,0 +1,61 @@
+{
+  "id": "840715182343462913",
+  "name": "获取流程图链接",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestFlowChart",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestFlowChart",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "流程图链接"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程图链接"
+  ],
+  "raw_text": "## 获取流程图链接\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestFlowChart\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 流程图链接 |\nJava sdk调用示例："
+}

@@ -1,0 +1,114 @@
+{
+  "id": "973597897005481984",
+  "name": "即将到达的流程列表接口",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "StringString",
+      "description": "每页数据量"
+    },
+    {
+      "name": "current",
+      "required": "是",
+      "type": "int",
+      "description": "页码"
+    },
+    {
+      "name": "params",
+      "required": "是",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "dimension",
+      "required": "是",
+      "type": "String",
+      "description": "维度标识，直接给'coming'即可"
+    },
+    {
+      "name": "tabid",
+      "required": "是",
+      "type": "String",
+      "description": "直接给1100，固定写法"
+    },
+    {
+      "name": "countKey",
+      "required": "是",
+      "type": "String",
+      "description": "预计今日到达传1，预计明日到达传2，预计近期总共到达传3"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "需要查询目标用户的用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestname",
+      "required": "",
+      "type": "string",
+      "description": "流程名称"
+    },
+    {
+      "name": "currentnode",
+      "required": "",
+      "type": "string",
+      "description": "当前节点"
+    },
+    {
+      "name": "arriveTime",
+      "required": "",
+      "type": "String(yyyy-MM-dd HH:mm:ss)",
+      "description": "预计到达时间"
+    },
+    {
+      "name": "remainingNodeShow",
+      "required": "",
+      "type": "string",
+      "description": "剩余节点数"
+    },
+    {
+      "name": "createdatetime",
+      "required": "",
+      "type": "String(yyyy-MM-dd HH:mm:ss)",
+      "description": "发起时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- https://api.yunteams.cn/api/workflow/list/paService/v1/getComingListData\n请求方式：\n- POST （Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| pageSize | 是 | StringString | 每页数据量 |\n| current | 是 | int | 页码 |\n| params | 是 |  |  |\n| dimension | 是 | String | 维度标识，直接给'coming'即可 |\n| tabid | 是 | String | 直接给1100，固定写法 |\n| countKey | 是 | String | 预计今日到达传1，预计明日到达传2，预计近期总共到达传3 |\n| userId | 是 | Long | 需要查询目标用户的用户ID |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestname | string | 流程名称 |\n| currentnode | string | 当前节点 |\n| arriveTime | String(yyyy-MM-dd HH:mm:ss) | 预计到达时间 |\n| remainingNodeShow | string | 剩余节点数 |\n| createdatetime | String(yyyy-MM-dd HH:mm:ss) | 发起时间 |\nJava sdk调用示例："
+}

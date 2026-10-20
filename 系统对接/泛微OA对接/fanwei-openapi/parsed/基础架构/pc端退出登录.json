@@ -1,0 +1,58 @@
+{
+  "id": "233077060837310464",
+  "name": "pc端退出登录",
+  "module": "基础架构",
+  "module_path": [
+    "基础架构"
+  ],
+  "is_api": true,
+  "url": "/api/basicserver/v1/login/sysLogout",
+  "url_template": "{OpenApiOrigin}/api/basicserver/v1/login/sysLogout",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "否",
+      "type": "Long",
+      "description": "人员id 获取用户id 当type为userId时必填type"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "userId人员id,loginName登录名,jobNum工号,account账号,mobile电话,email邮箱"
+    },
+    {
+      "name": "account",
+      "required": "shi",
+      "type": "String",
+      "description": "账号 当type为非userId时必填"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/basicserver/v1/login/sysLogout\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 否 | Long | 人员id 获取用户id 当type为userId时必填type |\n| type | 是 | String | userId人员id,loginName登录名,jobNum工号,account账号,mobile电话,email邮箱 |\n| account | shi | String | 账号 当type为非userId时必填 |\n传参示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |"
+}

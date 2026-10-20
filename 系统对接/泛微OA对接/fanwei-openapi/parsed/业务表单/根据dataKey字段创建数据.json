@@ -1,0 +1,72 @@
+{
+  "id": "192722769341841408",
+  "name": "根据dataKey字段创建数据",
+  "module": "业务表单",
+  "module_path": [
+    "业务表单"
+  ],
+  "is_api": true,
+  "url": "/api/formdatareport/v2/createDataReportByDataKey",
+  "url_template": "{OpenApiOrigin}/api/formdatareport/v2/createDataReportByDataKey",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "dataMap",
+      "required": "是",
+      "type": "String",
+      "description": "表单自定义字段集合 datamap传值说明"
+    },
+    {
+      "name": "layoutId",
+      "required": "否",
+      "type": "Long",
+      "description": "布局ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "reportId",
+      "required": "",
+      "type": "Long",
+      "description": "表单数据ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据dataKey字段创建数据"
+  ],
+  "raw_text": "## 根据dataKey字段创建数据\n请求URL：\n- {OpenApiOrigin}/api/formdatareport/v2/createDataReportByDataKey\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| formId | 是 | Long | 表单ID 获取表单ID |\n| dataMap | 是 | String | 表单自定义字段集合 datamap传值说明 |\n| layoutId | 否 | Long | 布局ID |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| reportId | Long | 表单数据ID |"
+}

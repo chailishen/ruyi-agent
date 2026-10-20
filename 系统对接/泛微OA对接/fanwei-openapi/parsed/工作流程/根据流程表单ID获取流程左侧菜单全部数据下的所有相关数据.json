@@ -1,0 +1,90 @@
+{
+  "id": "840693948093136896",
+  "name": "根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/getAllById",
+  "url_template": "{OpenApiOrigin}/workflow/v2/getAllById",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "表单ID 获取表单ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Int",
+      "description": "分页页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Int",
+      "description": "分页展示数据数，默认最大200"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "String",
+      "description": "审批提交人信息"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "String",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "审批数据ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "审批数据名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据"
+  ],
+  "raw_text": "## 根据流程表单ID获取流程左侧菜单全部数据下的所有相关数据\n请求URL：\n- {OpenApiOrigin}/workflow/v2/getAllById\n请求方式：\n- GET\n描述：\n- 根据审批表单ID获取审批左侧菜单全部数据下的所有相关数据\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 表单ID 获取表单ID |\n| pageNo | 否 | Int | 分页页码 |\n| pageSize | 否 | Int | 分页展示数据数，默认最大200 |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/getAllById?id=6473714586545086123&access_token=e94b9a88696283ab7ed688790daf5b89&userid=717929201362116609\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| creator | String | 审批提交人信息 |\n| delete | String | 是否删除 |\n| id | String | 审批数据ID |\n| name | String | 审批数据名称 |\nJava sdk调用示例："
+}

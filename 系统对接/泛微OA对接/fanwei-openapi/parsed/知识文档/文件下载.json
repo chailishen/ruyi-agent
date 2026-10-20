@@ -1,0 +1,58 @@
+{
+  "id": "220354754872606720",
+  "name": "文件下载",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/v2/common/download/{fileId}",
+  "url_template": "{OpenApiOrigin}/api/file/v2/common/download/{fileId}",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "module",
+      "required": "否",
+      "type": "string",
+      "description": "模块"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "object",
+      "description": "响应码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "object",
+      "description": "响应具体信息"
+    },
+    {
+      "name": "stream",
+      "required": "",
+      "type": "object",
+      "description": "文件流（直接返回文件流）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：\n- 主要用于文件的下载\n请求URL：\n- {OpenApiOrigin}/api/file/v2/common/download/{fileId}\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| userid | 是 | string | 用户ID 获取用户ID |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n| module | 否 | string | 模块 |\n返回失败示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | object | 响应码 |\n| errmsg | object | 响应具体信息 |\n| stream | object | 文件流（直接返回文件流） |\nJava sdk调用示例："
+}

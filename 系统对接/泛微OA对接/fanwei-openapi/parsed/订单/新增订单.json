@@ -1,0 +1,144 @@
+{
+  "id": "840717660506038273",
+  "name": "新增订单",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/create",
+  "url_template": "{OpenApiOrigin}/crm/v2/create",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：orderform"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "订单信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "订单名称"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "orderformCustomer",
+      "required": "是",
+      "type": "String",
+      "description": "客户"
+    },
+    {
+      "name": "orderformContract",
+      "required": "否",
+      "type": "String",
+      "description": "订单合同"
+    },
+    {
+      "name": "orderformStatus",
+      "required": "否",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "orderformType",
+      "required": "否",
+      "type": "String",
+      "description": "类型"
+    },
+    {
+      "name": "orderformUnit",
+      "required": "否",
+      "type": "String",
+      "description": "单位"
+    },
+    {
+      "name": "orderformPayMethod",
+      "required": "否",
+      "type": "String",
+      "description": "支付方式"
+    },
+    {
+      "name": "orderformNumber",
+      "required": "否",
+      "type": "String",
+      "description": "编号"
+    },
+    {
+      "name": "orderformTotalMoney",
+      "required": "否",
+      "type": "Double",
+      "description": "总金额"
+    },
+    {
+      "name": "orderformStartTime",
+      "required": "否",
+      "type": "Date",
+      "description": "下单日期"
+    },
+    {
+      "name": "orderformEndTime",
+      "required": "否",
+      "type": "Date",
+      "description": "结单日期"
+    },
+    {
+      "name": "orderformDescription",
+      "required": "否",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "订单信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增订单"
+  ],
+  "raw_text": "## 新增订单\n请求URL：\n- {OpenApiOrigin}/crm/v2/create\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：orderform |\n| entity | 是 | Object | 订单信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 是 | String | 订单名称 |\n| manager | 否 | String | 负责人 |\n| orderformCustomer | 是 | String | 客户 |\n| orderformContract | 否 | String | 订单合同 |\n| orderformStatus | 否 | String | 状态 |\n| orderformType | 否 | String | 类型 |\n| orderformUnit | 否 | String | 单位 |\n| orderformPayMethod | 否 | String | 支付方式 |\n| orderformNumber | 否 | String | 编号 |\n| orderformTotalMoney | 否 | Double | 总金额 |\n| orderformStartTime | 否 | Date | 下单日期 |\n| orderformEndTime | 否 | Date | 结单日期 |\n| orderformDescription | 否 | String | 备注 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&entity={\"name\": \"李浩订单002\",\"manager\": {\"name\": \"陈兰兰\"},\"orderformCustomer\": {\"name\": \"小小陈客户\"},\"orderformNumber\": \"DD_2019_000001\",\"orderformTotalMoney\": \"10000\",\"orderformStartTime\": \"2022-10-10\",\"orderformEndTime\": \"2022-10-20\",\"orderformDescription\": \"备注内容\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 订单信息（JSON格式） |\nJava sdk调用示例："
+}

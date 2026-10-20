@@ -1,0 +1,60 @@
+{
+  "id": "840673181800431617",
+  "name": "获取code信息",
+  "module": "认证",
+  "module_path": [
+    "认证"
+  ],
+  "is_api": true,
+  "url": "/oauth2/authorize",
+  "url_template": "{OpenApiOrigin}/oauth2/authorize",
+  "method": "GET、POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "corpid",
+      "required": "是",
+      "type": "String",
+      "description": "注册企业corpId 开发者资料中查看corpId"
+    },
+    {
+      "name": "response_type",
+      "required": "是",
+      "type": "String",
+      "description": "返回类型，此时固定为：code"
+    },
+    {
+      "name": "state",
+      "required": "是",
+      "type": "String",
+      "description": "重定向后会带上state参数，企业可以填写a-zA-Z0-9的参数值，长度不可超过128个字节"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "code信息，有效时间为10分钟且只能使用一次"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取code信息"
+  ],
+  "raw_text": "## 获取code信息\n请求URL：\n- {OpenApiOrigin}/oauth2/authorize\n请求方式：\n- GET、POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| corpid | 是 | String | 注册企业corpId 开发者资料中查看corpId |\n| response_type | 是 | String | 返回类型，此时固定为：code |\n| state | 是 | String | 重定向后会带上state参数，企业可以填写a-zA-Z0-9的参数值，长度不可超过128个字节 |\nGET方式请求示例：\n{OpenApiOrigin}/oauth2/authorize?corpid=xxx&response_type=code&state=xxx\nPOST方式请求示例：\n{OpenApiOrigin}/oauth2/authorize\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| code | String | code信息，有效时间为10分钟且只能使用一次 |\nJava sdk调用示例："
+}

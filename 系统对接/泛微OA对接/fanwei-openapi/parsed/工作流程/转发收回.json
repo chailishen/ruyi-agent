@@ -1,0 +1,86 @@
+{
+  "id": "874489795746537472",
+  "name": "转发收回",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/doForwardBack",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/doForwardBack",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "backParam",
+      "required": "是",
+      "type": "list",
+      "description": "需要收回的转发操作集合"
+    },
+    {
+      "name": "batch",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否收回同批次所有转发操作"
+    },
+    {
+      "name": "requestLogId",
+      "required": "是",
+      "type": "long",
+      "description": "转发日志ID"
+    },
+    {
+      "name": "targetCId",
+      "required": "否",
+      "type": "long",
+      "description": "（batch=false或batch不传时必填）"
+    },
+    {
+      "name": "targetUserId",
+      "required": "否",
+      "type": "long",
+      "description": "转发目标用户ID（batch=false或batch不传时必填）"
+    },
+    {
+      "name": "isMonitor",
+      "required": "否",
+      "type": "int",
+      "description": "是否监控权限 0：否 1：是"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "转发收回"
+  ],
+  "raw_text": "## 转发收回\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/doForwardBack\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| backParam | 是 | list | 需要收回的转发操作集合 |\n| batch | 否 | boolean | 是否收回同批次所有转发操作 |\n| requestLogId | 是 | long | 转发日志ID |\n| targetCId | 否 | long | （batch=false或batch不传时必填） |\n| targetUserId | 否 | long | 转发目标用户ID（batch=false或batch不传时必填） |\n| isMonitor | 否 | int | 是否监控权限 0：否 1：是 |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

@@ -1,0 +1,60 @@
+{
+  "id": "840678932844650497",
+  "name": "删除工时",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/deleteRealWorkingTimes",
+  "url_template": "{OpenApiOrigin}/task/v2/deleteRealWorkingTimes",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "String",
+      "description": "用户id"
+    },
+    {
+      "name": "fillRecordIds",
+      "required": "是",
+      "type": "List<Long>",
+      "description": "填报记录id列表"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除工时"
+  ],
+  "raw_text": "## 删除工时\n请求URL：\n- {OpenApiOrigin}/task/v2/deleteRealWorkingTimes\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | String | 用户id |\n| fillRecordIds | 是 | List<Long> | 填报记录id列表 |\nfillRecords请求结构体：\n请求示例：\nquery方式\nhttps://api.yunteams.cn/task/v2/deleteRealWorkingTimes?access_token=3f888283dd7564dd5443a5590a357318&fillRecordIds=[5117956890264113552]&userId=717929201362116609\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

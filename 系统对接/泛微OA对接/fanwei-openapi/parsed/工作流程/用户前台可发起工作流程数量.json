@@ -1,0 +1,78 @@
+{
+  "id": "840714039941758977",
+  "name": "用户前台可发起工作流程数量",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/list/paService/v1/getCreateWorkflowCount",
+  "url_template": "{OpenApiOrigin}/api/workflow/list/paService/v1/getCreateWorkflowCount",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "wfpCode",
+      "required": "是",
+      "type": "Int",
+      "description": "0：个人审批 1：团队审批"
+    },
+    {
+      "name": "filterHide",
+      "required": "否",
+      "type": "String",
+      "description": "是否过滤“新建流程默认隐藏”设置，为1时过滤"
+    },
+    {
+      "name": "mergeShow",
+      "required": "否",
+      "type": "Int",
+      "description": "主次账号是否统一显示\"mergeShow\":1/0（参数传递为1，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ）"
+    },
+    {
+      "name": "inCludePTJob",
+      "required": "否",
+      "type": "Int",
+      "description": "是否包含兼职岗位数据，0：否 1：是"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "count",
+      "required": "",
+      "type": "string",
+      "description": "数量"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "用户前台可发起工作流程数量"
+  ],
+  "raw_text": "## 用户前台可发起工作流程数量\n请求URL：\n- {OpenApiOrigin}/api/workflow/list/paService/v1/getCreateWorkflowCount\n请求方式：\n- POST\n- 备注：access_token参数请放置于param中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| wfpCode | 是 | Int | 0：个人审批 1：团队审批 |\n| filterHide | 否 | String | 是否过滤“新建流程默认隐藏”设置，为1时过滤 |\n| mergeShow | 否 | Int | 主次账号是否统一显示\"mergeShow\":1/0（参数传递为1，才会读取用户个人设置-偏好设置-其他设置：多身份数据显示 设置，否则默认不包含次账号数据 ） |\n| inCludePTJob | 否 | Int | 是否包含兼职岗位数据，0：否 1：是 |\n传参示例：\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| count | string | 数量 |\nJava sdk调用示例："
+}

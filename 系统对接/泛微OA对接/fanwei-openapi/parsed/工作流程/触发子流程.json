@@ -1,0 +1,70 @@
+{
+  "id": "236697290738237440",
+  "name": "触发子流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/triggerSubRequest",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/triggerSubRequest",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIdStr",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "mainRequestId",
+      "required": "是",
+      "type": "Long",
+      "description": "主流程的唯一标识"
+    },
+    {
+      "name": "subWfSetIds",
+      "required": "是",
+      "type": "List",
+      "description": "子流程设置唯一标识，需要触发子流程的设置ID（workflow_subwfset表id字段）"
+    },
+    {
+      "name": "dataId",
+      "required": "否",
+      "type": "Long",
+      "description": "外部表单ID，如果传了该参数就触发外部表单子流程，如果没有传则触发内部表单子流程"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "状态码 0：成功 , 500：系统异常 100001：参数异常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误信息"
+    },
+    {
+      "name": "otherData",
+      "required": "",
+      "type": "Object",
+      "description": "其他信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/triggerSubRequest\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIdStr | 是 | Long | 用户ID 获取用户ID |\n| mainRequestId | 是 | Long | 主流程的唯一标识 |\n| subWfSetIds | 是 | List | 子流程设置唯一标识，需要触发子流程的设置ID（workflow_subwfset表id字段） |\n| dataId | 否 | Long | 外部表单ID，如果传了该参数就触发外部表单子流程，如果没有传则触发内部表单子流程 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 状态码 0：成功 , 500：系统异常 100001：参数异常 |\n| errmsg | String | 错误信息 |\n| otherData | Object | 其他信息 |"
+}

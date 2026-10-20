@@ -1,0 +1,66 @@
+{
+  "id": "840676252625674241",
+  "name": "查询资金",
+  "module": "资金",
+  "module_path": [
+    "资金"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：capital"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "资金ID 获取资金ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "资金信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询资金"
+  ],
+  "raw_text": "## 查询资金\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：capital |\n| id | 是 | Long | 资金ID 获取资金ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=capital&id=2373238760050485558\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 资金信息（JSON格式） |\nJava sdk调用示例：\nJava sdk调用示例："
+}

@@ -1,0 +1,68 @@
+{
+  "id": "926018837817098241",
+  "name": "获取团队人员账号信息",
+  "module": "基础架构",
+  "module_path": [
+    "基础架构"
+  ],
+  "is_api": true,
+  "url": "/api/basicserver/v1/login/findAccount",
+  "url_template": "{OpenApiOrigin}/api/basicserver/v1/login/findAccount",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "loginName",
+      "required": "",
+      "type": "String",
+      "description": "登录名"
+    },
+    {
+      "name": "jobNum",
+      "required": "",
+      "type": "String",
+      "description": "工号"
+    },
+    {
+      "name": "account",
+      "required": "",
+      "type": "String",
+      "description": "绑定的账号"
+    },
+    {
+      "name": "mobile",
+      "required": "",
+      "type": "String",
+      "description": "绑定的手机号账号"
+    },
+    {
+      "name": "email",
+      "required": "",
+      "type": "String",
+      "description": "绑定的邮箱账号"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取团队人员账号信息"
+  ],
+  "raw_text": "## 获取团队人员账号信息\n请求URL：\n- {OpenApiOrigin}/api/basicserver/v1/login/findAccount\n请求方式：\n- POST application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n请求示例\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| loginName | String | 登录名 |\n| jobNum | String | 工号 |\n| account | String | 绑定的账号 |\n| mobile | String | 绑定的手机号账号 |\n| email | String | 绑定的邮箱账号 |\nJava sdk调用示例："
+}

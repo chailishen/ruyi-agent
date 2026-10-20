@@ -1,0 +1,60 @@
+{
+  "id": "840678683586428928",
+  "name": "查询任务类型",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/queryTaskTypes",
+  "url_template": "{OpenApiOrigin}/task/v2/queryTaskTypes",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "分类名称"
+    },
+    {
+      "name": "orderId",
+      "required": "",
+      "type": "Int",
+      "description": "分类排序"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "分类ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询任务类型"
+  ],
+  "raw_text": "## 查询任务类型\n请求URL：\n- {OpenApiOrigin}/task/v2/queryTaskTypes\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求示例：\nquery方式\n{OpenApiOrigin}/task/v2/queryTaskTypes?access_token=24f07a1e9199221a36835880b42508e4\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 分类名称 |\n| orderId | Int | 分类排序 |\n| id | String | 分类ID |\nJava sdk调用示例："
+}

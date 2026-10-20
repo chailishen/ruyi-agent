@@ -1,0 +1,174 @@
+{
+  "id": "908308291006128128",
+  "name": "文档属性",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/property",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/property",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "接口信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "接口状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "接口描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "文档属性信息"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "object",
+      "description": "文档创建人对象"
+    },
+    {
+      "name": "praised",
+      "required": "",
+      "type": "string",
+      "description": "是否已点赞"
+    },
+    {
+      "name": "praiseCount",
+      "required": "",
+      "type": "string",
+      "description": "点赞数"
+    },
+    {
+      "name": "author",
+      "required": "",
+      "type": "object",
+      "description": "负责人对象"
+    },
+    {
+      "name": "docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "docStatusName",
+      "required": "",
+      "type": "string",
+      "description": "文档状态显示名"
+    },
+    {
+      "name": "readCount",
+      "required": "",
+      "type": "string",
+      "description": "阅读总数"
+    },
+    {
+      "name": "watched",
+      "required": "",
+      "type": "string",
+      "description": "是否已关注"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "validity",
+      "required": "",
+      "type": "string",
+      "description": "密级有效期"
+    },
+    {
+      "name": "secLevelValidity",
+      "required": "",
+      "type": "string",
+      "description": "密级+有效期显示名"
+    },
+    {
+      "name": "companyFolder",
+      "required": "",
+      "type": "object",
+      "description": "公共文件夹对象"
+    },
+    {
+      "name": "sysFolder",
+      "required": "",
+      "type": "object",
+      "description": "系统文件夹对象"
+    },
+    {
+      "name": "privyFolder",
+      "required": "",
+      "type": "array",
+      "description": "个人文件夹集合"
+    },
+    {
+      "name": "virtualFolder",
+      "required": "",
+      "type": "array",
+      "description": "虚拟知识库集合"
+    },
+    {
+      "name": "participants",
+      "required": "",
+      "type": "array",
+      "description": "文档参与人集合"
+    },
+    {
+      "name": "myTags",
+      "required": "",
+      "type": "array",
+      "description": "个人标签集合"
+    },
+    {
+      "name": "myTags",
+      "required": "",
+      "type": "array",
+      "description": "公共标签集合"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档属性"
+  ],
+  "raw_text": "## 文档属性\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/property\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | string | 文档id |\n| userid | 是 | string | 用户id 获取用户ID |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 接口信息 |\n| errcode | string | 接口状态码 |\n| errmsg | string | 接口描述 |\n| data | object | 文档属性信息 |\n| creator | object | 文档创建人对象 |\n| praised | string | 是否已点赞 |\n| praiseCount | string | 点赞数 |\n| author | object | 负责人对象 |\n| docStatus | string | 文档状态 |\n| docStatusName | string | 文档状态显示名 |\n| readCount | string | 阅读总数 |\n| watched | string | 是否已关注 |\n| secLevel | string | 密级 |\n| validity | string | 密级有效期 |\n| secLevelValidity | string | 密级+有效期显示名 |\n| companyFolder | object | 公共文件夹对象 |\n| sysFolder | object | 系统文件夹对象 |\n| privyFolder | array | 个人文件夹集合 |\n| virtualFolder | array | 虚拟知识库集合 |\n| participants | array | 文档参与人集合 |\n| myTags | array | 个人标签集合 |\n| myTags | array | 公共标签集合 |\nJava sdk调用示例："
+}

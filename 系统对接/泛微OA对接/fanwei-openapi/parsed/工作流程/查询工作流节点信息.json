@@ -1,0 +1,85 @@
+{
+  "id": "215678129975328768",
+  "name": "查询工作流节点信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/pathdef/openapi/getNodeInfoByCondition",
+  "url_template": "{OpenApiOrigin}/api/workflow/pathdef/openapi/getNodeInfoByCondition",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "Int",
+      "description": "工作流id"
+    },
+    {
+      "name": "needNextNode",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要计算下-节点信息，可以不传默认是false，如果传了true则会计算每个节点的下个节点信息(在返回值的nextNodeList属性中)"
+    },
+    {
+      "name": "needRejectLink",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否需要退回出口，可以不传默认是false，如果传了true则当计算节点的下一个节点时，会返回退回出口"
+    },
+    {
+      "name": "nodeId",
+      "required": "否",
+      "type": "Int",
+      "description": "节点id，数字类型，可以不传，如果传了，则只查指定节点的数据，发起节点的数据始终返回"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "startNodeld",
+      "required": "",
+      "type": "String",
+      "description": "工作流开始节点id"
+    },
+    {
+      "name": "nodelnfoList",
+      "required": "",
+      "type": "String",
+      "description": "工作流节点列表，包含节点的基础信息，比如节点id、节点名称等等，具体见接口返回值注意，在节点对象中，有个nextNodeList属性，包含了当前节点所有的下一个节点id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据条件查询工作流节点信息，支持计算工作流开始节点、计算每个节点的下一个节点"
+  ],
+  "raw_text": "## 根据条件查询工作流节点信息，支持计算工作流开始节点、计算每个节点的下一个节点\n请求URL：\n- {OpenApiOrigin}/api/workflow/pathdef/openapi/getNodeInfoByCondition\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| workflowId | 是 | Int | 工作流id |\n| needNextNode | 否 | boolean | 是否需要计算下-节点信息，可以不传默认是false，如果传了true则会计算每个节点的下个节点信息(在返回值的nextNodeList属性中) |\n| needRejectLink | 否 | boolean | 是否需要退回出口，可以不传默认是false，如果传了true则当计算节点的下一个节点时，会返回退回出口 |\n| nodeId | 否 | Int | 节点id，数字类型，可以不传，如果传了，则只查指定节点的数据，发起节点的数据始终返回 |\n传参示例（在body中传参）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| startNodeld | String | 工作流开始节点id |\n| nodelnfoList | String | 工作流节点列表，包含节点的基础信息，比如节点id、节点名称等等，具体见接口返回值注意，在节点对象中，有个nextNodeList属性，包含了当前节点所有的下一个节点id |"
+}

@@ -1,0 +1,129 @@
+{
+  "id": "908575957688147968",
+  "name": "获取节点操作者",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getNodeOperator",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getNodeOperator",
+  "method": "POST （Content_Type: application/json），备注：access_token放在params中备注  若没传递targetNodeId，则获取当前节点未操作者（可能有多个，全部返回）；  若传递了targetNodeId，且targetNodeId为当前节点，则获取指定节点未操作者；  若传递了targetNodeId，且targetNodeId不为当前节点，若指定节点为发起节点，则获取指定节点最新轮次操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=true，则获取指定节点操作组配置的操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=false，则获取指定节点最新轮次操作者；",
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中备注  若没传递targetNodeId，则获取当前节点未操作者（可能有多个，全部返回）；  若传递了targetNodeId，且targetNodeId为当前节点，则获取指定节点未操作者；  若传递了targetNodeId，且targetNodeId不为当前节点，若指定节点为发起节点，则获取指定节点最新轮次操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=true，则获取指定节点操作组配置的操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=false，则获取指定节点最新轮次操作者；"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "onlyOperator",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否只获取操作者。默认值：true。true：只获取提交权限的操作者。false：获取所有操作者（提交、抄送接收人、转发接收人等）。"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "节点ID。"
+    },
+    {
+      "name": "targetNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "节点ID。"
+    },
+    {
+      "name": "calculateConfigOperator",
+      "required": "否",
+      "type": "boolean",
+      "description": "targetNodeId不为当前节点，非创建节点时；true：获取操作者设置；false：获取节点最新轮操作者；默认值false；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "long",
+      "description": "节点ID"
+    },
+    {
+      "name": "nodeName",
+      "required": "",
+      "type": "String",
+      "description": "节点名称"
+    },
+    {
+      "name": "operatorUsers",
+      "required": "",
+      "type": "list",
+      "description": "节点操作者集合"
+    },
+    {
+      "name": "operatorUsers.userId",
+      "required": "",
+      "type": "long",
+      "description": "操作者ID"
+    },
+    {
+      "name": "operatorUsers.userName",
+      "required": "",
+      "type": "String",
+      "description": "操作者名称"
+    },
+    {
+      "name": "operatorUsers.mainUserId",
+      "required": "",
+      "type": "long",
+      "description": "操作者主身份ID"
+    },
+    {
+      "name": "operatorUsers.departMentId",
+      "required": "",
+      "type": "long",
+      "description": "操作者部门ID"
+    },
+    {
+      "name": "operatorUsers.isRemark",
+      "required": "",
+      "type": "int",
+      "description": "操作者身份（{origin}/sp/techdoc/doc/cf87c3c9-8ada-4e5f-bc60-d6a6c48a12a9/freepass"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取节点操作者"
+  ],
+  "raw_text": "## 获取节点操作者\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getNodeOperator\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n- 备注  若没传递targetNodeId，则获取当前节点未操作者（可能有多个，全部返回）；  若传递了targetNodeId，且targetNodeId为当前节点，则获取指定节点未操作者；  若传递了targetNodeId，且targetNodeId不为当前节点，若指定节点为发起节点，则获取指定节点最新轮次操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=true，则获取指定节点操作组配置的操作者；  若传递了targetNodeId，且targetNodeId不为当前节点和发起节点，且calculateConfigOperator=false，则获取指定节点最新轮次操作者；\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID |\n| onlyOperator | 否 | boolean | 是否只获取操作者。默认值：true。true：只获取提交权限的操作者。false：获取所有操作者（提交、抄送接收人、转发接收人等）。 |\n| userCurrentNodeId | 否 | long | 节点ID。 |\n| targetNodeId | 否 | long | 节点ID。 |\n| calculateConfigOperator | 否 | boolean | targetNodeId不为当前节点，非创建节点时；true：获取操作者设置；false：获取节点最新轮操作者；默认值false； |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| nodeId | long | 节点ID |\n| nodeName | String | 节点名称 |\n| operatorUsers | list | 节点操作者集合 |\n| operatorUsers.userId | long | 操作者ID |\n| operatorUsers.userName | String | 操作者名称 |\n| operatorUsers.mainUserId | long | 操作者主身份ID |\n| operatorUsers.departMentId | long | 操作者部门ID |\n| operatorUsers.isRemark | int | 操作者身份（{origin}/sp/techdoc/doc/cf87c3c9-8ada-4e5f-bc60-d6a6c48a12a9/freepass |"
+}

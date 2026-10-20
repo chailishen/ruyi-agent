@@ -1,0 +1,90 @@
+{
+  "id": "840677695952789505",
+  "name": "资金转出",
+  "module": "资金",
+  "module_path": [
+    "资金"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/divertCapital",
+  "url_template": "{OpenApiOrigin}/crm/v2/divertCapital",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "true",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "true",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "entity",
+      "required": "true",
+      "type": "Object",
+      "description": "转出信息"
+    },
+    {
+      "name": "capital",
+      "required": "false",
+      "type": "Object",
+      "description": "资金"
+    },
+    {
+      "name": "capitalCustomer",
+      "required": "false",
+      "type": "Object",
+      "description": "客户（用于获取资金数据）"
+    },
+    {
+      "name": "capitalAccount",
+      "required": "true",
+      "type": "Object",
+      "description": "转出账户"
+    },
+    {
+      "name": "accountAmount",
+      "required": "true",
+      "type": "Double",
+      "description": "转出金额"
+    },
+    {
+      "name": "accountOperTime",
+      "required": "false",
+      "type": "Date",
+      "description": "转出时间"
+    },
+    {
+      "name": "accountDescription",
+      "required": "false",
+      "type": "String",
+      "description": "备注"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "资金转出"
+  ],
+  "raw_text": "## 资金转出\n简要描述：\n- 资金转出\n请求URL：\n- {OpenApiOrigin}/crm/v2/divertCapital\n请求方式：\n- POST\n参数：\n| 参数名 | 类型 | 必选 | 说明 |\n| --- | --- | --- | --- |\n| access_token | String | true | 调用接口凭证 获取accessToken信息 |\n| userid | Long | true | 用户ID 获取用户ID |\n| entity | Object | true | 转出信息 |\n| capital | Object | false | 资金 |\n| capitalCustomer | Object | false | 客户（用于获取资金数据） |\n| capitalAccount | Object | true | 转出账户 |\n| accountAmount | Double | true | 转出金额 |\n| accountOperTime | Date | false | 转出时间 |\n| accountDescription | String | false | 备注 |\nentity请求结构体\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/divertCapital?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&entity={\"capital\": {    \"id\": \"2373238760050485558\",    \"name\": \"资金消失术asdysdshdfdgfghdhgfdjhgfsdhgsgdhaghgadfdfvbhgsdhasdhahfdshfhadshfafdfd\"},\"capitalCustomer\": {   \"id\": \"7823238875125164336\",    \"name\": \"小小陈客户\"},\"capitalAccount\": {    \"name\": \"返点账户\"},\"accountAmount\": 1,\"accountOperTime\": \"2020-02-20 10:10:00\",\"accountDescription\": \"转出1块\"\r }\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

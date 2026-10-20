@@ -1,0 +1,252 @@
+{
+  "id": "908304498571558912",
+  "name": "查询文档附件列表",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/v2/attList/{docId}",
+  "url_template": "{OpenApiOrigin}/api/doc/v2/attList/{docId}",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "响应消息对象"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "响应码: 0 表示响应正常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "响应消息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "array",
+      "description": "附件列表数组"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "附件id"
+    },
+    {
+      "name": "refId",
+      "required": "",
+      "type": "string",
+      "description": "附件所属文档id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "附件名称"
+    },
+    {
+      "name": "fileid",
+      "required": "",
+      "type": "string",
+      "description": "附件id"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "string",
+      "description": "附件类型"
+    },
+    {
+      "name": "size",
+      "required": "",
+      "type": "long",
+      "description": "附件大小"
+    },
+    {
+      "name": "md5",
+      "required": "",
+      "type": "string",
+      "description": "附件md5值"
+    },
+    {
+      "name": "uploadTime",
+      "required": "",
+      "type": "long",
+      "description": "附件上传时间"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "string",
+      "description": "附件所属模块"
+    },
+    {
+      "name": "signTip",
+      "required": "",
+      "type": "string",
+      "description": "契约锁签署状态"
+    },
+    {
+      "name": "ban",
+      "required": "",
+      "type": "boolean",
+      "description": "是否含有敏感内容"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "uploadEmployeeId",
+      "required": "",
+      "type": "string",
+      "description": "上传人id"
+    },
+    {
+      "name": "uploadUser",
+      "required": "",
+      "type": "string",
+      "description": "上传人id"
+    },
+    {
+      "name": "uploadName",
+      "required": "",
+      "type": "string",
+      "description": "上传人姓名"
+    },
+    {
+      "name": "uploadUserName",
+      "required": "",
+      "type": "string",
+      "description": "上传人姓名"
+    },
+    {
+      "name": "map",
+      "required": "",
+      "type": "object",
+      "description": "密级信息"
+    },
+    {
+      "name": "map.secretLevelValidity",
+      "required": "",
+      "type": "string",
+      "description": "密级和保密期限"
+    },
+    {
+      "name": "map.secretLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "string",
+      "description": "租户key"
+    },
+    {
+      "name": "loadlink",
+      "required": "",
+      "type": "string",
+      "description": "文件下载地址"
+    },
+    {
+      "name": "extName",
+      "required": "",
+      "type": "string",
+      "description": "附件扩展名"
+    },
+    {
+      "name": "doc",
+      "required": "",
+      "type": "boolean",
+      "description": "是否为doc文件"
+    },
+    {
+      "name": "img",
+      "required": "",
+      "type": "boolean",
+      "description": "是否为图像"
+    },
+    {
+      "name": "docId",
+      "required": "",
+      "type": "string",
+      "description": "文档ID"
+    },
+    {
+      "name": "validity",
+      "required": "",
+      "type": "string",
+      "description": "密级和保密期限"
+    },
+    {
+      "name": "secretLevel",
+      "required": "",
+      "type": "string",
+      "description": "密级"
+    },
+    {
+      "name": "secretLevelValidity",
+      "required": "",
+      "type": "string",
+      "description": "保密期限"
+    },
+    {
+      "name": "docType",
+      "required": "",
+      "type": "string",
+      "description": "文件类型"
+    },
+    {
+      "name": "image",
+      "required": "",
+      "type": "string",
+      "description": "是否为图像"
+    },
+    {
+      "name": "hasRef",
+      "required": "",
+      "type": "boolean",
+      "description": "是否有业务id"
+    },
+    {
+      "name": "qysFile",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可进行契约锁签署"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询文档附件列表"
+  ],
+  "raw_text": "## 查询文档附件列表\n简要描述：\n- 查询文档附件列表\n请求URL：\n- {OpenApiOrigin}/api/doc/v2/attList/{docId}\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 响应消息对象 |\n| errcode | String | 响应码: 0 表示响应正常 |\n| errmsg | string | 响应消息 |\n| data | array | 附件列表数组 |\n| id | string | 附件id |\n| refId | string | 附件所属文档id |\n| name | string | 附件名称 |\n| fileid | string | 附件id |\n| type | string | 附件类型 |\n| size | long | 附件大小 |\n| md5 | string | 附件md5值 |\n| uploadTime | long | 附件上传时间 |\n| module | string | 附件所属模块 |\n| signTip | string | 契约锁签署状态 |\n| ban | boolean | 是否含有敏感内容 |\n| secLevel | string | 密级 |\n| uploadEmployeeId | string | 上传人id |\n| uploadUser | string | 上传人id |\n| uploadName | string | 上传人姓名 |\n| uploadUserName | string | 上传人姓名 |\n| map | object | 密级信息 |\n| map.secretLevelValidity | string | 密级和保密期限 |\n| map.secretLevel | string | 密级 |\n| tenantKey | string | 租户key |\n| loadlink | string | 文件下载地址 |\n| extName | string | 附件扩展名 |\n| doc | boolean | 是否为doc文件 |\n| img | boolean | 是否为图像 |\n| docId | string | 文档ID |\n| validity | string | 密级和保密期限 |\n| secretLevel | string | 密级 |\n| secretLevelValidity | string | 保密期限 |\n| docType | string | 文件类型 |\n| image | string | 是否为图像 |\n| hasRef | boolean | 是否有业务id |\n| qysFile | boolean | 是否可进行契约锁签署 |\nJava sdk调用示例："
+}

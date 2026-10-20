@@ -1,0 +1,21 @@
+{
+  "id": "404068526836416512",
+  "name": "合同流程发起执行模板套用",
+  "module": "合同管理",
+  "module_path": [
+    "合同管理",
+    "模板管理"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "如何实现合同流程发起执行模板套用\n1. 通过新增流程接口，发起流程。\n2. 给流程创建套用模板、合同模板执行生成模板套用接口。\n3. 使用更新表单字段将套用后文件更新流程\n示例：\n第一步：发起流程。\n调用流程新建接口，生成一条合同流程数据，得到流程数据的requestid。\n第二步：模板创建\n调用模板创建接口，生成指定模板，获取到模板id（data）。\n第三步：模板套用\n调用生成模板套用接口，根据书签名称更新文档中书签对应内容，生成所需合同文件数据\n第四步：更新流程\n调用更新流程接口，将二、三步骤中套用生成合同文件数据更新至第一步创建的流程数据内。"
+}

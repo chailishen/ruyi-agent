@@ -1,0 +1,92 @@
+{
+  "id": "278276247069392896",
+  "name": "批量提交",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/batchSubmit",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchSubmit",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "package com.weaver.core.demo;\n\nimport cn.hutool.http.HttpRequest;\nimport cn.hutool.json.JSONUtil;\nimport com.alibaba.fastjson.JSONObject;\nimport com.weaver.core.constant.TestConstant;\nimport com.weaver.core.utils.RequestUtil;\n\n/**\n * 批量提交\n */\npublic class BatchSubmitDemo extends DemoBase {\n\n    public static void main(String[] args) {\n        String response = new BatchSubmitDemo().batchSubmit();\n        System.out.println(response);\n    }\n\n    /**\n     * 批量提交\n     * {\"message\":{\"errcode\":\"0\",\"errmsg\":\"success\",\"otherData\":{}},\"data\":{\"successRequest\":[],\"isAsync\":true,\"failRequest\":{}}}\n     * {\"message\":{\"errcode\":\"0\",\"errmsg\":\"success\",\"otherData\":{}},\"data\":{\"successRequest\":[\"959474781853327360\",\"959474876288966657\"],\"isAsync\":false,\"failRequest\":{}}}\n     *\n     * @return\n     */\n    public String batchSubmit() {\n        String url = HOST + \"/api/workflow/core/paService/v1/batchSubmit?access_token=\" + TOKEN;\n\n        JSONObject param = new JSONObject();\n        param.put(\"userid\", TestConstant.USER_CHENWH);\n        param.put(\"remark\", \"批量提交\");\n        param.put(\"isAsync\", false);\n        param.put(\"requestIds\", \"959474781853327360,959474876288966657\");\n\n        return HttpRequest.post(url)\n                .header(\"Content-Type\", \"application/json\")\n                // 参数放入body\n                .body(JSONUtil.toJsonStr(param))\n                .execute()\n                .body();\n    }\n}"
+  ],
+  "parameters": [
+    {
+      "name": "access _token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户id"
+    },
+    {
+      "name": "requestIds",
+      "required": "是",
+      "type": "String",
+      "description": "需要提交的流程ID；多个流程ID用英文逗号隔开；若传递有重复的requestId，程序中会过滤掉；"
+    },
+    {
+      "name": "isAsync",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否异步：true；异步执行；false：同步；默认值：读取后台配置；"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "签字意见"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "json",
+      "description": "返回数据"
+    },
+    {
+      "name": "isAsync",
+      "required": "",
+      "type": "boolean",
+      "description": "true：流程异步提交中；false：同步提交；"
+    },
+    {
+      "name": "successRequest",
+      "required": "",
+      "type": "list",
+      "description": "提交成功流程Id集合；"
+    },
+    {
+      "name": "failRequest",
+      "required": "",
+      "type": "map",
+      "description": "提交失败的流程以及失败原因；KEY：流程ID；VALUE：提交失败原因；"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量提交"
+  ],
+  "raw_text": "## 批量提交\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/batchSubmit\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access _token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户id |\n| requestIds | 是 | String | 需要提交的流程ID；多个流程ID用英文逗号隔开；若传递有重复的requestId，程序中会过滤掉； |\n| isAsync | 否 | boolean | 是否异步：true；异步执行；false：同步；默认值：读取后台配置； |\n| remark | 否 | String | 签字意见 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | json | 返回数据 |\ndata说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| isAsync | boolean | true：流程异步提交中；false：同步提交； |\n| successRequest | list | 提交成功流程Id集合； |\n| failRequest | map | 提交失败的流程以及失败原因；KEY：流程ID；VALUE：提交失败原因； |\nJava sdk调用示例："
+}

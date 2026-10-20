@@ -1,0 +1,260 @@
+{
+  "id": "908341542684876801",
+  "name": "获取当前登录人有权限的日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/querySearchAgenda",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/querySearchAgenda",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户id  获取用户ID"
+    },
+    {
+      "name": "tenantKey",
+      "required": "否",
+      "type": "String",
+      "description": "租户key"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "beginDate",
+      "required": "否",
+      "type": "Long",
+      "description": "开始日期，时间戳"
+    },
+    {
+      "name": "endDate",
+      "required": "否",
+      "type": "Long",
+      "description": "结束日期，时间戳"
+    },
+    {
+      "name": "calendarStatus",
+      "required": "否",
+      "type": "String",
+      "description": "日程状态：todo进行中,finished已完结"
+    },
+    {
+      "name": "page",
+      "required": "否",
+      "type": "Integer",
+      "description": "页码，不填默认为1"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Integer",
+      "description": "页大小，不填默认为10"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "业务数据"
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：当前页"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：页大小"
+    },
+    {
+      "name": "totalCount",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：总数"
+    },
+    {
+      "name": "hasNext",
+      "required": "",
+      "type": "Boolean",
+      "description": "分页：是否有下一页"
+    },
+    {
+      "name": "totalPages",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：总页数"
+    },
+    {
+      "name": "nextPage",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：下一页页码"
+    },
+    {
+      "name": "hasPre",
+      "required": "",
+      "type": "Boolean",
+      "description": "分页：是否有上一页"
+    },
+    {
+      "name": "prePage",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：上一页页码"
+    },
+    {
+      "name": "first",
+      "required": "",
+      "type": "Integer",
+      "description": "分页：首页页码"
+    },
+    {
+      "name": "result",
+      "required": "",
+      "type": "Array",
+      "description": "分页：返回数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "日程id"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "Integer",
+      "description": "是否删除：0、否 1、是"
+    },
+    {
+      "name": "updateTime",
+      "required": "",
+      "type": "Long",
+      "description": "最近更新时间"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建人"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Long",
+      "description": "日程创建时间"
+    },
+    {
+      "name": "commentCount",
+      "required": "",
+      "type": "Integer",
+      "description": "日程评论条数"
+    },
+    {
+      "name": "watched",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否关注"
+    },
+    {
+      "name": "unread",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否未读"
+    },
+    {
+      "name": "finished",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否结束"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "日程描述"
+    },
+    {
+      "name": "startDate",
+      "required": "",
+      "type": "Long",
+      "description": "日程开始时间"
+    },
+    {
+      "name": "endDate",
+      "required": "",
+      "type": "Long",
+      "description": "日程结束时间"
+    },
+    {
+      "name": "allDay",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否全天"
+    },
+    {
+      "name": "repeat",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否重复日程"
+    },
+    {
+      "name": "calendarStatus",
+      "required": "",
+      "type": "String",
+      "description": "日程状态：todo进行中,finished已完结"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误描述"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误代码"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取当前登录人有权限的日程"
+  ],
+  "raw_text": "## 获取当前登录人有权限的日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/querySearchAgenda\n请求方式：\n- POST\n- Content-Type：application/json\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户id  获取用户ID |\n| tenantKey | 否 | String | 租户key |\n| name | 否 | String | 日程名称 |\n| beginDate | 否 | Long | 开始日期，时间戳 |\n| endDate | 否 | Long | 结束日期，时间戳 |\n| calendarStatus | 否 | String | 日程状态：todo进行中,finished已完结 |\n| page | 否 | Integer | 页码，不填默认为1 |\n| pageSize | 否 | Integer | 页大小，不填默认为10 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| data | Object | 业务数据 |\n| pageNo | Integer | 分页：当前页 |\n| pageSize | Integer | 分页：页大小 |\n| totalCount | Integer | 分页：总数 |\n| hasNext | Boolean | 分页：是否有下一页 |\n| totalPages | Integer | 分页：总页数 |\n| nextPage | Integer | 分页：下一页页码 |\n| hasPre | Boolean | 分页：是否有上一页 |\n| prePage | Integer | 分页：上一页页码 |\n| first | Integer | 分页：首页页码 |\n| result | Array | 分页：返回数据 |\n| id | String | 日程id |\n| deleteType | Integer | 是否删除：0、否 1、是 |\n| updateTime | Long | 最近更新时间 |\n| name | String | 日程名称 |\n| creator | Object | 创建人 |\n| createTime | Long | 日程创建时间 |\n| commentCount | Integer | 日程评论条数 |\n| watched | Boolean | 是否关注 |\n| unread | Boolean | 是否未读 |\n| finished | Boolean | 是否结束 |\n| manager | Object | 负责人 |\n| content | String | 日程描述 |\n| startDate | Long | 日程开始时间 |\n| endDate | Long | 日程结束时间 |\n| allDay | Boolean | 是否全天 |\n| repeat | Boolean | 是否重复日程 |\n| calendarStatus | String | 日程状态：todo进行中,finished已完结 |\n| errmsg | String | 错误描述 |\n| errcode | String | 错误代码 |\nJava sdk调用示例："
+}

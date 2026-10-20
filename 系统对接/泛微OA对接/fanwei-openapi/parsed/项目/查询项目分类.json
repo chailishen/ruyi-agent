@@ -1,0 +1,60 @@
+{
+  "id": "840678224083648513",
+  "name": "查询项目分类",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/queryMainlineCategories",
+  "url_template": "{OpenApiOrigin}/mainline/v2/queryMainlineCategories",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "分类名称"
+    },
+    {
+      "name": "sort",
+      "required": "",
+      "type": "Int",
+      "description": "分类排序"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "分类ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询项目分类"
+  ],
+  "raw_text": "## 查询项目分类\n请求URL：\n- {OpenApiOrigin}/mainline/v2/queryMainlineCategories\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/queryMainlineCategories?access_token=309bfb82ce12a2e30e37141273fb5ea0\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| name | String | 分类名称 |\n| sort | Int | 分类排序 |\n| id | String | 分类ID |\nJava sdk调用示例："
+}

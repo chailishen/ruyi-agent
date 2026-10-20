@@ -1,0 +1,117 @@
+{
+  "id": "275828313702793216",
+  "name": "获取节点上下文数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getNodeContextInfo",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getNodeContextInfo",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "package com.weaver.core.demo.select;\n\nimport cn.hutool.http.HttpRequest;\nimport cn.hutool.json.JSONUtil;\nimport com.alibaba.fastjson.JSONObject;\nimport com.weaver.core.constant.TestConstant;\nimport com.weaver.core.demo.DemoBase;\n\n/**\n * 获取节点上下文数据\n *\n * @author:chenwh\n */\npublic class GetNodeContextInfoDemo extends DemoBase {\n\n    public static void main(String[] args) {\n\n        String response = new GetNodeContextInfoDemo().getNodeContextInfo(TOKEN, 959439511657390081L);\n        System.out.println(response);\n    }\n\n    /**\n     * 获取节点上下文数据\n     *\n     * @param token\n     * @param requestId\n     * @return\n     */\n    public String getNodeContextInfo(String token, long requestId) {\n        String url = HOST + \"/api/workflow/core/paService/v1/getNodeContextInfo?access_token=\" + token;\n        JSONObject param = new JSONObject();\n        param.put(\"userid\", TestConstant.USER_CHENWH);\n        param.put(\"requestId\", requestId);\n        param.put(\"userCurrentNodeId\", TestConstant.WORKFLOW_YBLC_NODE);\n\n        // 发送请求\n        return HttpRequest.post(url)\n                .header(\"Content-Type\", \"application/json\")\n                .body(JSONUtil.toJsonStr(param))\n                .execute()\n                .body();\n    }\n}"
+  ],
+  "parameters": [
+    {
+      "name": "access _token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户id"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "当前节点ID"
+    },
+    {
+      "name": "onlyOperator",
+      "required": "否",
+      "type": "int",
+      "description": "当前节点操作者，是否只获取操作者数据。true：是。false：操作者，抄送人数据都会返回。默认值：false；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "json",
+      "description": ""
+    },
+    {
+      "name": "data.currentNode",
+      "required": "",
+      "type": "list",
+      "description": "当前节点数据"
+    },
+    {
+      "name": "data.nextNode",
+      "required": "",
+      "type": "list",
+      "description": "下一节点数据"
+    },
+    {
+      "name": "data.preNode",
+      "required": "",
+      "type": "list",
+      "description": "上一个节点数据"
+    },
+    {
+      "name": "nodeName",
+      "required": "",
+      "type": "String",
+      "description": "节点名称"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "String",
+      "description": "节点ID"
+    },
+    {
+      "name": "nodeType",
+      "required": "",
+      "type": "int",
+      "description": "节点类型"
+    },
+    {
+      "name": "operatorUsers",
+      "required": "",
+      "type": "list",
+      "description": "节点操作者数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据分类ID查询流程表"
+  ],
+  "raw_text": "## 根据分类ID查询流程表\n简要描述：获取当前节点、当前节点上一节点、当前节点下一节点数据。\n参数userCurrentNodeId可以不传，若当前节点有多个时需要传递，若不传递的话会取任意一个当前节点。\nonlyOperator传递true时，标识当前节点操作者只返回操作者数据，不返回抄送等数据。\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getNodeContextInfo\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access _token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户id |\n| requestId | 是 | long | 流程ID |\n| userCurrentNodeId | 否 | long | 当前节点ID |\n| onlyOperator | 否 | int | 当前节点操作者，是否只获取操作者数据。true：是。false：操作者，抄送人数据都会返回。默认值：false； |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | json |  |\n| data.currentNode | list | 当前节点数据 |\n| data.nextNode | list | 下一节点数据 |\n| data.preNode | list | 上一个节点数据 |\n节点数据说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| nodeName | String | 节点名称 |\n| nodeId | String | 节点ID |\n| nodeType | int | 节点类型 |\n| operatorUsers | list | 节点操作者数据 |\nJava sdk调用示例："
+}

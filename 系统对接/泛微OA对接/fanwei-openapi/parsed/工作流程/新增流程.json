@@ -1,0 +1,434 @@
+{
+  "id": "840714220321120257",
+  "name": "新增流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/doCreateRequest",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/doCreateRequest",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestname",
+      "required": "否",
+      "type": "String",
+      "description": "创建的流程实例标题（不输入按照默认标题组成生成标题）"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "String",
+      "description": "工作流ID 获取工作流ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "签字意见"
+    },
+    {
+      "name": "isnextflow",
+      "required": "否",
+      "type": "Int",
+      "description": "是否流转到下一节点：0 否，1 是。默认值：0"
+    },
+    {
+      "name": "requestSecLevel",
+      "required": "否",
+      "type": "int",
+      "description": "密级（系统开启密级才使用这个参数），值大于0 才生效。且开启了密级，则获取创建人能获取的最大密级。"
+    },
+    {
+      "name": "requestSecValidity",
+      "required": "否",
+      "type": "String",
+      "description": "保密期限（传递密级时才传递该参数）"
+    },
+    {
+      "name": "isVerifyFormRequired",
+      "required": "否",
+      "type": "boolean",
+      "description": "isnextflow=1时，true：要校验表单必填。false：不校验表单必填。默认值：false"
+    },
+    {
+      "name": "isExecuteCreateAddAction",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：执行创建节点前附加操作，false：不执行创建节点前附加操作。默认值：false"
+    },
+    {
+      "name": "isVerifyPer",
+      "required": "否",
+      "type": "int",
+      "description": "是否验证用户创建流程权限；0：不验证。1：验证。默认值：0；"
+    },
+    {
+      "name": "requestId",
+      "required": "否",
+      "type": "long",
+      "description": "可以自定义流程ID"
+    },
+    {
+      "name": "delReqFlowFaild",
+      "required": "否",
+      "type": "boolean",
+      "description": "创建并流转失败的流程是否要删除掉；true：删除。false：不删除。默认值：false"
+    },
+    {
+      "name": "businessData",
+      "required": "否",
+      "type": "String",
+      "description": "数据来源"
+    },
+    {
+      "name": "moduleDataId",
+      "required": "否",
+      "type": "long",
+      "description": "关联模块数据ID（默认值0）"
+    },
+    {
+      "name": "formData",
+      "required": "否",
+      "type": "String",
+      "description": "表单数据"
+    },
+    {
+      "name": "requestlevel",
+      "required": "否",
+      "type": "Int",
+      "description": "紧急程度 0：正常； 1：重要； 2：紧急。默认值：0"
+    },
+    {
+      "name": "otherParams",
+      "required": "否",
+      "type": "String",
+      "description": "比如isnextflow(是否进行流转1：是，其他否),requestSecLevel（密级，系统开启密级才使用这个参数）"
+    },
+    {
+      "name": "identityId",
+      "required": "否",
+      "type": "long",
+      "description": "代理人ID，此时userid 传被代理人ID；举例：A委托给B，userid传B，identityId传A；"
+    },
+    {
+      "name": "identityType",
+      "required": "否",
+      "type": "int",
+      "description": "1：兼岗，2：委托"
+    },
+    {
+      "name": "selectFlowParam",
+      "required": "否",
+      "type": "JSON",
+      "description": "指定流转相关参数"
+    },
+    {
+      "name": "exceptionHandleInfo",
+      "required": "否",
+      "type": "map",
+      "description": "异常处理由用户选择操作者参数；若节点异常处理未设置由用户选择操作者，传递了也不会生效；KEY：节点ID；VALUE：异常处理操作者数据；"
+    },
+    {
+      "name": "imRemind",
+      "required": "否",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送IM提醒"
+    },
+    {
+      "name": "emailRemind",
+      "required": "否",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送邮件提醒"
+    },
+    {
+      "name": "smsRemind",
+      "required": "否",
+      "type": "boolean",
+      "description": "isnextflow=0时，给发起人发送短信提醒"
+    },
+    {
+      "name": "mailAndSmsMsgParam",
+      "required": "否",
+      "type": "json",
+      "description": "节点允许修改提醒方式时，流时，可以选择是否发送短信邮件提醒"
+    },
+    {
+      "name": "nodeAddOperators",
+      "required": "否",
+      "type": "list",
+      "description": "自由选择批次指定选择人员，isnextflow = 1时才需要传递。"
+    },
+    {
+      "name": "customLogType",
+      "required": "否",
+      "type": "int",
+      "description": "自定义意见类型（isnextflow=1时，才有效；未传递自动计算默认意见类型）从工作流设置→应用设置→操作菜单及意见类型设置→意见类型自定义设置→意见类型code值 取值。"
+    },
+    {
+      "name": "skipFlowPointVerify",
+      "required": "否",
+      "type": "int",
+      "description": "默认值：0；1：跳过要点校验；"
+    },
+    {
+      "name": "odocId",
+      "required": "否",
+      "type": "long",
+      "description": "公文流程才需要的正文文档ID；"
+    },
+    {
+      "name": "isNewFormData",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：可以传递表单高级参数（seniorFormParam生效）。false：仅仅传递表达数据（默认值）。"
+    },
+    {
+      "name": "seniorFormParam",
+      "required": "否",
+      "type": "json",
+      "description": "表单高级参数，isNewFormData=true时才生效"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "dataId",
+      "required": "",
+      "type": "long",
+      "description": "业务数据Id"
+    },
+    {
+      "name": "dataDetails",
+      "required": "",
+      "type": "list",
+      "description": "表单字段数据"
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "long",
+      "description": "表单ID。"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块，默认workflow"
+    },
+    {
+      "name": "content",
+      "required": "是",
+      "type": "String",
+      "description": "文本内容"
+    },
+    {
+      "name": "dataKey",
+      "required": "否",
+      "type": "String",
+      "description": "字段数据库名，与fieldId二选一必填。"
+    },
+    {
+      "name": "fieldId",
+      "required": "否",
+      "type": "long",
+      "description": "字段ID，与dataKey二选一必填。"
+    },
+    {
+      "name": "dataIndex",
+      "required": "否",
+      "type": "long",
+      "description": "明细行序号(主表字段该值不用传递)。1：就代表是明细行第一行。从1开始填写。"
+    },
+    {
+      "name": "dataOptions",
+      "required": "否",
+      "type": "list",
+      "description": "浏览按钮数据，默认为null，有值的时候，以这个值为准，忽略content的内容。"
+    },
+    {
+      "name": "subFormId",
+      "required": "否",
+      "type": "long",
+      "description": "明细表ID，当传递明细数据且字段传递的dataKey则该值必填。获取明细表ID"
+    },
+    {
+      "name": "subFormDataKey",
+      "required": "否",
+      "type": "String",
+      "description": "明细表dataKey，与subFormId二选一传递。"
+    },
+    {
+      "name": "optionId",
+      "required": "否",
+      "type": "long",
+      "description": "选项ID"
+    },
+    {
+      "name": "targetId",
+      "required": "否",
+      "type": "long",
+      "description": "图片单选多选的选项的图片ID。"
+    },
+    {
+      "name": "content",
+      "required": "否",
+      "type": "long",
+      "description": "选项名称"
+    },
+    {
+      "name": "type",
+      "required": "否",
+      "type": "String",
+      "description": "选项类型"
+    },
+    {
+      "name": "needDefaultValue",
+      "required": "否",
+      "type": "boolean",
+      "description": "true：给表单赋值默认值，false：默认值"
+    },
+    {
+      "name": "execRelate",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否执行数据砖取；true：执行。false：默认值。"
+    },
+    {
+      "name": "execMonitor",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否执行运算：true：执行；false：默认值。"
+    },
+    {
+      "name": "validate",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否开启数据查重校验；true：开启。false：默认值。"
+    },
+    {
+      "name": "needValidateInfo",
+      "required": "否",
+      "type": "boolean",
+      "description": "validate=true时生效，查重结果是否返回具体信息；true：返回；false：不返回。"
+    },
+    {
+      "name": "selectNextFlowData",
+      "required": "",
+      "type": "list",
+      "description": "指定流转节点数据"
+    },
+    {
+      "name": "submitToDone",
+      "required": "",
+      "type": "boolean",
+      "description": "是否提交到已办；默认值：true"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "long",
+      "description": "指定流转节点ID"
+    },
+    {
+      "name": "nodeOperators",
+      "required": "",
+      "type": "list",
+      "description": "节点操作者"
+    },
+    {
+      "name": "signOrder",
+      "required": "",
+      "type": "int",
+      "description": "会签属性；会签：1；非会签：0；依次逐个处理：2；并行分流：9；默认值：0；"
+    },
+    {
+      "name": "nodeCCOperators",
+      "required": "",
+      "type": "list",
+      "description": "节点抄送人"
+    },
+    {
+      "name": "ccType",
+      "required": "",
+      "type": "int",
+      "description": "抄送设置: 用户选择：0； 不启用：1； 抄送需提交：2； 抄送不需提交：3； 操作者设置：4;默认值：0"
+    },
+    {
+      "name": "needSubmit",
+      "required": "",
+      "type": "boolean",
+      "description": "当ccType=0时该属性需要传递；true：节点抄送人可提交；false：节点抄送人不可提交；默认值：false；"
+    },
+    {
+      "name": "modifyOperator",
+      "required": "",
+      "type": "boolean",
+      "description": "是否允许修改节点操作者；true：允许；false：不允许；默认值：true；"
+    },
+    {
+      "name": "ehSignType",
+      "required": "",
+      "type": "int",
+      "description": "会签关系；0：非会签；1：会签；2：依次逐个处理；默认值：0；"
+    },
+    {
+      "name": "ehSetOperator",
+      "required": "",
+      "type": "String",
+      "description": "操作人ID，多个ID用英文逗号隔开；"
+    },
+    {
+      "name": "userChooseMailRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "false(默认值)：不发邮件；true：发邮件"
+    },
+    {
+      "name": "userChooseSmsRemind",
+      "required": "",
+      "type": "boolean",
+      "description": "false(默认值)：不发邮件；true：发邮件"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增流程"
+  ],
+  "raw_text": "## 新增流程\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/doCreateRequest\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestname | 否 | String | 创建的流程实例标题（不输入按照默认标题组成生成标题） |\n| workflowId | 是 | String | 工作流ID 获取工作流ID |\n| remark | 否 | String | 签字意见 |\n| isnextflow | 否 | Int | 是否流转到下一节点：0 否，1 是。默认值：0 |\n| requestSecLevel | 否 | int | 密级（系统开启密级才使用这个参数），值大于0 才生效。且开启了密级，则获取创建人能获取的最大密级。 |\n| requestSecValidity | 否 | String | 保密期限（传递密级时才传递该参数） |\n| isVerifyFormRequired | 否 | boolean | isnextflow=1时，true：要校验表单必填。false：不校验表单必填。默认值：false |\n| isExecuteCreateAddAction | 否 | boolean | true：执行创建节点前附加操作，false：不执行创建节点前附加操作。默认值：false |\n| isVerifyPer | 否 | int | 是否验证用户创建流程权限；0：不验证。1：验证。默认值：0； |\n| requestId | 否 | long | 可以自定义流程ID |\n| delReqFlowFaild | 否 | boolean | 创建并流转失败的流程是否要删除掉；true：删除。false：不删除。默认值：false |\n| businessData | 否 | String | 数据来源 |\n| moduleDataId | 否 | long | 关联模块数据ID（默认值0） |\n| formData | 否 | String | 表单数据 |\n| requestlevel | 否 | Int | 紧急程度 0：正常； 1：重要； 2：紧急。默认值：0 |\n| otherParams | 否 | String | 比如isnextflow(是否进行流转1：是，其他否),requestSecLevel（密级，系统开启密级才使用这个参数） |\n| identityId | 否 | long | 代理人ID，此时userid 传被代理人ID；举例：A委托给B，userid传B，identityId传A； |\n| identityType | 否 | int | 1：兼岗，2：委托 |\n| selectFlowParam | 否 | JSON | 指定流转相关参数 |\n| exceptionHandleInfo | 否 | map | 异常处理由用户选择操作者参数；若节点异常处理未设置由用户选择操作者，传递了也不会生效；KEY：节点ID；VALUE：异常处理操作者数据； |\n| imRemind | 否 | boolean | isnextflow=0时，给发起人发送IM提醒 |\n| emailRemind | 否 | boolean | isnextflow=0时，给发起人发送邮件提醒 |\n| smsRemind | 否 | boolean | isnextflow=0时，给发起人发送短信提醒 |\n| mailAndSmsMsgParam | 否 | json | 节点允许修改提醒方式时，流时，可以选择是否发送短信邮件提醒 |\n| nodeAddOperators | 否 | list | 自由选择批次指定选择人员，isnextflow = 1时才需要传递。 |\n| customLogType | 否 | int | 自定义意见类型（isnextflow=1时，才有效；未传递自动计算默认意见类型）从工作流设置→应用设置→操作菜单及意见类型设置→意见类型自定义设置→意见类型code值 取值。 |\n| skipFlowPointVerify | 否 | int | 默认值：0；1：跳过要点校验； |\n| odocId | 否 | long | 公文流程才需要的正文文档ID； |\n| isNewFormData | 否 | boolean | true：可以传递表单高级参数（seniorFormParam生效）。false：仅仅传递表达数据（默认值）。 |\n| seniorFormParam | 否 | json | 表单高级参数，isNewFormData=true时才生效 |\n备注\n- formData和otherParams需以json格式传参；【提交/同意流程】接口相同\n- 完整的formdata示例可以参考如下文档：{origin}/build/techdoc/wdoc/index.html#/public/doc/73b99f99-3c82-4b43-8d70-bea3118e276b\nformdata示例（按照dataKey传递时，fieldId也可以替换为字段的dataKey）：\nformdata参数说明：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| dataId | 否 | long | 业务数据Id |\n| dataDetails | 是 | list | 表单字段数据 |\n| formId | 否 | long | 表单ID。 |\n| module | 否 | String | 模块，默认workflow |\ndataDetails字段说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| content | 是 | String | 文本内容 |\n| dataKey | 否 | String | 字段数据库名，与fieldId二选一必填。 |\n| fieldId | 否 | long | 字段ID，与dataKey二选一必填。 |\n| dataIndex | 否 | long | 明细行序号(主表字段该值不用传递)。1：就代表是明细行第一行。从1开始填写。 |\n| dataOptions | 否 | list | 浏览按钮数据，默认为null，有值的时候，以这个值为准，忽略content的内容。 |\n| subFormId | 否 | long | 明细表ID，当传递明细数据且字段传递的dataKey则该值必填。获取明细表ID |\n| subFormDataKey | 否 | String | 明细表dataKey，与subFormId二选一传递。 |\ndataOptions字段说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| optionId | 否 | long | 选项ID |\n| targetId | 否 | long | 图片单选多选的选项的图片ID。 |\n| content | 否 | long | 选项名称 |\n| type | 否 | String | 选项类型 |\nseniorFormParam参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| needDefaultValue | 否 | boolean | true：给表单赋值默认值，false：默认值 |\n| execRelate | 否 | boolean | 是否执行数据砖取；true：执行。false：默认值。 |\n| execMonitor | 否 | boolean | 是否执行运算：true：执行；false：默认值。 |\n| validate | 否 | boolean | 是否开启数据查重校验；true：开启。false：默认值。 |\n| needValidateInfo | 否 | boolean | validate=true时生效，查重结果是否返回具体信息；true：返回；false：不返回。 |\nselectFlowParam说明：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| selectNextFlowData | 是 | list | 指定流转节点数据 |\n| submitToDone | 否 | boolean | 是否提交到已办；默认值：true |\nselectNextFlowData说明：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| nodeId | 是 | long | 指定流转节点ID |\n| nodeOperators | 是 | list | 节点操作者 |\n| signOrder | 否 | int | 会签属性；会签：1；非会签：0；依次逐个处理：2；并行分流：9；默认值：0； |\n| nodeCCOperators | 否 | list | 节点抄送人 |\n| ccType | 否 | int | 抄送设置: 用户选择：0； 不启用：1； 抄送需提交：2； 抄送不需提交：3； 操作者设置：4;默认值：0 |\n| needSubmit | 否 | boolean | 当ccType=0时该属性需要传递；true：节点抄送人可提交；false：节点抄送人不可提交；默认值：false； |\n| modifyOperator | 否 | boolean | 是否允许修改节点操作者；true：允许；false：不允许；默认值：true； |\nexceptionHandleInfo VALUE说明：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| ehSignType | 否 | int | 会签关系；0：非会签；1：会签；2：依次逐个处理；默认值：0； |\n| ehSetOperator | 是 | String | 操作人ID，多个ID用英文逗号隔开； |\nmailAndSmsMsgParam参数说明：\n| 参数名 | 必填 | 类型 | 说明 | 最低基线支持版本 |\n| --- | --- | --- | --- | --- |\n| userChooseMailRemind | 否 | boolean | false(默认值)：不发邮件；true：发邮件 | 10.0.2412.01 |\n| userChooseSmsRemind | 否 | boolean | false(默认值)：不发邮件；true：发邮件 | 10.0.2412.01 |\nnodeAddOperators参数说明：\n要结合isnextflow参数使用，只有isnextflow传1才生效；下方为参数示例以及属性解释\nnodeId、freeChoiceOptGroupId、freeChoiceOptGroupDtId参数可以通过【获取发起节点提交确认弹框信息】接口获取，也可以通过后台设置那边抓接口获取\n请求参数示例1：传递dataId\n请求参数示例2：传递表单数据\n请求参数示例3：seniorFormParam表单高级参数\nisNewFormData=true时seniorFormParam参数才生效。\n上传附件示例\n指定流转、异常处理参数传递示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestId | long | 流程ID |\nJava sdk调用示例："
+}

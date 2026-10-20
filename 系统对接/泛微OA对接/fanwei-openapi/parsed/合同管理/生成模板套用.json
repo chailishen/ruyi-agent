@@ -1,0 +1,49 @@
+{
+  "id": "404055565837271040",
+  "name": "生成模板套用",
+  "module": "合同管理",
+  "module_path": [
+    "合同管理",
+    "模板管理"
+  ],
+  "is_api": true,
+  "url": "/api/contract/jxhs/openApi/template/replaceTemplate",
+  "url_template": "{OpenApiOrigin}/api/contract/jxhs/openApi/template/replaceTemplate",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "paramMap",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "table_1",
+      "required": "",
+      "type": "array",
+      "description": "第一个表格的数据"
+    },
+    {
+      "name": "table_2",
+      "required": "",
+      "type": "array",
+      "description": "第二个表格的数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "生成模板套用接口"
+  ],
+  "raw_text": "## 生成模板套用接口\n接口描述：执行模板套用生成套用文件\n请求URL：\n- {OpenApiOrigin}/api/contract/jxhs/openApi/template/replaceTemplate\n请求方式：\n- POST\n请求参数：\n| 参数名 | 参数值 | 是否必须 | 描述 |\n| --- | --- | --- | --- |\n| access_token | String | 是 | 调用接口凭证 |\n| paramMap | Object | 是 | 参数 |\n模板字段替换参数：\n| 参数类型 | 参数格式 | 说明 | 示例 |\n| --- | --- | --- | --- |\n| 书签字段 | \"书签名\": \"值\" | key是模板中书签名，value是要替换的值 | \"合同编号\": \"20250999\" |\n明细表格参数 (detailTableInfo)：\n| 参数名 | 类型 | 必填 | 说明 | 示例 |\n| --- | --- | --- | --- | --- |\n| table_1 | array | 否 | 第一个表格的数据 | 见下方表格行说明 |\n| table_2 | array | 否 | 第二个表格的数据 | 同上格式 |\n表格行数据结构：\n| 字段名 | 类型 | 必填 | 说明 | 示例 |\n| --- | --- | --- | --- | --- |\n| 序号 | string | 是 | 表格中的序号字段 | \"1\" |\n| 商品名称 | string | 是 | 表格中的商品名称字段 | \"电脑\" |\n| 商品数量 | string | 是 | 表格中的数量字段 | \"3\" |\n请求示例：\n返回示例："
+}

@@ -1,0 +1,173 @@
+{
+  "id": "433123110456131584",
+  "name": "新建工作流",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/pathdef/openapi/createPath",
+  "url_template": "{OpenApiOrigin}/api/workflow/pathdef/openapi/createPath",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "baseInfoEntity",
+      "required": "是",
+      "type": "com.weaver.workflow.common.entity.pathdef.path.base.WfpBaseInfoEntity",
+      "description": "工作流基本信息"
+    },
+    {
+      "name": "createPathParam",
+      "required": "是",
+      "type": "com.weaver.workflow.common.entity.rpc.WfpCreatePathParam",
+      "description": "新建工作流时的其它参数，比如是否需要鉴权，是否校验付费、创建来源等等"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "workflowName",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "belongType",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "workflowDesc",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "workflowType",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "addDefaultHide",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "orderId",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "isFree",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "wfSymbol",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "bridgeService",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "checkPay",
+      "required": "",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "src",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "com.weaver.workflow.common.entity.rpc.WfpCreateResultEntity",
+      "description": "新建工作流结果"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "relateFormId",
+      "required": "",
+      "type": "数字",
+      "description": ""
+    },
+    {
+      "name": "success",
+      "required": "",
+      "type": "boolean",
+      "description": ""
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "字符串",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "接口说明：\n1、支持调用方预设工作流id，如果传了id，则会取传的作为工作流主键id\n2、接口默认会校验工作流新建权限，有权限的才能新建\n3、接口默认会校验租户付费，会限制未付费租户最多只能创建6条工作流，支持调用方传参不校验付费\n请求URL：\n- {OpenApiOrigin}/api/workflow/pathdef/openapi/createPath\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| baseInfoEntity | 是 | com.weaver.workflow.common.entity.pathdef.path.base.WfpBaseInfoEntity | 工作流基本信息 |\n| createPathParam | 是 | com.weaver.workflow.common.entity.rpc.WfpCreatePathParam | 新建工作流时的其它参数，比如是否需要鉴权，是否校验付费、创建来源等等 |\n传参示例（在body中传参）：\nWfpBaseInfoEntity对象属性详细说明：\n| 参数名 | 是否必传 | 参数含义 | 类型 | 补充说明 |\n| --- | --- | --- | --- | --- |\n| id | 否 | 工作流id | 数字 | 可选的，如果不传，则会自动生成，如果传了，则会取传的作为工作流主键id |\n| workflowName | 是 | 工作流名称 | 字符串 | 必传的，工作流名称 |\n| belongType | 是 | 工作流所属类型（团队还是个人） | 字符串 | 必传的，取值范围说明：PERSONAL：个人工作流   COMPANY：团队工作流 |\n| workflowDesc | 否 | 工作流描述 | 字符串 | 可选的，工作流描述 |\n| workflowType | 否 | 工作流类型id | 数字 | 可选的，不传则工作流是创建到其它类型下面 |\n| status | 否 | 字符串 | 字符串 | 可选的，不传，则默认创建的是启用状态的工作流。取值范围说明：  VALID：启用   INVALID：停用 |\n| addDefaultHide | 否 | 新建流程页面是否默认隐藏 | 字符串 | 可选的， 0关闭 1开启 |\n| orderId | 否 |  | 数字 | 可选的， 默认0 |\n| isFree | 否 |  | 数字 | 可选的，默认是固定流程，取值范围说明：0固定流程 1自由流程 |\n| wfSymbol | 否 | 新建流程页面是否默认隐藏 | 字符串 | 可选的，工作流编码 |\n| bridgeService | 否 | 工作流标识 | 字符串 | 可选的，用于区分不同服务的工作流，比如odoc代表公文流程，不传则会根据表单类型自动计算 |\nWfpCreatePathParam对象属性详细说明：\n| 参数名 | 是否必传 | 参数含义 | 类型 | 补充说明 |\n| --- | --- | --- | --- | --- |\n| formId | 是 | 表单id | 数字 | 必传的，注意：当前仅支持流程本地表单，不支持eb表单 |\n| checkPay | 是 | 是否校验租户付费 | boolean | 可选的，默认true，要校验付费，当如果租户未购买流程模块，则免费租户最多只能创建6条工作流，不需要校验付费，则传false |\n| src | 是 | 调用来源信息 | 字符串 | 可选的，用于说明是什么功能调用的这个接口，会被记录到操作日志中，方便追溯工作流来源，比如传“XX二开功能调用” |\n返回示例：\n返回值说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | com.weaver.workflow.common.entity.rpc.WfpCreateResultEntity | 新建工作流结果 |\nWfpCreateResultEntity对象属性详细说明：\n| 参数名 | 参数含义 | 类型 |\n| --- | --- | --- |\n| workflowId | 新建的工作流id: 创建失败则返回-1 | 数字 |\n| relateFormId | 工作流跟表单关联表的主键ID | 数字 |\n| success | 创建结果：成功true 失败false | boolean |\n| msg | 创建成功或者失败的提示信息 | 字符串 |"
+}

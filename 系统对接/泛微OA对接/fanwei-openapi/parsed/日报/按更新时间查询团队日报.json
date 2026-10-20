@@ -1,0 +1,78 @@
+{
+  "id": "840719795214712832",
+  "name": "按更新时间查询团队日报",
+  "module": "日报",
+  "module_path": [
+    "日报"
+  ],
+  "is_api": true,
+  "url": "/blog/v2/queryDateBlog",
+  "url_template": "{OpenApiOrigin}/blog/v2/queryDateBlog",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "string",
+      "description": "开始时间，格式（yyyy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "string",
+      "description": "结束时间，格式（yyyy-MM-dd HH:mm:ss"
+    },
+    {
+      "name": "queryType",
+      "required": "否",
+      "type": "string",
+      "description": "查询类型，默认查询日报创建时间，传入“update”则查询更新时间"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "blogs",
+      "required": "",
+      "type": "List",
+      "description": "日报列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "按更新时间查询团队日报"
+  ],
+  "raw_text": "## 按更新时间查询团队日报\n简要描述：\n- 根据日期区间查询新建和更新的日报\n请求URL：\n- {OpenApiOrigin}/blog/v2/queryDateBlog\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n| startDate | 是 | string | 开始时间，格式（yyyy-MM-dd HH:mm:ss） |\n| endDate | 是 | string | 结束时间，格式（yyyy-MM-dd HH:mm:ss |\n| queryType | 否 | string | 查询类型，默认查询日报创建时间，传入“update”则查询更新时间 |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userid | Long | 用户ID |\n| name | String | 用户名 |\n| blogs | List | 日报列表 |\nJava sdk调用示例："
+}

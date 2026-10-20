@@ -1,0 +1,192 @@
+{
+  "id": "840678816755580929",
+  "name": "查询团队实际工时",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/queryRealWorkingTimes",
+  "url_template": "{OpenApiOrigin}/task/v2/queryRealWorkingTimes",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "startTime",
+      "required": "否",
+      "type": "Date",
+      "description": "开始时间，格式 (yyyy-MM-dd HH:mm:ss)"
+    },
+    {
+      "name": "endTime",
+      "required": "否",
+      "type": "Date",
+      "description": "结束时间，格式(yyyy-MM-dd HH:mm:ss)"
+    },
+    {
+      "name": "dateType",
+      "required": "否",
+      "type": "String",
+      "description": "当值为“update”时，开始时间和结束时间表示更新时间，否则表示创建时间"
+    },
+    {
+      "name": "bmFollowParent",
+      "required": "否",
+      "type": "String",
+      "description": "当值为“T”时，表示子任务所属项目跟随父任务"
+    },
+    {
+      "name": "workingTimeDate",
+      "required": "否",
+      "type": "String",
+      "description": "工时填报日期, 精度为天，例如：’2021-10-21’"
+    },
+    {
+      "name": "taskId",
+      "required": "否",
+      "type": "String",
+      "description": "任务id"
+    },
+    {
+      "name": "userId",
+      "required": "否",
+      "type": "String",
+      "description": "填报人id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "realWorkingTimes",
+      "required": "",
+      "type": "List<Object>",
+      "description": "返回工时信息集合"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "实际工时ID"
+    },
+    {
+      "name": "workingTime",
+      "required": "",
+      "type": "Float",
+      "description": "实际工时"
+    },
+    {
+      "name": "workingTimeDate",
+      "required": "",
+      "type": "Date",
+      "description": "实际工时选择的日期"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "工时描述信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户姓名"
+    },
+    {
+      "name": "taskId",
+      "required": "",
+      "type": "String",
+      "description": "任务ID"
+    },
+    {
+      "name": "taskName",
+      "required": "",
+      "type": "String",
+      "description": "任务名称"
+    },
+    {
+      "name": "parentId",
+      "required": "",
+      "type": "Long",
+      "description": "父任务ID"
+    },
+    {
+      "name": "parentName",
+      "required": "",
+      "type": "String",
+      "description": "父任务名称"
+    },
+    {
+      "name": "mainlineId",
+      "required": "",
+      "type": "Long",
+      "description": "所属项目ID"
+    },
+    {
+      "name": "mainlineName",
+      "required": "",
+      "type": "String",
+      "description": "所属项目名称"
+    },
+    {
+      "name": "createUser",
+      "required": "",
+      "type": "Object",
+      "description": "创建人"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Date",
+      "description": "创建时间"
+    },
+    {
+      "name": "updateUser",
+      "required": "",
+      "type": "Object",
+      "description": "更新人"
+    },
+    {
+      "name": "updateTime",
+      "required": "",
+      "type": "Date",
+      "description": "更新时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询团队实际工时"
+  ],
+  "raw_text": "## 查询团队实际工时\n简要描述：\n- 查询团队实际工时接口\n- 支持增量查询\n- 支持子任务所属项目跟随父任务\n请求URL：\n- {OpenApiOrigin}/task/v2/queryRealWorkingTimes\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| startTime | 否 | Date | 开始时间，格式 (yyyy-MM-dd HH:mm:ss) |\n| endTime | 否 | Date | 结束时间，格式(yyyy-MM-dd HH:mm:ss) |\n| dateType | 否 | String | 当值为“update”时，开始时间和结束时间表示更新时间，否则表示创建时间 |\n| bmFollowParent | 否 | String | 当值为“T”时，表示子任务所属项目跟随父任务 |\n| workingTimeDate | 否 | String | 工时填报日期, 精度为天，例如：’2021-10-21’ |\n| taskId | 否 | String | 任务id |\n| userId | 否 | String | 填报人id |\n请求示例：\nquery方式\n{OpenApiOrigin}/task/v2/queryRealWorkingTimes?access_token=354172290dc12f9fb82e430b4d51df7f&startTime=2021-09-23 00:00:00&endTime=2021-09-23 00:00:00\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| realWorkingTimes | List<Object> | 返回工时信息集合 |\n| id | Long | 实际工时ID |\n| workingTime | Float | 实际工时 |\n| workingTimeDate | Date | 实际工时选择的日期 |\n| description | String | 工时描述信息 |\n| userId | Long | 用户ID |\n| userName | String | 用户姓名 |\n| taskId | String | 任务ID |\n| taskName | String | 任务名称 |\n| parentId | Long | 父任务ID |\n| parentName | String | 父任务名称 |\n| mainlineId | Long | 所属项目ID |\n| mainlineName | String | 所属项目名称 |\n| createUser | Object | 创建人 |\n| createTime | Date | 创建时间 |\n| updateUser | Object | 更新人 |\n| updateTime | Date | 更新时间 |\nJava sdk调用示例：\nJava sdk调用示例："
+}

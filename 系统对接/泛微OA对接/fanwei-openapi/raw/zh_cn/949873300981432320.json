@@ -1,0 +1,242 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第三方免登本系统配置指南",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第三方免登本系统配置指南"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "场景",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "场景："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "      在第三方业务系统中，点击本系统的链接菜单，自动免登到本系统。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "业务流",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "业务流："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "      第三方系统 -> 点击本系统链接菜单 -> 通过本系统令牌接口获得本系统令牌 -> 将令牌拼接到本系统链接后 -> 跳转至本系统 -> 本系统根据令牌获得对应人员信息。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "详细操作步骤",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "详细操作步骤："
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "1开放平台创建应用",
+        "level": 6
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1.开放平台创建应用"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "在开放平台创建应用，应用类型选择【第三方免登本系统】"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f949873300981432320.0.png",
+            "alt": "image.png"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "登陆开放平台—>创建应用—>选择第三方免登本系统，填写如图所示内容。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "2获取本系统免登身份令牌",
+        "level": 6
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2.获取本系统免登身份令牌"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "本系统会通过回调地址发送给第三方系统身份令牌，第三方根据"
+        },
+        {
+          "type": "text",
+          "text": "获取本系统令牌",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "javascript:weamdJumpTo('840673469570752513');",
+                "title": null
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "接口获取身份令牌。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "例如：通过app_key及app_secret在postman中获取到身份令牌"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f949873300981432320.1.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "3在本系统中构建免登应用并重定向",
+        "level": 6
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3.在本系统中构建免登应用并重定向"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "attrs": {
+        "textAlign": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第三方系统构建免登地址："
+        },
+        {
+          "type": "text",
+          "text": "https://E10环境地址/papi/open/singleSignon?singleToken=c9f5b0803d057a6b2dc6b36dd0f27d8b&oauthType=singlesign&redirect_uri=xxx",
+          "marks": [
+            {
+              "type": "link",
+              "attrs": {
+                "href": "{origin}/papi/open/singleSignon?singleToken=c9f5b0803d057a6b2dc6b36dd0f27d8b&oauthType=singlesign&redirect_uri=xxx",
+                "target": "_blank",
+                "rel": "noopener noreferrer nofollow",
+                "class": null
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f949873300981432320.2.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "构建完应用，通过重定向该地址，即可实现免登本系统"
+        }
+      ]
+    }
+  ]
+}

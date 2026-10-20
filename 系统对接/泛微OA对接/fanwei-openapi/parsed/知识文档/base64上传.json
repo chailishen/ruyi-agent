@@ -1,0 +1,76 @@
+{
+  "id": "220355033999343616",
+  "name": "base64上传",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/v2/common/upload/base64",
+  "url_template": "{OpenApiOrigin}/api/file/v2/common/upload/base64",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户Id"
+    },
+    {
+      "name": "base64",
+      "required": "是",
+      "type": "string",
+      "description": "附件BASE64编码内容"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "string",
+      "description": "指定上传的附件在OA中的名称"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "string",
+      "description": "所属模块(常见module列表）"
+    },
+    {
+      "name": "createDocument",
+      "required": "否",
+      "type": "boolean",
+      "description": "true:生成文档，false:不生成文档（值传入true时会结合folderId参数值在文档模块对应目录下生成文档，module=document时folderId必传，module是其他模块时如果没有folderId会生成在系统知识库模块目录下）"
+    },
+    {
+      "name": "createDocContent",
+      "required": "否",
+      "type": "boolean",
+      "description": "true:生成正文类型文档，false:不生成正文类型文档（生效前置条件需要createDocument为true，且仅支持pdf,ofd,wps,office格式文件）"
+    },
+    {
+      "name": "folderId",
+      "required": "否",
+      "type": "long",
+      "description": "文档文件夹目录（前置生效条件需要createDocument值为true否则该参数没有意义，如果folderId不传且createDocument值为true会根据module传入的值在文档模块系统知识库对应module的目录下生成文档）"
+    },
+    {
+      "name": "refId",
+      "required": "否",
+      "type": "long",
+      "description": "模块关联的业务ID（如当前附件属于流程模块上传，此处值就是流程的ID值）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：\n- base64上传\n请求URL：\n- {OpenApiOrigin}/api/file/v2/common/upload/base64\n请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求Body参数使用form-data传参（必填）：\n| 参数名 | 示例值 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- | --- |\n| userid |  | 是 | long | 用户Id |\n| base64 |  | 是 | string | 附件BASE64编码内容 |\n| name |  | 是 | string | 指定上传的附件在OA中的名称 |\n| module |  | 是 | string | 所属模块(常见module列表） |\n请求Body参数使用form-data传参（非必填）：\n| 参数名 | 示例值 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- | --- |\n| createDocument |  | 否 | boolean | true:生成文档，false:不生成文档（值传入true时会结合folderId参数值在文档模块对应目录下生成文档，module=document时folderId必传，module是其他模块时如果没有folderId会生成在系统知识库模块目录下） |\n| createDocContent |  | 否 | boolean | true:生成正文类型文档，false:不生成正文类型文档（生效前置条件需要createDocument为true，且仅支持pdf,ofd,wps,office格式文件） |\n| folderId |  | 否 | long | 文档文件夹目录（前置生效条件需要createDocument值为true否则该参数没有意义，如果folderId不传且createDocument值为true会根据module传入的值在文档模块系统知识库对应module的目录下生成文档） |\n| refId |  | 否 | long | 模块关联的业务ID（如当前附件属于流程模块上传，此处值就是流程的ID值） |\npostman调用请求示例（body参数使用form-data传参）:\n返回示例\n返回值参数说明：\n| 返回值参数 | 说明 |\n| --- | --- |\n| errcode | 接口响应状态， 0：成功 1：失败 |\n| errmsg | 描述信息 |\n| fileid | 附件ID |\n| name | 附件名称 |\n| size | 附件大小（单位为字节 B） |\n| extName | 附件后缀扩展名 |\n| type | 附件类型 |\n| uploadUser | 附件上传用户ID |\n| uploadUserName | 附件上传用户名称 |\n| uploadTime | 附件上传时间 |\n| docId | 文档ID |"
+}

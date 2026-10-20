@@ -1,0 +1,108 @@
+{
+  "id": "840677653011505153",
+  "name": "资金充值",
+  "module": "资金",
+  "module_path": [
+    "资金"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/rechargeCapital",
+  "url_template": "{OpenApiOrigin}/crm/v2/rechargeCapital",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "充值信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "capital",
+      "required": "否",
+      "type": "Object",
+      "description": "充值资金"
+    },
+    {
+      "name": "capitalCustomer",
+      "required": "否",
+      "type": "Object",
+      "description": "充值客户（用于获取充值资金）"
+    },
+    {
+      "name": "capitalAccount",
+      "required": "否",
+      "type": "Object",
+      "description": "充值账户"
+    },
+    {
+      "name": "accountAmount",
+      "required": "否",
+      "type": "Double",
+      "description": "充值金额"
+    },
+    {
+      "name": "accountOperTime",
+      "required": "否",
+      "type": "Date",
+      "description": "充值时间"
+    },
+    {
+      "name": "accountRecMethod",
+      "required": "否",
+      "type": "Object",
+      "description": "收款方式"
+    },
+    {
+      "name": "accountDescription",
+      "required": "否",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "accountExchangeRate",
+      "required": "否",
+      "type": "Double",
+      "description": "汇率"
+    },
+    {
+      "name": "accountDefaultUnit",
+      "required": "否",
+      "type": "Object",
+      "description": "换算单位"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "资金充值"
+  ],
+  "raw_text": "## 资金充值\n请求URL：\n- {OpenApiOrigin}/crm/v2/rechargeCapital\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| entity | 是 | Object | 充值信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| capital | 否 | Object | 充值资金 |\n| capitalCustomer | 否 | Object | 充值客户（用于获取充值资金） |\n| capitalAccount | 否 | Object | 充值账户 |\n| accountAmount | 否 | Double | 充值金额 |\n| accountOperTime | 否 | Date | 充值时间 |\n| accountRecMethod | 否 | Object | 收款方式 |\n| accountDescription | 否 | String | 备注 |\n| accountExchangeRate | 否 | Double | 汇率 |\n| accountDefaultUnit | 否 | Object | 换算单位 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/rechargeCapital?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&entity={\"capital\": {    \"id\": \"2373238760050485558\",    \"name\": \"资金消失术asdysdshdfdgfghdhgfdjhgfsdhgsgdhaghgadfdfvbhgsdhasdhahfdshfhadshfafdfd\"},\"capitalCustomer\": {    \"id\": \"7823238875125164336\",    \"name\": \"小小陈客户\"},\"capitalAccount\": {    \"name\": \"返点账户\"},\"accountAmount\": 1,\"accountOperTime\": \"2020-02-20 10:10:00\",\"accountRecMethod\": {    \"name\": \"现金\"},\"accountDescription\": \"充值1块钱\",\"accountExchangeRate\": \"6.8\",\"accountDefaultUnit\": {    \"name\": \"人民币\"}}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

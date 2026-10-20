@@ -1,0 +1,144 @@
+{
+  "id": "840675445273362433",
+  "name": "修改客户",
+  "module": "客户",
+  "module_path": [
+    "客户"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/update",
+  "url_template": "{OpenApiOrigin}/crm/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：customer"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "客户信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "客户ID 获取客户ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "customerStatus",
+      "required": "否",
+      "type": "String",
+      "description": "客户状态"
+    },
+    {
+      "name": "customerIndustry",
+      "required": "否",
+      "type": "String",
+      "description": "客户行业"
+    },
+    {
+      "name": "customerRegion",
+      "required": "否",
+      "type": "String",
+      "description": "客户地区"
+    },
+    {
+      "name": "customerFax",
+      "required": "否",
+      "type": "String",
+      "description": "客户传真"
+    },
+    {
+      "name": "customerEmail",
+      "required": "否",
+      "type": "String",
+      "description": "客户邮箱"
+    },
+    {
+      "name": "customerZipCode",
+      "required": "否",
+      "type": "String",
+      "description": "客户邮编"
+    },
+    {
+      "name": "customerTelephone",
+      "required": "否",
+      "type": "String",
+      "description": "客户电话"
+    },
+    {
+      "name": "namcustomerWebsitee",
+      "required": "否",
+      "type": "String",
+      "description": "客户网站"
+    },
+    {
+      "name": "customerAddress",
+      "required": "否",
+      "type": "String",
+      "description": "客户地址"
+    },
+    {
+      "name": "customerDescription",
+      "required": "否",
+      "type": "String",
+      "description": "客户描述"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "客户信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改客户"
+  ],
+  "raw_text": "## 修改客户\n请求URL：\n- {OpenApiOrigin}/crm/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：customer |\n| entity | 是 | Object | 客户信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 客户ID 获取客户ID |\n| name | 是 | String | 名称 |\n| manager | 否 | String | 负责人 |\n| customerStatus | 否 | String | 客户状态 |\n| customerIndustry | 否 | String | 客户行业 |\n| customerRegion | 否 | String | 客户地区 |\n| customerFax | 否 | String | 客户传真 |\n| customerEmail | 否 | String | 客户邮箱 |\n| customerZipCode | 否 | String | 客户邮编 |\n| customerTelephone | 否 | String | 客户电话 |\n| namcustomerWebsitee | 否 | String | 客户网站 |\n| customerAddress | 否 | String | 客户地址 |\n| customerDescription | 否 | String | 客户描述 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=b0973c986bc38365460b01271e147102&userid=717929201362116609&module=customer&entity={\"id\":\"1713193685646177241\",\"name\": \"修改小陈客户\",\"manager\": {\"name\": \"陈陈\"},\"customerStatus\": {\"name\": \"基础\"},\"customerType\": {\"name\": \"代理商\"},\"customerIndustry\": {\"name\": \"销售\"},\"customerRegion\": {\"name\": \"上海\"},\"customerFax\": \"02888888888\",\"customerEmail\": \"test@qq.com\",\"customerZipCode\": \"610000\",\"customerTelephone\": \"02899999999\",\"customerWebsite\": \"www.baidu.com\",\"customerAddress\": \"上海市闵行区\",\"customerDescription\": \"描述信息\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 客户信息（JSON格式） |\nJava sdk调用示例："
+}

@@ -1,0 +1,192 @@
+{
+  "id": "908307389101326337",
+  "name": "文档详情-文档内容",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/info",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/info",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "响应信息对象"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "响应码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误消息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "文档详情数据"
+    },
+    {
+      "name": "docList",
+      "required": "",
+      "type": "array",
+      "description": "文档列表"
+    },
+    {
+      "name": "docList.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "docList.name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "docList.creator",
+      "required": "",
+      "type": "object",
+      "description": "文档创建人对象"
+    },
+    {
+      "name": "docList.creator.id",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人id"
+    },
+    {
+      "name": "docList.creator.username",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人名称"
+    },
+    {
+      "name": "docList.createTime",
+      "required": "",
+      "type": "string",
+      "description": "创建时间"
+    },
+    {
+      "name": "docList.lastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "更新时间"
+    },
+    {
+      "name": "docList.module",
+      "required": "",
+      "type": "string",
+      "description": "所属模块"
+    },
+    {
+      "name": "docList.summary",
+      "required": "",
+      "type": "string",
+      "description": "文档若为HTML，此为文档内容"
+    },
+    {
+      "name": "docList.type",
+      "required": "",
+      "type": "string",
+      "description": "类型"
+    },
+    {
+      "name": "docList.author",
+      "required": "",
+      "type": "object",
+      "description": "文档负责人对象"
+    },
+    {
+      "name": "docList.author.id",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人id"
+    },
+    {
+      "name": "docList.author.username",
+      "required": "",
+      "type": "string",
+      "description": "文档负责人名称"
+    },
+    {
+      "name": "docList.docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "docList.downloadCount",
+      "required": "",
+      "type": "string",
+      "description": "下载次数"
+    },
+    {
+      "name": "docList.readCount",
+      "required": "",
+      "type": "string",
+      "description": "阅读次数"
+    },
+    {
+      "name": "docList.folder",
+      "required": "",
+      "type": "object",
+      "description": "文档所属目录对象"
+    },
+    {
+      "name": "docList.folder.id",
+      "required": "",
+      "type": "string",
+      "description": "文档所属目录id"
+    },
+    {
+      "name": "docList.contentType",
+      "required": "",
+      "type": "string",
+      "description": "文档类型"
+    },
+    {
+      "name": "docList.documentCode",
+      "required": "",
+      "type": "string",
+      "description": "文档编号"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档详情-文档内容"
+  ],
+  "raw_text": "## 文档详情-文档内容\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/info\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | string | 文档id |\n| userid | 是 | string | 用户id 获取用户ID |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 响应信息对象 |\n| errcode | string | 响应码 |\n| errmsg | string | 错误消息 |\n| data | object | 文档详情数据 |\n| docList | array | 文档列表 |\n| docList.id | string | 文档id |\n| docList.name | string | 文档名称 |\n| docList.creator | object | 文档创建人对象 |\n| docList.creator.id | string | 文档创建人id |\n| docList.creator.username | string | 文档创建人名称 |\n| docList.createTime | string | 创建时间 |\n| docList.lastUpdateTime | string | 更新时间 |\n| docList.module | string | 所属模块 |\n| docList.summary | string | 文档若为HTML，此为文档内容 |\n| docList.type | string | 类型 |\n| docList.author | object | 文档负责人对象 |\n| docList.author.id | string | 文档负责人id |\n| docList.author.username | string | 文档负责人名称 |\n| docList.docStatus | string | 文档状态 |\n| docList.downloadCount | string | 下载次数 |\n| docList.readCount | string | 阅读次数 |\n| docList.folder | object | 文档所属目录对象 |\n| docList.folder.id | string | 文档所属目录id |\n| docList.contentType | string | 文档类型 |\n| docList.documentCode | string | 文档编号 |\nJava sdk调用示例："
+}

@@ -1,0 +1,102 @@
+{
+  "id": "840720770038071297",
+  "name": "文件上传",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/file/v2/common/upload",
+  "url_template": "{OpenApiOrigin}/api/file/v2/common/upload",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "module",
+      "required": "是",
+      "type": "string",
+      "description": "附件所属模块(模块列表：https://i18n-test-1301503941.cos.ap-shanghai.myqcloud.com/visitstatic/test/document/%E6%A8%A1%E5%9D%97%E6%A0%87%E8%AF%86.docx)"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "string",
+      "description": "指定上传的附件在OA中的名称"
+    },
+    {
+      "name": "file",
+      "required": "是",
+      "type": "file",
+      "description": "上传文件"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户id"
+    },
+    {
+      "name": "createDocument",
+      "required": "否",
+      "type": "boolean",
+      "description": "true:生成文档，false:不生成文档（值传入true时会结合folderId参数值在文档模块对应目录下生成文档，module=document时folderId必传，module是其他模块时如果没有folderId会生成在系统知识库模块目录下）"
+    },
+    {
+      "name": "createDocContent",
+      "required": "否",
+      "type": "boolean",
+      "description": "true:生成正文类型文档，false:不生成正文类型文档（生效前置条件需要createDocument为true，且仅支持pdf,ofd,wps,office格式文件）"
+    },
+    {
+      "name": "folderId",
+      "required": "否",
+      "type": "long",
+      "description": "文档文件夹目录（前置生效条件需要createDocument值为true否则该参数没有意义，如果folderId不传且createDocument值为true会根据module传入的值在文档模块系统知识库对应module的目录下生成文档）"
+    },
+    {
+      "name": "refId",
+      "required": "否",
+      "type": "long",
+      "description": "模块关联的业务ID（如当前附件属于流程模块上传，此处值就是流程的ID值）"
+    },
+    {
+      "name": "enterprisePan",
+      "required": "否",
+      "type": "boolean",
+      "description": "企业网盘鉴权-固定标识"
+    },
+    {
+      "name": "enterprisePanAppId",
+      "required": "否",
+      "type": "string",
+      "description": "企业网盘鉴权-eb应用id"
+    },
+    {
+      "name": "enterprisePanFormDataId",
+      "required": "否",
+      "type": "string",
+      "description": "企业网盘鉴权-对应表单数据id"
+    },
+    {
+      "name": "enterprisePanParam",
+      "required": "否",
+      "type": "string",
+      "description": "企业网盘相关鉴权参数"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文件上传"
+  ],
+  "raw_text": "## 文件上传\n简要描述：\n- 文件上传\n请求URL：\n- {OpenApiOrigin}/api/file/v2/common/upload\n请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n请求Body参数使用form-data传参（必填）：\n| 参数名 | 示例值 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- | --- |\n| module | document | 是 | string | 附件所属模块(模块列表：https://i18n-test-1301503941.cos.ap-shanghai.myqcloud.com/visitstatic/test/document/%E6%A8%A1%E5%9D%97%E6%A0%87%E8%AF%86.docx) |\n| name | 文件服务部署.docx | 是 | string | 指定上传的附件在OA中的名称 |\n| file |  | 是 | file | 上传文件 |\n| userid | 802202524068020233 | 是 | long | 用户id |\n请求Body参数使用form-data传参（非必填）：\n| 参数名 | 示例值 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- | --- |\n| createDocument |  | 否 | boolean | true:生成文档，false:不生成文档（值传入true时会结合folderId参数值在文档模块对应目录下生成文档，module=document时folderId必传，module是其他模块时如果没有folderId会生成在系统知识库模块目录下） |\n| createDocContent |  | 否 | boolean | true:生成正文类型文档，false:不生成正文类型文档（生效前置条件需要createDocument为true，且仅支持pdf,ofd,wps,office格式文件） |\n| folderId |  | 否 | long | 文档文件夹目录（前置生效条件需要createDocument值为true否则该参数没有意义，如果folderId不传且createDocument值为true会根据module传入的值在文档模块系统知识库对应module的目录下生成文档） |\n| refId |  | 否 | long | 模块关联的业务ID（如当前附件属于流程模块上传，此处值就是流程的ID值） |\n| enterprisePan |  | 否 | boolean | 企业网盘鉴权-固定标识 |\n| enterprisePanAppId |  | 否 | string | 企业网盘鉴权-eb应用id |\n| enterprisePanFormDataId |  | 否 | string | 企业网盘鉴权-对应表单数据id |\n| enterprisePanParam |  | 否 | string | 企业网盘相关鉴权参数 |\npostman调用请求示例（body参数使用form-data传参）：\n成功返回示例\n返回值参数说明\n| 返回值参数 | 说明 |\n| --- | --- |\n| errcode | 接口响应状态， 0：成功 1：失败 |\n| errmsg | 描述信息 |\n| fileid | 附件ID |\n| name | 附件名称 |\n| size | 附件大小（单位为字节 B） |\n| extName | 附件后缀扩展名 |\n| type | 附件类型 |\n| uploadUser | 附件上传用户ID |\n| uploadUserName | 附件上传用户名称 |\n| uploadTime | 附件上传时间 |\n| docId | 文档ID |\n开放平台 sdk调用示例：\ndemo代码示例"
+}

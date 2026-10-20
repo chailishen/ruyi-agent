@@ -1,0 +1,85 @@
+{
+  "id": "840721410013364225",
+  "name": "获取表格基本信息",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/formcfg/list/v1/listInit",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/formcfg/list/v1/listInit",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "listId",
+      "required": "是",
+      "type": "Long",
+      "description": "表格 id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "viewType",
+      "required": "",
+      "type": "String",
+      "description": "展示方式"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "appId",
+      "required": "",
+      "type": "String",
+      "description": "应用 id"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "String",
+      "description": "分页大小"
+    },
+    {
+      "name": "listBaseInfo",
+      "required": "",
+      "type": "Map",
+      "description": "列表基础配置信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表格基本信息"
+  ],
+  "raw_text": "## 获取表格基本信息\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/formcfg/list/v1/listInit\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| listId | 是 | Long | 表格 id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| viewType | String | 展示方式 |\n| name | String | 名称 |\n| appId | String | 应用 id |\n| pageSize | String | 分页大小 |\n| listBaseInfo | Map | 列表基础配置信息 |\nJava sdk调用示例："
+}

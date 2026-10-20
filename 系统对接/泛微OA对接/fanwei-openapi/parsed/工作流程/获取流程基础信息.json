@@ -1,0 +1,159 @@
+{
+  "id": "908575278979039232",
+  "name": "获取流程基础信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestInfo",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestInfo",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "getFormData",
+      "required": "否",
+      "type": "boolean",
+      "description": "是否获取表单数据，默认值：false"
+    },
+    {
+      "name": "fieldIds",
+      "required": "否",
+      "type": "list",
+      "description": "要获取表单字段的ID，若是不传递则获取所有字段值；getFormData=true时才生效；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "long",
+      "description": "工作流ID"
+    },
+    {
+      "name": "startNodeId",
+      "required": "",
+      "type": "long",
+      "description": "创建节点ID"
+    },
+    {
+      "name": "createDateTime",
+      "required": "",
+      "type": "String",
+      "description": "创建时间"
+    },
+    {
+      "name": "requestName",
+      "required": "",
+      "type": "String",
+      "description": "流程名称"
+    },
+    {
+      "name": "requestNameHtml",
+      "required": "",
+      "type": "String",
+      "description": "流程名称（HTML）"
+    },
+    {
+      "name": "lastOperator",
+      "required": "",
+      "type": "long",
+      "description": "上一操作者ID"
+    },
+    {
+      "name": "lastOperateDateTime",
+      "required": "",
+      "type": "String",
+      "description": "上次操作时间"
+    },
+    {
+      "name": "requestLevel",
+      "required": "",
+      "type": "int",
+      "description": "紧急程度"
+    },
+    {
+      "name": "requestMark",
+      "required": "",
+      "type": "String",
+      "description": "流程编号"
+    },
+    {
+      "name": "secLevel",
+      "required": "",
+      "type": "int",
+      "description": "流程密级"
+    },
+    {
+      "name": "secValidity",
+      "required": "",
+      "type": "String",
+      "description": "流程保密期限"
+    },
+    {
+      "name": "flowStatus",
+      "required": "",
+      "type": "Enum",
+      "description": "流程状态"
+    },
+    {
+      "name": "currentNodeList",
+      "required": "",
+      "type": "list",
+      "description": "当前节点集合"
+    },
+    {
+      "name": "finishDateTime",
+      "required": "",
+      "type": "String",
+      "description": "流程归档时间"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取流程基础信息"
+  ],
+  "raw_text": "## 获取流程基础信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestInfo\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID |\n| getFormData | 否 | boolean | 是否获取表单数据，默认值：false |\n| fieldIds | 否 | list | 要获取表单字段的ID，若是不传递则获取所有字段值；getFormData=true时才生效； |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestId | long | 流程ID |\n| workflowId | long | 工作流ID |\n| startNodeId | long | 创建节点ID |\n| createDateTime | String | 创建时间 |\n| requestName | String | 流程名称 |\n| requestNameHtml | String | 流程名称（HTML） |\n| lastOperator | long | 上一操作者ID |\n| lastOperateDateTime | String | 上次操作时间 |\n| requestLevel | int | 紧急程度 |\n| requestMark | String | 流程编号 |\n| secLevel | int | 流程密级 |\n| secValidity | String | 流程保密期限 |\n| flowStatus | Enum | 流程状态 |\n| currentNodeList | list | 当前节点集合 |\n| finishDateTime | String | 流程归档时间 |\nJava sdk调用示例："
+}

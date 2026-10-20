@@ -1,0 +1,54 @@
+{
+  "id": "908307006718631936",
+  "name": "文档详情tab页",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/tabInfo",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/tabInfo",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "message.errcode",
+      "required": "",
+      "type": "string",
+      "description": "0-成功，其他-失败"
+    },
+    {
+      "name": "message.errmsg",
+      "required": "",
+      "type": "string",
+      "description": "失败原因"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "string",
+      "description": "tab页（doc-正文,attach-附件,log-日志,property-属性,share-共享,version-版本）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档详情tab页"
+  ],
+  "raw_text": "## 文档详情tab页\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/tabInfo\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| message.errcode | string | 0-成功，其他-失败 |\n| message.errmsg | string | 失败原因 |\n| data | string | tab页（doc-正文,attach-附件,log-日志,property-属性,share-共享,version-版本） |\nJava sdk调用示例："
+}

@@ -1,0 +1,145 @@
+{
+  "id": "324293802497933312",
+  "name": "智能推荐会议室",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/getRecommendRoomEvents",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/getRecommendRoomEvents",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "totalMember",
+      "required": "否",
+      "type": "int",
+      "description": "参会人数"
+    },
+    {
+      "name": "start",
+      "required": "否",
+      "type": "String",
+      "description": "开始时间，格式为（yy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "end",
+      "required": "否",
+      "type": "String",
+      "description": "结束时间，格式为（yy-MM-dd HH:mm:ss）"
+    },
+    {
+      "name": "size",
+      "required": "是",
+      "type": "int",
+      "description": "推荐的数据个数（最多只能返回10个）"
+    },
+    {
+      "name": "keyWords",
+      "required": "否",
+      "type": "List<String>",
+      "description": "模糊查询得关键词数组[\"泛微\"，“的”，“茶室”]"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "返回状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "start",
+      "required": "",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "end",
+      "required": "",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "permission",
+      "required": "",
+      "type": "int",
+      "description": "权限级别（默认0）"
+    },
+    {
+      "name": "room",
+      "required": "",
+      "type": "object",
+      "description": "会议室信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "会议室id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "会议室名称"
+    },
+    {
+      "name": "roomDesc",
+      "required": "",
+      "type": "String",
+      "description": "会议室备注"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "int",
+      "description": "会议室状态（1为正常，2为封存）"
+    },
+    {
+      "name": "equipments",
+      "required": "",
+      "type": "String",
+      "description": "会议室设备"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "智能推荐会议室\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/getRecommendRoomEvents\n请求方式：\n- POST\n备注:\n- Body 参数格式(application/json)\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID |\n| totalMember | 否 | int | 参会人数 |\n| start | 否 | String | 开始时间，格式为（yy-MM-dd HH:mm:ss） |\n| end | 否 | String | 结束时间，格式为（yy-MM-dd HH:mm:ss） |\n| size | 是 | int | 推荐的数据个数（最多只能返回10个） |\n| keyWords | 否 | List<String> | 模糊查询得关键词数组[\"泛微\"，“的”，“茶室”] |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | String | 返回状态 |\n| data | object | 返回数据 |\n| start | String | 开始日期时间 |\n| end | String | 结束日期时间 |\n| permission | int | 权限级别（默认0） |\n| room | object | 会议室信息 |\n| id | String | 会议室id |\n| name | String | 会议室名称 |\n| roomDesc | String | 会议室备注 |\n| status | int | 会议室状态（1为正常，2为封存） |\n| equipments | String | 会议室设备 |"
+}

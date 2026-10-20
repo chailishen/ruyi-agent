@@ -1,0 +1,194 @@
+{
+  "id": "908341242109050881",
+  "name": "根据id查询日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/queryById",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/queryById",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "日程id"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "日程id"
+    },
+    {
+      "name": "deleteType",
+      "required": "",
+      "type": "Integer",
+      "description": "是否删除（0：否，1：是）"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "日程创建人"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Long",
+      "description": "日程创建时间"
+    },
+    {
+      "name": "commentCount",
+      "required": "",
+      "type": "Integer",
+      "description": "日程评论条数"
+    },
+    {
+      "name": "watched",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否关注"
+    },
+    {
+      "name": "unread",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否未读"
+    },
+    {
+      "name": "finished",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否完成"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "日程负责人"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "日程详情"
+    },
+    {
+      "name": "startDate",
+      "required": "",
+      "type": "Long",
+      "description": "日程开始时间"
+    },
+    {
+      "name": "endDate",
+      "required": "",
+      "type": "Long",
+      "description": "日程结束时间"
+    },
+    {
+      "name": "allDay",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否全天（开启：true，关闭：false）"
+    },
+    {
+      "name": "secret",
+      "required": "",
+      "type": "String",
+      "description": "公开程度（normal：上级可见，self：仅自己可见，dept：本部门可见，all：公开）"
+    },
+    {
+      "name": "repeat",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否重复日程"
+    },
+    {
+      "name": "priority",
+      "required": "",
+      "type": "String",
+      "description": "日程紧急程度"
+    },
+    {
+      "name": "calendarStatus",
+      "required": "",
+      "type": "String",
+      "description": "日程状态（todo:进行中，finished：已完成）"
+    },
+    {
+      "name": "repeatNum",
+      "required": "",
+      "type": "Integer",
+      "description": "周期日程重复次数"
+    },
+    {
+      "name": "placeType",
+      "required": "",
+      "type": "String",
+      "description": "地点"
+    },
+    {
+      "name": "receiptSwitch",
+      "required": "",
+      "type": "String",
+      "description": "参与人回执开关（开启：open，关闭：close）"
+    },
+    {
+      "name": "calendarType",
+      "required": "",
+      "type": "String",
+      "description": "日程类型"
+    },
+    {
+      "name": "signType",
+      "required": "",
+      "type": "String",
+      "description": "日程签到（无：none，扫码签到：scan，定位签到：position）"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据id查询日程"
+  ],
+  "raw_text": "## 根据id查询日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/queryById\n请求方式：\n- POST\n- Content-Type：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 日程id |\n| userId | 是 | Long | 用户id 获取用户ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| id | String | 日程id |\n| deleteType | Integer | 是否删除（0：否，1：是） |\n| name | String | 日程名称 |\n| creator | Object | 日程创建人 |\n| createTime | Long | 日程创建时间 |\n| commentCount | Integer | 日程评论条数 |\n| watched | Boolean | 是否关注 |\n| unread | Boolean | 是否未读 |\n| finished | Boolean | 是否完成 |\n| manager | Object | 日程负责人 |\n| content | String | 日程详情 |\n| startDate | Long | 日程开始时间 |\n| endDate | Long | 日程结束时间 |\n| allDay | Boolean | 是否全天（开启：true，关闭：false） |\n| secret | String | 公开程度（normal：上级可见，self：仅自己可见，dept：本部门可见，all：公开） |\n| repeat | Boolean | 是否重复日程 |\n| priority | String | 日程紧急程度 |\n| calendarStatus | String | 日程状态（todo:进行中，finished：已完成） |\n| repeatNum | Integer | 周期日程重复次数 |\n| placeType | String | 地点 |\n| receiptSwitch | String | 参与人回执开关（开启：open，关闭：close） |\n| calendarType | String | 日程类型 |\n| signType | String | 日程签到（无：none，扫码签到：scan，定位签到：position） |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

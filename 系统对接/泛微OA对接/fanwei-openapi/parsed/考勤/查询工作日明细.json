@@ -1,0 +1,120 @@
+{
+  "id": "840692285756243969",
+  "name": "查询工作日明细",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/getWorkDay",
+  "url_template": "{OpenApiOrigin}/attend/v2/getWorkDay",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID集合 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期 (格式：YYYY-MM-DD)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "nextDay",
+      "required": "",
+      "type": "String",
+      "description": "是否次日签退"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "planDays",
+      "required": "",
+      "type": "List",
+      "description": "应出勤日"
+    },
+    {
+      "name": "workDays",
+      "required": "",
+      "type": "String",
+      "description": "工作日"
+    },
+    {
+      "name": "normalWorkDays",
+      "required": "",
+      "type": "String",
+      "description": "正常工作日（排除节假日）"
+    },
+    {
+      "name": "planWorkTimes",
+      "required": "",
+      "type": "String",
+      "description": "应出勤工时"
+    },
+    {
+      "name": "date",
+      "required": "",
+      "type": "Long",
+      "description": "日期（时间戳）"
+    },
+    {
+      "name": "period",
+      "required": "",
+      "type": "String",
+      "description": "考勤时间段"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "String",
+      "description": "应出勤时长"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询工作日明细"
+  ],
+  "raw_text": "## 查询工作日明细\n请求URL：\n- {OpenApiOrigin}/attend/v2/getWorkDay\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID集合 获取用户ID |\n| startDate | 是 | Date | 开始日期 (格式：YYYY-MM-DD) |\n| endDate | 是 | Date | 结束日期 (格式：YYYY-MM-DD) |\n请求示例：\nquery方式\n{OpenApiOrigin}/attend/v2/getWorkDay?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userIds=717929201362116609,778007431387290207&startDate=2023-01-01&endDate=2023-01-30\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | Long | 用户ID |\n| nextDay | String | 是否次日签退 |\n| userName | String | 用户名 |\n| planDays | List | 应出勤日 |\n| workDays | String | 工作日 |\n| normalWorkDays | String | 正常工作日（排除节假日） |\n| planWorkTimes | String | 应出勤工时 |\n| date | Long | 日期（时间戳） |\n| period | String | 考勤时间段 |\n| total | String | 应出勤时长 |\nJava sdk调用示例："
+}

@@ -1,0 +1,294 @@
+{
+  "id": "908314673290362881",
+  "name": "我的文档列表",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/documents/list/mine",
+  "url_template": "{OpenApiOrigin}/api/doc/documents/list/mine",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "string",
+      "description": "总数"
+    },
+    {
+      "name": "documents",
+      "required": "",
+      "type": "array",
+      "description": "文档集合"
+    },
+    {
+      "name": "documents.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "documents.name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "documents.type",
+      "required": "",
+      "type": "string",
+      "description": "列表类型"
+    },
+    {
+      "name": "documents.virtualFolderType",
+      "required": "",
+      "type": "string",
+      "description": "虚拟目录类型"
+    },
+    {
+      "name": "documents.docCreateTime",
+      "required": "",
+      "type": "string",
+      "description": "文档创建时间"
+    },
+    {
+      "name": "documents.docLastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "文档更新时间"
+    },
+    {
+      "name": "documents.docAuthorId",
+      "required": "",
+      "type": "string",
+      "description": "负责人id"
+    },
+    {
+      "name": "documents.docAuthorName",
+      "required": "",
+      "type": "string",
+      "description": "负责人名称"
+    },
+    {
+      "name": "documents.docStatusName",
+      "required": "",
+      "type": "string",
+      "description": "文档状态名称"
+    },
+    {
+      "name": "documents.countOfAttachment",
+      "required": "",
+      "type": "string",
+      "description": "附件数量"
+    },
+    {
+      "name": "documents.docCreatorId",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人id"
+    },
+    {
+      "name": "documents.docCreatorName",
+      "required": "",
+      "type": "string",
+      "description": "文档创建人id"
+    },
+    {
+      "name": "documents.docMetadata",
+      "required": "",
+      "type": "object",
+      "description": "文档基础信息"
+    },
+    {
+      "name": "documents.docMetadata.canPreview",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可预览"
+    },
+    {
+      "name": "documents.docMetadata.type",
+      "required": "",
+      "type": "string",
+      "description": "文档类型"
+    },
+    {
+      "name": "documents.docMetadata.folderType",
+      "required": "",
+      "type": "string",
+      "description": "文件夹类型"
+    },
+    {
+      "name": "documents.docMetadata.fileSize",
+      "required": "",
+      "type": "string",
+      "description": "文件大小"
+    },
+    {
+      "name": "documents.docMetadata.readableFileSize",
+      "required": "",
+      "type": "string",
+      "description": "文件大小"
+    },
+    {
+      "name": "documents.docMetadata.currentUserIsAuthor",
+      "required": "",
+      "type": "boolean",
+      "description": "是否为文档的负责人"
+    },
+    {
+      "name": "documents.docMetadata.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "documents.docMetadata.docStatus",
+      "required": "",
+      "type": "string",
+      "description": "文档状态值"
+    },
+    {
+      "name": "documents.docMetadata.docStatusName",
+      "required": "",
+      "type": "string",
+      "description": "文档状态名称"
+    },
+    {
+      "name": "documents.docMetadata.canCancel",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可作废"
+    },
+    {
+      "name": "documents.docMetadata.canReopenCancel",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可打开作废"
+    },
+    {
+      "name": "documents.docMetadata.forcedCheckIn",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可强制签入"
+    },
+    {
+      "name": "documents.docMetadata.canEdit",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可编辑"
+    },
+    {
+      "name": "documents.docMetadata.canMattersForward",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可事项转发"
+    },
+    {
+      "name": "documents.docMetadata.canDownload",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可下载"
+    },
+    {
+      "name": "documents.docMetadata.canUrging",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可催办"
+    },
+    {
+      "name": "documents.docMetadata.coordinateDocument",
+      "required": "",
+      "type": "boolean",
+      "description": "是否协同文档"
+    },
+    {
+      "name": "documents.docMetadata.office",
+      "required": "",
+      "type": "boolean",
+      "description": "是否office文件"
+    },
+    {
+      "name": "documents.docNumber",
+      "required": "",
+      "type": "string",
+      "description": "列表索引"
+    },
+    {
+      "name": "documents.folderPathName",
+      "required": "",
+      "type": "string",
+      "description": "文档所属文件夹路径"
+    },
+    {
+      "name": "documents.canSubscribe",
+      "required": "",
+      "type": "boolean",
+      "description": "是否可订阅"
+    },
+    {
+      "name": "documents.unread",
+      "required": "",
+      "type": "boolean",
+      "description": "true : 未读；false : 已读"
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "string",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "string",
+      "description": "每页显示数量"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "我的文档列表"
+  ],
+  "raw_text": "## 我的文档列表\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/documents/list/mine\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| pageNo | 是 | int 页码（数据范围：大于或等于1的整数） |  |\n| pageSize | 是 | int | 每页显示数量(数据范围：大于或等于1的整数) |\n| keywords | 否 | string | 关键词（搜索文档标题） |\n| queryReadStatus | 否 | string | 是否查询文档的阅读状态(“1”：查询;其他：不查询) |\n| order | 否 | object | 排序规则 |\n| order.property | 否 | string | 排序字段(default-默认, name-名称, last_update_time-最后修改时间, create_time-创建时间, manager-负责人, read_count-阅读数 |\n| order.direction | 否 | string | DESC/ASC |\n| conditions | 否 | array | 搜索条件 |\n| conditions.id | 否 | string | 查询字段（name-名称，creator-创建人，author-负责人，create_time-创建时间，last_update_time-最后修改时间，doc_status-文档状态） |\n| conditions.type | 否 | string | 查询条件类型（array： 字段值是多个；date：日期范围） |\n| conditions.operate | 否 | string | 逻辑符（eq: 等于；like : 模糊查询） |\n| conditions.value | 否 | string | 过滤值 |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\n| data | object | 返回数据 |\n| total | string | 总数 |\n| documents | array | 文档集合 |\n| documents.id | string | 文档id |\n| documents.name | string | 文档名称 |\n| documents.type | string | 列表类型 |\n| documents.virtualFolderType | string | 虚拟目录类型 |\n| documents.docCreateTime | string | 文档创建时间 |\n| documents.docLastUpdateTime | string | 文档更新时间 |\n| documents.docAuthorId | string | 负责人id |\n| documents.docAuthorName | string | 负责人名称 |\n| documents.docStatusName | string | 文档状态名称 |\n| documents.countOfAttachment | string | 附件数量 |\n| documents.docCreatorId | string | 文档创建人id |\n| documents.docCreatorName | string | 文档创建人id |\n| documents.docMetadata | object | 文档基础信息 |\n| documents.docMetadata.canPreview | boolean | 是否可预览 |\n| documents.docMetadata.type | string | 文档类型 |\n| documents.docMetadata.folderType | string | 文件夹类型 |\n| documents.docMetadata.fileSize | string | 文件大小 |\n| documents.docMetadata.readableFileSize | string | 文件大小 |\n| documents.docMetadata.currentUserIsAuthor | boolean | 是否为文档的负责人 |\n| documents.docMetadata.id | string | 文档id |\n| documents.docMetadata.docStatus | string | 文档状态值 |\n| documents.docMetadata.docStatusName | string | 文档状态名称 |\n| documents.docMetadata.canCancel | boolean | 是否可作废 |\n| documents.docMetadata.canReopenCancel | boolean | 是否可打开作废 |\n| documents.docMetadata.forcedCheckIn | boolean | 是否可强制签入 |\n| documents.docMetadata.canEdit | boolean | 是否可编辑 |\n| documents.docMetadata.canMattersForward | boolean | 是否可事项转发 |\n| documents.docMetadata.canDownload | boolean | 是否可下载 |\n| documents.docMetadata.canUrging | boolean | 是否可催办 |\n| documents.docMetadata.coordinateDocument | boolean | 是否协同文档 |\n| documents.docMetadata.office | boolean | 是否office文件 |\n| documents.docNumber | string | 列表索引 |\n| documents.folderPathName | string | 文档所属文件夹路径 |\n| documents.canSubscribe | boolean | 是否可订阅 |\n| documents.unread | boolean | true : 未读；false : 已读 |\n| pageNo | string | 页码 |\n| pageSize | string | 每页显示数量 |\nJava sdk调用示例："
+}

@@ -1,0 +1,66 @@
+{
+  "id": "840693432705449984",
+  "name": "更新流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/update",
+  "url_template": "{OpenApiOrigin}/workflow/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "datamap",
+      "required": "是",
+      "type": "String",
+      "description": "审批自定义字段集合 datamap传值说明"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "flowId",
+      "required": "",
+      "type": "Long",
+      "description": "审批数据ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "更新流程"
+  ],
+  "raw_text": "## 更新流程\n请求URL：\n- {OpenApiOrigin}/workflow/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 审批数据ID 获取审批数据ID |\n| datamap | 是 | String | 审批自定义字段集合 datamap传值说明 |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/update?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&id=845207297111105537&datamap={\"7833714589339303317\":\"更新审批\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| flowId | Long | 审批数据ID |\nJava sdk调用示例："
+}

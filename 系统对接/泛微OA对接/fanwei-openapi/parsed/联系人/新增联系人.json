@@ -1,0 +1,132 @@
+{
+  "id": "840675604078100481",
+  "name": "新增联系人",
+  "module": "联系人",
+  "module_path": [
+    "联系人"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/create",
+  "url_template": "{OpenApiOrigin}/crm/v2/create",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：contact"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "联系人信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "contactBelongCustomer",
+      "required": "是",
+      "type": "String",
+      "description": "联系人所属客户"
+    },
+    {
+      "name": "contactTitle",
+      "required": "是",
+      "type": "String",
+      "description": "联系人头衔"
+    },
+    {
+      "name": "contactCall",
+      "required": "是",
+      "type": "String",
+      "description": "联系人称呼"
+    },
+    {
+      "name": "contactTelephone",
+      "required": "是",
+      "type": "String",
+      "description": "联系人电话"
+    },
+    {
+      "name": "contactPhoneNumber",
+      "required": "是",
+      "type": "String",
+      "description": "联系人手机"
+    },
+    {
+      "name": "contactEmail",
+      "required": "是",
+      "type": "String",
+      "description": "联系人邮箱"
+    },
+    {
+      "name": "contactSex",
+      "required": "是",
+      "type": "String",
+      "description": "联系人性别，1男、2女、3未知"
+    },
+    {
+      "name": "contactInterest",
+      "required": "是",
+      "type": "String",
+      "description": "联系人兴趣"
+    },
+    {
+      "name": "contactDescription",
+      "required": "是",
+      "type": "String",
+      "description": "联系人备注"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "联系人信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增联系人"
+  ],
+  "raw_text": "## 新增联系人\n请求URL：\n- {OpenApiOrigin}/crm/v2/create\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：contact |\n| entity | 是 | Object | 联系人信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 是 | String | 名称 |\n| manager | 是 | String | 负责人 |\n| contactBelongCustomer | 是 | String | 联系人所属客户 |\n| contactTitle | 是 | String | 联系人头衔 |\n| contactCall | 是 | String | 联系人称呼 |\n| contactTelephone | 是 | String | 联系人电话 |\n| contactPhoneNumber | 是 | String | 联系人手机 |\n| contactEmail | 是 | String | 联系人邮箱 |\n| contactSex | 是 | String | 联系人性别，1男、2女、3未知 |\n| contactInterest | 是 | String | 联系人兴趣 |\n| contactDescription | 是 | String | 联系人备注 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/create?access_token=b0973c986bc38365460b01271e147102&userid=717929201362116609&module=contact&entity={\"name\": \"联系人名称\",\"manager\": { \"name\": \"陈兰\"},\"contactBelongCustomer\": { \"name\": \"上海泛微网络科技股份有限公司1606457730530\"},\"contactTitle\": \"头衔\",\"contactCall\": \"称呼\",\"contactTelephone\": \"028-61300000\",\"contactPhoneNumber\": \"13700000000\",\"contactEmail\": \"contact@eteams.com\",\"contactSex\": \"1\",\"contactInterest\": \"跑步，篮球\",\"contactDescription\": \"联系人描述备注\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 联系人信息（JSON格式） |\nJava sdk调用示例："
+}

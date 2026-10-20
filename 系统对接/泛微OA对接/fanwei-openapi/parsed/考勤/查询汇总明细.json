@@ -1,0 +1,198 @@
+{
+  "id": "840692908585222145",
+  "name": "查询汇总明细",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/getCollect",
+  "url_template": "{OpenApiOrigin}/attend/v2/getCollect",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID集合 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期 (格式：YYYY-MM-DD)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "absenseNum",
+      "required": "",
+      "type": "String",
+      "description": "未签到次数"
+    },
+    {
+      "name": "unSignOutNum",
+      "required": "",
+      "type": "String",
+      "description": "未签退次数"
+    },
+    {
+      "name": "oAttendNum",
+      "required": "",
+      "type": "String",
+      "description": "外勤次数"
+    },
+    {
+      "name": "lateNum",
+      "required": "",
+      "type": "String",
+      "description": "迟到次数"
+    },
+    {
+      "name": "leaveEarlyNum",
+      "required": "",
+      "type": "String",
+      "description": "早退次数"
+    },
+    {
+      "name": "planTime",
+      "required": "",
+      "type": "String",
+      "description": "应出勤工时"
+    },
+    {
+      "name": "workTime",
+      "required": "",
+      "type": "String",
+      "description": "出勤工时"
+    },
+    {
+      "name": "absence",
+      "required": "",
+      "type": "String",
+      "description": "缺勤工时"
+    },
+    {
+      "name": "workOvertime",
+      "required": "",
+      "type": "String",
+      "description": "工作日加班工时"
+    },
+    {
+      "name": "weekendOvertime",
+      "required": "",
+      "type": "String",
+      "description": "周末加班工时"
+    },
+    {
+      "name": "holidayOvertime",
+      "required": "",
+      "type": "String",
+      "description": "节假日加班工时"
+    },
+    {
+      "name": "workBt",
+      "required": "",
+      "type": "String",
+      "description": "工作日出差工时"
+    },
+    {
+      "name": "weekendBt",
+      "required": "",
+      "type": "String",
+      "description": "周末出差工时"
+    },
+    {
+      "name": "holidayBt",
+      "required": "",
+      "type": "String",
+      "description": "节假日出差工时"
+    },
+    {
+      "name": "actualWork",
+      "required": "",
+      "type": "String",
+      "description": "实际出勤工时"
+    },
+    {
+      "name": "vacation",
+      "required": "",
+      "type": "Object",
+      "description": "请假明细"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "假期名称"
+    },
+    {
+      "name": "hour",
+      "required": "",
+      "type": "Int",
+      "description": "时长"
+    },
+    {
+      "name": "vacationId",
+      "required": "",
+      "type": "String",
+      "description": "假期ID"
+    },
+    {
+      "name": "holidayWork",
+      "required": "",
+      "type": "String",
+      "description": "节假日出勤工时"
+    },
+    {
+      "name": "diffDays",
+      "required": "",
+      "type": "Int",
+      "description": "入职离职差额天数"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询汇总明细"
+  ],
+  "raw_text": "## 查询汇总明细\n请求URL：\n- {OpenApiOrigin}/attend/v2/getCollect\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID集合 获取用户ID |\n| startDate | 是 | Date | 开始日期 (格式：YYYY-MM-DD) |\n| endDate | 是 | Date | 结束日期 (格式：YYYY-MM-DD) |\n请求示例：\nquery方式\n{OpenApiOrigin}/attend/v2/getCollect?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userIds=717929201362116609,778007431387290207&startDate=2023-01-01&endDate=2023-01-30\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | Long | 用户ID |\n| userName | String | 用户名 |\n| absenseNum | String | 未签到次数 |\n| unSignOutNum | String | 未签退次数 |\n| oAttendNum | String | 外勤次数 |\n| lateNum | String | 迟到次数 |\n| leaveEarlyNum | String | 早退次数 |\n| planTime | String | 应出勤工时 |\n| workTime | String | 出勤工时 |\n| absence | String | 缺勤工时 |\n| workOvertime | String | 工作日加班工时 |\n| weekendOvertime | String | 周末加班工时 |\n| holidayOvertime | String | 节假日加班工时 |\n| workBt | String | 工作日出差工时 |\n| weekendBt | String | 周末出差工时 |\n| holidayBt | String | 节假日出差工时 |\n| actualWork | String | 实际出勤工时 |\n| vacation | Object | 请假明细 |\n| name | String | 假期名称 |\n| hour | Int | 时长 |\n| vacationId | String | 假期ID |\n| holidayWork | String | 节假日出勤工时 |\n| diffDays | Int | 入职离职差额天数 |\nJava sdk调用示例："
+}

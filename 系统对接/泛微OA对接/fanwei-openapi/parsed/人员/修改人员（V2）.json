@@ -1,0 +1,96 @@
+{
+  "id": "840674749512949761",
+  "name": "修改人员（V2）",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": true,
+  "url": "/user/v2/updateUser",
+  "url_template": "{OpenApiOrigin}/user/v2/updateUser",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "用户名称"
+    },
+    {
+      "name": "mobile",
+      "required": "否",
+      "type": "String",
+      "description": "手机号"
+    },
+    {
+      "name": "department",
+      "required": "否",
+      "type": "List",
+      "description": "所属部门ID集合 获取部门ID"
+    },
+    {
+      "name": "email",
+      "required": "否",
+      "type": "String",
+      "description": "邮箱"
+    },
+    {
+      "name": "jobNum",
+      "required": "否",
+      "type": "String",
+      "description": "工号"
+    },
+    {
+      "name": "telephone",
+      "required": "否",
+      "type": "String",
+      "description": "电话"
+    },
+    {
+      "name": "hireDate",
+      "required": "否",
+      "type": "String",
+      "description": "入职日期（格式：2019-08-20）"
+    },
+    {
+      "name": "sex",
+      "required": "否",
+      "type": "String",
+      "description": "性别（male、female）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改人员（V2）"
+  ],
+  "raw_text": "## 修改人员（V2）\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用同步人员接口\n请求URL：\n- {OpenApiOrigin}/user/v2/updateUser\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| name | 否 | String | 用户名称 |\n| mobile | 否 | String | 手机号 |\n| department | 否 | List | 所属部门ID集合 获取部门ID |\n| email | 否 | String | 邮箱 |\n| jobNum | 否 | String | 工号 |\n| telephone | 否 | String | 电话 |\n| hireDate | 否 | String | 入职日期（格式：2019-08-20） |\n| sex | 否 | String | 性别（male、female） |\n请求示例：\nquery方式\n{OpenApiOrigin}/user/v2/updateUser?access_token=f2d325f12b4ab02b97cc53b361636b16&userid=6483193578931353652&name=最新修改小小陈\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

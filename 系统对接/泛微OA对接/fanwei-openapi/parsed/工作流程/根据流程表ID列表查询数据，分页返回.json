@@ -1,0 +1,72 @@
+{
+  "id": "840712854371401729",
+  "name": "根据流程表ID列表查询数据，分页返回",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryStatFlowByFormIds",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formIds",
+      "required": "是",
+      "type": "List<Long>",
+      "description": "审批表ID列表（最大10） 获取审批表ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Integer",
+      "description": "分页页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Integer",
+      "description": "每页数量（最大200）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "flowMaps",
+      "required": "",
+      "type": "List",
+      "description": "流程列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据审批表ID列表查询数据，分页返回"
+  ],
+  "raw_text": "## 根据审批表ID列表查询数据，分页返回\n请求URL：\n- {OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| formIds | 是 | List<Long> | 审批表ID列表（最大10） 获取审批表ID |\n| pageNo | 否 | Integer | 分页页码 |\n| pageSize | 否 | Integer | 每页数量（最大200） |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/queryStatFlowByFormIds?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&formIds=6473714586545086123,785837620680556544\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| flowMaps | List | 流程列表 |\nJava sdk调用示例："
+}

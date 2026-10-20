@@ -1,0 +1,61 @@
+{
+  "id": "433108419411443712",
+  "name": "创建表单或者修改表单字段",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/batchSaveFormFieldManage",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchSaveFormFieldManage",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formFieldManageDto",
+      "required": "是",
+      "type": "com.weaver.common.form.dto.field.formfield.FormFieldManageDto",
+      "description": "表单字段详细保存信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "com.weaver.common.form.dto.field.formfield.FormFieldManageDto",
+      "description": "保存结果对象"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "接口说明：\n1、本接口支持创建表单，和批量修改表单字段信息，包括新增、修改、删除字段信息\n2、接口内部有鉴权，需要有工作流管理新建权限或者工作流管理修改权限的人，才能调用\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/batchSaveFormFieldManage\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| formFieldManageDto | 是 | com.weaver.common.form.dto.field.formfield.FormFieldManageDto | 表单字段详细保存信息 |\n请求参数示例：\nFormFieldManageDto对象属性详细说明：\n| 属性 | 具体属性 | 类型 | 必传 | 说明 |\n| --- | --- | --- | --- | --- |\n| form | dataKey | String | 是 | 表唯一标识由不超过30位长度的数字、字母、下划线组成 |\n| name | String | 是 | 表名称 |  |\n| isPhysical | Boolean | 否 | 是否物理表，不传默认建物理表 |  |\n| describe | String | 否 | 表的描述信息 |  |\n| formTableList | dataKey | String | 是 | 多物理表唯一标识由不超过30位长度的数字、字母、下划线组成 |\n| name | String | 是 | 多物理表名称 |  |\n| subFormList | dataKey | String | 是 | 明细表唯一标识由不超过30位长度的数字、字母、下划线组成 |\n| name | String | 是 | 明细表名称 |  |\n| describe | String | 否 | 明细表的描述信息 |  |\n| formFieldList | dataKey | String | 是 | 字段唯一标识由不超过20位长度的数字、字母、下划线组成 |\n| subFormDataKey | String | 否 | 所属明细表的dataKey，没有则属于主表 |  |\n| mainDataKey | String | 否 | 所属多物理表的dataKey，没有则属于主表 |  |\n| title | String | 是 | 字段标题 |  |\n| type | String | 是 | 字段类型不同字段类型不同，具体可以参考下面的示例 |  |\n| describe | String | 否 | 字段描述信息 |  |\n| showOrder | Double | 否 | 字段顺序 |  |\n| options | Array | 否 | 选项类型必传 |  |\n| name | 是 | 选项名称 |  |  |\n| valueKey | 是 | 选项唯一标识 |  |  |\n| other | 否 | 是否是”其它”类型选项 |  |  |\n| order | 否 | 选项顺序 |  |  |\n| parentDataKey | String | 存在父级选项时必传 | 父级选项时对应父选项的字段dataKey |  |\n| format | String | 日期类型必传 | 日期格式 |  |\n| single | Boolean | 否 | 是否单选浏览/附件类型字段需要，默认false |  |\n| browserType | Object | 自定义浏览类型必传 | 自定义浏览类型的具体属性这几个参数可以从选择自定义浏览页面的请求接口获取到：/api/bcw/relevanceBrowser/getBrowserBean格式请参考示例 |  |\n| 这里只罗列了字段通用的几种属性，更多每个字段的特有属性可以参考下面的【字段属性数据字典】 |  |  |  |  |\n| autoCompare |  | Boolean | 否 | 是否支持自动比对差异当传true时，如果表单已存在，会进行更新规则：不传的字段会删除，传的字段会比对后进行新增、覆盖 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | com.weaver.common.form.dto.field.formfield.FormFieldManageDto | 保存结果对象 |\n字段属性字典："
+}

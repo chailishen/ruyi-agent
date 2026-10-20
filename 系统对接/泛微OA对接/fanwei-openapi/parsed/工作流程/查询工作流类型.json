@@ -1,0 +1,59 @@
+{
+  "id": "840693647360663552",
+  "name": "查询工作流类型",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/classify",
+  "url_template": "{OpenApiOrigin}/workflow/v2/classify",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "工作流类型ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "工作流类型名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/workflow/v2/classify\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/classify?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userid=717929201362116609\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | Long | 工作流类型ID |\n| name | String | 工作流类型名称 |\nJava sdk调用示例："
+}

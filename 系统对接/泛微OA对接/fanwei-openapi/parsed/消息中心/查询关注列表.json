@@ -1,0 +1,144 @@
+{
+  "id": "874507985129840640",
+  "name": "查询关注列表",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/my/watch/queryAllWatch",
+  "url_template": "{OpenApiOrigin}/api/my/watch/queryAllWatch",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "long",
+      "description": "每一页展示条数"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "long",
+      "description": "页码"
+    },
+    {
+      "name": "nodeId",
+      "required": "否",
+      "type": "string",
+      "description": "文件夹ID（默认是根节点）"
+    },
+    {
+      "name": "s_time_tamp",
+      "required": "否",
+      "type": "string",
+      "description": "关注时间起（时间戳）"
+    },
+    {
+      "name": "e_time_tamp",
+      "required": "否",
+      "type": "string",
+      "description": "关注时间止（时间戳）"
+    },
+    {
+      "name": "modules",
+      "required": "否",
+      "type": "string[]",
+      "description": "模块"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "string",
+      "description": "事项名称"
+    },
+    {
+      "name": "orderType",
+      "required": "是",
+      "type": "int",
+      "description": "排序方式（排序方式 0代表按照关注时间降序 1代表按照事项标题降序 2表示按照模块降序 3按照关注日期升序 4按照名称升序 5按照模块升序,6 重要性降序，7重要性升序）"
+    },
+    {
+      "name": "creater",
+      "required": "是",
+      "type": "long",
+      "description": "用户id"
+    },
+    {
+      "name": "importances",
+      "required": "否",
+      "type": "string[]",
+      "description": "重要程度(1一般，2关注，3 重要)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "type",
+      "required": "",
+      "type": "int",
+      "description": "type为1的时候代表当前为文件夹为2的时候代表为事项"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "int",
+      "description": "type为1的时候代表当前为文件夹id为2的时候代表为事项id"
+    },
+    {
+      "name": "treeNodeId",
+      "required": "",
+      "type": "int",
+      "description": "为文件夹ID"
+    },
+    {
+      "name": "pid",
+      "required": "",
+      "type": "int",
+      "description": "父文件夹ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "事项名称或文件夹名称"
+    },
+    {
+      "name": "pcUrl",
+      "required": "",
+      "type": "string",
+      "description": "打开事项的url"
+    },
+    {
+      "name": "h5Url",
+      "required": "",
+      "type": "string",
+      "description": "打开事项的h5url"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询关注列表"
+  ],
+  "raw_text": "## 查询关注列表\n请求URL：\n- {OpenApiOrigin}/api/my/watch/queryAllWatch\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| pageSize | 是 | long | 每一页展示条数 |\n| pageNo | 是 | long | 页码 |\n| nodeId | 否 | string | 文件夹ID（默认是根节点） |\n| s_time_tamp | 否 | string | 关注时间起（时间戳） |\n| e_time_tamp | 否 | string | 关注时间止（时间戳） |\n| modules | 否 | string[] | 模块 |\n| name | 否 | string | 事项名称 |\n| orderType | 是 | int | 排序方式（排序方式 0代表按照关注时间降序 1代表按照事项标题降序 2表示按照模块降序 3按照关注日期升序 4按照名称升序 5按照模块升序,6 重要性降序，7重要性升序） |\n| creater | 是 | long | 用户id |\n| importances | 否 | string[] | 重要程度(1一般，2关注，3 重要) |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| type | int | type为1的时候代表当前为文件夹为2的时候代表为事项 |\n| id | int | type为1的时候代表当前为文件夹id为2的时候代表为事项id |\n| treeNodeId | int | 为文件夹ID |\n| pid | int | 父文件夹ID |\n| name | string | 事项名称或文件夹名称 |\n| pcUrl | string | 打开事项的url |\n| h5Url | string | 打开事项的h5url |\nJava sdk调用示例："
+}

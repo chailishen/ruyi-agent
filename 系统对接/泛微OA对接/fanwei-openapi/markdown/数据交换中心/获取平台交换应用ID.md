@@ -1,0 +1,23 @@
+# 获取平台交换应用ID
+
+- **文档 ID**: `284144032106414080`
+- **业务模块**: 数据交换中心
+- **是否 API 接口**: 是
+- **请求 URL**: `{OpenApiOrigin}/api/odocexchange/v1/getPlatAppId`
+- **请求方式**: `GET`
+
+## 请求参数
+
+| 参数名 | 必选 | 类型 | 说明 |
+| --- | --- | --- | --- |
+| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |
+| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |
+
+## 返回参数
+
+| 参数名 | 类型 | 说明 |
+| --- | --- | --- |
+| access_token | String | 调用接口凭证 获取accessToken信息 |
+| message | JSON | 返回信息 |
+| data | JSON |  |
+| appId | String | 平台交换模板应用id |

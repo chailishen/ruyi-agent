@@ -1,0 +1,169 @@
+{
+  "id": "345735518639620096",
+  "name": "同步条件矩阵数据",
+  "module": "人员",
+  "module_path": [
+    "人员"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/json)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "matrixName",
+      "required": "是",
+      "type": "String",
+      "description": "矩阵名称"
+    },
+    {
+      "name": "dataList",
+      "required": "是",
+      "type": "Array[Object]",
+      "description": "矩阵数据"
+    },
+    {
+      "name": "dataId",
+      "required": "否",
+      "type": "String",
+      "description": "行id，唯一确认矩阵某一行数据的id值1.如果是系统矩阵、或者同步矩阵，则行id就是部门或者分部的id，同时支持数据规则2.如果需要更新数据，则行id是必须的；新增数据不需要"
+    },
+    {
+      "name": "delete_type",
+      "required": "否",
+      "type": "Integer",
+      "description": "删除标识，仅支持 1 ： 表示需要删除；需要与行id配合使用，确认删除某一行数据；仅支持自定义矩阵"
+    },
+    {
+      "name": "[矩阵列名称]",
+      "required": "否",
+      "type": "String",
+      "description": "矩阵列数据"
+    },
+    {
+      "name": "optId",
+      "required": "是",
+      "type": "String",
+      "description": "操作者，OA中人员id; 如果实在没有，可以提供-1"
+    },
+    {
+      "name": "taskId",
+      "required": "否",
+      "type": "String",
+      "description": "当前请求任务号"
+    },
+    {
+      "name": "extKeyField",
+      "required": "否",
+      "type": "String",
+      "description": "外键字段指定后，返回报文中extKeyMap，将提供对应的信息（内容与请求报文一致）；主要目的是让第三方系统方便绑定矩阵行id，下次同步可以根据行id更新数据"
+    },
+    {
+      "name": "dataRule",
+      "required": "是",
+      "type": "Object",
+      "description": "数据规则"
+    },
+    {
+      "name": "employee",
+      "required": "是",
+      "type": "String",
+      "description": "人员规则"
+    },
+    {
+      "name": "employeeScopeConfig",
+      "required": "否",
+      "type": "string",
+      "description": "人员范围配置"
+    },
+    {
+      "name": "department",
+      "required": "否",
+      "type": "String",
+      "description": "部门规则"
+    },
+    {
+      "name": "subcompany",
+      "required": "否",
+      "type": "String",
+      "description": "分部规则"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": ""
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "0 成功，其他异常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "success 成功；其他异常"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Array[Object]",
+      "description": ""
+    },
+    {
+      "name": "keyValue",
+      "required": "",
+      "type": "String",
+      "description": "矩阵的行id，唯一定位一条数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "number",
+      "description": "状态（SUCCESS 成功；ERROR 失败）"
+    },
+    {
+      "name": "operate",
+      "required": "",
+      "type": "String",
+      "description": "操作"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "SUCCESS 成功"
+    },
+    {
+      "name": "extKeyMap",
+      "required": "",
+      "type": "Object",
+      "description": "根据入参中指定的外键字段；从请求报文中返回数据，方便第三方系统绑定数据"
+    },
+    {
+      "name": "outkey",
+      "required": "",
+      "type": "String",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "条件矩阵： 自定义矩阵，系统矩阵、同步矩阵（仅1101基线（2024年）后支持）\n1.其中系统矩阵、同步矩阵 不允许新增、删除数据，只能更新数据\n2.系统矩阵、同步矩阵中条件列不允许更新，所以报文中不可以传递条件列内容，请使用dataId进行指定条件列内容\n请求URL：\n{OpenApiOrigin}/api/hrm/restful/syncMatrixData\n请求方式：\n- POST\n备注:\n- Body 参数格式(application/json)\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| matrixName | 是 | String | 矩阵名称 |\n| dataList | 是 | Array[Object] | 矩阵数据 |\n| dataId | 否 | String | 行id，唯一确认矩阵某一行数据的id值1.如果是系统矩阵、或者同步矩阵，则行id就是部门或者分部的id，同时支持数据规则2.如果需要更新数据，则行id是必须的；新增数据不需要 |\n| delete_type | 否 | Integer | 删除标识，仅支持 1 ： 表示需要删除；需要与行id配合使用，确认删除某一行数据；仅支持自定义矩阵 |\n| [矩阵列名称] | 否 | String | 矩阵列数据 |\n| optId | 是 | String | 操作者，OA中人员id; 如果实在没有，可以提供-1 |\n| taskId | 否 | String | 当前请求任务号 |\n| extKeyField | 否 | String | 外键字段指定后，返回报文中extKeyMap，将提供对应的信息（内容与请求报文一致）；主要目的是让第三方系统方便绑定矩阵行id，下次同步可以根据行id更新数据 |\n| dataRule | 是 | Object | 数据规则 |\n| employee | 是 | String | 人员规则 |\n| employeeScopeConfig | 否 | string | 人员范围配置 |\n| department | 否 | String | 部门规则 |\n| subcompany | 否 | String | 分部规则 |\n参数示例：\njson\n返回示例：\njson\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object |  |\n| errcode | String | 0 成功，其他异常 |\n| errmsg | String | success 成功；其他异常 |\n| data | Array[Object] |  |\n| keyValue | String | 矩阵的行id，唯一定位一条数据 |\n| id | number | 状态（SUCCESS 成功；ERROR 失败） |\n| operate | String | 操作 |\n| status | String | SUCCESS 成功 |\n| extKeyMap | Object | 根据入参中指定的外键字段；从请求报文中返回数据，方便第三方系统绑定数据 |\n| outkey | String |  |\n- 同步条件矩阵数据"
+}

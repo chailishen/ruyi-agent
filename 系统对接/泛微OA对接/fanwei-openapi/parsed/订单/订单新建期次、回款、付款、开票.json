@@ -1,0 +1,234 @@
+{
+  "id": "840718218994393089",
+  "name": "订单新建期次、回款、付款、开票",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/addPayment",
+  "url_template": "{OpenApiOrigin}/crm/v2/addPayment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "String",
+      "type": "是",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "String",
+      "type": "是",
+      "description": "用户ID"
+    },
+    {
+      "name": "module",
+      "required": "String",
+      "type": "是",
+      "description": "模块。暂时只支持订单模块（orderform）"
+    },
+    {
+      "name": "entity",
+      "required": "String",
+      "type": "是",
+      "description": "期次等信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "paymentEntityType",
+      "required": "String",
+      "type": "是",
+      "description": "创建对象的类型，固定值： 期次stage、回款/付款paid、开票invoice、抵扣deduction、扣款chargeback、预回款/预付款prepaid"
+    },
+    {
+      "name": "entityId",
+      "required": "String",
+      "type": "是",
+      "description": "实体ID，如订单ID"
+    },
+    {
+      "name": "plannedMoney",
+      "required": "Double",
+      "type": "否",
+      "description": "期次计划金额"
+    },
+    {
+      "name": "plannedTime",
+      "required": "Date",
+      "type": "否",
+      "description": "期次计划时间，默认创建时间"
+    },
+    {
+      "name": "description",
+      "required": "String",
+      "type": "否",
+      "description": "备注"
+    },
+    {
+      "name": "stageId",
+      "required": "String",
+      "type": "是",
+      "description": "期次ID"
+    },
+    {
+      "name": "paidMoney",
+      "required": "Double",
+      "type": "是",
+      "description": "回（付）款金额"
+    },
+    {
+      "name": "paidTime",
+      "required": "Date",
+      "type": "否",
+      "description": "回（付）款时间，默认创建时间"
+    },
+    {
+      "name": "exchangeRate",
+      "required": "Double",
+      "type": "否",
+      "description": "汇率"
+    },
+    {
+      "name": "defaultUnit",
+      "required": "Object",
+      "type": "否",
+      "description": "换算单位"
+    },
+    {
+      "name": "chargebackMoney",
+      "required": "Double",
+      "type": "否",
+      "description": "扣款金额"
+    },
+    {
+      "name": "chargebackTime",
+      "required": "Date",
+      "type": "否",
+      "description": "扣款时间，默认创建时间"
+    },
+    {
+      "name": "chargebackItems",
+      "required": "List",
+      "type": "是",
+      "description": "扣款条目、capitalAccount 扣款账户、amount 扣款金额"
+    },
+    {
+      "name": "capitalAccount",
+      "required": "String",
+      "type": "是",
+      "description": "扣款账户"
+    },
+    {
+      "name": "amount",
+      "required": "Double",
+      "type": "是",
+      "description": "扣款金额"
+    },
+    {
+      "name": "deductionMoney",
+      "required": "Double",
+      "type": "是",
+      "description": "抵扣金额"
+    },
+    {
+      "name": "deductionTime",
+      "required": "Date",
+      "type": "否",
+      "description": "抵扣时间，默认创建时间"
+    },
+    {
+      "name": "deductionItem",
+      "required": "Object",
+      "type": "是",
+      "description": "抵扣项目"
+    },
+    {
+      "name": "invoiceMoney",
+      "required": "Double",
+      "type": "是",
+      "description": "开票金额"
+    },
+    {
+      "name": "invoiceTime",
+      "required": "Date",
+      "type": "否",
+      "description": "开票时间，默认创建时间"
+    },
+    {
+      "name": "invoiceType",
+      "required": "Object",
+      "type": "是",
+      "description": "开票类型"
+    },
+    {
+      "name": "invoiceNumber",
+      "required": "String",
+      "type": "是",
+      "description": "发票号码"
+    },
+    {
+      "name": "taxNumber",
+      "required": "String",
+      "type": "否",
+      "description": "税号"
+    },
+    {
+      "name": "content",
+      "required": "String",
+      "type": "否",
+      "description": "开票内容"
+    },
+    {
+      "name": "prepaidMoney",
+      "required": "Double",
+      "type": "是",
+      "description": "预回（付）款金额"
+    },
+    {
+      "name": "prepaidTime",
+      "required": "Date",
+      "type": "否",
+      "description": "预回（付）款时间，默认创建时间"
+    },
+    {
+      "name": "prepaidAccount",
+      "required": "Object",
+      "type": "是",
+      "description": "资金账户"
+    },
+    {
+      "name": "prepaidMethod",
+      "required": "Object",
+      "type": "否",
+      "description": "预回（付）款方式"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "期次等信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "订单新建期次、回款、付款、开票"
+  ],
+  "raw_text": "## 订单新建期次、回款、付款、开票\n简要描述：\n- 订单新建期次、回款、付款、开票等\n请求URL：\n- {OpenApiOrigin}/crm/v2/addPayment\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | String | 是 | 调用接口凭证 |\n| userid | String | 是 | 用户ID |\n| module | String | 是 | 模块。暂时只支持订单模块（orderform） |\n| entity | String | 是 | 期次等信息 |\nentity请求结构示例\nentity 参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| paymentEntityType | String | 是 | 创建对象的类型，固定值： 期次stage、回款/付款paid、开票invoice、抵扣deduction、扣款chargeback、预回款/预付款prepaid |\n| entityId | String | 是 | 实体ID，如订单ID |\n| plannedMoney | Double | 否 | 期次计划金额 |\n| plannedTime | Date | 否 | 期次计划时间，默认创建时间 |\n| description | String | 否 | 备注 |\n| stageId | String | 是 | 期次ID |\n| paidMoney | Double | 是 | 回（付）款金额 |\n| paidTime | Date | 否 | 回（付）款时间，默认创建时间 |\n| exchangeRate | Double | 否 | 汇率 |\n| defaultUnit | Object | 否 | 换算单位 |\n| chargebackMoney | Double | 否 | 扣款金额 |\n| chargebackTime | Date | 否 | 扣款时间，默认创建时间 |\n| chargebackItems | List | 是 | 扣款条目、capitalAccount 扣款账户、amount 扣款金额 |\n| capitalAccount | String | 是 | 扣款账户 |\n| amount | Double | 是 | 扣款金额 |\n| deductionMoney | Double | 是 | 抵扣金额 |\n| deductionTime | Date | 否 | 抵扣时间，默认创建时间 |\n| deductionItem | Object | 是 | 抵扣项目 |\n| invoiceMoney | Double | 是 | 开票金额 |\n| invoiceTime | Date | 否 | 开票时间，默认创建时间 |\n| invoiceType | Object | 是 | 开票类型 |\n| invoiceNumber | String | 是 | 发票号码 |\n| taxNumber | String | 否 | 税号 |\n| content | String | 否 | 开票内容 |\n| prepaidMoney | Double | 是 | 预回（付）款金额 |\n| prepaidTime | Date | 否 | 预回（付）款时间，默认创建时间 |\n| prepaidAccount | Object | 是 | 资金账户 |\n| prepaidMethod | Object | 否 | 预回（付）款方式 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/addPayment?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&entity={\"paymentEntityType\":\"stage\",\"entityId\":\"3578058074788063706\",\"plannedMoney\":\"100000\",\"plannedTime\":\"2019-10-2008:00:00\",\"description\":\"备注：本期预计回款10万\"}\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 期次等信息（JSON格式） |\nJava sdk调用示例："
+}

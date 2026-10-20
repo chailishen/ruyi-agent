@@ -1,0 +1,108 @@
+{
+  "id": "930519980790751233",
+  "name": "发送营销短信接口",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/mc/msg/sendMarketingSms",
+  "url_template": "{OpenApiOrigin}/api/mc/msg/sendMarketingSms",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "moduleId",
+      "required": "是",
+      "type": "String",
+      "description": "模块ID"
+    },
+    {
+      "name": "eventId",
+      "required": "是",
+      "type": "String",
+      "description": "事件ID"
+    },
+    {
+      "name": "sender",
+      "required": "是",
+      "type": "Object",
+      "description": "发送人"
+    },
+    {
+      "name": "sender.employeeId",
+      "required": "是",
+      "type": "Long",
+      "description": "发送人id，默认人员ID 10000"
+    },
+    {
+      "name": "sender.name",
+      "required": "是",
+      "type": "String",
+      "description": "发送人名称"
+    },
+    {
+      "name": "sender.tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "发送人团队标识 默认人员可以使用system"
+    },
+    {
+      "name": "dynamicParams",
+      "required": "否",
+      "type": "map",
+      "description": "动态参数（当邮件和短信需要支持动态参数的时候讲参数放入此处）"
+    },
+    {
+      "name": "sysContent",
+      "required": "否",
+      "type": "String",
+      "description": "短信内容,非模板短信时使用"
+    },
+    {
+      "name": "phones",
+      "required": "是",
+      "type": "String[]",
+      "description": "接受人手机号码"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "消息中心消息Id"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "消息发送状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "发送营销短信接口"
+  ],
+  "raw_text": "## 发送营销短信接口\n请求URL：\n- {OpenApiOrigin}/api/mc/msg/sendMarketingSms\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| moduleId | 是 | String | 模块ID |\n| eventId | 是 | String | 事件ID |\n| sender | 是 | Object | 发送人 |\n| sender.employeeId | 是 | Long | 发送人id，默认人员ID 10000 |\n| sender.name | 是 | String | 发送人名称 |\n| sender.tenantKey | 是 | String | 发送人团队标识 默认人员可以使用system |\n| dynamicParams | 否 | map | 动态参数（当邮件和短信需要支持动态参数的时候讲参数放入此处） |\n| sysContent | 否 | String | 短信内容,非模板短信时使用 |\n| phones | 是 | String[] | 接受人手机号码 |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| data | String | 消息中心消息Id |\n| status | String | 消息发送状态 |\nJava sdk调用示例："
+}

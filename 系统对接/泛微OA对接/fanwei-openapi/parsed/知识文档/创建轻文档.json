@@ -1,0 +1,66 @@
+{
+  "id": "389978167042899968",
+  "name": "创建轻文档",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/lightDoc/createDoc",
+  "url_template": "{OpenApiOrigin}/api/doc/lightDoc/createDoc",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "body参数（content-type : application/json）："
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "String",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "返回数据"
+    },
+    {
+      "name": "docId",
+      "required": "",
+      "type": "Long",
+      "description": "文档id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "简要描述：\n- 创建一篇轻文档（需oa已安装轻文档应用）\n请求URL：\n- {OpenApiOrigin}/api/doc/lightDoc/createDoc\n请求方式：\n- POST\nParams参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | String | 用户id 获取用户ID |\nbody参数（content-type : application/json）：\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| spaceId | 是 | Long | 文档所属的空间id |\n| docName | 是 | String | 文档标题 |\n| type | 是 | Object | 文档类型 0：目录 1：文档 |\n| parentId | 是 | Long | 父节点id |\n| fullPath | 否 | String | 文档全路径，根节点不用转，其他需要传 |\n| content | 是 | String | 文档正文（base64加密） |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 错误编码 |\n| errmsg | String | 错误提示 |\n| data | Object | 返回数据 |\n| docId | Long | 文档id |"
+}

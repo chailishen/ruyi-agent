@@ -1,0 +1,168 @@
+{
+  "id": "908326896909893633",
+  "name": "查询我的日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/queryIndexAgenda",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/queryIndexAgenda",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "employeeIds",
+      "required": "是",
+      "type": "String",
+      "description": "人员id，多个用，隔开"
+    },
+    {
+      "name": "deptIds",
+      "required": "否",
+      "type": "String",
+      "description": "部门id，多个用，隔开"
+    },
+    {
+      "name": "start",
+      "required": "是",
+      "type": "Long",
+      "description": "开始时间，格式：yyyy-MM-dd HH:mm"
+    },
+    {
+      "name": "end",
+      "required": "是",
+      "type": "Long",
+      "description": "结束时间 ，格式：yyyy-MM-dd HH:mm"
+    },
+    {
+      "name": "simpleEmployee",
+      "required": "是",
+      "type": "JSON",
+      "description": "当前人员信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "当前人员ID"
+    },
+    {
+      "name": "tenantKey",
+      "required": "否",
+      "type": "String",
+      "description": "当前人员租户"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "array",
+      "description": "数据列表"
+    },
+    {
+      "name": "message.errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误代码"
+    },
+    {
+      "name": "message.errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误信息"
+    },
+    {
+      "name": "allDay",
+      "required": "",
+      "type": "boolean",
+      "description": "是否是全天事件"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "object",
+      "description": "创建者"
+    },
+    {
+      "name": "watched",
+      "required": "",
+      "type": "boolean",
+      "description": "是否已关注"
+    },
+    {
+      "name": "start",
+      "required": "",
+      "type": "number",
+      "description": "开始时间"
+    },
+    {
+      "name": "end",
+      "required": "",
+      "type": "number",
+      "description": "结束时间"
+    },
+    {
+      "name": "calendarTypeEntity",
+      "required": "",
+      "type": "object",
+      "description": "日程类型"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "日程ID"
+    },
+    {
+      "name": "repeatNum",
+      "required": "",
+      "type": "number",
+      "description": "每周重复次数"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "string",
+      "description": "日程标题"
+    },
+    {
+      "name": "color",
+      "required": "",
+      "type": "string",
+      "description": "颜色值"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "类型名称"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "创建者姓名"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "string",
+      "description": "创建者ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询我的日程"
+  ],
+  "raw_text": "## 查询我的日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/queryIndexAgenda\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| employeeIds | 是 | String | 人员id，多个用，隔开 |\n| deptIds | 否 | String | 部门id，多个用，隔开 |\n| start | 是 | Long | 开始时间，格式：yyyy-MM-dd HH:mm |\n| end | 是 | Long | 结束时间 ，格式：yyyy-MM-dd HH:mm |\n| simpleEmployee | 是 | JSON | 当前人员信息 |\n参数simpleEmployee:\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 当前人员ID |\n| tenantKey | 否 | String | 当前人员租户 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 示例 | 说明 |\n| --- | --- | --- | --- |\n| data | array | [] | 数据列表 |\n| message.errcode | string | 0 | 错误代码 |\n| message.errmsg | string | success | 错误信息 |\n返回参数data：\n| 参数名 | 类型 | 示例 | 说明 |\n| --- | --- | --- | --- |\n| allDay | boolean | false | 是否是全天事件 |\n| creator | object | {} | 创建者 |\n| watched | boolean | false | 是否已关注 |\n| start | number | 1683538200000 | 开始时间 |\n| end | number | 1683540000000 | 结束时间 |\n| calendarTypeEntity | object | {} | 日程类型 |\n| id | string | 6478353786812725862 | 日程ID |\n| repeatNum | number | 0 | 每周重复次数 |\n| title | string | 123213123 | 日程标题 |\n返回参数calendarTypeEntity：\n| 参数名 | 类型 | 示例 | 说明 |\n| --- | --- | --- | --- |\n| color | string | #81AFE2 | 颜色值 |\n| name | string | 其它 | 类型名称 |\n返回参数：creator：\n| 参数名 | 类型 | 示例 | 说明 |\n| --- | --- | --- | --- |\n| name | string | XX | 创建者姓名 |\n| id | string | 2226729915946561291 | 创建者ID |\nJava sdk调用示例："
+}

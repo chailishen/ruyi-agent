@@ -1,0 +1,62 @@
+{
+  "id": "283442698315104256",
+  "name": "下载二维码",
+  "module": "会议管理",
+  "module_path": [
+    "会议管理"
+  ],
+  "is_api": true,
+  "url": "/api/meeting/meetingOpenApi/downLoadOrcode",
+  "url_template": "{OpenApiOrigin}/api/meeting/meetingOpenApi/downLoadOrcode",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST（Content_Type: application/json）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "size",
+      "required": "是",
+      "type": "int",
+      "description": "二维码大小（默认传1）"
+    },
+    {
+      "name": "meetingId",
+      "required": "是",
+      "type": "String",
+      "description": "当前id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "下载二维码"
+  ],
+  "raw_text": "## 下载二维码\n请求URL：\n- {OpenApiOrigin}/api/meeting/meetingOpenApi/downLoadOrcode\n请求方式：\n- POST（Content_Type: application/json）\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| size | 是 | int | 二维码大小（默认传1） |\n| meetingId | 是 | String | 当前id |\n请求示例：\n返回结果：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |"
+}

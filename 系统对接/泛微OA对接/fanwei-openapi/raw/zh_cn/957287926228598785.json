@@ -1,0 +1,266 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "开放平台认证参数的多种传递方式",
+        "level": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "开放平台认证参数的多种传递方式"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "前言",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "前言"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "针对于一些客户普遍的需求，有一些客户可能并不希望把access_token，access_name，access_pwd，secret_key，corpid等认证相关的信息放在参数中传递，希望将这些参数放在HTTP请求当中的header中传递给开放平台，针对于此需求背景，开放平台提供并支持认证相关参数放置在header当中。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "功能介绍",
+        "level": 4
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "功能介绍"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "第三方系统在调用开放平台接口时，支持把access_token，access_name，access_pwd，secret_key，corpid等认证相关的信息放在参数中传递，也同时支持放置在header中传递。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "一认证相关参数放置在params中传递",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "一：认证相关参数放置在params中传递"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_token:"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957287926228598785.0.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_pwd，access_name，secret_key，corpid"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957287926228598785.1.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "二认证相关参数放置在header中传递",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "二：认证相关参数放置在header中传递"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "对于需要将认证参数放置在header中传递的客户，需要注意的是，默认nginx代理是不支持header当中存在下划线（_）的，如需开启下划线，请修改nginx配置文件nginx.conf："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "underscores_in_headers on配置。例如："
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "http {\n    include       mime.types;\n    default_type  application/octet-stream;\n    sendfile        on;\n    underscores_in_headers on;\n    keepalive_timeout  65;\n}"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "当然，我们也提供了更为简单的方式，那就是将认证参数转为驼峰，放在header中传递。例如："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_token -> accessToken"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_name -> accessName"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_pwd -> accessPwd"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "secret_key -> secretKey"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "corpid不变"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "例子："
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "access_token形式"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957287926228598785.2.png",
+            "alt": ""
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "普通认证&Basic认证"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "image",
+          "attrs": {
+            "src": "{public_url}/docs/10.0.2026.0201.01/imgs/f957287926228598785.3.png",
+            "alt": ""
+          }
+        }
+      ]
+    }
+  ]
+}

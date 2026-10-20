@@ -1,0 +1,80 @@
+{
+  "id": "908340602019930112",
+  "name": "查询日程紧急程度",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/queryUrgency",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/queryUrgency",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "日程类型id"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "日程类型名称"
+    },
+    {
+      "name": "color",
+      "required": "",
+      "type": "String",
+      "description": "日程类型显示颜色"
+    },
+    {
+      "name": "sort",
+      "required": "",
+      "type": "Integer",
+      "description": "日程类型显示排序"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "启用标识（enabled：启用，disabled：未启用）"
+    },
+    {
+      "name": "selected",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否是默认类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询日程紧急程度"
+  ],
+  "raw_text": "## 查询日程紧急程度\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/queryUrgency\n请求方式：\n- POST\n- Content-Type：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| id | String | 日程类型id |\n| name | String | 日程类型名称 |\n| color | String | 日程类型显示颜色 |\n| sort | Integer | 日程类型显示排序 |\n| status | String | 启用标识（enabled：启用，disabled：未启用） |\n| selected | Boolean | 是否是默认类型 |\nJava sdk调用示例："
+}

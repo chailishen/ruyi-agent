@@ -1,0 +1,104 @@
+{
+  "id": "874489190302621697",
+  "name": "传阅",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/circulate",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/circulate",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID 获取审批数据ID"
+    },
+    {
+      "name": "receiveOperators",
+      "required": "是",
+      "type": "list",
+      "description": "接收人是个数组，数组内的元素有id和entityType."
+    },
+    {
+      "name": "receiveOperators[0].id",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID、群组ID、部门ID"
+    },
+    {
+      "name": "receiveOperators[0].entityType",
+      "required": "是",
+      "type": "String",
+      "description": "user:id代表人员ID；dept：id代表部门ID；group：id代表群组ID。"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "意见"
+    },
+    {
+      "name": "otherParam",
+      "required": "否",
+      "type": "obj",
+      "description": "额外参数：包含下面几个参数。"
+    },
+    {
+      "name": "otherParam.allowAnnotation",
+      "required": "否",
+      "type": "int",
+      "description": "接收人是否可提交意见：0不可提交，1可提交。"
+    },
+    {
+      "name": "otherParam.allowCirculate",
+      "required": "否",
+      "type": "int",
+      "description": "接收人是否可发起传阅：0不可发起，1可发起。"
+    },
+    {
+      "name": "otherParam.circulateNeedBack",
+      "required": "否",
+      "type": "int",
+      "description": "接收人阅读后是否反馈我：0不反馈，1反馈。"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "传阅"
+  ],
+  "raw_text": "## 传阅\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/circulate\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID 获取审批数据ID |\n| receiveOperators | 是 | list | 接收人是个数组，数组内的元素有id和entityType. |\n| receiveOperators[0].id | 是 | long | 用户ID、群组ID、部门ID |\n| receiveOperators[0].entityType | 是 | String | user:id代表人员ID；dept：id代表部门ID；group：id代表群组ID。 |\n| remark | 否 | String | 意见 |\n| otherParam | 否 | obj | 额外参数：包含下面几个参数。 |\n| otherParam.allowAnnotation | 否 | int | 接收人是否可提交意见：0不可提交，1可提交。 |\n| otherParam.allowCirculate | 否 | int | 接收人是否可发起传阅：0不可发起，1可发起。 |\n| otherParam.circulateNeedBack | 否 | int | 接收人阅读后是否反馈我：0不反馈，1反馈。 |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

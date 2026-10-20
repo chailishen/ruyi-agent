@@ -1,0 +1,98 @@
+{
+  "id": "908574870960758785",
+  "name": "获取字段下拉框选项",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getFieldOption",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getFieldOption",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "fieldId",
+      "required": "是",
+      "type": "long",
+      "description": "字段ID"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "int",
+      "description": "每页数量"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "int",
+      "description": "页码"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "total",
+      "required": "",
+      "type": "int",
+      "description": "总数"
+    },
+    {
+      "name": "maxPage",
+      "required": "",
+      "type": "int",
+      "description": "最大页码"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "list",
+      "description": "下拉框选项数据"
+    },
+    {
+      "name": "data.id",
+      "required": "",
+      "type": "long",
+      "description": "选项ID"
+    },
+    {
+      "name": "data.name",
+      "required": "",
+      "type": "String",
+      "description": "选项名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取字段下拉框选项"
+  ],
+  "raw_text": "## 获取字段下拉框选项\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getFieldOption\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | long | 用户ID 获取用户ID |\n| fieldId | 是 | long | 字段ID |\n| pageSize | 否 | int | 每页数量 |\n| pageNo | 否 | int | 页码 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| total | int | 总数 |\n| maxPage | int | 最大页码 |\n| data | list | 下拉框选项数据 |\n| data.id | long | 选项ID |\n| data.name | String | 选项名称 |\nJava sdk调用示例："
+}

@@ -1,0 +1,168 @@
+{
+  "id": "840677992221646849",
+  "name": "查询项目",
+  "module": "项目",
+  "module_path": [
+    "项目"
+  ],
+  "is_api": true,
+  "url": "/mainline/v2/info",
+  "url_template": "{OpenApiOrigin}/mainline/v2/info",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "项目ID 获取项目ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "mainline",
+      "required": "",
+      "type": "Object",
+      "description": "项目对象"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "项目名称"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "项目详情"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否锁定"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块名"
+    },
+    {
+      "name": "startTime",
+      "required": "",
+      "type": "Date",
+      "description": "起始日期"
+    },
+    {
+      "name": "endTime",
+      "required": "",
+      "type": "Date",
+      "description": "到期日期"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "participate",
+      "required": "",
+      "type": "Object",
+      "description": "参与人"
+    },
+    {
+      "name": "sharer",
+      "required": "",
+      "type": "Object",
+      "description": "共享人"
+    },
+    {
+      "name": "formDatas",
+      "required": "",
+      "type": "Object",
+      "description": "自定义字段"
+    },
+    {
+      "name": "isDelete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否已删除"
+    },
+    {
+      "name": "percentFinished",
+      "required": "",
+      "type": "String",
+      "description": "进度"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建者"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后修改时间"
+    },
+    {
+      "name": "lastCommentTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后评论时间"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "团队key"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "项目ID"
+    },
+    {
+      "name": "stage",
+      "required": "",
+      "type": "List",
+      "description": "项目的计划任务分组信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询项目"
+  ],
+  "raw_text": "## 查询项目\n请求URL：\n- {OpenApiOrigin}/mainline/v2/info\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 项目ID 获取项目ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/mainline/v2/info?id=8993238989000073303&access_token=309bfb82ce12a2e30e37141273fb5ea0\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| mainline | Object | 项目对象 |\n| name | String | 项目名称 |\n| description | String | 项目详情 |\n| locked | Boolean | 是否锁定 |\n| module | String | 模块名 |\n| startTime | Date | 起始日期 |\n| endTime | Date | 到期日期 |\n| manager | Object | 负责人 |\n| participate | Object | 参与人 |\n| sharer | Object | 共享人 |\n| formDatas | Object | 自定义字段 |\n| isDelete | Boolean | 是否已删除 |\n| percentFinished | String | 进度 |\n| status | String | 状态 |\n| creator | Object | 创建者 |\n| lastUpdateTime | Date | 最后修改时间 |\n| lastCommentTime | Date | 最后评论时间 |\n| tenantKey | String | 团队key |\n| id | Long | 项目ID |\n| stage | List | 项目的计划任务分组信息 |\nJava sdk调用示例："
+}

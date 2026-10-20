@@ -1,0 +1,458 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "datajson传值说明",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "dataJson传值说明"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "单个控件传单个值"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"控件id\",\n\t\t\"fieldValue\": [\"控件值\"]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "控件传多个值"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"控件id\",\n\t\t\"fieldValue\": [\"选项1\", \"选项2\", \"选项3\"]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "明细表中的控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"控件id\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"明细表第一行控件值\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"明细表第二行控件值\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "多个控件传值"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"控件id\",\n\t\t\"fieldValue\": [\"控件值\"]\n\t}, {\n\t\t\"fieldId\": \"控件id\",\n\t\t\"fieldValue\": [\"控件值\"]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第一类文本输入框多行文本框单选框下拉菜单日期数字输入框金额邮箱电话手机运算控件评分控件进度条身份证地理位置",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第一类：文本输入框、多行文本框、单选框、下拉菜单、日期、数字输入框、金额、邮箱、电话、手机、运算控件、评分控件、进度条、身份证、地理位置"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例1：单选框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "#普通布局的单选框 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"1566099556955787865\",\n\t\t\"fieldValue\": [\"选项1\"]\n\t}]\n}\n#明细表中的单选框 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"1566099556955787865\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"选项1\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"选项2\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例2：日期控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "#普通布局中的日期控件 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302563258719042\",\n\t\t\"fieldValue\": [\"2019-11-06\"]\n\t}]\n}\n#明细表中的日期控件 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302563258719042\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"2019-11-06\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"2019-11-16\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例3：人员控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "#普通布局中的人员控件 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302564445519051\",\n\t\t\"fieldValue\": [\"巍巍\"]\n\t}]\n}\n#明细表中的人员控件 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302564445519051\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"巍巍\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"巍巍\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例4：多级下拉框控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"3747303343096505866\",\n\t\t\"fieldValue\": [\"选项1\", \"选项12\", \"选项122\"]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "第二类复选框日期区间多级下拉框关联项目关联任务关联文档关联审批关联日程关联表单数据关联客户关联线索关联订单客户联系人关联商机关联产品关联合同人员部门",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "第二类：复选框、日期区间、多级下拉框、关联项目、关联任务、关联文档、关联审批、关联日程、关联表单数据、关联客户、关联线索、关联订单、客户联系人、关联商机、关联产品、关联合同、人员、部门"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例1：复选框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "#普通布局中的复选框 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302563258719039\",\n\t\t\"fieldValue\": [\"选项1\", \"选项2\"]\n\t}]\n}\n#明细表中的复选框 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302563258719042\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"选项1\", \"选项2\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"选项1\", \"选项2\", \"选项3\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例3：关联任务"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "language": "json",
+                "fold": true
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "#普通布局中的关联任务 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302567402719061\",\n\t\t\"fieldValue\": [\"任务A\", \"任务B\"]\n\t}]\n}\n#明细表中的关联任务 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302567402719061\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"任务A\", \"任务B\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"任务C\", \"任务D\"]\n\t\t}]\n\t}]\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "false"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例4：日期区间"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "language": "json",
+        "fold": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "#普通布局中的日期区间 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137302563258719043\",\n\t\t\"fieldValue\": [\"2019-11-06\", \"2019-11-16\"]\n\t}]\n}\n#明细表中的日期区间 \n{\n\t\"dataDetails\": [{\n\t\t\"fieldId\": \"5137303509440727214\",\n\t\t\"fieldValue\": [{\n\t\t\t\"index\": 1,\n\t\t\t\"value\": [\"2019-11-11\", \"2019-11-12\"]\n\t\t}, {\n\t\t\t\"index\": 2,\n\t\t\t\"value\": [\"2019-11-10\", \"2019-11-15\"]\n\t\t}]\n\t}]\n}"
+        }
+      ]
+    },
+    {
+      "type": "hr"
+    },
+    {
+      "type": "paragraph",
+      "content": [
+        {
+          "type": "text",
+          "text": "注：",
+          "marks": [
+            {
+              "type": "strong",
+              "attrs": {}
+            }
+          ]
+        },
+        {
+          "type": "hardbreak"
+        },
+        {
+          "type": "text",
+          "text": "暂不支持：数据源、图片单选、图片多选、附件、图片、签名、电子发票、子表控件"
+        },
+        {
+          "type": "hardbreak"
+        },
+        {
+          "type": "text",
+          "text": "不需要传值：编号控件、分割线、描述文字，轮播控件"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "840722646896836608",
+  "name": "发送消息",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/mc/msg/sendMsg",
+  "url_template": "{OpenApiOrigin}/api/mc/msg/sendMsg",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "消息id"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "消息发送状态"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "发送消息"
+  ],
+  "raw_text": "## 发送消息\n请求URL：\n- {OpenApiOrigin}/api/mc/msg/sendMsg\n请求方式：\n- POST\n参数：\n| 是参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userType(废弃) | 否 | String | 设置为JOB_NUM时,employeeId支持设置为工号 |\n| sender.workCode | 否 | String | 用户工号,与employeeId二选一,同时存在时,优先使用employeeId 从0402,0501基线的最新补丁包开始支持 |\n| recivers.workCode | 否 | String | 用户工号,与employeeId二选一,同时存在时,优先使用employeeId 从0402,0501基线的最新补丁包开始支持 |\n| text | 是 | String | 消息内容 |\n| title | 是 | String | 消息标题 |\n| sender.tenantKey | 是 | String | 发送人团队标识 |\n| sender.employeeId | 是 | Long | 发送人id |\n| sender.name | 是 | String | 发送人名称 |\n| eventId | 是 | Int | 事件id |\n| moduleId | 是 | Int | 模块id |\n| recivers | 是 | List | 接收人 |\n| recivers.employeeId | 是 | long | 接受人id |\n| recivers.tenantKey | 是 | string | 接受人团队tenantKey |\n| recivers.email | 否f |  | 接受人邮件地址 |\n| recivers.workCode | 否 | string | 用户工号,与employeeId二选一,同时存在时,优先使用employeeId 从0402,0501基线的最新补丁包开始支持 |\n| entity | 否 | Object | 事项 |\n| entity.id | 是 | string | 事项id |\n| entity.name | 是 | string | 事项名称 |\n| entity.pcUrl | 否 | string | pc打开地址 |\n| entity.h5Url | 否 | string | h5,app打开地址 |\n| channels | 否 | int[] | 1im,2云桥，3邮件，4 短信。 设置消息渠道时，只有规则中有对应渠道才会有效。比如推送规则中没有im渠道，参数传递1,消息仍然不会发送出去 |\n| dynamicParams | 否 | map | 动态参数（当邮件和短信需要支持动态参数的时候讲参数放入此处） |\n| smsCode | 否 | string | 指定短信的typeCode,不传递时，默认使用eventId |\n| channels | 是 | int[] | 推送渠道1 im 2 云桥 3邮件 4短信 |\n| emailEntityVo | 否 | object | 邮件相关参数，设置之后将不使用邮件模板 |\n| emailEntityVo.emailContent | 否 | string | 邮件内容 |\n| emailEntityVo.emailSubject | 否 | string | 邮件标题 |\n| emailEntityVo.ccList | 否 | string | 抄送，多个使用,分割 |\n| emailEntityVo.bccList | 否 | string | 抄送，多个使用,分割 |\n| emailEntityVo.fileIds | 否 | string | 附件地址，多个附件使用,分割 |\n| emailEntityVo.mailUserAccountId | 否 | long | 邮箱发送帐号的id |\n| todo | 否 | boolean | 是否为待办消息 |\n| outMessage | 否 | boolean | 是否发送给外部人员 |\n| smsContent | 否 | string | 短信内容,非模板短信 |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| data | String | 消息id |\n| status | String | 消息发送状态 |"
+}

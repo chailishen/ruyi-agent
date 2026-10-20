@@ -1,0 +1,66 @@
+{
+  "id": "840719507426738177",
+  "name": "新建日报",
+  "module": "日报",
+  "module_path": [
+    "日报"
+  ],
+  "is_api": true,
+  "url": "/blog/v2/createBlog",
+  "url_template": "{OpenApiOrigin}/blog/v2/createBlog",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "blogTime",
+      "required": "是",
+      "type": "Date",
+      "description": "日报日期，格式（yyyy-MM-dd）"
+    },
+    {
+      "name": "content",
+      "required": "是",
+      "type": "String",
+      "description": "日报内容"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "blogId",
+      "required": "",
+      "type": "String",
+      "description": "日报ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新建日报"
+  ],
+  "raw_text": "## 新建日报\n请求URL：\n- {OpenApiOrigin}/blog/v2/createBlog\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| blogTime | 是 | Date | 日报日期，格式（yyyy-MM-dd） |\n| content | 是 | String | 日报内容 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| blogId | String | 日报ID |\nJava sdk调用示例："
+}

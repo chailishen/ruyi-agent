@@ -1,0 +1,91 @@
+{
+  "id": "840712712611438592",
+  "name": "根据表单ID列表查询表单字段",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryFormFieldByFormIds",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryFormFieldByFormIds",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "formIds",
+      "required": "是",
+      "type": "List<Long>",
+      "description": "表单ID列表（最大10） 获取表单ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "fieldMaps",
+      "required": "",
+      "type": "Map<String,List>",
+      "description": "表单ID对应的字段列表"
+    },
+    {
+      "name": "componentKey",
+      "required": "",
+      "type": "String",
+      "description": "字段类型"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否删除"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "字段Id"
+    },
+    {
+      "name": "required",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否必填"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "字段名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据流程表ID列表查询表单字段"
+  ],
+  "raw_text": "## 根据流程表ID列表查询表单字段\n请求URL：\n- {OpenApiOrigin}/workflow/v2/queryFormFieldByFormIds\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| formIds | 是 | List<Long> | 表单ID列表（最大10） 获取表单ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/queryFormFieldByFormIds?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&formIds=6473714586545086123\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| fieldMaps | Map<String,List> | 表单ID对应的字段列表 |\n| componentKey | String | 字段类型 |\n| delete | Boolean | 是否删除 |\n| id | Long | 字段Id |\n| required | Boolean | 是否必填 |\n| title | String | 字段名称 |\n- 暂不支持字段：图片控件、图片单选、图片多选、附件、签名、数据源、微信发票、编号控件\nJava sdk调用示例："
+}

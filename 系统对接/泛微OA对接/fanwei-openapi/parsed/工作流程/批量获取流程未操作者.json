@@ -1,0 +1,73 @@
+{
+  "id": "280947303118798848",
+  "name": "批量获取流程未操作者",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/batchGetRequestUnOperator",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/batchGetRequestUnOperator",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestIds",
+      "required": "是",
+      "type": "String",
+      "description": "流程ID，多个ID用英文逗号隔开；最多传递100个，多余100的流程ID将被忽略；"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": "响应数据"
+    },
+    {
+      "name": "failRequest",
+      "required": "",
+      "type": "json",
+      "description": "查询失败的流程信息以及提示信息"
+    },
+    {
+      "name": "requestBaseInfo",
+      "required": "",
+      "type": "json",
+      "description": "查询成功的流程信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "批量获取流程未操作者"
+  ],
+  "raw_text": "## 批量获取流程未操作者\n说明：\n必须要有流程查看权限的人才能获取可退回节点数据。当这个人是多个节点操作者时可以传递节点ID指定获取某个节点的可退回目标节点；\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/batchGetRequestUnOperator\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestIds | 是 | String | 流程ID，多个ID用英文逗号隔开；最多传递100个，多余100的流程ID将被忽略； |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSON | 响应数据 |\n| failRequest | json | 查询失败的流程信息以及提示信息 |\n| requestBaseInfo | json | 查询成功的流程信息 |\nJava调用示例:"
+}

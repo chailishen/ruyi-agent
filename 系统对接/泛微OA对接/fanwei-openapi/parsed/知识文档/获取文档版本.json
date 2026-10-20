@@ -1,0 +1,222 @@
+{
+  "id": "908310258151481345",
+  "name": "获取文档版本",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/versions",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/versions",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "string",
+      "description": "当前页，默认第1页"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "string",
+      "description": "每页显示数量，默认10条"
+    },
+    {
+      "name": "startDate",
+      "required": "否",
+      "type": "string",
+      "description": "支持按照时间搜索，起始日期(yyyy-MM-dd)"
+    },
+    {
+      "name": "endDate",
+      "required": "否",
+      "type": "string",
+      "description": "支持按照时间搜索，结束日期(yyyy-MM-dd)"
+    },
+    {
+      "name": "creatorId",
+      "required": "否",
+      "type": "string",
+      "description": "支持按人员id搜索"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "接口信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "接口状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "接口描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "接口返回数据"
+    },
+    {
+      "name": "result",
+      "required": "",
+      "type": "array",
+      "description": "版本结果集"
+    },
+    {
+      "name": "result.creator",
+      "required": "",
+      "type": "string",
+      "description": "创建人id"
+    },
+    {
+      "name": "result.versionDesc",
+      "required": "",
+      "type": "string",
+      "description": "文档版本描述"
+    },
+    {
+      "name": "result.creatorName",
+      "required": "",
+      "type": "string",
+      "description": "创建人名称"
+    },
+    {
+      "name": "result.restoreDocument",
+      "required": "",
+      "type": "string",
+      "description": "是否能被还原"
+    },
+    {
+      "name": "result.versionNumber",
+      "required": "",
+      "type": "string",
+      "description": "版本号"
+    },
+    {
+      "name": "result.currentVersion",
+      "required": "",
+      "type": "string",
+      "description": "当前版本"
+    },
+    {
+      "name": "result.viewDocument",
+      "required": "",
+      "type": "string",
+      "description": "是否可查看"
+    },
+    {
+      "name": "result.docStatusSpan",
+      "required": "",
+      "type": "string",
+      "description": "文档状态显示名"
+    },
+    {
+      "name": "result.createTime",
+      "required": "",
+      "type": "string",
+      "description": "创建时间"
+    },
+    {
+      "name": "result.doc_status",
+      "required": "",
+      "type": "string",
+      "description": "文档状态"
+    },
+    {
+      "name": "result.name",
+      "required": "",
+      "type": "string",
+      "description": "文档名称"
+    },
+    {
+      "name": "result.id",
+      "required": "",
+      "type": "string",
+      "description": "文档id"
+    },
+    {
+      "name": "result.lastUpdateTime",
+      "required": "",
+      "type": "string",
+      "description": "最后一次更新时间"
+    },
+    {
+      "name": "prePage",
+      "required": "",
+      "type": "string",
+      "description": "上一页页码"
+    },
+    {
+      "name": "nextPage",
+      "required": "",
+      "type": "string",
+      "description": "下一页页码"
+    },
+    {
+      "name": "totalPages",
+      "required": "",
+      "type": "string",
+      "description": "总页数"
+    },
+    {
+      "name": "hasNext",
+      "required": "",
+      "type": "string",
+      "description": "是否有下一页"
+    },
+    {
+      "name": "totalCount",
+      "required": "",
+      "type": "string",
+      "description": "总数"
+    },
+    {
+      "name": "hasPre",
+      "required": "",
+      "type": "string",
+      "description": "是否有上一页"
+    },
+    {
+      "name": "first",
+      "required": "",
+      "type": "string",
+      "description": "当前页起始行号"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取文档版本"
+  ],
+  "raw_text": "## 获取文档版本\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/versions\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | string | 文档id |\n| userid | 是 | string | 用户id 获取用户ID |\n| pageNo | 否 | string | 当前页，默认第1页 |\n| pageSize | 否 | string | 每页显示数量，默认10条 |\n| startDate | 否 | string | 支持按照时间搜索，起始日期(yyyy-MM-dd) |\n| endDate | 否 | string | 支持按照时间搜索，结束日期(yyyy-MM-dd) |\n| creatorId | 否 | string | 支持按人员id搜索 |\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 接口信息 |\n| errcode | string | 接口状态码 |\n| errmsg | string | 接口描述 |\n| data | object | 接口返回数据 |\n| result | array | 版本结果集 |\n| result.creator | string | 创建人id |\n| result.versionDesc | string | 文档版本描述 |\n| result.creatorName | string | 创建人名称 |\n| result.restoreDocument | string | 是否能被还原 |\n| result.versionNumber | string | 版本号 |\n| result.currentVersion | string | 当前版本 |\n| result.viewDocument | string | 是否可查看 |\n| result.docStatusSpan | string | 文档状态显示名 |\n| result.createTime | string | 创建时间 |\n| result.doc_status | string | 文档状态 |\n| result.name | string | 文档名称 |\n| result.id | string | 文档id |\n| result.lastUpdateTime | string | 最后一次更新时间 |\n| prePage | string | 上一页页码 |\n| nextPage | string | 下一页页码 |\n| totalPages | string | 总页数 |\n| hasNext | string | 是否有下一页 |\n| totalCount | string | 总数 |\n| hasPre | string | 是否有上一页 |\n| first | string | 当前页起始行号 |\nJava sdk调用示例："
+}

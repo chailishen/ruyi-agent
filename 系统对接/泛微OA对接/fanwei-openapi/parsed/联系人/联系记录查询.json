@@ -1,0 +1,219 @@
+{
+  "id": "213108361086894080",
+  "name": "联系记录查询",
+  "module": "联系人",
+  "module_path": [
+    "联系人"
+  ],
+  "is_api": true,
+  "url": "/api/crm/v2/employeeComment",
+  "url_template": "{OpenApiOrigin}/api/crm/v2/employeeComment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [
+    "备注：传参格式为 'Content-Type': 'application/x-www-form-urlencoded'",
+    "备注：commentFilter参数信息（id,type,operate按照以下内容固定传值，id目前仅支持content|commentor|commentorName|add_time，value根据需求情况填写，orderBy仅支持content|commentor|add_time，orderWay仅支持desc | asc）"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "String",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块，可多传用逗号隔开，例如目前仅已支持customer,saleChance,contract,clue,production,competitor"
+    },
+    {
+      "name": "permissionType",
+      "required": "是",
+      "type": "String",
+      "description": "权限类型，固定值mineMgrAndSubMgr"
+    },
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "String",
+      "description": "默认值1，小于1按1查询"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "String",
+      "description": "默认值100,超过3000按3000查询"
+    },
+    {
+      "name": "commentFilter",
+      "required": "否",
+      "type": "String",
+      "description": "条件参数，json格式，详细如下"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "contactBelongCustomer",
+      "required": "是",
+      "type": "String",
+      "description": "联系人所属客户"
+    },
+    {
+      "name": "contactTitle",
+      "required": "是",
+      "type": "String",
+      "description": "联系人头衔"
+    },
+    {
+      "name": "contactCall",
+      "required": "是",
+      "type": "String",
+      "description": "联系人称呼"
+    },
+    {
+      "name": "contactTelephone",
+      "required": "是",
+      "type": "String",
+      "description": "联系人电话"
+    },
+    {
+      "name": "contactPhoneNumber",
+      "required": "是",
+      "type": "String",
+      "description": "联系人手机"
+    },
+    {
+      "name": "contactEmail",
+      "required": "是",
+      "type": "String",
+      "description": "联系人邮箱"
+    },
+    {
+      "name": "contactSex",
+      "required": "是",
+      "type": "String",
+      "description": "联系人性别，1男、2女、3未知"
+    },
+    {
+      "name": "contactInterest",
+      "required": "是",
+      "type": "String",
+      "description": "联系人兴趣"
+    },
+    {
+      "name": "contactDescription",
+      "required": "是",
+      "type": "String",
+      "description": "联系人备注"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "联系人信息（JSON格式）"
+    },
+    {
+      "name": "targetId",
+      "required": "",
+      "type": "String",
+      "description": "目标模块数据id"
+    },
+    {
+      "name": "targetName",
+      "required": "",
+      "type": "String",
+      "description": "目标模块数据名称"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "内容"
+    },
+    {
+      "name": "addTime",
+      "required": "",
+      "type": "String",
+      "description": "评论时间"
+    },
+    {
+      "name": "saleChanceId",
+      "required": "",
+      "type": "String",
+      "description": "如果是商机数据，数据的ID"
+    },
+    {
+      "name": "saleChanceName",
+      "required": "",
+      "type": "String",
+      "description": "如果是商机数据，数据的名称"
+    },
+    {
+      "name": "customerId",
+      "required": "",
+      "type": "String",
+      "description": "如果是非客户数据，所关联的客户Id"
+    },
+    {
+      "name": "customerName",
+      "required": "",
+      "type": "String",
+      "description": "如果是非客户数据，所关联的客户名称"
+    },
+    {
+      "name": "commentor",
+      "required": "",
+      "type": "Object",
+      "description": "用户信息"
+    },
+    {
+      "name": "totalCount",
+      "required": "",
+      "type": "Long",
+      "description": "总数"
+    },
+    {
+      "name": "hasNext",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否还有下一页"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取联系客户记录"
+  ],
+  "raw_text": "## 获取联系客户记录\n请求URL：\n- {OpenApiOrigin}/api/crm/v2/employeeComment\n请求方式：\n- POST\n备注：传参格式为 'Content-Type': 'application/x-www-form-urlencoded'\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | String | 用户ID 获取用户ID |\n| module | 是 | String | 模块，可多传用逗号隔开，例如目前仅已支持customer,saleChance,contract,clue,production,competitor |\n| permissionType | 是 | String | 权限类型，固定值mineMgrAndSubMgr |\n| pageNo | 否 | String | 默认值1，小于1按1查询 |\n| pageSize | 否 | String | 默认值100,超过3000按3000查询 |\n| commentFilter | 否 | String | 条件参数，json格式，详细如下 |\n备注：commentFilter参数信息（id,type,operate按照以下内容固定传值，id目前仅支持content|commentor|commentorName|add_time，value根据需求情况填写，orderBy仅支持content|commentor|add_time，orderWay仅支持desc | asc）\ncommentFilter请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 是 | String | 名称 |\n| manager | 是 | String | 负责人 |\n| contactBelongCustomer | 是 | String | 联系人所属客户 |\n| contactTitle | 是 | String | 联系人头衔 |\n| contactCall | 是 | String | 联系人称呼 |\n| contactTelephone | 是 | String | 联系人电话 |\n| contactPhoneNumber | 是 | String | 联系人手机 |\n| contactEmail | 是 | String | 联系人邮箱 |\n| contactSex | 是 | String | 联系人性别，1男、2女、3未知 |\n| contactInterest | 是 | String | 联系人兴趣 |\n| contactDescription | 是 | String | 联系人备注 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | String | 联系人信息（JSON格式） |\n| targetId | String | 目标模块数据id |\n| targetName | String | 目标模块数据名称 |\n| content | String | 内容 |\n| addTime | String | 评论时间 |\n| saleChanceId | String | 如果是商机数据，数据的ID |\n| saleChanceName | String | 如果是商机数据，数据的名称 |\n| customerId | String | 如果是非客户数据，所关联的客户Id |\n| customerName | String | 如果是非客户数据，所关联的客户名称 |\n| commentor | Object | 用户信息 |\n| totalCount | Long | 总数 |\n| hasNext | Boolean | 是否还有下一页 |\nJava sdk调用示例："
+}

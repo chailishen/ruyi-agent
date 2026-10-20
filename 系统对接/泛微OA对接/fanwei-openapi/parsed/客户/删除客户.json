@@ -1,0 +1,60 @@
+{
+  "id": "840675419511070721",
+  "name": "删除客户",
+  "module": "客户",
+  "module_path": [
+    "客户"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/delete",
+  "url_template": "{OpenApiOrigin}/crm/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：customer"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "客户ID 获取客户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除客户"
+  ],
+  "raw_text": "## 删除客户\n请求URL：\n- {OpenApiOrigin}/crm/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：customer |\n| id | 是 | Long | 客户ID 获取客户ID |\n请求示例：\nquery方式\nhttps://api.eteams.com/crm/v2/delete?access_token=9e678d90d2428201cd69a1934cf5bc77&userid=4980937863852743878&module=customer&id=1713193685646177241\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

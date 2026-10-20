@@ -1,0 +1,78 @@
+{
+  "id": "840712785760100353",
+  "name": "根据多个流程ID查询多份流程数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/workflow/v2/queryFlowInfoByFlowIds",
+  "url_template": "{OpenApiOrigin}/workflow/v2/queryFlowInfoByFlowIds",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "flowIds",
+      "required": "是",
+      "type": "List<Long>",
+      "description": "审批数据ID列表（最大10） 获取审批数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "flowInfos",
+      "required": "",
+      "type": "List",
+      "description": "已办列表"
+    },
+    {
+      "name": "formData",
+      "required": "",
+      "type": "Object",
+      "description": "流程数据详情"
+    },
+    {
+      "name": "fileDownload_Urls",
+      "required": "",
+      "type": "Object",
+      "description": "附件下载地址"
+    },
+    {
+      "name": "flowRequest",
+      "required": "",
+      "type": "Object",
+      "description": "流程数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据多个流程ID查询多份流程数据"
+  ],
+  "raw_text": "## 根据多个流程ID查询多份流程数据\n请求URL：\n- {OpenApiOrigin}/workflow/v2/queryFlowInfoByFlowIds\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| flowIds | 是 | List<Long> | 审批数据ID列表（最大10） 获取审批数据ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/workflow/v2/queryFlowInfoByFlowIds?access_token=3a5d77d421d05ddfc7d8495d0e8b339e&userid=717929201362116609&flowIds=843623747084992512,843402719487508480\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| flowInfos | List | 已办列表 |\n| formData | Object | 流程数据详情 |\n| fileDownload_Urls | Object | 附件下载地址 |\n| flowRequest | Object | 流程数据 |\nJava sdk调用示例："
+}

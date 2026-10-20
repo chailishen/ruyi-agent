@@ -1,0 +1,96 @@
+{
+  "id": "840718141517209600",
+  "name": "获取增删改的订单",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/getChanged",
+  "url_template": "{OpenApiOrigin}/crm/v2/getChanged",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "string",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "string",
+      "description": "模块（固定为orderform）"
+    },
+    {
+      "name": "query",
+      "required": "是",
+      "type": "Object",
+      "description": "查询参数对象"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "pageNo",
+      "required": "否",
+      "type": "Int",
+      "description": "页码，默认1"
+    },
+    {
+      "name": "pageSize",
+      "required": "否",
+      "type": "Int",
+      "description": "每页显示条数，默认15"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "string",
+      "description": "新增 create、修改update、删除delete、作废invalid"
+    },
+    {
+      "name": "startTime",
+      "required": "是",
+      "type": "string",
+      "description": "开始日期，例如：2020-05-06"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "string",
+      "description": "截止日期，例如：2020-05-07"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "订单信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取增删改的订单"
+  ],
+  "raw_text": "## 获取增删改的订单\n简要描述：\n- 获取增删改的订单\n请求URL：\n- {OpenApiOrigin}/crm/v2/getChanged\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | string | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | string | 模块（固定为orderform） |\n| query | 是 | Object | 查询参数对象 |\nquery请求结构体:\nquery参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| pageNo | 否 | Int | 页码，默认1 |\n| pageSize | 否 | Int | 每页显示条数，默认15 |\n| type | 是 | string | 新增 create、修改update、删除delete、作废invalid |\n| startTime | 是 | string | 开始日期，例如：2020-05-06 |\n| endTime | 是 | string | 截止日期，例如：2020-05-07 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/getChanged?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&query={\"pageNo\":\"1\",\"pageSize\":\"15\",\"type\":\"create\",\"startTime\":\"2020-05-06\",\"endTime\":\"2020-05-07\"}\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 订单信息（JSON格式） |\nJava sdk调用示例："
+}

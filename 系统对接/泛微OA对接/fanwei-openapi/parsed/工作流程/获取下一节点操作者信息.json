@@ -1,0 +1,175 @@
+{
+  "id": "840715457129095168",
+  "name": "获取下一节点操作者信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestNextOperator",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestNextOperator",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "下节点操作者信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "审批数据ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "String",
+      "description": "审批流ID"
+    },
+    {
+      "name": "linkId",
+      "required": "",
+      "type": "String",
+      "description": "出口ID"
+    },
+    {
+      "name": "freeLink",
+      "required": "",
+      "type": "String",
+      "description": "是否自由出口 （0：否，1是）"
+    },
+    {
+      "name": "linkName",
+      "required": "",
+      "type": "String",
+      "description": "出口名称"
+    },
+    {
+      "name": "srcNodeId",
+      "required": "",
+      "type": "String",
+      "description": "源节点"
+    },
+    {
+      "name": "nextNodeId",
+      "required": "",
+      "type": "String",
+      "description": "下节点ID"
+    },
+    {
+      "name": "nextNodeName",
+      "required": "",
+      "type": "String",
+      "description": "下节点名称"
+    },
+    {
+      "name": "nextNodeType",
+      "required": "",
+      "type": "String",
+      "description": "下节点类型 。START:发起，APPROVE：审批，COMMIT：确认,END:结束,SUB_WF：子流程节点，VOTE：投票，LOOP：循环审批,ROBOT：自动处理，WAIT：等待，LOOP_UP：查阅）"
+    },
+    {
+      "name": "nextNodeAttr",
+      "required": "",
+      "type": "String",
+      "description": "下节点属性。（COMMON:一般节点，FORK_START：分流节点，FORK_MIDDLE：分流中间节点，FORK_END：合流点）"
+    },
+    {
+      "name": "nextOperators",
+      "required": "",
+      "type": "List",
+      "description": "下节点操作者 List"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "操作者ID"
+    },
+    {
+      "name": "userType",
+      "required": "",
+      "type": "String",
+      "description": "操作者类型 (USER：系统内部用户，CUSTOM：客户)"
+    },
+    {
+      "name": "agentUserId",
+      "required": "",
+      "type": "String",
+      "description": "代理人ID"
+    },
+    {
+      "name": "signOrder",
+      "required": "",
+      "type": "String",
+      "description": "会签关系。（SIGN:会签，NO_SIGN：非会签，IN_TURN：依次逐个处理，CC_SUBMIT：抄送需提交，CC_NO_SUBMIT：抄送不需提交，OR_SIGN：或签）"
+    },
+    {
+      "name": "arrivalRoundId",
+      "required": "",
+      "type": "String",
+      "description": "到达轮次号 (每次同时到达的记录相同，多次到达不同)"
+    },
+    {
+      "name": "formOperateLogId",
+      "required": "",
+      "type": "String",
+      "description": "记录这条数据是那个操作ID产生的"
+    },
+    {
+      "name": "signGroup",
+      "required": "",
+      "type": "String",
+      "description": "会签组"
+    },
+    {
+      "name": "agent",
+      "required": "",
+      "type": "String",
+      "description": "是否代理"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取下一节点操作者信息"
+  ],
+  "raw_text": "## 获取下一节点操作者信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestNextOperator\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | List | 下节点操作者信息 |\n| requestId | String | 审批数据ID |\n| workflowId | String | 审批流ID |\n| linkId | String | 出口ID |\n| freeLink | String | 是否自由出口 （0：否，1是） |\n| linkName | String | 出口名称 |\n| srcNodeId | String | 源节点 |\n| nextNodeId | String | 下节点ID |\n| nextNodeName | String | 下节点名称 |\n| nextNodeType | String | 下节点类型 。START:发起，APPROVE：审批，COMMIT：确认,END:结束,SUB_WF：子流程节点，VOTE：投票，LOOP：循环审批,ROBOT：自动处理，WAIT：等待，LOOP_UP：查阅） |\n| nextNodeAttr | String | 下节点属性。（COMMON:一般节点，FORK_START：分流节点，FORK_MIDDLE：分流中间节点，FORK_END：合流点） |\n| nextOperators | List | 下节点操作者 List |\n| userId | String | 操作者ID |\n| userType | String | 操作者类型 (USER：系统内部用户，CUSTOM：客户) |\n| agentUserId | String | 代理人ID |\n| signOrder | String | 会签关系。（SIGN:会签，NO_SIGN：非会签，IN_TURN：依次逐个处理，CC_SUBMIT：抄送需提交，CC_NO_SUBMIT：抄送不需提交，OR_SIGN：或签） |\n| arrivalRoundId | String | 到达轮次号 (每次同时到达的记录相同，多次到达不同) |\n| formOperateLogId | String | 记录这条数据是那个操作ID产生的 |\n| signGroup | String | 会签组 |\n| agent | String | 是否代理 |\nJava sdk调用示例："
+}

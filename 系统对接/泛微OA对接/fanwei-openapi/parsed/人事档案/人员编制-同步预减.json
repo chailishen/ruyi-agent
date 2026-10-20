@@ -1,0 +1,54 @@
+{
+  "id": "365948102063947776",
+  "name": "人员编制-同步预减",
+  "module": "人事档案",
+  "module_path": [
+    "人事档案"
+  ],
+  "is_api": true,
+  "url": "/api/hr/hrapi/est/savePreSub",
+  "url_template": "/api/hr/hrapi/est/savePreSub",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "操作人员id"
+    },
+    {
+      "name": "employeeIdList",
+      "required": "是",
+      "type": "array",
+      "description": "预减人员id集合"
+    },
+    {
+      "name": "preStatus",
+      "required": "否",
+      "type": "int",
+      "description": "预减状态 有效：1 无效：0"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "简要描述",
+    "请求URL",
+    "请求方式",
+    "参数",
+    "请求参数示例",
+    "返回示例",
+    "返回参数说明"
+  ],
+  "raw_text": "##### 简要描述\n- 新增预减、更新预减、预减置为失效状态\n##### 请求URL\n- /api/hr/hrapi/est/savePreSub\n##### 请求方式\n- POST\n##### 参数\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| userid | 是 | long | 操作人员id |\n| employeeIdList | 是 | array | 预减人员id集合 |\n| preStatus | 否 | int | 预减状态 有效：1 无效：0 |\n##### 请求参数示例\n##### 返回示例\n##### 返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errmsg | string | 错误提示 |"
+}

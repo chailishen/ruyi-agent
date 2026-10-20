@@ -1,0 +1,162 @@
+{
+  "id": "216013914331152384",
+  "name": "获取(公文)业务数据（详情）",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/getDocumentDetail/api/odocexchange/v1/getDataDetail",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/getDocumentDetail{OpenApiOrigin}/api/odocexchange/v1/getDataDetail",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "receiveId",
+      "required": "是",
+      "type": "Long",
+      "description": "公文收文标识"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": ""
+    },
+    {
+      "name": "-dataTitle",
+      "required": "",
+      "type": "String",
+      "description": "标题"
+    },
+    {
+      "name": "-appTemplateId",
+      "required": "",
+      "type": "String",
+      "description": "交换模板id"
+    },
+    {
+      "name": "-formDataId",
+      "required": "",
+      "type": "String",
+      "description": "数据交换表单数据id，可做唯一标识"
+    },
+    {
+      "name": "-platformTenant",
+      "required": "",
+      "type": "String",
+      "description": "平台租户信息"
+    },
+    {
+      "name": "-thirdId",
+      "required": "",
+      "type": "String",
+      "description": "第三方唯一标识"
+    },
+    {
+      "name": "-sendUnit",
+      "required": "",
+      "type": "JSON",
+      "description": "发文单位"
+    },
+    {
+      "name": "-departmentCode",
+      "required": "",
+      "type": "String",
+      "description": "发文单位编码"
+    },
+    {
+      "name": "-departmentName",
+      "required": "",
+      "type": "String",
+      "description": "发文单位名称"
+    },
+    {
+      "name": "-plainTextMessage",
+      "required": "",
+      "type": "JSON",
+      "description": "报文内容，若为数据交际，则返回报文内容格式为对应交换模板的数据结构。"
+    },
+    {
+      "name": "-Document_Title",
+      "required": "",
+      "type": "String",
+      "description": "公文标题"
+    },
+    {
+      "name": "-Emergency_Degree",
+      "required": "",
+      "type": "String",
+      "description": "紧急程度"
+    },
+    {
+      "name": "-Document_Text",
+      "required": "",
+      "type": "String",
+      "description": "公文正文文件id"
+    },
+    {
+      "name": "-Document_Attachments",
+      "required": "",
+      "type": "String",
+      "description": "公文附件文件id"
+    },
+    {
+      "name": "-Issuer_Department",
+      "required": "",
+      "type": "String",
+      "description": "发文单位"
+    },
+    {
+      "name": "-Main_Receiver_Department",
+      "required": "",
+      "type": "String",
+      "description": "主送单位"
+    },
+    {
+      "name": "-Copy_to_Department",
+      "required": "",
+      "type": "String",
+      "description": "抄送单位"
+    },
+    {
+      "name": "-Signer",
+      "required": "",
+      "type": "String",
+      "description": "签发人"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取(公文)业务数据（详情）"
+  ],
+  "raw_text": "## 获取(公文)业务数据（详情）\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/getDocumentDetail\n- {OpenApiOrigin}/api/odocexchange/v1/getDataDetail\n请求方式：\n- POST\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| receiveId | 是 | Long | 公文收文标识 |\n请求地址：https://api.yunteams.cn/api/odocexchange/v1/getDocumentDetail?access_token=df035c8146663ea21bd28438845ce9f6\n请求头Header：\ndepartmentCode：fwpg01\nplatformTenant：tq2uz86iuoq\n请求Body（以raw，JSON格式）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | JSON |  |\n| -dataTitle | String | 标题 |\n| -appTemplateId | String | 交换模板id |\n| -formDataId | String | 数据交换表单数据id，可做唯一标识 |\n| -platformTenant | String | 平台租户信息 |\n| -thirdId | String | 第三方唯一标识 |\n| -sendUnit | JSON | 发文单位 |\n| -departmentCode | String | 发文单位编码 |\n| -departmentName | String | 发文单位名称 |\n| -plainTextMessage | JSON | 报文内容，若为数据交际，则返回报文内容格式为对应交换模板的数据结构。 |\n| -Document_Title | String | 公文标题 |\n| -Emergency_Degree | String | 紧急程度 |\n| -Document_Text | String | 公文正文文件id |\n| -Document_Attachments | String | 公文附件文件id |\n| -Issuer_Department | String | 发文单位 |\n| -Main_Receiver_Department | String | 主送单位 |\n| -Copy_to_Department | String | 抄送单位 |\n| -Signer | String | 签发人 |"
+}

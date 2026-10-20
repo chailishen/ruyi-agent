@@ -1,0 +1,213 @@
+{
+  "id": "840679014449905665",
+  "name": "任务更新接口（支持批量）",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/api/task/v3/update",
+  "url_template": "{OpenApiOrigin}/api/task/v3/update",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注",
+    "参数格式为Content-Type: “application/json”"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "当前操作人ID 获取用户ID"
+    },
+    {
+      "name": "propertyDataList",
+      "required": "是",
+      "type": "List",
+      "description": "任务属性集合，支持多个map对象"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "任务ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "任务名称（不能改为空）"
+    },
+    {
+      "name": "content",
+      "required": "否",
+      "type": "String",
+      "description": "任务详情"
+    },
+    {
+      "name": "status",
+      "required": "否",
+      "type": "String",
+      "description": "任务状态（todo(未完成),finished(已完成)）"
+    },
+    {
+      "name": "beginDate",
+      "required": "否",
+      "type": "String",
+      "description": "任务起始时间（格式：yyyy-MM-dd或者yyyy-MM-dd hh:mm ）"
+    },
+    {
+      "name": "dueDate",
+      "required": "否",
+      "type": "String",
+      "description": "任务到期时间（格式：yyyy-MM-dd或者yyyy-MM-dd hh:mm ）"
+    },
+    {
+      "name": "progress",
+      "required": "否",
+      "type": "Float",
+      "description": "任务进度（范围0-1，支持一位小数，如0.5）"
+    },
+    {
+      "name": "priority",
+      "required": "否",
+      "type": "String",
+      "description": "任务紧急程度（urgency(非常紧急), high(紧急), normal(正常)）"
+    },
+    {
+      "name": "parentId",
+      "required": "否",
+      "type": "Long",
+      "description": "上级任务ID（如果要删除上级任务则传null）"
+    },
+    {
+      "name": "taskTypeForm",
+      "required": "否",
+      "type": "Long",
+      "description": "任务类型ID"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "Long",
+      "description": "任务负责人ID"
+    },
+    {
+      "name": "participanterIds",
+      "required": "否",
+      "type": "List",
+      "description": "参与人ID（Long型集合）"
+    },
+    {
+      "name": "sharerIds",
+      "required": "否",
+      "type": "List",
+      "description": "共享人集合（map型），key支持sid和entryType。sid: Long型；entryType: 取值范围（user(人员)、department(部门)、group(群组)、all(所有人)、external(外部联系人)）"
+    },
+    {
+      "name": "mainlineId",
+      "required": "否",
+      "type": "Long",
+      "description": "所属项目ID"
+    },
+    {
+      "name": "stageId",
+      "required": "否",
+      "type": "Long",
+      "description": "项目下任务分组ID（stageId要生效必传mainlineId）"
+    },
+    {
+      "name": "group",
+      "required": "否",
+      "type": "String",
+      "description": "任务分组 （暂默认为“today”）"
+    },
+    {
+      "name": "attachments",
+      "required": "否",
+      "type": "List",
+      "description": "附件ID（Long型集合）"
+    },
+    {
+      "name": "locked",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否锁定"
+    },
+    {
+      "name": "milestone",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否里程碑任务"
+    },
+    {
+      "name": "entityRemind",
+      "required": "否",
+      "type": "Map",
+      "description": "提醒（参考任务新建接口（支持批量））中说明）"
+    },
+    {
+      "name": "entityRepeatWeb",
+      "required": "否",
+      "type": "Map",
+      "description": "周期创建（参考任务新建接口（支持批量））中说明）"
+    },
+    {
+      "name": "commonFormData",
+      "required": "否",
+      "type": "String",
+      "description": "通用字段数据 传参说明"
+    },
+    {
+      "name": "taskTypeFormData",
+      "required": "否",
+      "type": "String",
+      "description": "自定义字段数据 传参说明"
+    },
+    {
+      "name": "status",
+      "required": "否",
+      "type": "String",
+      "description": "任务状态（todo(未完成),finished(已完成)，自定义状态ID"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "String",
+      "description": "执行结果"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "任务更新接口（支持批量）"
+  ],
+  "raw_text": "## 任务更新接口（支持批量）\n请求URL：\n- {OpenApiOrigin}/api/task/v3/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 当前操作人ID 获取用户ID |\n| propertyDataList | 是 | List | 任务属性集合，支持多个map对象 |\n备注\n- 参数格式为Content-Type: “application/json”\npropertyDataList 参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 任务ID |\n| name | 否 | String | 任务名称（不能改为空） |\n| content | 否 | String | 任务详情 |\n| status | 否 | String | 任务状态（todo(未完成),finished(已完成)） |\n| beginDate | 否 | String | 任务起始时间（格式：yyyy-MM-dd或者yyyy-MM-dd hh:mm ） |\n| dueDate | 否 | String | 任务到期时间（格式：yyyy-MM-dd或者yyyy-MM-dd hh:mm ） |\n| progress | 否 | Float | 任务进度（范围0-1，支持一位小数，如0.5） |\n| priority | 否 | String | 任务紧急程度（urgency(非常紧急), high(紧急), normal(正常)） |\n| parentId | 否 | Long | 上级任务ID（如果要删除上级任务则传null） |\n| taskTypeForm | 否 | Long | 任务类型ID |\n| manager | 否 | Long | 任务负责人ID |\n| participanterIds | 否 | List | 参与人ID（Long型集合） |\n| sharerIds | 否 | List | 共享人集合（map型），key支持sid和entryType。sid: Long型；entryType: 取值范围（user(人员)、department(部门)、group(群组)、all(所有人)、external(外部联系人)） |\n| mainlineId | 否 | Long | 所属项目ID |\n| stageId | 否 | Long | 项目下任务分组ID（stageId要生效必传mainlineId） |\n| group | 否 | String | 任务分组 （暂默认为“today”） |\n| attachments | 否 | List | 附件ID（Long型集合） |\n| locked | 否 | Boolean | 是否锁定 |\n| milestone | 否 | Boolean | 是否里程碑任务 |\n| entityRemind | 否 | Map | 提醒（参考任务新建接口（支持批量））中说明） |\n| entityRepeatWeb | 否 | Map | 周期创建（参考任务新建接口（支持批量））中说明） |\n| commonFormData | 否 | String | 通用字段数据 传参说明 |\n| taskTypeFormData | 否 | String | 自定义字段数据 传参说明 |\n| status | 否 | String | 任务状态（todo(未完成),finished(已完成)，自定义状态ID |\npropertyDataList 示例：\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | Boolean | 状态 |\n| data | String | 执行结果 |\nJava sdk调用示例："
+}

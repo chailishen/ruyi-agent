@@ -1,0 +1,62 @@
+{
+  "id": "840721328542326785",
+  "name": "获取表单数据总数",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "应用建模",
+    "表单数据操作"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/form/dataset/v1/getAllDataCount",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/form/dataset/v1/getAllDataCount",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "objId",
+      "required": "是",
+      "type": "Long",
+      "description": "表单 id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "dataCount",
+      "required": "",
+      "type": "int",
+      "description": "表单数据总数"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取表单数据总数"
+  ],
+  "raw_text": "## 获取表单数据总数\n注：本接口为老接口，推荐使用获取数据总数（V2）接口，交互和响应更好\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/form/dataset/v1/getAllDataCount\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| objId | 是 | Long | 表单 id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| dataCount | int | 表单数据总数 |\nJava sdk调用示例："
+}

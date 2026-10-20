@@ -1,0 +1,96 @@
+{
+  "id": "840674517703032833",
+  "name": "获取职级列表（V2）",
+  "module": "职级",
+  "module_path": [
+    "职级"
+  ],
+  "is_api": true,
+  "url": "/grade/v2/list",
+  "url_template": "{OpenApiOrigin}/grade/v2/list",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "gradeId",
+      "required": "否",
+      "type": "Long",
+      "description": "职级ID（不传时，获取企业整个职级列表）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "grade",
+      "required": "",
+      "type": "List",
+      "description": "职级信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "职级名称"
+    },
+    {
+      "name": "disporder",
+      "required": "",
+      "type": "Int",
+      "description": "序号"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "编码"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Date",
+      "description": "创建时间"
+    },
+    {
+      "name": "ts",
+      "required": "",
+      "type": "Date",
+      "description": "最后更新时间"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "职级ID"
+    },
+    {
+      "name": "delete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否已删除，true表示已经被删除，false表示未被删除"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取职级列表（V2）"
+  ],
+  "raw_text": "## 获取职级列表（V2）\n请求URL：\n- {OpenApiOrigin}/grade/v2/list\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| gradeId | 否 | Long | 职级ID（不传时，获取企业整个职级列表） |\n请求示例：\nquery方式\n{OpenApiOrigin}/grade/v2/list?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&gradeId=1\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| grade | List | 职级信息 |\n| name | String | 职级名称 |\n| disporder | Int | 序号 |\n| code | String | 编码 |\n| createTime | Date | 创建时间 |\n| ts | Date | 最后更新时间 |\n| id | String | 职级ID |\n| delete | Boolean | 是否已删除，true表示已经被删除，false表示未被删除 |\nJava sdk调用示例："
+}

@@ -1,0 +1,42 @@
+{
+  "id": "908313483710251008",
+  "name": "文档详情-添加文档阅读记录",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/addDocumentLog",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/addDocumentLog",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "data.result",
+      "required": "",
+      "type": "string",
+      "description": "“sucess” 记录阅读记录成功"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "文档详情-添加文档阅读记录"
+  ],
+  "raw_text": "## 文档详情-添加文档阅读记录\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/addDocumentLog\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| operatetype | 是 | string | 日志类型（read 阅读文档） |\n| targetId | 是 | string | 文档id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| data.result | string | “sucess” 记录阅读记录成功 |\nJava sdk调用示例："
+}

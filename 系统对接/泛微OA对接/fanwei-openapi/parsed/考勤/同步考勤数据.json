@@ -1,0 +1,75 @@
+{
+  "id": "207640955031912448",
+  "name": "同步考勤数据",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/open/syncMachineData",
+  "url_template": "{OpenApiOrigin}/api/attend/web/open/syncMachineData",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注：body传参格式为application/json",
+    "备注：body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "deviceId",
+      "required": "是",
+      "type": "String",
+      "description": "考勤机设备编号"
+    },
+    {
+      "name": "signData",
+      "required": "是",
+      "type": "Object",
+      "description": "员⼯打卡信息列表"
+    },
+    {
+      "name": "signData.userNum",
+      "required": "是",
+      "type": "String",
+      "description": "员⼯的⼯号"
+    },
+    {
+      "name": "signData.signDate",
+      "required": "是",
+      "type": "String",
+      "description": "员⼯打卡时间(时间格式：yyyy-MM-ddHH:mm:ssyyyy/MM/ddHH:mm:ssyyyy.MM.ddHH:mm:ss）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "statusCode",
+      "required": "",
+      "type": "String",
+      "description": "接⼝响应状态码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "接⼝响应描述"
+    },
+    {
+      "name": "errorDatas",
+      "required": "",
+      "type": "String",
+      "description": "有错误信息的打卡数据（此对象可能为空只有当）当打卡数据缺少userId或者是当打卡数据的打卡时间signDate\u0001格式不正确时，会返回该数据。"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "同步考勤数据"
+  ],
+  "raw_text": "## 同步考勤数据\n请求URL：\n- {OpenApiOrigin}/api/attend/web/open/syncMachineData\n请求方式：\n- POST\n|  |\n| --- |\n请求参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 |\n| deviceId | 是 | String | 考勤机设备编号 |\n| signData | 是 | Object | 员⼯打卡信息列表 |\n| signData.userNum | 是 | String | 员⼯的⼯号 |\n| signData.signDate | 是 | String | 员⼯打卡时间(时间格式：yyyy-MM-ddHH:mm:ssyyyy/MM/ddHH:mm:ssyyyy.MM.ddHH:mm:ss） |\n备注：body传参格式为application/json\n请求示例\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| statusCode | String | 接⼝响应状态码 |\n| msg | String | 接⼝响应描述 |\n| errorDatas | String | 有错误信息的打卡数据（此对象可能为空只有当）当打卡数据缺少userId或者是当打卡数据的打卡时间signDate\u0001格式不正确时，会返回该数据。 |"
+}

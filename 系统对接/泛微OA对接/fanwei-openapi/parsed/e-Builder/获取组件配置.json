@@ -1,0 +1,103 @@
+{
+  "id": "840722144393175040",
+  "name": "获取组件配置",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "页面"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/coms/common/getConfig",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/coms/common/getConfig",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageId",
+      "required": "是",
+      "type": "Long",
+      "description": "页面id"
+    },
+    {
+      "name": "compId",
+      "required": "是",
+      "type": "String",
+      "description": "组件id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "Number",
+      "description": "状态码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "接口是否请求成功"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "组件配置信息"
+    },
+    {
+      "name": "data.id",
+      "required": "",
+      "type": "String",
+      "description": "组件id"
+    },
+    {
+      "name": "data.pid",
+      "required": "",
+      "type": "String",
+      "description": "父组件id"
+    },
+    {
+      "name": "data.refCompId",
+      "required": "",
+      "type": "String",
+      "description": "关联组件id"
+    },
+    {
+      "name": "data.tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "租户id"
+    },
+    {
+      "name": "data.config",
+      "required": "",
+      "type": "json",
+      "description": "组件详细配置"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取组件配置"
+  ],
+  "raw_text": "## 获取组件配置\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/coms/common/getConfig\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageId | 是 | Long | 页面id |\n| compId | 是 | String | 组件id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | Number | 状态码 |\n| msg | String | 返回信息 |\n| status | Boolean | 接口是否请求成功 |\n| data | Object | 组件配置信息 |\n| data.id | String | 组件id |\n| data.pid | String | 父组件id |\n| data.refCompId | String | 关联组件id |\n| data.tenantKey | String | 租户id |\n| data.config | json | 组件详细配置 |\nJava sdk调用示例："
+}

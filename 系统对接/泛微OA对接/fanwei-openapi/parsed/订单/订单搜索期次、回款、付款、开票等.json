@@ -1,0 +1,144 @@
+{
+  "id": "840718519633715200",
+  "name": "订单搜索期次、回款、付款、开票等",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/searchPayment",
+  "url_template": "{OpenApiOrigin}/crm/v2/searchPayment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "String",
+      "type": "是",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "String",
+      "type": "是",
+      "description": "用户ID"
+    },
+    {
+      "name": "module",
+      "required": "String",
+      "type": "是",
+      "description": "模块。暂时只支持订单模块（orderform）"
+    },
+    {
+      "name": "query",
+      "required": "Object",
+      "type": "是",
+      "description": "查询参数对象"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "paymentType",
+      "required": "否",
+      "type": "String",
+      "description": "查询类型，固定值：回款receive、付款pay"
+    },
+    {
+      "name": "paymentEntityType",
+      "required": "是",
+      "type": "String",
+      "description": "查询对象的类型，固定值： 期次stage、回款/付款paid、开票invoice、抵扣deduction 、扣款chargeback、预回款/预付款prepaid"
+    },
+    {
+      "name": "entityId",
+      "required": "否",
+      "type": "Long",
+      "description": "实体ID，如订单ID"
+    },
+    {
+      "name": "entityName",
+      "required": "否",
+      "type": "String",
+      "description": "实体名称，如订单名称，模糊查询"
+    },
+    {
+      "name": "stageId",
+      "required": "否",
+      "type": "Long",
+      "description": "期次ID"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "Int",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "Int",
+      "description": "每页条数"
+    },
+    {
+      "name": "orderPropertyName",
+      "required": "否",
+      "type": "String",
+      "description": "排序字段名称"
+    },
+    {
+      "name": "asc",
+      "required": "否",
+      "type": "String",
+      "description": "true升序，false降序"
+    },
+    {
+      "name": "conditions",
+      "required": "否",
+      "type": "List",
+      "description": "查询条件集"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "属性名"
+    },
+    {
+      "name": "compareType",
+      "required": "是",
+      "type": "String",
+      "description": "比较类型"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "String",
+      "description": "属性值"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "期次等信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "订单搜索期次、回款、付款、开票等"
+  ],
+  "raw_text": "## 订单搜索期次、回款、付款、开票等\n简要描述：\n- 订单搜索期次、回款、付款、开票等\n请求URL：\n- {OpenApiOrigin}/crm/v2/searchPayment\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | String | 是 | 调用接口凭证 |\n| userid | String | 是 | 用户ID |\n| module | String | 是 | 模块。暂时只支持订单模块（orderform） |\n| query | Object | 是 | 查询参数对象 |\nquery请求结构体：\nquery参数说明：\n| 参数名 | 类型 | 必选 | 说明 |\n| --- | --- | --- | --- |\n| paymentType | String | 否 | 查询类型，固定值：回款receive、付款pay |\n| paymentEntityType | String | 是 | 查询对象的类型，固定值： 期次stage、回款/付款paid、开票invoice、抵扣deduction 、扣款chargeback、预回款/预付款prepaid |\n| entityId | Long | 否 | 实体ID，如订单ID |\n| entityName | String | 否 | 实体名称，如订单名称，模糊查询 |\n| stageId | Long | 否 | 期次ID |\n| pageNo | Int | 是 | 页码 |\n| pageSize | Int | 是 | 每页条数 |\n| orderPropertyName | String | 否 | 排序字段名称 |\n| asc | String | 否 | true升序，false降序 |\n| conditions | List | 否 | 查询条件集 |\n| propertyName | String | 是 | 属性名 |\n| compareType | String | 是 | 比较类型 |\n| propertyValue | String | 是 | 属性值 |\npropertyName：计划金额：plannedMoney （number）计划时间：plannedTime（date）回（付）款金额：paidMoney（number）回（付）款时间：paidTime（date）开票金额：invoiceMoney（number）开票时间：invoiceTime（date）开票类型：invoiceType（string）发票号码：invoiceNumber（string）税号：taxNumber（string）开票内容：content（string）抵扣项目：deductionItem（string）抵扣金额：deductionMoney（number）抵扣时间：deductionTime（date）扣款金额：chargebackMoney（number）扣款时间：chargebackTime（date）预回（付）款金额：prepaidMoney（number）预回（付）款时间：prepaidTime（date）备注：description（string）创建时间：createTime（date）\ncompareType：like包含eq等于neq不等于empty为空notEmpty不为空range 范围区间gt大于gtAndEq大于等于lt小于ltAndEq小于等于\n选择范围：选择范围string类型字段：like、eq、neq、empty、notEmptydate类型字段：range、empty、notEmptynumber类型字段：eq、neq、range、gt、gtAndEq、lt、ltAndEq\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/searchPayment?access_token=8dd7550c42c119b421e570b5ee18a0a5&userid=835851587175096321&module=orderform&query={\"paymentType\":\"receive\",\"paymentEntityType\":\"stage\",\"entityId\":\"3578058074788063706\",\"entityName\":\"订单名称\",\"stageId\":\"3578058712901903492\",\"pageNo\":\"1\",\"pageSize\":\"15\",\"orderPropertyName\":\"plannedMoney\",\"asc\":\"true\",\"conditions\":[{\"propertyName\":\"plannedMoney\",\"compareType\":\"range\",\"propertyValue\":\"1000~10000\"},{\"propertyName\":\"plannedTime\",\"compareType\":\"range\",\"propertyValue\":\"2019-10-20~2019-10-30\"}]}\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 期次等信息（JSON格式） |\nJava sdk调用示例："
+}

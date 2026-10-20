@@ -1,0 +1,111 @@
+{
+  "id": "941316179829612545",
+  "name": "签退接口查询",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/open/getSignOutData",
+  "url_template": "{OpenApiOrigin}/api/attend/web/open/getSignOutData",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注：body传参格式为application/json",
+    "备注：body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "beginDate",
+      "required": "是",
+      "type": "String",
+      "description": "查询开始日期，格式：YYYY-MM-DD"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "String",
+      "description": "查询结束日期 ，格式：YYYY-MM-DD。注：开始日期与结束日期间隔不得超过60天"
+    },
+    {
+      "name": "empIds",
+      "required": "是",
+      "type": "Array",
+      "description": "查询人员集合"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "date",
+      "required": "",
+      "type": "String",
+      "description": "考勤日期"
+    },
+    {
+      "name": "empId",
+      "required": "",
+      "type": "String",
+      "description": "人员id"
+    },
+    {
+      "name": "period",
+      "required": "",
+      "type": "String",
+      "description": "考勤时段"
+    },
+    {
+      "name": "signTime",
+      "required": "",
+      "type": "String",
+      "description": "打卡时间"
+    },
+    {
+      "name": "signStatus",
+      "required": "",
+      "type": "String",
+      "description": "考勤状态标识"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "人员姓名"
+    },
+    {
+      "name": "signStatusName",
+      "required": "",
+      "type": "String",
+      "description": "考勤状态名称"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "签退接口查询"
+  ],
+  "raw_text": "## 签退接口查询\n请求URL：\n- {OpenApiOrigin}/api/attend/web/open/getSignOutData\n请求方式：\n- POST\nURL参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID |\nbody参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| beginDate | 是 | String | 查询开始日期，格式：YYYY-MM-DD |\n| endDate | 是 | String | 查询结束日期 ，格式：YYYY-MM-DD。注：开始日期与结束日期间隔不得超过60天 |\n| empIds | 是 | Array | 查询人员集合 |\n备注：body传参格式为application/json\n请求示例\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| date | String | 考勤日期 |\n| empId | String | 人员id |\n| period | String | 考勤时段 |\n| signTime | String | 打卡时间 |\n| signStatus | String | 考勤状态标识 |\n| userName | String | 人员姓名 |\n| signStatusName | String | 考勤状态名称 |\nJava sdk调用示例："
+}

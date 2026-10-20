@@ -1,0 +1,126 @@
+{
+  "id": "840678520561344513",
+  "name": "修改任务",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/update",
+  "url_template": "{OpenApiOrigin}/task/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "任务ID 获取任务ID"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "需要修改的参数名"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "String",
+      "description": "参数值"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "任务名"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态 todo(未完成)、doing(进行中)、finished(已完成)"
+    },
+    {
+      "name": "dueDate",
+      "required": "",
+      "type": "String",
+      "description": "结束日期 格式：2021-05-11 15:00 或者2021-05-11"
+    },
+    {
+      "name": "beginDate",
+      "required": "",
+      "type": "String",
+      "description": "开始日期 格式：2021-05-11 15:00 或者2021-05-11"
+    },
+    {
+      "name": "priority",
+      "required": "",
+      "type": "String",
+      "description": "紧急程度 urgency(非常紧急), high(紧急), normal(正常)"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "内容"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "String",
+      "description": "是否锁定 true、false（”true”就是true，其他情况均为false）"
+    },
+    {
+      "name": "progress",
+      "required": "",
+      "type": "String",
+      "description": "进度（小数）"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "String",
+      "description": "任务负责人（propertyValue为负责人ID）"
+    },
+    {
+      "name": "stage",
+      "required": "",
+      "type": "String",
+      "description": "项目的计划任务分组信息 （propertyValue为mainlineId**_stageId（项目Id_**任务分组Id）"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改任务"
+  ],
+  "raw_text": "## 修改任务\n请求URL：\n- {OpenApiOrigin}/task/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| id | 是 | Long | 任务ID 获取任务ID |\n| propertyName | 是 | String | 需要修改的参数名 |\n| propertyValue | 是 | String | 参数值 |\npropertyName参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| name | String | 任务名 |\n| status | String | 状态 todo(未完成)、doing(进行中)、finished(已完成) |\n| dueDate | String | 结束日期 格式：2021-05-11 15:00 或者2021-05-11 |\n| beginDate | String | 开始日期 格式：2021-05-11 15:00 或者2021-05-11 |\n| priority | String | 紧急程度 urgency(非常紧急), high(紧急), normal(正常) |\n| content | String | 内容 |\n| locked | String | 是否锁定 true、false（”true”就是true，其他情况均为false） |\n| progress | String | 进度（小数） |\n| manager | String | 任务负责人（propertyValue为负责人ID） |\n| stage | String | 项目的计划任务分组信息 （propertyValue为mainlineId**_stageId（项目Id_**任务分组Id） |\n请求示例：\nquery方式\n{OpenApiOrigin}/task/v2/update?access_token=3f888283dd7564dd5443a5590a357318&userid=717929201362116609&id=5117956818993913546&propertyName=name&propertyValue=今天必须做完\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

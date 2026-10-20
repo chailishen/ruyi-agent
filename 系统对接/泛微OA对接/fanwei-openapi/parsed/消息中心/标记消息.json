@@ -1,0 +1,102 @@
+{
+  "id": "840722792891293696",
+  "name": "标记消息",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/mc/msg/markMsg",
+  "url_template": "{OpenApiOrigin}/api/mc/msg/markMsg",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "operator",
+      "required": "是",
+      "type": "Object",
+      "description": "操作人"
+    },
+    {
+      "name": "operator.employeeId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人id"
+    },
+    {
+      "name": "operator.tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "操作 人团队标识"
+    },
+    {
+      "name": "operator.workCode",
+      "required": "否",
+      "type": "string",
+      "description": "操作人工号,与employeeId二选一,优先employeeId"
+    },
+    {
+      "name": "msgIds",
+      "required": "是",
+      "type": "List",
+      "description": "息id数组，调用发送接口获取"
+    },
+    {
+      "name": "flag",
+      "required": "否",
+      "type": "Int",
+      "description": "标识，默认0，标记已读/未读, 1标记已处理/未处理"
+    },
+    {
+      "name": "statue",
+      "required": "否",
+      "type": "int",
+      "description": "状态，标记已读时使用"
+    },
+    {
+      "name": "entityId",
+      "required": "否",
+      "type": "String",
+      "description": "事项id,发送消息时，entity对象的id,企业微信，钉钉标记已处理时必填"
+    },
+    {
+      "name": "markers",
+      "required": "是",
+      "type": "list",
+      "description": "标记人"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "标记消息"
+  ],
+  "raw_text": "## 标记消息\n请求URL：\n- {OpenApiOrigin}/api/mc/msg/markMsg\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| operator | 是 | Object | 操作人 |\n| operator.employeeId | 是 | Long | 操作人id |\n| operator.tenantKey | 是 | String | 操作 人团队标识 |\n| operator.workCode | 否 | string | 操作人工号,与employeeId二选一,优先employeeId |\n| msgIds | 是 | List | 息id数组，调用发送接口获取 |\n| flag | 否 | Int | 标识，默认0，标记已读/未读, 1标记已处理/未处理 |\n| statue | 否 | int | 状态，标记已读时使用 |\n| entityId | 否 | String | 事项id,发送消息时，entity对象的id,企业微信，钉钉标记已处理时必填 |\n| markers | 是 | list | 标记人 |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | String | 状态 |\nJava sdk调用示例："
+}

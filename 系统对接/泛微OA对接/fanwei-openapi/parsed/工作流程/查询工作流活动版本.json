@@ -1,0 +1,61 @@
+{
+  "id": "215680864221134848",
+  "name": "查询工作流活动版本",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "工作流管理"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/pathdef/openapi/getActiveWfId",
+  "url_template": "{OpenApiOrigin}/api/workflow/pathdef/openapi/getActiveWfId",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "Int",
+      "description": "工作流id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "activeWfId",
+      "required": "",
+      "type": "String",
+      "description": "工作流活动版本id"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据工作流id查询工作流活动版本id"
+  ],
+  "raw_text": "## 根据工作流id查询工作流活动版本id\n请求URL：\n- {OpenApiOrigin}/api/workflow/pathdef/openapi/getActiveWfId\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| workflowId | 是 | Int | 工作流id |\n传参示例：直接在Params中传参\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| activeWfId | String | 工作流活动版本id |"
+}

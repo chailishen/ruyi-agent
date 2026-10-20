@@ -1,0 +1,210 @@
+{
+  "id": "840678773982068736",
+  "name": "根据更新时间查询团队任务",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/queryUpdateTasks",
+  "url_template": "{OpenApiOrigin}/task/v2/queryUpdateTasks",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "startTime",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式 (yyyy-MM-dd HH:mm:ss)"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式 (yyyy-MM-dd HH:mm:ss)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "task",
+      "required": "",
+      "type": "Object",
+      "description": "任务对象"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "任务名称"
+    },
+    {
+      "name": "content",
+      "required": "",
+      "type": "String",
+      "description": "任务内容"
+    },
+    {
+      "name": "locked",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否锁定"
+    },
+    {
+      "name": "commonForm",
+      "required": "",
+      "type": "Object",
+      "description": "表单通用模板"
+    },
+    {
+      "name": "taskTypeForm",
+      "required": "",
+      "type": "Object",
+      "description": "任务类型（属表单）"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "String",
+      "description": "模块名"
+    },
+    {
+      "name": "lockable",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否可锁定"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父任务"
+    },
+    {
+      "name": "dueDate",
+      "required": "",
+      "type": "Date",
+      "description": "到期日"
+    },
+    {
+      "name": "finishTime",
+      "required": "",
+      "type": "Date",
+      "description": "结束时间"
+    },
+    {
+      "name": "priority",
+      "required": "",
+      "type": "String",
+      "description": "优先级"
+    },
+    {
+      "name": "manager",
+      "required": "",
+      "type": "Object",
+      "description": "负责人"
+    },
+    {
+      "name": "sn",
+      "required": "",
+      "type": "Long",
+      "description": "排序序号"
+    },
+    {
+      "name": "isDelete",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否已删除"
+    },
+    {
+      "name": "progress",
+      "required": "",
+      "type": "Float",
+      "description": "进度"
+    },
+    {
+      "name": "parentIndex",
+      "required": "",
+      "type": "Int",
+      "description": "父任务下的排序"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "tailnum",
+      "required": "",
+      "type": "String",
+      "description": "流水号"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Object",
+      "description": "创建者"
+    },
+    {
+      "name": "commonFormData",
+      "required": "",
+      "type": "Object",
+      "description": "通用字段数据"
+    },
+    {
+      "name": "taskTypeFormData",
+      "required": "",
+      "type": "Object",
+      "description": "自定义字段数据"
+    },
+    {
+      "name": "lastUpdateTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后修改时间"
+    },
+    {
+      "name": "lastCommentTime",
+      "required": "",
+      "type": "Date",
+      "description": "最后评论时间"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "团队key"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "任务ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据更新时间查询团队任务"
+  ],
+  "raw_text": "## 根据更新时间查询团队任务\n简要描述：\n- 根据更新时间查询团队任务接口\n- 增量查询任务\n请求URL：\n- {OpenApiOrigin}/task/v2/queryUpdateTasks\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| startTime | 是 | Date | 开始时间，格式 (yyyy-MM-dd HH:mm:ss) |\n| endTime | 是 | Date | 结束时间，格式 (yyyy-MM-dd HH:mm:ss) |\n请求示例：\nquery方式\n{OpenApiOrigin}/task/v2/queryUpdateTasks?access_token=354172290dc12f9fb82e430b4d51df7f&startTime=2021-09-23 00:00:00&endTime=2021-09-23 23:00:00\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| task | Object | 任务对象 |\n| name | String | 任务名称 |\n| content | String | 任务内容 |\n| locked | Boolean | 是否锁定 |\n| commonForm | Object | 表单通用模板 |\n| taskTypeForm | Object | 任务类型（属表单） |\n| module | String | 模块名 |\n| lockable | Boolean | 是否可锁定 |\n| parent | Object | 父任务 |\n| dueDate | Date | 到期日 |\n| finishTime | Date | 结束时间 |\n| priority | String | 优先级 |\n| manager | Object | 负责人 |\n| sn | Long | 排序序号 |\n| isDelete | Boolean | 是否已删除 |\n| progress | Float | 进度 |\n| parentIndex | Int | 父任务下的排序 |\n| status | String | 状态 |\n| tailnum | String | 流水号 |\n| creator | Object | 创建者 |\n| commonFormData | Object | 通用字段数据 |\n| taskTypeFormData | Object | 自定义字段数据 |\n| lastUpdateTime | Date | 最后修改时间 |\n| lastCommentTime | Date | 最后评论时间 |\n| tenantKey | String | 团队key |\n| id | Long | 任务ID |\nJava sdk调用示例："
+}

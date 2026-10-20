@@ -1,0 +1,147 @@
+{
+  "id": "404018416857382912",
+  "name": "模板基础信息修改",
+  "module": "合同管理",
+  "module_path": [
+    "合同管理",
+    "模板管理"
+  ],
+  "is_api": true,
+  "url": "/api/ebd/contract/tplinfo/openAPI/v1/update",
+  "url_template": "{OpenApiOrigin}/api/ebd/contract/tplinfo/openAPI/v1/update",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "参数名参数值是否必须描述Content-Typeapplication/json是请求体为JSON格式AuthorizationBearer [token]是用户认证令牌"
+  ],
+  "parameters": [
+    {
+      "name": "Content-Type",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "Authorization",
+      "required": "",
+      "type": "",
+      "description": ""
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "contractTemplateInfo",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "Long",
+      "description": ""
+    },
+    {
+      "name": "templateName",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateDesc",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "belongId",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "sourceType",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateVersion",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateStartdate",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateEnddate",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "appId",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "useType",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "operateType",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "fileFolderId",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "fileFolderName",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateFileid",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "templateStatus",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "formId",
+      "required": "",
+      "type": "String",
+      "description": ""
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "模板基础信息修改接口"
+  ],
+  "raw_text": "## 模板基础信息修改接口\n接口描述：用于修改一个模板的基本信息、有效期、关联文件及状态。\n请求URL：\n- {OpenApiOrigin}/api/ebd/contract/tplinfo/openAPI/v1/update\n请求方式：\n- POST\n请求头（Headers）：\n| 参数名 | 参数值 | 是否必须 | 描述 |\n| --- | --- | --- | --- |\n| Content-Type | application/json | 是 | 请求体为JSON格式 |\n| Authorization | Bearer [token] | 是 | 用户认证令牌 |\n请求参数（Body）：\n| 参数名 | 参数值 | 是否必须 | 描述 |\n| --- | --- | --- | --- |\n| contractTemplateInfo | object | 是 | 详见contractTemplateInfo对象 |\n| access_token | String | 是 | 调用接口凭证 |\n- contractTemplateInfo对象结构（合同模板基础信息）\n| 参数名 | 类型 | 是否必须 | 描述 | 示例值 |\n| --- | --- | --- | --- | --- |\n| userid | Long | 是 | 用户ID |  |\n| templateName | String | 是 | 模板的名称 | \"模板名称1\" |\n| templateDesc | String | 否 | 模板的详细描述 | \"模板描述2\" |\n| belongId | String | 是 | api/ebd/contract/type/openAPI/v1/all 接口获取，模板分类ID | \"1178071677904535553\" |\n| sourceType | String | 是 | 模板来源类型（枚举：如 0-自建, 1-系统预置, 2-第三方导入等，需根据业务定义） | \"0\" |\n| templateVersion | String | 否 | 模板的版本号 | \"版本号\" |\n| templateStartdate | String | 否 | 模板生效的开始时间（格式：yyyy-MM-dd HH:mm） | \"2025-09-10 08:00\" |\n| templateEnddate | String | 否 | 模板生效的结束时间（格式：yyyy-MM-dd HH:mm） | \"2025-09-12 18:00\" |\n| appId | String | 是 | api/ebuilder/form/formcfg/list/v1/listInit中的appid,应用id | \"1141232003850575933\" |\n| useType | String | 是 | 模板类型（0-eb表单, 1-流程） | \"1\" |\n| operateType | String | 是 | 模板类型（ 0-书签匹配） | \"0\" |\n| fileFolderId | String | 否 | api/doc/folder/list接口获取，模板文件所在的文件夹ID | \"\" |\n| fileFolderName | String | 否 | 模板文件所在的文件夹名称 | \"\" |\n| templateFileid | String | 是 | api/file/v2/common/upload接口返回，配置书签的模板文件ID | \"1178095639380107265\" |\n| templateStatus | String | 是 | 模板状态（枚举：如 0-为启用, 1-启用） | \"0\" |\n| formId | String | 是 | api/ebuilder/form/formcfg/list/v1/listInit中的objid，表单id |  |\nPOST方式请求示例：\n- {OpenApiOrigin}/api/ebd/contract/tplinfo/openAPI/v1/update\n请求参数为json格式\n返回示例："
+}

@@ -1,0 +1,90 @@
+{
+  "id": "284170128273178624",
+  "name": "获取反馈意见（接收方获取发送方撤销、作废反馈意见）",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/receiveOperateOpinion",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/receiveOperateOpinion",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "docId",
+      "required": "否",
+      "type": "String",
+      "description": "处理系统中公文唯一标识，此处无需给值"
+    },
+    {
+      "name": "sendId",
+      "required": "否",
+      "type": "String",
+      "description": "公文发文标识，此处无需给值"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": ""
+    },
+    {
+      "name": "-receiveIds",
+      "required": "",
+      "type": "Long",
+      "description": "公文收文标识（收文方获取时，必须返回）"
+    },
+    {
+      "name": "-receiveUnitCode",
+      "required": "",
+      "type": "String",
+      "description": "收文单位编码（发文方获取时必须返回）"
+    },
+    {
+      "name": "-operateType",
+      "required": "",
+      "type": "String",
+      "description": "反馈类型：作废(invalid)、撤销(withdraw)、签收(accept)、拒收(reject)、退回(return)"
+    },
+    {
+      "name": "-opinion",
+      "required": "",
+      "type": "String",
+      "description": "意见"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取反馈意见（接收方获取发送方撤销、作废反馈意见）"
+  ],
+  "raw_text": "## 获取反馈意见（接收方获取发送方撤销、作废反馈意见）\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/receiveOperateOpinion\n请求方式：\n- POST\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| docId | 否 | String | 处理系统中公文唯一标识，此处无需给值 |\n| sendId | 否 | String | 公文发文标识，此处无需给值 |\n请求Body（以raw，JSON格式）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | JSON |  |\n| -receiveIds | Long | 公文收文标识（收文方获取时，必须返回） |\n| -receiveUnitCode | String | 收文单位编码（发文方获取时必须返回） |\n| -operateType | String | 反馈类型：作废(invalid)、撤销(withdraw)、签收(accept)、拒收(reject)、退回(return) |\n| -opinion | String | 意见 |"
+}

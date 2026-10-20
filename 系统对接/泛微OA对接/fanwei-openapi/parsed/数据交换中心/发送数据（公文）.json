@@ -1,0 +1,144 @@
+{
+  "id": "216006633891823616",
+  "name": "发送数据（公文）",
+  "module": "数据交换中心",
+  "module_path": [
+    "数据交换中心"
+  ],
+  "is_api": true,
+  "url": "/api/odocexchange/v1/sendDocument/api/odocexchange/v1/sendData",
+  "url_template": "{OpenApiOrigin}/api/odocexchange/v1/sendDocument{OpenApiOrigin}/api/odocexchange/v1/sendData",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "departmentCode",
+      "required": "是",
+      "type": "String",
+      "description": "单位编码，用于标识请求方所属单位"
+    },
+    {
+      "name": "platformTenant",
+      "required": "是",
+      "type": "String",
+      "description": "交换中心租户key，用于标识被请求的交换平台团队"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "docId",
+      "required": "否",
+      "type": "String",
+      "description": "处理系统中公文唯一标识"
+    },
+    {
+      "name": "sendUnitCode",
+      "required": "是",
+      "type": "String",
+      "description": "发文单位编码"
+    },
+    {
+      "name": "receiveUnitCodes",
+      "required": "是",
+      "type": "List",
+      "description": "收文单位编码集合"
+    },
+    {
+      "name": "appTemplateId",
+      "required": "否（数据交换必填）",
+      "type": "String",
+      "description": "交换模板id，公文交换默认为1无需填写，数据交换必填对应交换模板id"
+    },
+    {
+      "name": "sourceId",
+      "required": "否",
+      "type": "String",
+      "description": "数据交换源数据唯一标识，相同标识会覆盖处理。"
+    },
+    {
+      "name": "dataTitle",
+      "required": "否（数据交换必填）",
+      "type": "String",
+      "description": "数据交换数据标题"
+    },
+    {
+      "name": "plainTextMessage",
+      "required": "是",
+      "type": "JSON",
+      "description": "明文报文，key是在公文交换平台-字段设置模块维护，其中正文和附件的Name和Content不可更改。若数据交换，则内部结构为交换模板对应的表单json数据结构。"
+    },
+    {
+      "name": "- Document_Title",
+      "required": "是",
+      "type": "String",
+      "description": "公文标题"
+    },
+    {
+      "name": "- Emergency_Degree",
+      "required": "是",
+      "type": "String",
+      "description": "紧急程度（仅支持无、平件、平急、急件、加急、特急、特提）"
+    },
+    {
+      "name": "- Issued_Number_of_Document",
+      "required": "否",
+      "type": "String",
+      "description": "发文字号"
+    },
+    {
+      "name": "- Main_Receiver_Department",
+      "required": "是",
+      "type": "String",
+      "description": "主送单位编码"
+    },
+    {
+      "name": "- Issuer_Department",
+      "required": "是",
+      "type": "String",
+      "description": "发文单位编码"
+    },
+    {
+      "name": "-Document_Text",
+      "required": "是",
+      "type": "String",
+      "description": "公文正文，调用文件上传接口返回的文件id"
+    },
+    {
+      "name": "-Document_Attachments",
+      "required": "是",
+      "type": "String",
+      "description": "明文附件，逗号分隔的调用文件上传接口返回的文件id"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "JSON",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": ""
+    },
+    {
+      "name": "-sendId",
+      "required": "",
+      "type": "Long",
+      "description": "公文发文标识"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "发送数据（公文）"
+  ],
+  "raw_text": "## 发送数据（公文）\n请求URL：\n- {OpenApiOrigin}/api/odocexchange/v1/sendDocument\n- {OpenApiOrigin}/api/odocexchange/v1/sendData\n请求方式：\n- POST\n请求头Header：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| departmentCode | 是 | String | 单位编码，用于标识请求方所属单位 |\n| platformTenant | 是 | String | 交换中心租户key，用于标识被请求的交换平台团队 |\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| docId | 否 | String | 处理系统中公文唯一标识 |\n| sendUnitCode | 是 | String | 发文单位编码 |\n| receiveUnitCodes | 是 | List | 收文单位编码集合 |\n| appTemplateId | 否（数据交换必填） | String | 交换模板id，公文交换默认为1无需填写，数据交换必填对应交换模板id |\n| sourceId | 否 | String | 数据交换源数据唯一标识，相同标识会覆盖处理。 |\n| dataTitle | 否（数据交换必填） | String | 数据交换数据标题 |\n| plainTextMessage | 是 | JSON | 明文报文，key是在公文交换平台-字段设置模块维护，其中正文和附件的Name和Content不可更改。若数据交换，则内部结构为交换模板对应的表单json数据结构。 |\n| - Document_Title | 是 | String | 公文标题 |\n| - Emergency_Degree | 是 | String | 紧急程度（仅支持无、平件、平急、急件、加急、特急、特提） |\n| - Issued_Number_of_Document | 否 | String | 发文字号 |\n| - Main_Receiver_Department | 是 | String | 主送单位编码 |\n| - Issuer_Department | 是 | String | 发文单位编码 |\n| -Document_Text | 是 | String | 公文正文，调用文件上传接口返回的文件id |\n| -Document_Attachments | 是 | String | 明文附件，逗号分隔的调用文件上传接口返回的文件id |\n请求地址:https://api.yunteams.cn/api/odocexchange/v1/sendDocument?access_token=df035c8146663ea21bd28438845ce9f6\n请求头Header：\ndepartmentCode：fwpg01\nplatformTenant：tq2uz86iuoq\n请求Body（以raw，JSON格式）：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | JSON | 返回信息 |\n| data | JSON |  |\n| -sendId | Long | 公文发文标识 |"
+}

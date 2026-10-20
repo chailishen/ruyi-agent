@@ -1,0 +1,379 @@
+{
+  "type": "doc",
+  "content": [
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "表单查询datamap传值说明",
+        "level": 2
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "表单查询datamap传值说明"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "基础字段namescreatetimesoperators",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "基础字段：names，createTimes，operators"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "根据表单名称names查询"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"names\":\"关键词\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "根据表单提交时间createTimes查询"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"createTimes\":\"开始时间,结束时间\"} \n#查询10月22日提交的表单数据\n{\"createTimes\":\"2019-10-22\"} \n#查询10月20日到10月23日提交的表单数据\n{\"createTimes\":\"2019-10-20,2019-10-23\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "根据提交人operators查询"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "{\"operators\":\"提交人姓名\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "支持的控件文本输入框多行文本框日期数字输入框金额邮箱电话手机人员部门",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "支持的控件：文本输入框、多行文本框、日期、数字输入框、金额、邮箱、电话、手机、人员，部门"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例：文本输入框"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# {\"控件id\":\"控件值\"}\n{\"2175859602838099975\":\"文本内容\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例：日期控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# {\"控件id\":\"控件值\"}\n{\"2175859602838099975\":\"2019-05-25\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例：人员控件"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# {\"控件id\":\"姓名\"}\n{\"2175859602838099975\":\"姓名A\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "datamap传值举例",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "datamap传值举例"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "#查询名称含有【 月度汇总】, 提交时间为【 10 月21日到10月22日】 的， 由人员【 张一】 提交的表单， \n其中表单文本框中含有【 十月】 关键词 \n{\n\t\"names\": \"月度汇总\",\n\t\"createTimes\": \"2019-10-21,2019-10-22\",\n\t\"operators\": \"张一\",\n\t\"5817173420843632761\": \"十月\"\n}"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "attrs": {
+        "id": "以下字段支持字段ideq进行进行精确匹配字段idlike支持模糊查询",
+        "level": 5
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "以下字段支持字段id_eq进行进行精确匹配、字段id_like支持模糊查询"
+        }
+      ]
+    },
+    {
+      "type": "fence",
+      "attrs": {
+        "fold": true,
+        "language": "json"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "基础字段：名称；控件字段：文本输入框、多行文本框、邮箱、电话、手机"
+        }
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "attrs": {
+        "spread": "false"
+      },
+      "content": [
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例 基础字段:名称"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 精确匹配标题包含“关键词”的数据\n# {\"names_eq\":\"关键词\"}\n{\"names_eq\":\"基础表单\"}\n# 模糊匹配标题包含“关键词”的数据\n# {\"names_like\":\"关键词\"}\n{\"names_like\":\"基础表单\"}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "list_item",
+          "attrs": {
+            "label": "•",
+            "listType": "bullet",
+            "spread": "true"
+          },
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "例 控件字段:文本"
+                }
+              ]
+            },
+            {
+              "type": "fence",
+              "attrs": {
+                "fold": true,
+                "language": "json"
+              },
+              "content": [
+                {
+                  "type": "text",
+                  "text": "# 精确匹配文本输入框包含“文本内容”的数据\n#  {\"控件id_eq\":\"控件值\"}\n{\"2175859602838099975_eq\":\"文本内容\"}\n# 模糊匹配文本输入框包含“文本内容”的数据\n#  {\"控件id_like\":\"控件值\"}\n{\"2175859602838099975_like\":\"文本内容\"}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph"
+    }
+  ]
+}

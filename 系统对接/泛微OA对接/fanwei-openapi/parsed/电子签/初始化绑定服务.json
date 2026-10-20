@@ -1,0 +1,108 @@
+{
+  "id": "311612542768119808",
+  "name": "初始化绑定服务",
+  "module": "电子签",
+  "module_path": [
+    "电子签"
+  ],
+  "is_api": true,
+  "url": "/api/signcenter/server/initServerSetting",
+  "url_template": "{OpenApiOrigin}/api/signcenter/server/initServerSetting",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "tenantKey",
+      "required": "是",
+      "type": "String",
+      "description": "租户key"
+    },
+    {
+      "name": "accessKey",
+      "required": "是",
+      "type": "String",
+      "description": "接口令牌"
+    },
+    {
+      "name": "accessSecret",
+      "required": "是",
+      "type": "String",
+      "description": "接入密钥"
+    },
+    {
+      "name": "externalUrl",
+      "required": "是",
+      "type": "String",
+      "description": "契约锁签署平台外网地址"
+    },
+    {
+      "name": "intranetUrl",
+      "required": "否",
+      "type": "String",
+      "description": "契约锁签署平台内网地址"
+    },
+    {
+      "name": "openUrl",
+      "required": "是",
+      "type": "String",
+      "description": "契约锁开放平台地址"
+    },
+    {
+      "name": "serverName",
+      "required": "新增服务时必填，编辑时非必填",
+      "type": "String",
+      "description": "服务名称"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "oa10Secret",
+      "required": "",
+      "type": "String",
+      "description": "单点加密秘钥"
+    },
+    {
+      "name": "serverId",
+      "required": "",
+      "type": "String",
+      "description": "绑定服务ID，新增服务时返回"
+    },
+    {
+      "name": "corpId",
+      "required": "",
+      "type": "String",
+      "description": "开放平台corpId，新增服务时返回"
+    },
+    {
+      "name": "appKey",
+      "required": "",
+      "type": "String",
+      "description": "开放平台appKey，新增服务时返回"
+    },
+    {
+      "name": "appSecret",
+      "required": "",
+      "type": "String",
+      "description": "开放平台appSecret，新增服务时返回"
+    },
+    {
+      "name": "ec10SyncUrl",
+      "required": "",
+      "type": "String",
+      "description": "开放平台地址，新增服务时返回"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "初始化绑定服务"
+  ],
+  "raw_text": "## 初始化绑定服务\n请求URL：\n- {OpenApiOrigin}/api/signcenter/server/initServerSetting\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| tenantKey | 是 | String | 租户key |\n| accessKey | 是 | String | 接口令牌 |\n| accessSecret | 是 | String | 接入密钥 |\n| externalUrl | 是 | String | 契约锁签署平台外网地址 |\n| intranetUrl | 否 | String | 契约锁签署平台内网地址 |\n| openUrl | 是 | String | 契约锁开放平台地址 |\n| serverName | 新增服务时必填，编辑时非必填 | String | 服务名称 |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| oa10Secret | String | 单点加密秘钥 |\n| serverId | String | 绑定服务ID，新增服务时返回 |\n| corpId | String | 开放平台corpId，新增服务时返回 |\n| appKey | String | 开放平台appKey，新增服务时返回 |\n| appSecret | String | 开放平台appSecret，新增服务时返回 |\n| ec10SyncUrl | String | 开放平台地址，新增服务时返回 |"
+}

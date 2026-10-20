@@ -1,0 +1,107 @@
+{
+  "id": "249279858977275904",
+  "name": "根据币符或者币种id获取币种",
+  "module": "国际化",
+  "module_path": [
+    "国际化",
+    "货币"
+  ],
+  "is_api": true,
+  "url": "/api/i18n/currency/v1/getCurrency",
+  "url_template": "{OpenApiOrigin}/api/i18n/currency/v1/getCurrency",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "symbol",
+      "required": "否",
+      "type": "String",
+      "description": "币符。币符和币种ID二选一，如果同时传递，则取币种ID"
+    },
+    {
+      "name": "unitId",
+      "required": "否",
+      "type": "long",
+      "description": "币种ID。币符和币种ID二选一，如果同时传递，则取币种ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "状态码 200：成功 , 500：系统异常"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "响应信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "boolean",
+      "description": "状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "币种信息"
+    },
+    {
+      "name": "data.id",
+      "required": "",
+      "type": "long",
+      "description": "币种ID"
+    },
+    {
+      "name": "data.currencyName",
+      "required": "",
+      "type": "String",
+      "description": "币种名称"
+    },
+    {
+      "name": "data.symbol",
+      "required": "",
+      "type": "String",
+      "description": "币符"
+    },
+    {
+      "name": "data.isEnable",
+      "required": "",
+      "type": "int",
+      "description": "是否启用 1：启用 0：未启用"
+    },
+    {
+      "name": "data.labelId",
+      "required": "",
+      "type": "long",
+      "description": "币种名称标签ID"
+    },
+    {
+      "name": "data.isBase",
+      "required": "",
+      "type": "int",
+      "description": "是否本位币 1：是 0：不是"
+    },
+    {
+      "name": "fail",
+      "required": "",
+      "type": "boolean",
+      "description": "是否失败"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/i18n/currency/v1/getCurrency\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| symbol | 否 | String | 币符。币符和币种ID二选一，如果同时传递，则取币种ID |\n| unitId | 否 | long | 币种ID。币符和币种ID二选一，如果同时传递，则取币种ID |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 状态码 200：成功 , 500：系统异常 |\n| msg | String | 响应信息 |\n| status | boolean | 状态 |\n| data | List | 币种信息 |\n| data.id | long | 币种ID |\n| data.currencyName | String | 币种名称 |\n| data.symbol | String | 币符 |\n| data.isEnable | int | 是否启用 1：启用 0：未启用 |\n| data.labelId | long | 币种名称标签ID |\n| data.isBase | int | 是否本位币 1：是 0：不是 |\n| fail | boolean | 是否失败 |"
+}

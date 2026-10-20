@@ -1,0 +1,109 @@
+{
+  "id": "840722466566930432",
+  "name": "获取导航菜单数据",
+  "module": "e-Builder",
+  "module_path": [
+    "e-Builder",
+    "页面"
+  ],
+  "is_api": true,
+  "url": "/api/ebuilder/coms/navmenu/getData",
+  "url_template": "{OpenApiOrigin}/api/ebuilder/coms/navmenu/getData",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "pageId",
+      "required": "是",
+      "type": "Long",
+      "description": "页面id"
+    },
+    {
+      "name": "compId",
+      "required": "是",
+      "type": "String",
+      "description": "组件id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "Number",
+      "description": "状态码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "接口是否请求成功"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List",
+      "description": "菜单数据"
+    },
+    {
+      "name": "data[0].id",
+      "required": "",
+      "type": "String",
+      "description": "菜单id"
+    },
+    {
+      "name": "data[0].name",
+      "required": "",
+      "type": "String",
+      "description": "菜单名称"
+    },
+    {
+      "name": "data[0].pid",
+      "required": "",
+      "type": "String",
+      "description": "父菜单id"
+    },
+    {
+      "name": "data[0].page",
+      "required": "",
+      "type": "json",
+      "description": "菜单跳转地址信息"
+    },
+    {
+      "name": "data[0].openMode",
+      "required": "",
+      "type": "String",
+      "description": "菜单打开方式"
+    },
+    {
+      "name": "data[0].isHomePage",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否默认选中"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取导航菜单数据"
+  ],
+  "raw_text": "## 获取导航菜单数据\n请求URL：\n- {OpenApiOrigin}/api/ebuilder/coms/navmenu/getData\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| pageId | 是 | Long | 页面id |\n| compId | 是 | String | 组件id |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | Number | 状态码 |\n| msg | String | 返回信息 |\n| status | Boolean | 接口是否请求成功 |\n| data | List | 菜单数据 |\n| data[0].id | String | 菜单id |\n| data[0].name | String | 菜单名称 |\n| data[0].pid | String | 父菜单id |\n| data[0].page | json | 菜单跳转地址信息 |\n| data[0].openMode | String | 菜单打开方式 |\n| data[0].isHomePage | Boolean | 是否默认选中 |\nJava sdk调用示例："
+}

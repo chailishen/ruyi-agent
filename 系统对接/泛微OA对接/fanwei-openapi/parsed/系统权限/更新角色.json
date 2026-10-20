@@ -1,0 +1,103 @@
+{
+  "id": "398300332762857472",
+  "name": "更新角色",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "角色同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/role/v1/batchUpdate",
+  "url_template": "{OpenApiOrigin}/api/auth/role/v1/batchUpdate",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "operator",
+      "required": "必填",
+      "type": "Long",
+      "description": "操作者"
+    },
+    {
+      "name": "rule",
+      "required": "必填",
+      "type": "AuthRoleQueryRule",
+      "description": "角色查询规则"
+    },
+    {
+      "name": "data",
+      "required": "必填",
+      "type": "List<BatchAuthRoleDetail>",
+      "description": "角色数据"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "role",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "roleName",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "roleCode",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "outKey",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "Long",
+      "description": ""
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "Long",
+      "description": "请求ID"
+    },
+    {
+      "name": "roleId",
+      "required": "",
+      "type": "Long",
+      "description": "角色ID"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "失败信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "更新角色接口"
+  ],
+  "raw_text": "## 更新角色接口\n请求URL：\n- {OpenApiOrigin}/api/auth/role/v1/batchUpdate\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| operator | 必填 | Long | 操作者 |\n| rule | 必填 | AuthRoleQueryRule | 角色查询规则 |\n| data | 必填 | List<BatchAuthRoleDetail> | 角色数据 |\nBatchAuthRoleDetail 参数说明：\n| 参数名 | 类型 | 描述 |\n| --- | --- | --- |\n| role | String | 角色唯一值-更新/删除时传递 |\n| roleName | String | 角色名称 |\n| roleCode | String | 角色编号 |\n| parent | String | 上级角色-默认为系统管理员 |\n| remark | String | 说明 |\n| outKey | String | 第三方系统主键 |\n| requestId | Long | 请求ID-用于和返回结果对应 |\nAuthRoleQueryRule参数说明\n| 枚举名称 | 描述 |\n| --- | --- |\n| ID | 角色ID |\n| ROLE_CODE | 角色编号 |\n| OUT_KEY | 第三方主键 |\n请求参数为json格式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| requestId | Long | 请求ID |\n| roleId | Long | 角色ID |\n| msg | String | 失败信息 |"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "840719722165837825",
+  "name": "日报统计",
+  "module": "日报",
+  "module_path": [
+    "日报"
+  ],
+  "is_api": true,
+  "url": "/blog/v2/queryBlogStatistic",
+  "url_template": "{OpenApiOrigin}/blog/v2/queryBlogStatistic",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式（yyyy-MM-dd）"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式（yyyy-MM-dd）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "日报状态：none未提交，normal正常、 delay补交"
+    },
+    {
+      "name": "date",
+      "required": "",
+      "type": "String",
+      "description": "日报时间"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "日报创建人"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "日报统计"
+  ],
+  "raw_text": "## 日报统计\n请求URL：\n- {OpenApiOrigin}/blog/v2/queryBlogStatistic\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID 获取用户ID |\n| startDate | 是 | Date | 开始时间，格式（yyyy-MM-dd） |\n| endDate | 是 | Date | 结束时间，格式（yyyy-MM-dd） |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | String | 用户ID |\n| status | String | 日报状态：none未提交，normal正常、 delay补交 |\n| date | String | 日报时间 |\n| userName | String | 日报创建人 |\nJava sdk调用示例："
+}

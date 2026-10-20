@@ -1,0 +1,138 @@
+{
+  "id": "908315966226513921",
+  "name": "查询文件夹的子节点",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/folder/tree/subNodes",
+  "url_template": "{OpenApiOrigin}/api/doc/folder/tree/subNodes",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "错误编码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误提示"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "返回数据"
+    },
+    {
+      "name": "nodes",
+      "required": "",
+      "type": "array",
+      "description": "文件夹节点集合"
+    },
+    {
+      "name": "nodes.id",
+      "required": "",
+      "type": "string",
+      "description": "文件夹id"
+    },
+    {
+      "name": "nodes.content",
+      "required": "",
+      "type": "string",
+      "description": "文件夹名称"
+    },
+    {
+      "name": "nodes.title",
+      "required": "",
+      "type": "string",
+      "description": "文件夹名称"
+    },
+    {
+      "name": "nodes.isLeaf",
+      "required": "",
+      "type": "string",
+      "description": "true:无下级文件夹，false：有下级文件夹"
+    },
+    {
+      "name": "nodes.encoded",
+      "required": "",
+      "type": "boolean",
+      "description": "文件夹名称是否编码"
+    },
+    {
+      "name": "nodes.type",
+      "required": "",
+      "type": "string",
+      "description": "文件夹类型"
+    },
+    {
+      "name": "nodes.virtual",
+      "required": "",
+      "type": "boolean",
+      "description": "是否虚拟目录"
+    },
+    {
+      "name": "nodes.empty",
+      "required": "",
+      "type": "boolean",
+      "description": "是否关注目录"
+    },
+    {
+      "name": "nodes.sequence",
+      "required": "",
+      "type": "string",
+      "description": "文件夹顺序"
+    },
+    {
+      "name": "nodes.virtualRootNode",
+      "required": "",
+      "type": "boolean",
+      "description": "是否虚拟根目录"
+    },
+    {
+      "name": "nodes.failed",
+      "required": "",
+      "type": "boolean",
+      "description": "是否查询失败"
+    },
+    {
+      "name": "nodes.leaf",
+      "required": "",
+      "type": "boolean",
+      "description": "true:无下级文件夹，false：有下级文件夹"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询文件夹的子节点"
+  ],
+  "raw_text": "## 查询文件夹的子节点\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/folder/tree/subNodes\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| folderId | 是 | string | 文件夹id |\n| module | 否 | string | 模块标识 |\n| moduleId | 否 | string | 模块id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 提示信息 |\n| errcode | string | 错误编码 |\n| errmsg | string | 错误提示 |\n| data | object | 返回数据 |\n| nodes | array | 文件夹节点集合 |\n| nodes.id | string | 文件夹id |\n| nodes.content | string | 文件夹名称 |\n| nodes.title | string | 文件夹名称 |\n| nodes.isLeaf | string | true:无下级文件夹，false：有下级文件夹 |\n| nodes.encoded | boolean | 文件夹名称是否编码 |\n| nodes.type | string | 文件夹类型 |\n| nodes.virtual | boolean | 是否虚拟目录 |\n| nodes.empty | boolean | 是否关注目录 |\n| nodes.sequence | string | 文件夹顺序 |\n| nodes.virtualRootNode | boolean | 是否虚拟根目录 |\n| nodes.failed | boolean | 是否查询失败 |\n| nodes.leaf | boolean | true:无下级文件夹，false：有下级文件夹 |\nJava sdk调用示例："
+}

@@ -1,0 +1,121 @@
+{
+  "id": "908340825442115584",
+  "name": "创建日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/createAgenda",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/createAgenda",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "日程标题（长度不能超过100字符 ）"
+    },
+    {
+      "name": "creator",
+      "required": "是",
+      "type": "Long",
+      "description": "日程创建人"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "Long",
+      "description": "日程负责人"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "String",
+      "description": "日程开始时间(yyyy-MM-dd HH:mm格式)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "String",
+      "description": "日程结束时间，必须大于开始时间(yyyy-MM-dd HH:mm格式)"
+    },
+    {
+      "name": "content",
+      "required": "否",
+      "type": "String",
+      "description": "日程详情"
+    },
+    {
+      "name": "calendarType",
+      "required": "否",
+      "type": "Long",
+      "description": "日程类型，不传则使用默认类型。若需要手动指定，则需要指定启用的类型"
+    },
+    {
+      "name": "priority",
+      "required": "否",
+      "type": "String",
+      "description": "日程紧急程度，不传递则使用默认紧急程度。若需要手动指定，则需要指定启用的紧急程度"
+    },
+    {
+      "name": "secret",
+      "required": "否",
+      "type": "String",
+      "description": "日程公开程度（normal：正常(上级可见)， self：仅自己可见， dept：本部门可见， all：公开）"
+    },
+    {
+      "name": "allDay",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否全天:false、true"
+    },
+    {
+      "name": "permissionEntry",
+      "required": "否",
+      "type": "JSON",
+      "description": "参与人3、共享人1。permissionEntry参数详情配置见下方"
+    },
+    {
+      "name": "receiptSwitch",
+      "required": "否",
+      "type": "String",
+      "description": "是否开启参与人回执：close（关闭）、open（开启）"
+    },
+    {
+      "name": "signType",
+      "required": "否",
+      "type": "String",
+      "description": "签到设置：none无、scan扫码签到、position定位签到；配置了此参数为scan或者position，需要配置signConfig参数，signConfig参数详情配置见下方"
+    },
+    {
+      "name": "signConfig",
+      "required": "否",
+      "type": "JSON",
+      "description": "{\"addrs\": [] ,\"clientLimit\": \"app、h5、pc\", \"signRange\": \"0\"}，signConfig参数详情配置见下方"
+    },
+    {
+      "name": "placeType",
+      "required": "否",
+      "type": "String",
+      "description": "地点：other、room。如果是other：需要传place参数值。如果是room：需要传 roomIds:[\"684137373611106305\"]，placeType参数详情配置见下方"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "创建日程"
+  ],
+  "raw_text": "## 创建日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/createAgenda\n请求方式：\n- POST\n- Content-Type：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| name | 是 | String | 日程标题（长度不能超过100字符 ） |\n| creator | 是 | Long | 日程创建人 |\n| manager | 是 | Long | 日程负责人 |\n| startDate | 是 | String | 日程开始时间(yyyy-MM-dd HH:mm格式) |\n| endDate | 是 | String | 日程结束时间，必须大于开始时间(yyyy-MM-dd HH:mm格式) |\n| content | 否 | String | 日程详情 |\n| calendarType | 否 | Long | 日程类型，不传则使用默认类型。若需要手动指定，则需要指定启用的类型 |\n| priority | 否 | String | 日程紧急程度，不传递则使用默认紧急程度。若需要手动指定，则需要指定启用的紧急程度 |\n| secret | 否 | String | 日程公开程度（normal：正常(上级可见)， self：仅自己可见， dept：本部门可见， all：公开） |\n| allDay | 否 | Boolean | 是否全天:false、true |\n| permissionEntry | 否 | JSON | 参与人3、共享人1。permissionEntry参数详情配置见下方 |\n| receiptSwitch | 否 | String | 是否开启参与人回执：close（关闭）、open（开启） |\n| signType | 否 | String | 签到设置：none无、scan扫码签到、position定位签到；配置了此参数为scan或者position，需要配置signConfig参数，signConfig参数详情配置见下方 |\n| signConfig | 否 | JSON | {\"addrs\": [] ,\"clientLimit\": \"app、h5、pc\", \"signRange\": \"0\"}，signConfig参数详情配置见下方 |\n| placeType | 否 | String | 地点：other、room。如果是other：需要传place参数值。如果是room：需要传 roomIds:[\"684137373611106305\"]，placeType参数详情配置见下方 |\n- 部分字段传参详细说明签到设置 signType传参说明 ：// 签到设置：none无、scan扫码签到、position定位签到，详情配置见下方// 如果是scan、position，传递 signConfig 参数为：\n{\n\"addrs\": [\n{\n\"longitude\": \"104.052689\",\n\"latitude\": \"30.741677\",\n\"address\": \"四川省成都市xxxxxx\"\n}\n],\n\"signRange\": \"0\",\n\"clientLimit\": \"app、h5、pc\",\n\"qrCodePermission\":\"creator&manager\"\n}共享人、参与人permissionEntry：[\n//共享人1\n{\n\"targetId\": \"123\", // 人员ID\n\"targetType\": 1, // 1：人员\n\"permissionType\": 1 //共享人\n},\n//共享人2\n{\n\"targetId\": \"456\", // 人员ID\n\"targetType\": 1, // 1：人员\n\"permissionType\": 1 //共享人\n},\n// 参与人1\n{\n\"targetId\": \"789\", // 人员ID\n\"targetType\": 1, // 1：人员\n\"permissionType\": 3 // 参与人\n},\n// 参与人2\n{\n\"targetId\": \"125\", // 人员ID\"targetType\": 1, // 1：人员\"permissionType\": 3 // 参与人}\n]placeType 地点设置{\n\"placeType\": \"other\",\n\"place\": \"具体会议地点内容\"\n}\n\n//或者传递room\n{\n\"placeType\": \"room\",\n\"roomIds\": [\n1,\n2,\n3,\n4\n]\n}返回示例：{\n\t\"data\": {\n\t\t\"id\": \"1748241352386793842\"\n\t},\n\t\"message\": {\n\t\t\"errcode\": \"0\",\n\t\t\"errmsg\": \"success\"\n\t}\n}返回参数说明：参数名类型说明errcodeString返回码errmsgString返回信息idString日程idJava sdk调用示例：CalendarRequestVo calendarRequestVo = new CalendarRequestVo();\ncalendarRequestVo.setAccessToken(accessToken);\ncalendarRequestVo.setName(\"SDK创建日程\");\ncalendarRequestVo.setCreator(2225304380394396551L);\ncalendarRequestVo.setManager(5140826883110054023L);\ncalendarRequestVo.setStartDate(\"2024-01-24 12:00\");\ncalendarRequestVo.setEndDate(\"2024-01-25 12:00\");\ncalendarRequestVo.setContent(\"SDK创建日程内容\");\ncalendarRequestVo.setCalendarType(null);\ncalendarRequestVo.setPriority(\"\");\ncalendarRequestVo.setSecret(\"\");\ncalendarRequestVo.setAllDay(true);\ncalendarRequestVo.setPermissionEntry(null);\ncalendarRequestVo.setReceiptSwitch(\"\");\ncalendarRequestVo.setSignType(\"\");\ncalendarRequestVo.setSignConfig(null);\ncalendarRequestVo.setPlaceType(null);\nCreateCalendarResultVo createCalendarResultVo = CalendarService.createAgenda(calendarRequestVo, \"https://api.yunteams.cn\", null);\nSystem.out.println(JSONObject.toJSONString(createCalendarResultVo));"
+}

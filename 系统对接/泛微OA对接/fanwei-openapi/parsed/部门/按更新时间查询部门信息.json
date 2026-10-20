@@ -1,0 +1,96 @@
+{
+  "id": "840674221332635649",
+  "name": "按更新时间查询部门信息",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/department/v2/findUpdateDepartment",
+  "url_template": "{OpenApiOrigin}/department/v2/findUpdateDepartment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "beginDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始时间，格式(yyyy-MM-dd HH:mm:ss)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束时间，格式(yyyy-MM-dd HH:mm:ss)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "部门名称"
+    },
+    {
+      "name": "rank",
+      "required": "",
+      "type": "Int",
+      "description": "层级"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "部门备注信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "部门ID"
+    },
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "部门编码"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父部门信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "按更新时间查询部门信息"
+  ],
+  "raw_text": "## 按更新时间查询部门信息\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用组织（含分部、部门）查询接口\n简要描述：\n- 根据时间区间，查询发生新增和修改的部门信息\n请求URL：\n- {OpenApiOrigin}/department/v2/findUpdateDepartment\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| beginDate | 是 | Date | 开始时间，格式(yyyy-MM-dd HH:mm:ss) |\n| endDate | 是 | Date | 结束时间，格式(yyyy-MM-dd HH:mm:ss) |\n请求示例：\nquery方式\n{OpenApiOrigin}/department/v2/findUpdateDepartment?access_token=72b0f706b2f5b659a3efaa6d546f47fd&beginDate=2021-09-18 00:00:00&endDate=2021-09-18 23:59:59\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| department | List | 部门信息 |\n| name | String | 部门名称 |\n| rank | Int | 层级 |\n| description | String | 部门备注信息 |\n| id | String | 部门ID |\n| code | String | 部门编码 |\n| parent | Object | 父部门信息 |\n生效字段\n| 能够触发增量接口的字段 |\n| --- |\n| 部门名称 |\n| 部门编号 |\n| 显示顺序 |\n| 备注 |\nJava sdk调用示例："
+}

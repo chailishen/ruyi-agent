@@ -1,0 +1,21 @@
+{
+  "id": "405109546562879488",
+  "name": "新增自定义接口权限",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "自定义接口权限同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/custom/permission/v1/batchCreateCustomPermission",
+  "url_template": "{OpenApiOrigin}/api/auth/custom/permission/v1/batchCreateCustomPermission",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/auth/custom/permission/v1/batchCreateCustomPermission\n请求方式：\n- POST\n参数说明：\n- AuthCustomPermissionReq（接口权限相关接口参数）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| data | List<CustomPermissionDTO> | 具体接口权限数据 |\n| langId | Integer | 语言ID-默认为7中文 |\n| idempotent | boolean | 是否幂等 |\n- CustomPermissionDTO（接口权限详细信息）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| menuCode | String | 菜单编码 |\n| permissionSetCode | String | 权限项编码 |\n| apiPath | String | 接口路径 |\n| permissionName | String | 接口名称 |\n| displayOrder | Integer | 显示顺序 |\n请求示例：\n返回示例：\n返回参数说明：\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| id | Long | 权限项ID |\n| menuCode | String | 菜单编码 |\n| permissionSetCode | String | 权限项编码 |\n| apiPath | String | 接口路径 |\n| msg | String | 错误信息 |"
+}

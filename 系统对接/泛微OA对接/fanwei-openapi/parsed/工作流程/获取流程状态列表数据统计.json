@@ -1,0 +1,41 @@
+{
+  "id": "418962518715662336",
+  "name": "获取流程状态列表数据统计",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestStatusDataCount",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatusDataCount",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求id"
+    }
+  ],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "最低支持基线：10.0.26.01.01\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestStatusDataCount\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n请求参数说明\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userId | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求id |\n请求参数示例\n返回示例\nallCount：总人数\nallSubmittedCount：已操作人数\nallNoSubmittedCount：未操作人数\nallViewedCount：已查看人数\nallNoViewedCount：未查看人数"
+}

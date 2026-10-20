@@ -1,0 +1,81 @@
+{
+  "id": "280943135339577344",
+  "name": "获取可退回节点",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRejectNodes",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRejectNodes",
+  "method": "GET",
+  "content_type": "application/json",
+  "notes": [
+    "package com.weaver.core.demo.select;\n\nimport cn.hutool.http.HttpRequest;\nimport cn.hutool.json.JSONUtil;\nimport com.alibaba.fastjson.JSONObject;\nimport com.weaver.core.constant.TestConstant;\nimport com.weaver.core.demo.DemoBase;\n\n/**\n * 获取可退回节点数据\n *\n * @author:chenwh\n * @date:2024/9/02 11:26\n */\npublic class GetRejectNodesDemo extends DemoBase {\n\n    public static void main(String[] args) {\n        String response = new GetRejectNodesDemo().getRejectNodes(TOKEN, 1039623497362194434L);\n        System.out.println(response);\n    }\n\n    /**\n     * 获取可退回节点数据\n     *\n     * @param token\n     * @param requestId\n     * @return\n     */\n    public String getRejectNodes(String token, long requestId) {\n\n        String url = HOST + \"/api/workflow/core/paService/v1/getRejectNodes?access_token=\" + token;\n        JSONObject param = new JSONObject();\n        param.put(\"userid\", TestConstant.USER_CHENWH);\n        param.put(\"requestId\", requestId);\n        param.put(\"userCurrentNodeId\", 801766920009482250L);\n\n        // 发送请求\n        return HttpRequest.get(url)\n                .header(\"Content-Type\", \"application/json\")\n                .body(JSONUtil.toJsonStr(param))\n                .execute()\n                .body();\n    }\n}"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Long",
+      "description": "流程ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "否",
+      "type": "Long",
+      "description": "节点ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSON",
+      "description": "响应数据"
+    },
+    {
+      "name": "rejectType",
+      "required": "",
+      "type": "String",
+      "description": "退回方式"
+    },
+    {
+      "name": "rejectNodes",
+      "required": "",
+      "type": "json",
+      "description": "可退回节点信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取可退回节点"
+  ],
+  "raw_text": "## 获取可退回节点\n说明：\n必须要有流程查看权限的人才能获取可退回节点数据。当这个人是多个节点操作者时可以传递节点ID指定获取某个节点的可退回目标节点；\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRejectNodes\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Long | 流程ID |\n| userCurrentNodeId | 否 | Long | 节点ID |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSON | 响应数据 |\n| rejectType | String | 退回方式 |\n| rejectNodes | json | 可退回节点信息 |\nJava调用示例:"
+}

@@ -1,0 +1,96 @@
+{
+  "id": "840714679900274689",
+  "name": "干预流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/doIntervenor",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/doIntervenor",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "Intervenorid",
+      "required": "是",
+      "type": "Int",
+      "description": "干预节点接收人，多个人以”,”号隔开"
+    },
+    {
+      "name": "submitNodeId",
+      "required": "是",
+      "type": "Int",
+      "description": "目标节点ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "签字意见"
+    },
+    {
+      "name": "SignType",
+      "required": "否",
+      "type": "Int",
+      "description": "会签类型 0 ：非会签 1：会签 2：依次逐个处理，不传代表会签"
+    },
+    {
+      "name": "enableIntervenor",
+      "required": "否",
+      "type": "String",
+      "description": "干预是否执行节点前附加操作 true：执行 false：不执行，默认执行"
+    },
+    {
+      "name": "interveneFinishBranch",
+      "required": "否",
+      "type": "int",
+      "description": "干预结束分支 0：否(默认)、1：是该参数只对分叉中间点有效该参数传入1时，干预接受人Intervenorid和会签关系SignType都不需要传递"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "审批ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "干预流程"
+  ],
+  "raw_text": "## 干预流程\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/doIntervenor\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n| Intervenorid | 是 | Int | 干预节点接收人，多个人以”,”号隔开 |\n| submitNodeId | 是 | Int | 目标节点ID |\n| remark | 否 | String | 签字意见 |\n| SignType | 否 | Int | 会签类型 0 ：非会签 1：会签 2：依次逐个处理，不传代表会签 |\n| enableIntervenor | 否 | String | 干预是否执行节点前附加操作 true：执行 false：不执行，默认执行 |\n| interveneFinishBranch | 否 | int | 干预结束分支 0：否(默认)、1：是该参数只对分叉中间点有效该参数传入1时，干预接受人Intervenorid和会签关系SignType都不需要传递 |\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestId | String | 审批ID |\nJava sdk调用示例："
+}

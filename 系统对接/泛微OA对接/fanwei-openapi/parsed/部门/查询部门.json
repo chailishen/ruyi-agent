@@ -1,0 +1,78 @@
+{
+  "id": "840674143989669888",
+  "name": "查询部门",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/department/v2/get",
+  "url_template": "{OpenApiOrigin}/department/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "depid",
+      "required": "是",
+      "type": "String",
+      "description": "部门ID 获取部门ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "department",
+      "required": "",
+      "type": "List",
+      "description": "部门信息"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "部门名称"
+    },
+    {
+      "name": "rank",
+      "required": "",
+      "type": "Int",
+      "description": "层级"
+    },
+    {
+      "name": "parent",
+      "required": "",
+      "type": "Object",
+      "description": "父部门信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "String",
+      "description": "部门ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询部门"
+  ],
+  "raw_text": "## 查询部门\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用组织（含分部、部门）查询接口\n请求URL：\n- {OpenApiOrigin}/department/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| depid | 是 | String | 部门ID 获取部门ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/department/v2/get?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&depid=6483193403677253615\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| department | List | 部门信息 |\n| name | String | 部门名称 |\n| rank | Int | 层级 |\n| parent | Object | 父部门信息 |\n| id | String | 部门ID |\nJava sdk调用示例："
+}

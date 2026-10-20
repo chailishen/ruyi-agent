@@ -1,0 +1,135 @@
+{
+  "id": "301546523106213888",
+  "name": "档案接收接口数据推送",
+  "module": "档案管理",
+  "module_path": [
+    "档案管理"
+  ],
+  "is_api": true,
+  "url": "/api/archive/core/openapi/dataToArchive",
+  "url_template": "{OpenApiOrigin}/api/archive/core/openapi/dataToArchive",
+  "method": "POST",
+  "content_type": "application/x-www-form-urlencoded",
+  "notes": [
+    "备注:",
+    "Body 参数格式(application/x-www-form-urlencoded)"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "employeeId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人"
+    },
+    {
+      "name": "xml",
+      "required": "是",
+      "type": "String",
+      "description": "xml归档报文"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "Integer",
+      "description": "200 成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "描述"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "boolean",
+      "description": "接口处理状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "业务处理详情"
+    },
+    {
+      "name": "xmlName",
+      "required": "",
+      "type": "String",
+      "description": "ftp方式时执行的xml文件名称"
+    },
+    {
+      "name": "taskId",
+      "required": "",
+      "type": "String",
+      "description": "任务号"
+    },
+    {
+      "name": "dealResult",
+      "required": "",
+      "type": "Array(Object)",
+      "description": "处理明细"
+    },
+    {
+      "name": "data_id",
+      "required": "",
+      "type": "String",
+      "description": "档案条目id"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "处理情况"
+    },
+    {
+      "name": "detailFormId",
+      "required": "",
+      "type": "String",
+      "description": "档案表id"
+    },
+    {
+      "name": "metadata_id",
+      "required": "",
+      "type": "String",
+      "description": "元数据id"
+    },
+    {
+      "name": "is_pre_arc",
+      "required": "",
+      "type": "Integer",
+      "description": "是否预归档（0:预归档；1:收集库）"
+    },
+    {
+      "name": "state",
+      "required": "",
+      "type": "Integer",
+      "description": "状态（0:成功；1:失败）"
+    },
+    {
+      "name": "dealType",
+      "required": "",
+      "type": "String",
+      "description": "明细类型（meta-元数据；file-文件；folder-案卷；prj-项目）"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "处理情况"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "档案接收接口数据推送"
+  ],
+  "raw_text": "## 档案接收接口数据推送\n请求URL：\n- {OpenApiOrigin}/api/archive/core/openapi/dataToArchive\n请求方式：\n- POST\n备注:\n- Body 参数格式(application/x-www-form-urlencoded)\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| employeeId | 是 | Long | 操作人 |\n| xml | 是 | String | xml归档报文 |\n参数示例：\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | Integer | 200 成功 |\n| msg | String | 描述 |\n| status | boolean | 接口处理状态 |\n| data | Object | 业务处理详情 |\n| xmlName | String | ftp方式时执行的xml文件名称 |\n| taskId | String | 任务号 |\n| dealResult | Array(Object) | 处理明细 |\n| data_id | String | 档案条目id |\n| msg | String | 处理情况 |\n| detailFormId | String | 档案表id |\n| metadata_id | String | 元数据id |\n| is_pre_arc | Integer | 是否预归档（0:预归档；1:收集库） |\n| state | Integer | 状态（0:成功；1:失败） |\n| dealType | String | 明细类型（meta-元数据；file-文件；folder-案卷；prj-项目） |\n| msg | String | 处理情况 |\nXML格式参考说明："
+}

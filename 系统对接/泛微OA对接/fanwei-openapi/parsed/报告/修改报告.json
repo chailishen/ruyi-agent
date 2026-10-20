@@ -1,0 +1,66 @@
+{
+  "id": "840719992706834432",
+  "name": "修改报告",
+  "module": "报告",
+  "module_path": [
+    "报告"
+  ],
+  "is_api": true,
+  "url": "/workreport/v2/updateWorkreport",
+  "url_template": "{OpenApiOrigin}/workreport/v2/updateWorkreport",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "workreportId",
+      "required": "是",
+      "type": "Long",
+      "description": "报告ID 获取报告ID"
+    },
+    {
+      "name": "paramName",
+      "required": "是",
+      "type": "String",
+      "description": "要修改的参数名（工作成效content、总结心得summary、计划内容plan）"
+    },
+    {
+      "name": "paramVal",
+      "required": "是",
+      "type": "String",
+      "description": "要修改的参数值"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改报告"
+  ],
+  "raw_text": "## 修改报告\n请求URL：\n- {OpenApiOrigin}/workreport/v2/updateWorkreport\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| workreportId | 是 | Long | 报告ID 获取报告ID |\n| paramName | 是 | String | 要修改的参数名（工作成效content、总结心得summary、计划内容plan） |\n| paramVal | 是 | String | 要修改的参数值 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

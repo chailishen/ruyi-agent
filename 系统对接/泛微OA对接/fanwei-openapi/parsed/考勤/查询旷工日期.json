@@ -1,0 +1,84 @@
+{
+  "id": "840691766291693569",
+  "name": "查询旷工日期",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/getAbsenteeism",
+  "url_template": "{OpenApiOrigin}/attend/v2/getAbsenteeism",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIds",
+      "required": "是",
+      "type": "List",
+      "description": "用户ID集合 获取用户ID"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "Date",
+      "description": "开始日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "Date",
+      "description": "结束日期 (格式：YYYY-MM-DD)"
+    },
+    {
+      "name": "onlyNormal",
+      "required": "否",
+      "type": "Boolean",
+      "description": "是否过滤申诉成功、审批通过的数据（默认false）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户名"
+    },
+    {
+      "name": "dates",
+      "required": "",
+      "type": "List",
+      "description": "旷工日期"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询旷工日期"
+  ],
+  "raw_text": "## 查询旷工日期\n请求URL：\n- {OpenApiOrigin}/attend/v2/getAbsenteeism\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIds | 是 | List | 用户ID集合 获取用户ID |\n| startDate | 是 | Date | 开始日期 (格式：YYYY-MM-DD) |\n| endDate | 是 | Date | 结束日期 (格式：YYYY-MM-DD) |\n| onlyNormal | 否 | Boolean | 是否过滤申诉成功、审批通过的数据（默认false） |\n请求示例：\nquery方式\n{OpenApiOrigin}/attend/v2/getAbsenteeism?access_token=241d5059c6ed9e8f439b0f7baa1abcdc&userIds=717929201362116609&startDate=2023-01-01&endDate=2023-02-30&onlyNormal=false\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| userId | Long | 用户ID |\n| userName | String | 用户名 |\n| dates | List | 旷工日期 |\nJava sdk调用示例："
+}

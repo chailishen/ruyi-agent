@@ -1,0 +1,66 @@
+{
+  "id": "840719211090771969",
+  "name": "查询产品",
+  "module": "产品",
+  "module_path": [
+    "产品"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/get",
+  "url_template": "{OpenApiOrigin}/crm/v2/get",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定取值：production"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "产品ID 获取产品ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "产品信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询产品"
+  ],
+  "raw_text": "## 查询产品\n请求URL：\n- {OpenApiOrigin}/crm/v2/get\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定取值：production |\n| id | 是 | Long | 产品ID 获取产品ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/get?access_token=db7e733fc168c595e8c847a513a2865d&userid=835851587175096321&module=production&id=1555043600490957835\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 产品信息 |\nJava sdk调用示例："
+}

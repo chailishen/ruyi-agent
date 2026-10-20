@@ -1,0 +1,21 @@
+{
+  "id": "405105327206301696",
+  "name": "更新自定义菜单",
+  "module": "系统权限",
+  "module_path": [
+    "系统权限",
+    "自定义菜单同步"
+  ],
+  "is_api": true,
+  "url": "/api/auth/custom/permission/v1/batchUpdateCustomMenu",
+  "url_template": "{OpenApiOrigin}/api/auth/custom/permission/v1/batchUpdateCustomMenu",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [],
+  "response_parameters": [],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/auth/custom/permission/v1/batchUpdateCustomMenu\n请求方式：\n- POST\n参数：\n- AuthCustomMenuReq（菜单相关接口参数）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| data | List<CustomMenuDTO> | 具体菜单数据 |\n| langId | Integer | 语言ID-默认为7中文 |\n| idempotent | boolean | 是否幂等 |\n- CustomMenuDTO（菜单详细信息）\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| menuName | String | 菜单名称 |\n| menuCode | String | 菜单编码 |\n| parentCode | String | 上级编码 |\n| menuType | MenuType | 菜单类型 |\n| applicationType | ApplicationType | 应用类型 |\n| applicationKey | String | 应用外键 |\n| displayOrder | Integer | 显示顺序 |\n- MenuType（菜单类型）\n| 枚举名称 | 描述 |\n| --- | --- |\n| MENU | 菜单 |\n| PAGE | 页面 |\n- ApplicationType\n| 枚举名称 | 描述 |\n| --- | --- |\n| ALL | 全部 |\n请求示例：\n返回示例:\n返回参数说明：\n| 字段名称 | 类型 | 描述 |\n| --- | --- | --- |\n| id | Long | 菜单ID |\n| menuCode | String | 菜单编码与接口参数对应 |\n| msg | String | 错误信息 |"
+}

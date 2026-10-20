@@ -1,0 +1,102 @@
+{
+  "id": "231135372178882560",
+  "name": "发送内部邮件",
+  "module": "邮件",
+  "module_path": [
+    "邮件"
+  ],
+  "is_api": true,
+  "url": "/api/mail/send/v1/sendInternalMail",
+  "url_template": "{OpenApiOrigin}/api/mail/send/v1/sendInternalMail",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "fromid",
+      "required": "是",
+      "type": "String",
+      "description": "发送人工号"
+    },
+    {
+      "name": "toids",
+      "required": "是",
+      "type": "String",
+      "description": "收件人工号列表串"
+    },
+    {
+      "name": "ccids",
+      "required": "否",
+      "type": "String",
+      "description": "抄送人工号列表串"
+    },
+    {
+      "name": "bccids",
+      "required": "否",
+      "type": "String",
+      "description": "密送人工号列表串"
+    },
+    {
+      "name": "subject",
+      "required": "是",
+      "type": "String",
+      "description": "邮件主题（纯文本）"
+    },
+    {
+      "name": "content",
+      "required": "是",
+      "type": "String",
+      "description": "邮件内容（纯文本）"
+    },
+    {
+      "name": "paths",
+      "required": "否",
+      "type": "String",
+      "description": "附件存放路径地址列表串"
+    },
+    {
+      "name": "fileIds",
+      "required": "否",
+      "type": "String",
+      "description": "附件ID，多个附件英文逗号分隔"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "接口状态"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "int",
+      "description": "发件结果0：失败，1：成功"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "发送内部邮件"
+  ],
+  "raw_text": "## 发送内部邮件\n请求URL：\n- {OpenApiOrigin}/api/mail/send/v1/sendInternalMail\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| fromid | 是 | String | 发送人工号 |\n| toids | 是 | String | 收件人工号列表串 |\n| ccids | 否 | String | 抄送人工号列表串 |\n| bccids | 否 | String | 密送人工号列表串 |\n| subject | 是 | String | 邮件主题（纯文本） |\n| content | 是 | String | 邮件内容（纯文本） |\n| paths | 否 | String | 附件存放路径地址列表串 |\n| fileIds | 否 | String | 附件ID，多个附件英文逗号分隔 |\n请求示例：\nquery方式\n{OpenApiOrigin}/api/mail/send/v1/sendInternalMail?access_token=354172290dc12f9fb82e430b4d51df7f&fromid=ZS&toid=LISI,WW&subject=主题&content=邮件内容\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| status | String | 接口状态 |\n| data | int | 发件结果0：失败，1：成功 |"
+}

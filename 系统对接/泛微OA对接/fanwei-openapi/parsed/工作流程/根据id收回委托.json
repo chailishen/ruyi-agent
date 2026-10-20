@@ -1,0 +1,66 @@
+{
+  "id": "408044690571526144",
+  "name": "根据id收回委托",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/recoverAgentWithId?access_token=",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/recoverAgentWithId?access_token=",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "agentIds",
+      "required": "",
+      "type": "String",
+      "description": "委托设置id；多个id以,分割"
+    },
+    {
+      "name": "recoverPendingWf",
+      "required": "",
+      "type": "int",
+      "description": "是否收回流转中的代理；0：否、1：是（默认）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "提示信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "根据id收回委托"
+  ],
+  "raw_text": "## 根据id收回委托\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/recoverAgentWithId?access_token=\n请求方式：\n- POST，备注：access_token放在params中\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| agentIds | 是 | String | 委托设置id；多个id以,分割 |\n| recoverPendingWf | 否 | int | 是否收回流转中的代理；0：否、1：是（默认） |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 提示信息 |\n| requestId | long | 流程ID |"
+}

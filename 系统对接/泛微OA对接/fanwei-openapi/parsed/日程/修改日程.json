@@ -1,0 +1,152 @@
+{
+  "id": "908341955040067584",
+  "name": "修改日程",
+  "module": "日程",
+  "module_path": [
+    "日程"
+  ],
+  "is_api": true,
+  "url": "/api/calendar/openapi/v1/updateById",
+  "url_template": "{OpenApiOrigin}/api/calendar/openapi/v1/updateById",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POSTContent-Type：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "要修改的日程id"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "操作人的id 获取用户ID"
+    },
+    {
+      "name": "propertyName",
+      "required": "是",
+      "type": "String",
+      "description": "需要修改的参数名"
+    },
+    {
+      "name": "propertyValue",
+      "required": "是",
+      "type": "Object",
+      "description": "要修改为的参数值"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "日程名称"
+    },
+    {
+      "name": "startDate",
+      "required": "是",
+      "type": "String",
+      "description": "日程开始时间"
+    },
+    {
+      "name": "endDate",
+      "required": "是",
+      "type": "String",
+      "description": "日程结束时间"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "String",
+      "description": "日程负责人"
+    },
+    {
+      "name": "secret",
+      "required": "是",
+      "type": "String",
+      "description": "日程公开程度（normal：上级可见， self：仅自己可见， dept：本部门可见， all：公开）"
+    },
+    {
+      "name": "priority",
+      "required": "是",
+      "type": "String",
+      "description": "日程紧急程度"
+    },
+    {
+      "name": "receiptSwitch",
+      "required": "是",
+      "type": "String",
+      "description": "日程回执开关，（开启：open，关闭：close）"
+    },
+    {
+      "name": "place",
+      "required": "是",
+      "type": "String",
+      "description": "日程地点"
+    },
+    {
+      "name": "repeatSetting",
+      "required": "是",
+      "type": "String",
+      "description": "重复日程设置"
+    },
+    {
+      "name": "entityRemind",
+      "required": "是",
+      "type": "String",
+      "description": "日程提醒设置"
+    },
+    {
+      "name": "calendarStatus",
+      "required": "是",
+      "type": "String",
+      "description": "日程状态"
+    },
+    {
+      "name": "signType",
+      "required": "是",
+      "type": "String",
+      "description": "日程签到设置。none：不签到；scan：扫码签到；position：定位签到"
+    },
+    {
+      "name": "allDay",
+      "required": "是",
+      "type": "String",
+      "description": "全天设置,（开启：true，关闭：false）"
+    },
+    {
+      "name": "calendarType",
+      "required": "是",
+      "type": "String",
+      "description": "日程类型"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改日程"
+  ],
+  "raw_text": "## 修改日程\n请求URL：\n- {OpenApiOrigin}/api/calendar/openapi/v1/updateById\n请求方式：\n- POST\n- Content-Type：application/json\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| id | 是 | Long | 要修改的日程id |\n| userId | 是 | Long | 操作人的id 获取用户ID |\n| propertyName | 是 | String | 需要修改的参数名 |\n| propertyValue | 是 | Object | 要修改为的参数值 |\npropertyName支持的参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| name | 是 | String | 日程名称 |\n| startDate | 是 | String | 日程开始时间 |\n| endDate | 是 | String | 日程结束时间 |\n| manager | 是 | String | 日程负责人 |\n| secret | 是 | String | 日程公开程度（normal：上级可见， self：仅自己可见， dept：本部门可见， all：公开） |\n| priority | 是 | String | 日程紧急程度 |\n| receiptSwitch | 是 | String | 日程回执开关，（开启：open，关闭：close） |\n| place | 是 | String | 日程地点 |\n| repeatSetting | 是 | String | 重复日程设置 |\n| entityRemind | 是 | String | 日程提醒设置 |\n| calendarStatus | 是 | String | 日程状态 |\n| signType | 是 | String | 日程签到设置。none：不签到；scan：扫码签到；position：定位签到 |\n| allDay | 是 | String | 全天设置,（开启：true，关闭：false） |\n| calendarType | 是 | String | 日程类型 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

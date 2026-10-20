@@ -1,0 +1,81 @@
+{
+  "id": "874490517275877377",
+  "name": "获取下节点信息",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getNextNodeInfo",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getNextNodeInfo",
+  "method": null,
+  "content_type": "application/json",
+  "notes": [
+    "POST （Content_Type: application/json），备注：access_token放在params中"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "long",
+      "description": "流程ID"
+    },
+    {
+      "name": "userCurrentNodeId",
+      "required": "否",
+      "type": "long",
+      "description": "节点ID"
+    },
+    {
+      "name": "isFlowToFreePath",
+      "required": "否",
+      "type": "int",
+      "description": "当节点下一节点有固定节点和自由节点时，传1获取加签节点；传0获取固定节点；默认值：1"
+    },
+    {
+      "name": "isIncludeOperate",
+      "required": "否",
+      "type": "int",
+      "description": "是否返回操作者数据，0：返回；1：不返回（默认值）"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Map",
+      "description": "流程数据"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取下一节点信息"
+  ],
+  "raw_text": "## 获取下一节点信息\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getNextNodeInfo\n请求方式：\n- POST （Content_Type: application/json），备注：access_token放在params中\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userId | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | long | 流程ID |\n| userCurrentNodeId | 否 | long | 节点ID |\n| isFlowToFreePath | 否 | int | 当节点下一节点有固定节点和自由节点时，传1获取加签节点；传0获取固定节点；默认值：1 |\n| isIncludeOperate | 否 | int | 是否返回操作者数据，0：返回；1：不返回（默认值） |\n参数示例：\n返回结果示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Map | 流程数据 |"
+}

@@ -1,0 +1,258 @@
+{
+  "id": "874508221353041921",
+  "name": "查询待办接口",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": true,
+  "url": "/api/my/workWait/queryWorkWaitList",
+  "url_template": "{OpenApiOrigin}/api/my/workWait/queryWorkWaitList",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "creator",
+      "required": "是",
+      "type": "long",
+      "description": "待办人"
+    },
+    {
+      "name": "modules",
+      "required": "否",
+      "type": "string[]",
+      "description": "模块"
+    },
+    {
+      "name": "statue",
+      "required": "否",
+      "type": "int",
+      "description": "1 未读 2 进行中 3 已延期"
+    },
+    {
+      "name": "joinType",
+      "required": "否",
+      "type": "int",
+      "description": "0 我参与的 1我发起的"
+    },
+    {
+      "name": "orderType",
+      "required": "是",
+      "type": "int",
+      "description": "排序方式:0 按接受时间降序，1 按发起时间降序，2按接受时间升序，3按发起时间升序"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "string",
+      "description": "事项名称"
+    },
+    {
+      "name": "pageSize",
+      "required": "是",
+      "type": "int",
+      "description": "每一页展示条数"
+    },
+    {
+      "name": "pageNo",
+      "required": "是",
+      "type": "int",
+      "description": "页码"
+    },
+    {
+      "name": "dealStatue",
+      "required": "是",
+      "type": "int",
+      "description": "是否稍后处理（0正常，1稍后处理）"
+    },
+    {
+      "name": "templateId",
+      "required": "否",
+      "type": "string",
+      "description": "流程模板ID"
+    },
+    {
+      "name": "s_time",
+      "required": "否",
+      "type": "string",
+      "description": "待办生成时间起(时间戳)"
+    },
+    {
+      "name": "e_time",
+      "required": "否",
+      "type": "string",
+      "description": "待办生成时间止(时间戳)"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "long",
+      "description": "待办ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "string",
+      "description": "事项名称"
+    },
+    {
+      "name": "module",
+      "required": "",
+      "type": "string",
+      "description": "事项模块"
+    },
+    {
+      "name": "waitTimeTamp",
+      "required": "",
+      "type": "string",
+      "description": "待办时间戳(毫秒)"
+    },
+    {
+      "name": "expireTimeTamp",
+      "required": "",
+      "type": "string",
+      "description": "过期时间时间戳（毫秒）"
+    },
+    {
+      "name": "readStatue",
+      "required": "",
+      "type": "int",
+      "description": "已读未读状态"
+    },
+    {
+      "name": "entityId",
+      "required": "",
+      "type": "string",
+      "description": "待办人ID"
+    },
+    {
+      "name": "entityCreatName",
+      "required": "",
+      "type": "string",
+      "description": "事项创建人姓名"
+    },
+    {
+      "name": "statue",
+      "required": "",
+      "type": "int",
+      "description": "状态，0正常，1稍后处理"
+    },
+    {
+      "name": "entityCreator",
+      "required": "",
+      "type": "int",
+      "description": "事项创建人"
+    },
+    {
+      "name": "unDealDay",
+      "required": "",
+      "type": "int",
+      "description": "未处理时间天数"
+    },
+    {
+      "name": "colorStatue",
+      "required": "",
+      "type": "int",
+      "description": "显示颜色1黄色2红色其他不显示"
+    },
+    {
+      "name": "totalPage",
+      "required": "",
+      "type": "int",
+      "description": "总页数"
+    },
+    {
+      "name": "pageNo",
+      "required": "",
+      "type": "int",
+      "description": "页码"
+    },
+    {
+      "name": "pageSize",
+      "required": "",
+      "type": "int",
+      "description": "每一页数量"
+    },
+    {
+      "name": "unReadCount",
+      "required": "",
+      "type": "int",
+      "description": "未读数量"
+    },
+    {
+      "name": "doingCount",
+      "required": "",
+      "type": "int",
+      "description": "正在处理数量"
+    },
+    {
+      "name": "delayCount",
+      "required": "",
+      "type": "int",
+      "description": "延期处理数量"
+    },
+    {
+      "name": "initiationCount",
+      "required": "",
+      "type": "int",
+      "description": "我发起的事项列表"
+    },
+    {
+      "name": "allCount",
+      "required": "",
+      "type": "int",
+      "description": "全部待办"
+    },
+    {
+      "name": "requestCode",
+      "required": "",
+      "type": "string",
+      "description": "统一待办模块标识"
+    },
+    {
+      "name": "exts",
+      "required": "",
+      "type": "string",
+      "description": "扩展字段（用于打开统一待办组件）"
+    },
+    {
+      "name": "pcUrl",
+      "required": "",
+      "type": "string",
+      "description": "pc端打开事项详情url"
+    },
+    {
+      "name": "h5Url",
+      "required": "",
+      "type": "string",
+      "description": "h5打开事项详情url"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "查询待办接口"
+  ],
+  "raw_text": "## 查询待办接口\n请求URL：\n- {OpenApiOrigin}/api/my/workWait/queryWorkWaitList\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| creator | 是 | long | 待办人 |\n| modules | 否 | string[] | 模块 |\n| statue | 否 | int | 1 未读 2 进行中 3 已延期 |\n| joinType | 否 | int | 0 我参与的 1我发起的 |\n| orderType | 是 | int | 排序方式:0 按接受时间降序，1 按发起时间降序，2按接受时间升序，3按发起时间升序 |\n| name | 否 | string | 事项名称 |\n| pageSize | 是 | int | 每一页展示条数 |\n| pageNo | 是 | int | 页码 |\n| dealStatue | 是 | int | 是否稍后处理（0正常，1稍后处理） |\n| templateId | 否 | string | 流程模板ID |\n| s_time | 否 | string | 待办生成时间起(时间戳) |\n| e_time | 否 | string | 待办生成时间止(时间戳) |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| id | long | 待办ID |\n| name | string | 事项名称 |\n| module | string | 事项模块 |\n| waitTimeTamp | string | 待办时间戳(毫秒) |\n| expireTimeTamp | string | 过期时间时间戳（毫秒） |\n| readStatue | int | 已读未读状态 |\n| entityId | string | 待办人ID |\n| entityCreatName | string | 事项创建人姓名 |\n| statue | int | 状态，0正常，1稍后处理 |\n| entityCreator | int | 事项创建人 |\n| unDealDay | int | 未处理时间天数 |\n| colorStatue | int | 显示颜色1黄色2红色其他不显示 |\n| totalPage | int | 总页数 |\n| pageNo | int | 页码 |\n| pageSize | int | 每一页数量 |\n| unReadCount | int | 未读数量 |\n| doingCount | int | 正在处理数量 |\n| delayCount | int | 延期处理数量 |\n| initiationCount | int | 我发起的事项列表 |\n| allCount | int | 全部待办 |\n| requestCode | string | 统一待办模块标识 |\n| exts | string | 扩展字段（用于打开统一待办组件） |\n| pcUrl | string | pc端打开事项详情url |\n| h5Url | string | h5打开事项详情url |\nJava sdk调用示例："
+}

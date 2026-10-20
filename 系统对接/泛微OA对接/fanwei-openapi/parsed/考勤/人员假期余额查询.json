@@ -1,0 +1,87 @@
+{
+  "id": "921615319410696193",
+  "name": "人员假期余额查询",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/open/getVacationBalance",
+  "url_template": "{OpenApiOrigin}/api/attend/web/open/getVacationBalance",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注：",
+    "Content-Type类型：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "String",
+      "description": "用户id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "提示信息"
+    },
+    {
+      "name": "vacationId",
+      "required": "",
+      "type": "String",
+      "description": "假期类型id"
+    },
+    {
+      "name": "vacationName",
+      "required": "",
+      "type": "String",
+      "description": "假期类型名称"
+    },
+    {
+      "name": "vacationData",
+      "required": "",
+      "type": "String",
+      "description": "假期余额信息"
+    },
+    {
+      "name": "key",
+      "required": "",
+      "type": "String",
+      "description": "用来区分 历年可请/今年可请/总计可请"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "历年可请/今年可请/总计可请 的显示文案"
+    },
+    {
+      "name": "value",
+      "required": "",
+      "type": "String",
+      "description": "余额数值"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "人员假期余额查询"
+  ],
+  "raw_text": "## 人员假期余额查询\n请求URL：\n- {OpenApiOrigin}/api/attend/web/open/getVacationBalance\n请求方式：\n- POST\n备注：\n- Content-Type类型：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | String | 用户id |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 状态码 |\n| errmsg | String | 提示信息 |\n| vacationId | String | 假期类型id |\n| vacationName | String | 假期类型名称 |\n| vacationData | String | 假期余额信息 |\n| key | String | 用来区分 历年可请/今年可请/总计可请 |\n| name | String | 历年可请/今年可请/总计可请 的显示文案 |\n| value | String | 余额数值 |\nJava sdk调用示例："
+}

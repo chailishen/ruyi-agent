@@ -1,0 +1,132 @@
+{
+  "id": "946538830039908353",
+  "name": "修改商机",
+  "module": "商机",
+  "module_path": [
+    "商机"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/update",
+  "url_template": "{OpenApiOrigin}/crm/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：saleChance"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "商机信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "商机ID 获取客户ID"
+    },
+    {
+      "name": "name",
+      "required": "否",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "manager",
+      "required": "否",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "saleBelongCustomer",
+      "required": "否",
+      "type": "String",
+      "description": "客户"
+    },
+    {
+      "name": "saleStage",
+      "required": "否",
+      "type": "String",
+      "description": "阶段"
+    },
+    {
+      "name": "saleMoney",
+      "required": "否",
+      "type": "String",
+      "description": "销售金额"
+    },
+    {
+      "name": "saleWinRate",
+      "required": "否",
+      "type": "String",
+      "description": "赢率"
+    },
+    {
+      "name": "saleSource",
+      "required": "否",
+      "type": "String",
+      "description": "来源"
+    },
+    {
+      "name": "saleType",
+      "required": "否",
+      "type": "String",
+      "description": "类型"
+    },
+    {
+      "name": "saleOrderDate",
+      "required": "否",
+      "type": "String",
+      "description": "结单时间"
+    },
+    {
+      "name": "saleDescription",
+      "required": "否",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "商机信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改商机"
+  ],
+  "raw_text": "## 修改商机\n请求URL：\n- {OpenApiOrigin}/crm/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：saleChance |\n| entity | 是 | Object | 商机信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 商机ID 获取客户ID |\n| name | 否 | String | 名称 |\n| manager | 否 | String | 负责人 |\n| saleBelongCustomer | 否 | String | 客户 |\n| saleStage | 否 | String | 阶段 |\n| saleMoney | 否 | String | 销售金额 |\n| saleWinRate | 否 | String | 赢率 |\n| saleSource | 否 | String | 来源 |\n| saleType | 否 | String | 类型 |\n| saleOrderDate | 否 | String | 结单时间 |\n| saleDescription | 否 | String | 备注 |\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 商机信息（JSON格式） |\nJava sdk调用示例："
+}

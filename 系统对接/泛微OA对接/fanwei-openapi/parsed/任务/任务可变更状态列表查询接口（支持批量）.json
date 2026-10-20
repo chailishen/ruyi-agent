@@ -1,0 +1,105 @@
+{
+  "id": "840679057390313473",
+  "name": "任务可变更状态列表查询接口（支持批量）",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/api/task/v3/status/changeableList",
+  "url_template": "{OpenApiOrigin}/api/task/v3/status/changeableList",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注",
+    "参数格式为Content-Type: “application/json”"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "当前操作人ID 获取用户ID"
+    },
+    {
+      "name": "propertyDataList",
+      "required": "是",
+      "type": "List",
+      "description": "任务属性集合，支持多个map对象"
+    },
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "任务ID 获取任务ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "resultList",
+      "required": "",
+      "type": "Object",
+      "description": "接口返回结果"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "当前查询任务的ID"
+    },
+    {
+      "name": "name",
+      "required": "",
+      "type": "String",
+      "description": "当前查询任务的名称"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "String",
+      "description": "当前查询执行状态（success成功、fail失败）"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "接口返回"
+    },
+    {
+      "name": "currentStatus",
+      "required": "",
+      "type": "Object",
+      "description": "任务当前的状态"
+    },
+    {
+      "name": "changeableStatusList",
+      "required": "",
+      "type": "List",
+      "description": "任务可变更的状态列表"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "任务可变更状态列表查询接口（支持批量）"
+  ],
+  "raw_text": "## 任务可变更状态列表查询接口（支持批量）\n请求URL：\n- {OpenApiOrigin}/api/task/v3/status/changeableList\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 当前操作人ID 获取用户ID |\n| propertyDataList | 是 | List | 任务属性集合，支持多个map对象 |\n| id | 是 | Long | 任务ID 获取任务ID |\n备注\n- 参数格式为Content-Type: “application/json”\n参数示例：\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | String | 返回码 |\n| msg | String | 返回信息 |\n| resultList | Object | 接口返回结果 |\n| id | Long | 当前查询任务的ID |\n| name | String | 当前查询任务的名称 |\n| status | String | 当前查询执行状态（success成功、fail失败） |\n| data | Object | 接口返回 |\n| currentStatus | Object | 任务当前的状态 |\n| changeableStatusList | List | 任务可变更的状态列表 |\nJava sdk调用示例："
+}

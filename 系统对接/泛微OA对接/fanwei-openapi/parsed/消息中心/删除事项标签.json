@@ -1,0 +1,58 @@
+{
+  "id": "403745063424753664",
+  "name": "删除事项标签",
+  "module": "消息中心",
+  "module_path": [
+    "消息中心"
+  ],
+  "is_api": false,
+  "url": null,
+  "url_template": null,
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "String",
+      "description": "标签id,多个标签用,拼接"
+    },
+    {
+      "name": "entityId",
+      "required": "是",
+      "type": "long",
+      "description": "事项id"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "事项模块"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "long",
+      "description": "操作人id"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "int",
+      "description": "type, 0公共，1我的"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200成功"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n{OpenApiOrigin}/api/my/tag/removeEntityTag\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | String | 标签id,多个标签用,拼接 |\n| entityId | 是 | long | 事项id |\n| module | 是 | String | 事项模块 |\n| userid | 是 | long | 操作人id |\n| type | 是 | int | type, 0公共，1我的 |\n参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200成功 |\n- 更多返回错误代码请看首页的错误代码描述"
+}

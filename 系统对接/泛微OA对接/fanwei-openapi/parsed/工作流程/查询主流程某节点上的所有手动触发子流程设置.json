@@ -1,0 +1,202 @@
+{
+  "id": "236699392474611712",
+  "name": "查询主流程某节点上的所有手动触发子流程设置",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getTriSubRequestMenuSet",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getTriSubRequestMenuSet",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userIdStr",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "mainRequestId",
+      "required": "是",
+      "type": "Long",
+      "description": "主流程的唯一标识"
+    },
+    {
+      "name": "nodeIds",
+      "required": "否",
+      "type": "Long",
+      "description": "外部表单ID，如果传了该参数就触发外部表单子流程，如果没有传则触发内部表单子流程"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "状态码 0：成功 , 500：系统异常 100001：参数异常"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "错误信息"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "触发按钮ID"
+    },
+    {
+      "name": "workflowId",
+      "required": "",
+      "type": "Long",
+      "description": "工作流程ID"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "Long",
+      "description": "节点ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "Long",
+      "description": "流程ID"
+    },
+    {
+      "name": "title",
+      "required": "",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "DateTime",
+      "description": "创建时间"
+    },
+    {
+      "name": "creator",
+      "required": "",
+      "type": "Long",
+      "description": "创建人ID"
+    },
+    {
+      "name": "tenantKey",
+      "required": "",
+      "type": "String",
+      "description": "租户Key"
+    },
+    {
+      "name": "orderid",
+      "required": "",
+      "type": "int",
+      "description": "排序"
+    },
+    {
+      "name": "menutype",
+      "required": "",
+      "type": "String",
+      "description": "“TRIGGER_SUBWF”固定值"
+    },
+    {
+      "name": "logtype",
+      "required": "",
+      "type": "int",
+      "description": "签署意见类型"
+    },
+    {
+      "name": "useable",
+      "required": "",
+      "type": "int",
+      "description": "是否启用"
+    },
+    {
+      "name": "istop",
+      "required": "",
+      "type": "int",
+      "description": "是否顶部快捷菜单"
+    },
+    {
+      "name": "defaultSign",
+      "required": "",
+      "type": "String",
+      "description": "默认审批意见"
+    },
+    {
+      "name": "feedbackControl",
+      "required": "",
+      "type": "int",
+      "description": "反馈控制"
+    },
+    {
+      "name": "cusFeedbackTitle",
+      "required": "",
+      "type": "String",
+      "description": "反馈控制的自定义名称"
+    },
+    {
+      "name": "datasrc",
+      "required": "",
+      "type": "int",
+      "description": "数据来源"
+    },
+    {
+      "name": "pcIcon",
+      "required": "",
+      "type": "String",
+      "description": "PC端菜单按钮"
+    },
+    {
+      "name": "mobileIcon",
+      "required": "",
+      "type": "String",
+      "description": "移动端菜单按钮"
+    },
+    {
+      "name": "menuKey",
+      "required": "",
+      "type": "int",
+      "description": "按钮唯一key值"
+    },
+    {
+      "name": "subwfsetid",
+      "required": "",
+      "type": "Long",
+      "description": "子流程设置ID"
+    },
+    {
+      "name": "addStepMode",
+      "required": "",
+      "type": "int",
+      "description": "流转设定属性"
+    },
+    {
+      "name": "doneTriSubWf",
+      "required": "",
+      "type": "int",
+      "description": "已办中允许手动触发"
+    },
+    {
+      "name": "archiveTriSubWf",
+      "required": "",
+      "type": "int",
+      "description": "结束后允许手动触发"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getTriSubRequestMenuSet\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userIdStr | 是 | Long | 用户ID 获取用户ID |\n| mainRequestId | 是 | Long | 主流程的唯一标识 |\n| nodeIds | 否 | Long | 外部表单ID，如果传了该参数就触发外部表单子流程，如果没有传则触发内部表单子流程 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 状态码 0：成功 , 500：系统异常 100001：参数异常 |\n| errmsg | String | 错误信息 |\n| id | Long | 触发按钮ID |\n| workflowId | Long | 工作流程ID |\n| nodeId | Long | 节点ID |\n| requestId | Long | 流程ID |\n| title | String | 名称 |\n| createTime | DateTime | 创建时间 |\n| creator | Long | 创建人ID |\n| tenantKey | String | 租户Key |\n| orderid | int | 排序 |\n| menutype | String | “TRIGGER_SUBWF”固定值 |\n| logtype | int | 签署意见类型 |\n| useable | int | 是否启用 |\n| istop | int | 是否顶部快捷菜单 |\n| defaultSign | String | 默认审批意见 |\n| feedbackControl | int | 反馈控制 |\n| cusFeedbackTitle | String | 反馈控制的自定义名称 |\n| datasrc | int | 数据来源 |\n| pcIcon | String | PC端菜单按钮 |\n| mobileIcon | String | 移动端菜单按钮 |\n| menuKey | int | 按钮唯一key值 |\n| subwfsetid | Long | 子流程设置ID |\n| addStepMode | int | 流转设定属性 |\n| doneTriSubWf | int | 已办中允许手动触发 |\n| archiveTriSubWf | int | 结束后允许手动触发 |"
+}

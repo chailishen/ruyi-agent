@@ -1,0 +1,60 @@
+{
+  "id": "840718455092641792",
+  "name": "订单查询期次、回款、付款、开票等",
+  "module": "订单",
+  "module_path": [
+    "订单"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/getPayment",
+  "url_template": "{OpenApiOrigin}/crm/v2/getPayment",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "String",
+      "type": "是",
+      "description": "调用接口凭证"
+    },
+    {
+      "name": "userid",
+      "required": "String",
+      "type": "是",
+      "description": "用户id"
+    },
+    {
+      "name": "module",
+      "required": "String",
+      "type": "是",
+      "description": "模块。暂时只支持订单模块（orderform）"
+    },
+    {
+      "name": "id",
+      "required": "Long",
+      "type": "是",
+      "description": "期次等信息ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "订单查询期次、回款、付款、开票等"
+  ],
+  "raw_text": "## 订单查询期次、回款、付款、开票等\n简要描述：\n- 订单查询期次、回款、付款、开票等\n请求URL：\n- {OpenApiOrigin}/crm/v2/getPayment\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | String | 是 | 调用接口凭证 |\n| userid | String | 是 | 用户id |\n| module | String | 是 | 模块。暂时只支持订单模块（orderform） |\n| id | Long | 是 | 期次等信息ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/getPayment?access_token=db7e733fc168c595e8c847a513a2865d&userid=835851587175096321&module=orderform&id=3578058712901903492\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

@@ -1,0 +1,48 @@
+{
+  "id": "840674105344229377",
+  "name": "删除部门",
+  "module": "部门",
+  "module_path": [
+    "部门"
+  ],
+  "is_api": true,
+  "url": "/department/v2/delete",
+  "url_template": "{OpenApiOrigin}/department/v2/delete",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "depid",
+      "required": "是",
+      "type": "Long",
+      "description": "部门ID 获取部门ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "删除部门"
+  ],
+  "raw_text": "## 删除部门\n注：本接口为老接口，不推荐使用，存在性能问题，请优先使用同步部门接口\n请求URL：\n- {OpenApiOrigin}/department/v2/delete\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| depid | 是 | Long | 部门ID 获取部门ID |\n请求示例：\nquery方式\n{OpenApiOrigin}/department/v2/delete?access_token=9fe81c2c55ef1a012166b4a0d5abf6d2&depid=6483193403677253615\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}

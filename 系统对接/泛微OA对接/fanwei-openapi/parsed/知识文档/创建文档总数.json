@@ -1,0 +1,66 @@
+{
+  "id": "908311473551728640",
+  "name": "创建文档总数",
+  "module": "知识文档",
+  "module_path": [
+    "知识文档"
+  ],
+  "is_api": true,
+  "url": "/api/doc/document/v2/docCount",
+  "url_template": "{OpenApiOrigin}/api/doc/document/v2/docCount",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "string",
+      "description": "用户id 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "object",
+      "description": "返回结果信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "string",
+      "description": "0-成功，其他-失败"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "string",
+      "description": "错误消息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "object",
+      "description": "文档数据对象"
+    },
+    {
+      "name": "count",
+      "required": "",
+      "type": "string",
+      "description": "文档数量"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "创建文档总数"
+  ],
+  "raw_text": "## 创建文档总数\n简要描述：\n- 无\n请求URL：\n- {OpenApiOrigin}/api/doc/document/v2/docCount\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | string | 用户id 获取用户ID |\n请求json字段说明\n| 字段名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| conditions | 否 | array | 查询条件 |\n| conditions.id | 否 | string | 创建时间填 create_time，更新时间填 last_update_time |\n| conditions.type | 否 | string | 时间区间填 date |\n| conditions.value | 否 | string | 日期区间 |\n| keywords | 否 | string | 搜索关键字 |\n| folder | 是 | object | 文件夹 |\n| folder.id | 是 | string | 文件夹id |\n请求参数示例\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | object | 返回结果信息 |\n| errcode | string | 0-成功，其他-失败 |\n| errmsg | string | 错误消息 |\n| data | object | 文档数据对象 |\n| count | string | 文档数量 |\nJava sdk调用示例："
+}

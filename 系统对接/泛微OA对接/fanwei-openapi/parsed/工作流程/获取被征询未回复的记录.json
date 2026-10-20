@@ -1,0 +1,163 @@
+{
+  "id": "408008148654227456",
+  "name": "获取被征询未回复的记录",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getBeConsulLog",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getBeConsulLog",
+  "method": null,
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "",
+      "type": "String",
+      "description": ""
+    },
+    {
+      "name": "userid",
+      "required": "",
+      "type": "long",
+      "description": "用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "long",
+      "description": "流程请求ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "code",
+      "required": "",
+      "type": "int",
+      "description": "200 代表成功"
+    },
+    {
+      "name": "msg",
+      "required": "",
+      "type": "String",
+      "description": "执行结果信息描述"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "JSONArray",
+      "description": "响应数据"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "long",
+      "description": "id, 对应wfc_operate_consul的id"
+    },
+    {
+      "name": "nodeId",
+      "required": "",
+      "type": "long",
+      "description": "征询节点id"
+    },
+    {
+      "name": "nodeName",
+      "required": "",
+      "type": "String",
+      "description": "征询节点"
+    },
+    {
+      "name": "beConsulNodeId",
+      "required": "",
+      "type": "long",
+      "description": "被征询节点id"
+    },
+    {
+      "name": "beConsulNodeName",
+      "required": "",
+      "type": "String",
+      "description": "被征询节点"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "long",
+      "description": "征询人ID"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "征询人"
+    },
+    {
+      "name": "userDepartId",
+      "required": "",
+      "type": "long",
+      "description": "征询人部门id"
+    },
+    {
+      "name": "userDepartName",
+      "required": "",
+      "type": "String",
+      "description": "征询人部门"
+    },
+    {
+      "name": "beConsulBeAgentUserId",
+      "required": "",
+      "type": "long",
+      "description": "征询接收人被代理人Id"
+    },
+    {
+      "name": "beConsulBeAgentUserName",
+      "required": "",
+      "type": "String",
+      "description": "征询接收人被代理人"
+    },
+    {
+      "name": "beConsulUserId",
+      "required": "",
+      "type": "long",
+      "description": "征询接收人ID(包含代理身份)"
+    },
+    {
+      "name": "beConsulUserName",
+      "required": "",
+      "type": "String",
+      "description": "征询接收人(包含代理身份)"
+    },
+    {
+      "name": "operateTime",
+      "required": "",
+      "type": "LocalDateTime (pattern = \"yyyy-MM-dd HH:mm:ss\")",
+      "description": "征询时间"
+    },
+    {
+      "name": "remark",
+      "required": "",
+      "type": "String",
+      "description": "征询意见"
+    },
+    {
+      "name": "logTypeCode",
+      "required": "",
+      "type": "int",
+      "description": "意见类型编码"
+    },
+    {
+      "name": "logType",
+      "required": "",
+      "type": "String",
+      "description": "意见类型"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取被征询未回复的记录"
+  ],
+  "raw_text": "## 获取被征询未回复的记录\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getBeConsulLog\n说明：\n- 获取指定用户被征询未回复的记录\n请求方式：\n- GET，备注：access_token放在params中\n参数：\n| 参数名 | 必填 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String |  |\n| userid | 是 | long | 用户ID |\n| requestId | 是 | long | 流程请求ID |\n请求参数示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| code | int | 200 代表成功 |\n| msg | String | 执行结果信息描述 |\n| data | JSONArray | 响应数据 |\ndata[0]说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| id | long | id, 对应wfc_operate_consul的id |\n| nodeId | long | 征询节点id |\n| nodeName | String | 征询节点 |\n| beConsulNodeId | long | 被征询节点id |\n| beConsulNodeName | String | 被征询节点 |\n| userId | long | 征询人ID |\n| userName | String | 征询人 |\n| userDepartId | long | 征询人部门id |\n| userDepartName | String | 征询人部门 |\n| beConsulBeAgentUserId | long | 征询接收人被代理人Id |\n| beConsulBeAgentUserName | String | 征询接收人被代理人 |\n| beConsulUserId | long | 征询接收人ID(包含代理身份) |\n| beConsulUserName | String | 征询接收人(包含代理身份) |\n| operateTime | LocalDateTime (pattern = \"yyyy-MM-dd HH:mm:ss\") | 征询时间 |\n| remark | String | 征询意见 |\n| logTypeCode | int | 意见类型编码 |\n| logType | String | 意见类型 |"
+}

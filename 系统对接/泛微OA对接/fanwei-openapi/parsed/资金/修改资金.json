@@ -1,0 +1,132 @@
+{
+  "id": "840676214030565376",
+  "name": "修改资金",
+  "module": "资金",
+  "module_path": [
+    "资金"
+  ],
+  "is_api": true,
+  "url": "/crm/v2/update",
+  "url_template": "{OpenApiOrigin}/crm/v2/update",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块固定为：capital"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "资金信息"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "id",
+      "required": "是",
+      "type": "Long",
+      "description": "资金ID 获取资金ID"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "名称"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "String",
+      "description": "用户ID"
+    },
+    {
+      "name": "module",
+      "required": "是",
+      "type": "String",
+      "description": "模块（固定为capital）"
+    },
+    {
+      "name": "entity",
+      "required": "是",
+      "type": "Object",
+      "description": "资金信息"
+    },
+    {
+      "name": "name",
+      "required": "是",
+      "type": "String",
+      "description": "资金名称"
+    },
+    {
+      "name": "manager",
+      "required": "是",
+      "type": "String",
+      "description": "负责人"
+    },
+    {
+      "name": "capitalStatus",
+      "required": "是",
+      "type": "String",
+      "description": "状态"
+    },
+    {
+      "name": "capitalCustomer",
+      "required": "是",
+      "type": "String",
+      "description": "客户"
+    },
+    {
+      "name": "capitalUnit",
+      "required": "是",
+      "type": "String",
+      "description": "货币单位"
+    },
+    {
+      "name": "capitalDescription",
+      "required": "是",
+      "type": "String",
+      "description": "备注"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "资金信息（JSON格式）"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "修改资金"
+  ],
+  "raw_text": "## 修改资金\n请求URL：\n- {OpenApiOrigin}/crm/v2/update\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| module | 是 | String | 模块固定为：capital |\n| entity | 是 | Object | 资金信息 |\nentity请求结构体：\nentity参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| id | 是 | Long | 资金ID 获取资金ID |\n| name | 是 | String | 名称 |\n| userid | 是 | String | 用户ID |\n| module | 是 | String | 模块（固定为capital） |\n| entity | 是 | Object | 资金信息 |\n| name | 是 | String | 资金名称 |\n| manager | 是 | String | 负责人 |\n| capitalStatus | 是 | String | 状态 |\n| capitalCustomer | 是 | String | 客户 |\n| capitalUnit | 是 | String | 货币单位 |\n| capitalDescription | 是 | String | 备注 |\n请求示例：\nquery方式\n{OpenApiOrigin}/crm/v2/update?access_token=309bfb82ce12a2e30e37141273fb5ea0&userid=4980937863852743878&module=capital&entity={\"id\": \"2373238760050485558\",\"name\": \"资金消失术asdysdshdfdgfghdhgfdjhgfsdhgsgdhaghgadfdfvbhgsdhasdhahfdshfhadshfafdfd\",\"manager\": {    \"name\": \"陈兰\"},\"capitalStatus\": \"正常\",\"capitalCustomer\": {    \"name\": \"0918供应商-fw01\"},\"capitalUnit\": {    \"name\": \"人民币\"},\"capitalDescription\": \"备注内容22\"}\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | Object | 资金信息（JSON格式） |\nJava sdk调用示例："
+}

@@ -1,0 +1,99 @@
+{
+  "id": "263841872810606592",
+  "name": "获取考勤流程时长计算",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/api/attend/web/open/getFlowDuration",
+  "url_template": "{OpenApiOrigin}/api/attend/web/open/getFlowDuration",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注：body传参格式为application/json",
+    "备注：body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "appealType",
+      "required": "是",
+      "type": "String",
+      "description": "类型"
+    },
+    {
+      "name": "applicant",
+      "required": "是",
+      "type": "String",
+      "description": "需计算时长的人员id"
+    },
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "appealType是请假或者销假时对应请假类型id"
+    },
+    {
+      "name": "beginTime",
+      "required": "是",
+      "type": "String",
+      "description": "开始日期时间"
+    },
+    {
+      "name": "endTime",
+      "required": "是",
+      "type": "String",
+      "description": "结束日期时间"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "接⼝响应状态码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "接⼝响应描述"
+    },
+    {
+      "name": "duration",
+      "required": "",
+      "type": "String",
+      "description": "时长(根据请假类型时长动态匹配)"
+    },
+    {
+      "name": "duration_hour",
+      "required": "",
+      "type": "String",
+      "description": "时长(固定单位小时)"
+    },
+    {
+      "name": "duration_day",
+      "required": "",
+      "type": "String",
+      "description": "时长(固定单位天)"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "获取考勤流程时长计算"
+  ],
+  "raw_text": "## 获取考勤流程时长计算\n请求URL：\n- {OpenApiOrigin}/api/attend/web/open/getFlowDuration\n请求方式：\n- POST\nURL参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\nbody参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| appealType | 是 | String | 类型 |\n| applicant | 是 | String | 需计算时长的人员id |\n| type | 是 | String | appealType是请假或者销假时对应请假类型id |\n| beginTime | 是 | String | 开始日期时间 |\n| endTime | 是 | String | 结束日期时间 |\nappealType参数说明\n| 参数 | 说明 |\n| --- | --- |\n| leave | 请假 |\n| respLeave | 销假 |\n| outSide | 公出 |\n| overTime | 加班 |\n| businessTrip | 出差 |\n| processChange | 补签审批 |\n备注：body传参格式为application/json\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 接⼝响应状态码 |\n| errmsg | String | 接⼝响应描述 |\n| duration | String | 时长(根据请假类型时长动态匹配) |\n| duration_hour | String | 时长(固定单位小时) |\n| duration_day | String | 时长(固定单位天) |"
+}

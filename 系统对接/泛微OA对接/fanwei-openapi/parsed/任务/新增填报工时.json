@@ -1,0 +1,156 @@
+{
+  "id": "840678855469006849",
+  "name": "新增填报工时",
+  "module": "任务",
+  "module_path": [
+    "任务"
+  ],
+  "is_api": true,
+  "url": "/task/v2/fillRealWorkingTimes",
+  "url_template": "{OpenApiOrigin}/task/v2/fillRealWorkingTimes",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "fillRecords",
+      "required": "是",
+      "type": "List<Object>",
+      "description": "参数List, 单个元素包含如下字段"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "taskId",
+      "required": "是",
+      "type": "String",
+      "description": "任务id"
+    },
+    {
+      "name": "userId",
+      "required": "是",
+      "type": "String",
+      "description": "用户id"
+    },
+    {
+      "name": "workingTime",
+      "required": "是",
+      "type": "String",
+      "description": "工时量, 最多保留两位小数"
+    },
+    {
+      "name": "workingTimeDate",
+      "required": "是",
+      "type": "String",
+      "description": "填报日期，精度为天，例如：’2021-10-21’"
+    },
+    {
+      "name": "description",
+      "required": "否",
+      "type": "String",
+      "description": "填报备注"
+    },
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "提示信息"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "List<Object>",
+      "description": "返回工时信息集合"
+    },
+    {
+      "name": "updateUser",
+      "required": "",
+      "type": "Object",
+      "description": "更新人"
+    },
+    {
+      "name": "updateTime",
+      "required": "",
+      "type": "Date",
+      "description": "更新时间"
+    },
+    {
+      "name": "description",
+      "required": "",
+      "type": "String",
+      "description": "工时描述信息"
+    },
+    {
+      "name": "workingTime",
+      "required": "",
+      "type": "Float",
+      "description": "实际工时"
+    },
+    {
+      "name": "workingTimeDate",
+      "required": "",
+      "type": "Date",
+      "description": "实际工时选择的日期"
+    },
+    {
+      "name": "userName",
+      "required": "",
+      "type": "String",
+      "description": "用户姓名"
+    },
+    {
+      "name": "userId",
+      "required": "",
+      "type": "Long",
+      "description": "用户ID"
+    },
+    {
+      "name": "createUser",
+      "required": "",
+      "type": "Object",
+      "description": "创建人"
+    },
+    {
+      "name": "createTime",
+      "required": "",
+      "type": "Date",
+      "description": "创建时间"
+    },
+    {
+      "name": "id",
+      "required": "",
+      "type": "Long",
+      "description": "实际工时ID"
+    },
+    {
+      "name": "taskId",
+      "required": "",
+      "type": "String",
+      "description": "任务ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "新增填报工时"
+  ],
+  "raw_text": "## 新增填报工时\n请求URL：\n- {OpenApiOrigin}/task/v2/fillRealWorkingTimes\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| fillRecords | 是 | List<Object> | 参数List, 单个元素包含如下字段 |\nfillRecords请求结构体：\nqueryParams参数说明：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| taskId | 是 | String | 任务id |\n| userId | 是 | String | 用户id |\n| workingTime | 是 | String | 工时量, 最多保留两位小数 |\n| workingTimeDate | 是 | String | 填报日期，精度为天，例如：’2021-10-21’ |\n| description | 否 | String | 填报备注 |\n请求示例：\nquery方式\nhttps://api.yunteams.cn/task/v2/fillRealWorkingTimes?access_token=3f888283dd7564dd5443a5590a357318&fillRecords=[{\"taskId\": \"5117956818993913546\", \"userId\": \"717929201362116609\", \"workingTime\": 1, \"workingTimeDate\": \"2021-10-21\", \"description\": \"备注\"}]\n返回示例\n返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 提示信息 |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| data | List<Object> | 返回工时信息集合 |\n| updateUser | Object | 更新人 |\n| updateTime | Date | 更新时间 |\n| description | String | 工时描述信息 |\n| workingTime | Float | 实际工时 |\n| workingTimeDate | Date | 实际工时选择的日期 |\n| userName | String | 用户姓名 |\n| userId | Long | 用户ID |\n| createUser | Object | 创建人 |\n| createTime | Date | 创建时间 |\n| id | Long | 实际工时ID |\n| taskId | String | 任务ID |\nJava sdk调用示例："
+}

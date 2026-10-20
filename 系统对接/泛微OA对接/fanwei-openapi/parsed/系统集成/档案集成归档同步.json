@@ -1,0 +1,64 @@
+{
+  "id": "908324659109715968",
+  "name": "档案集成归档同步",
+  "module": "系统集成",
+  "module_path": [
+    "系统集成",
+    "数据同步"
+  ],
+  "is_api": true,
+  "url": "/api/intiascore/v1/doSync",
+  "url_template": "{OpenApiOrigin}/api/intiascore/v1/doSync",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "备注：",
+    "满足三方系统（包括不限于文书定）触发E10档案集成归档同步逻辑。该请求为异步请求，在校验完所有参数信息后将会开启子线程执行同步。线程由当前服务的线程池提供，当计算资源不足无法分配线程时会返回失败（queue: 256）Content-Type类型：application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "channelIds",
+      "required": "是",
+      "type": "List<String>",
+      "description": "归档方案ID"
+    },
+    {
+      "name": "requestIds",
+      "required": "是",
+      "type": "List<String>",
+      "description": "流程请求ID，单次请求限制50个"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "status",
+      "required": "",
+      "type": "Boolean",
+      "description": "请求状态，仅标识是否通过参数校验，并开启了子线程进行同步"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "档案集成归档同步"
+  ],
+  "raw_text": "## 档案集成归档同步\n请求URL：\n- {OpenApiOrigin}/api/intiascore/v1/doSync\n请求方式：\n- POST\n备注：\n- 满足三方系统（包括不限于文书定）触发E10档案集成归档同步逻辑。\n- 该请求为异步请求，在校验完所有参数信息后将会开启子线程执行同步。线程由当前服务的线程池提供，当计算资源不足无法分配线程时会返回失败（queue: 256）\n- Content-Type类型：application/json\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| channelIds | 是 | List<String> | 归档方案ID |\n| requestIds | 是 | List<String> | 流程请求ID，单次请求限制50个 |\n请求示例：\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| status | Boolean | 请求状态，仅标识是否通过参数校验，并开启了子线程进行同步 |\nJava sdk调用示例："
+}

@@ -1,0 +1,72 @@
+{
+  "id": "840713241052676097",
+  "name": "撤回流程",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/withdrawRequest",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/withdrawRequest",
+  "method": "POST",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "String",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "remark",
+      "required": "否",
+      "type": "String",
+      "description": "签字意见"
+    },
+    {
+      "name": "isremind",
+      "required": "否",
+      "type": "Int",
+      "description": "是否提醒 0：不提醒 其他：提醒"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    },
+    {
+      "name": "requestId",
+      "required": "",
+      "type": "String",
+      "description": "审批数据ID"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "撤回流程"
+  ],
+  "raw_text": "## 撤回流程\n请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/withdrawRequest\n请求方式：\n- POST\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\n| requestId | 是 | String | 审批数据ID 获取审批数据ID |\n| remark | 否 | String | 签字意见 |\n| isremind | 否 | Int | 是否提醒 0：不提醒 其他：提醒 |\n请求示例：\nquery方式\n{OpenApiOrigin}/api/workflow/core/paService/v1/withdrawRequest?access_token=daf1ad0f464d94fea3f96cb6cbe55993&userid=835851587175096321&requestId=847719101440745472&remark=信息有误&isremind=0\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\n| requestId | String | 审批数据ID |\nJava sdk调用示例："
+}

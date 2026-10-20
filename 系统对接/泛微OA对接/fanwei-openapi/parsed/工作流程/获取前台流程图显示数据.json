@@ -1,0 +1,101 @@
+{
+  "id": "409087560665530368",
+  "name": "获取前台流程图显示数据",
+  "module": "工作流程",
+  "module_path": [
+    "工作流程",
+    "获取流程信息"
+  ],
+  "is_api": true,
+  "url": "/api/workflow/core/paService/v1/getRequestChart",
+  "url_template": "{OpenApiOrigin}/api/workflow/core/paService/v1/getRequestChart",
+  "method": "GET",
+  "content_type": null,
+  "notes": [],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户id"
+    },
+    {
+      "name": "requestId",
+      "required": "是",
+      "type": "Int",
+      "description": "审批数据ID 获取审批数据ID"
+    },
+    {
+      "name": "showType",
+      "required": "是",
+      "type": "Integer",
+      "description": "传递常量值2"
+    },
+    {
+      "name": "workflowId",
+      "required": "是",
+      "type": "Long",
+      "description": "路径id"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "message",
+      "required": "",
+      "type": "Object",
+      "description": "响应状态对象"
+    },
+    {
+      "name": "data",
+      "required": "",
+      "type": "Object",
+      "description": "响应数据对象"
+    },
+    {
+      "name": "autoProcess",
+      "required": "",
+      "type": "Boolean",
+      "description": "是否存在自动处理"
+    },
+    {
+      "name": "chartFlowInfo",
+      "required": "",
+      "type": "Object",
+      "description": "流程图流转信息，例如节点状态、出口状态、操作者等等"
+    },
+    {
+      "name": "groupDetail",
+      "required": "",
+      "type": "Object",
+      "description": "流程图分组信息"
+    },
+    {
+      "name": "haveNewVersionAddSign",
+      "required": "",
+      "type": "Boolean",
+      "description": "该流程图上，是否存在新版加签节点"
+    },
+    {
+      "name": "workflowDatas",
+      "required": "",
+      "type": "Object",
+      "description": "流程图路径信息"
+    },
+    {
+      "name": "xml",
+      "required": "",
+      "type": "String",
+      "description": "流程图渲染的xml串"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [],
+  "raw_text": "请求URL：\n- {OpenApiOrigin}/api/workflow/core/paService/v1/getRequestChart\n请求方式：\n- GET\n参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户id |\n| requestId | 是 | Int | 审批数据ID 获取审批数据ID |\n| showType | 是 | Integer | 传递常量值2 |\n| workflowId | 是 | Long | 路径id |\n返回示例以及参数说明：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| message | Object | 响应状态对象 |\n| data | Object | 响应数据对象 |\ndata 数据返回参数说明\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| autoProcess | Boolean | 是否存在自动处理 |\n| chartFlowInfo | Object | 流程图流转信息，例如节点状态、出口状态、操作者等等 |\n| groupDetail | Object | 流程图分组信息 |\n| haveNewVersionAddSign | Boolean | 该流程图上，是否存在新版加签节点 |\n| workflowDatas | Object | 流程图路径信息 |\n| xml | String | 流程图渲染的xml串 |\n- chartFlowInfo中主要参数说明\n1. 注释1:normalChartInfoEntity 这个是存放流程图流转信息对象， 例如节点(已经过、未经过等)状态以及操作者显示名称、出口状态等。\n2. 注释2:linkInfo是存放出口信息的，该对象有俩个比较重要的属性，如图所示chartStatusEnum属性说明属性名称描述NOT_PASSED未经过PASSED经过REJECT退回CUSTOM_FLOW自由流转SUBMIT_TO_NODE提交至指定节点INTERVENTION流程干预WITHDRAW流程撤回注释3:nodeInfo是存放节点信息对象， 该对象属性的作用如下图所示nodeStatusEnum属性说明属性名称描述NOT_PASSED未经过PASSED已经过CURRENT_NODE当前节点EXCEPTION_NODE异常跳过REJECT_NODE退回节点INTERVENTION流程干预\n- xml参数说明 mxCell是存放流程图元素的标签，如何区分各个元素? 例如出口、节点等， 可以通过id的数据格式来做区分\n1. id 格式为node_xxxx 这个就是节点类型\n2. id 格式为link_xxxxx这个是出口类型\n3. id 格式为group_xxxxx 这个是分组类型 mxGeometry是mxCell的子标签，主要是判断元素的形状,relative属性为1的，标记为出口\n1. x是该元素的横坐标\n2. y是该元素的纵坐标\n3. width是该元素的宽度\n4. height是该元素的高度\n- mxCell元素中,节点常用标签补充说明\n1. value 节点名称\n2. nodeId 节点id 如果是列表模式的加签流程图， 则 nodeid : 节点id_出现的次数\n3. isPassedNode 是否是已经过，或者已到达的节点 1是已经经过或者已经到达， 0是未经过\n4. isHaveSubWorkflow 是否有子流程 1是存在，0是不存在\n5. operatorNameStr 节点上操作者显示名称\n6. style 节点样式 渲染节点的形状和颜色\n- mxCell元素中, 出口常用标签\n- value 出口名称\n- linkId 出口id\n- source 出口的开始节点 格式为 node_节点id\n- target 出口的到达节点 格式为 node_节点id\n- defaultColor 出口线条的默认显示颜色\n- hoverColor 鼠标移到出口上的显示颜色\n- style 出口样式 判断流程图线条的颜色已经显示形式\n- defaultPos 来源节点出口坐标和目标节点入口坐标\n获取到流程图数据处理demo"
+}

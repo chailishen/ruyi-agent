@@ -1,0 +1,86 @@
+{
+  "id": "840691688848064512",
+  "name": "考勤签到签退",
+  "module": "考勤",
+  "module_path": [
+    "考勤"
+  ],
+  "is_api": true,
+  "url": "/attend/v2/check",
+  "url_template": "{OpenApiOrigin}/attend/v2/check",
+  "method": "POST",
+  "content_type": "application/json",
+  "notes": [
+    "**备注：**body传参格式为application/json"
+  ],
+  "parameters": [
+    {
+      "name": "access_token",
+      "required": "是",
+      "type": "String",
+      "description": "调用接口凭证 获取accessToken信息"
+    },
+    {
+      "name": "userid",
+      "required": "是",
+      "type": "Long",
+      "description": "用户ID 获取用户ID"
+    }
+  ],
+  "response_parameters": [
+    {
+      "name": "type",
+      "required": "是",
+      "type": "String",
+      "description": "考勤类型：CHECKIN 、签到CHECKOUT签退"
+    },
+    {
+      "name": "longitude",
+      "required": "否",
+      "type": "String",
+      "description": "纬度"
+    },
+    {
+      "name": "latitude",
+      "required": "否",
+      "type": "String",
+      "description": "纬度"
+    },
+    {
+      "name": "checkAddress",
+      "required": "否",
+      "type": "String",
+      "description": "地址"
+    },
+    {
+      "name": "wifiId",
+      "required": "否",
+      "type": "String",
+      "description": "WIFI ID"
+    },
+    {
+      "name": "wifiName",
+      "required": "否",
+      "type": "String",
+      "description": "WIFI名称"
+    },
+    {
+      "name": "errcode",
+      "required": "",
+      "type": "String",
+      "description": "返回码"
+    },
+    {
+      "name": "errmsg",
+      "required": "",
+      "type": "String",
+      "description": "返回信息"
+    }
+  ],
+  "request_example": null,
+  "response_example": null,
+  "headings": [
+    "考勤签到签退"
+  ],
+  "raw_text": "## 考勤签到签退\n请求URL：\n- {OpenApiOrigin}/attend/v2/check\n请求方式：\n- POST\nURL参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| access_token | 是 | String | 调用接口凭证 获取accessToken信息 |\n| userid | 是 | Long | 用户ID 获取用户ID |\nbody参数：\n| 参数名 | 必选 | 类型 | 说明 |\n| --- | --- | --- | --- |\n| type | 是 | String | 考勤类型：CHECKIN 、签到CHECKOUT签退 |\n| longitude | 否 | String | 纬度 |\n| latitude | 否 | String | 纬度 |\n| checkAddress | 否 | String | 地址 |\n| wifiId | 否 | String | WIFI ID |\n| wifiName | 否 | String | WIFI名称 |\n**备注：**body传参格式为application/json\n请求示例：\njson方式\n返回示例：\n返回参数说明：\n| 参数名 | 类型 | 说明 |\n| --- | --- | --- |\n| errcode | String | 返回码 |\n| errmsg | String | 返回信息 |\nJava sdk调用示例："
+}
